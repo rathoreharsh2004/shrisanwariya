@@ -1,0 +1,590 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cobbles & Sets | Shri Sanwariya Stone Suppliers</title>
+  <meta name="description" content="Hand-Cut & Tumbled Natural Stone Cobbles & Setts from Shri Sanwariya Stone Suppliers. Heavy-duty driveway setts, fan-pattern paving, and cubic stones in Kandla Grey, Raj Green & Sagar Black.">
+  <meta name="keywords" content="Cobbles and Sets, Sandstone Cobbles, Driveway Setts, Tumbled Stone Cubes, Fan Paving Setts, Indian Granite Cobbles, Mandsaur Stone">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-cream: #FAF7F2;
+      --bg-cream-soft: #F4EFE7;
+      --bg-dark: #241F1C;
+      --accent-ochre: #BA6E2B;
+      --accent-ochre-dark: #A05C20;
+      --text-dark: #221C18;
+      --text-muted: #6E665E;
+      --text-light-muted: #C0B7AC;
+      --border-warm: #E6DFD5;
+      --radius-sm: 8px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 22px;
+      --radius-full: 9999px;
+      --shadow-sm: 0 4px 15px rgba(37, 32, 28, 0.05);
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-cream); color: var(--text-dark); line-height: 1.65; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; transition: var(--transition); }
+
+    .container { width: min(1180px, 92%); margin: 0 auto; }
+    .center { text-align: center; }
+
+    header {
+      position: sticky; top: 0; z-index: 900; background: rgba(250, 247, 242, 0.96);
+      backdrop-filter: blur(14px); border-bottom: 1px solid rgba(230, 223, 213, 0.85);
+    }
+    .nav-bar { height: 76px; display: flex; align-items: center; justify-content: space-between; }
+    .brand-logo { display: flex; flex-direction: column; }
+    .brand-title { font-size: 16px; font-weight: 800; letter-spacing: 0.05em; color: var(--text-dark); text-transform: uppercase; line-height: 1.1; }
+    .brand-sub { font-size: 8.5px; font-weight: 600; letter-spacing: 0.22em; color: #8C827A; margin-top: 4px; text-transform: uppercase; }
+    .nav-menu { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-link { font-size: 13.5px; font-weight: 500; color: var(--text-dark); padding: 8px 0; }
+    .nav-link:hover { color: var(--accent-ochre); }
+
+    .dropdown { position: relative; }
+    .dropdown-btn { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+    .dropdown-menu {
+      position: absolute; top: 100%; left: -15px; width: 230px; background: #FFFFFF;
+      border: 1px solid var(--border-warm); border-radius: var(--radius-md); padding: 10px;
+      box-shadow: 0 20px 45px rgba(37, 32, 28, 0.1); opacity: 0; visibility: hidden;
+      transform: translateY(12px); transition: var(--transition); list-style: none;
+    }
+    .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-item a { display: block; padding: 9px 12px; font-size: 13px; font-weight: 500; border-radius: var(--radius-sm); }
+    .dropdown-item a:hover { background: var(--bg-cream-soft); color: var(--accent-ochre); padding-left: 16px; }
+
+    .btn-quote { padding: 9px 20px; border: 1px solid var(--text-dark); border-radius: var(--radius-full); font-size: 12.5px; font-weight: 600; }
+    .btn-quote:hover { background: var(--text-dark); color: #fff; }
+    .menu-toggle { display: none; font-size: 24px; color: var(--text-dark); }
+
+    .floating-enquiry-tab {
+      position: fixed; right: 0; top: 48%; transform: translateY(-50%); z-index: 850;
+      background: var(--bg-dark); color: #fff; border: 1px solid rgba(255,255,255,0.15);
+      border-right: none; padding: 14px 9px; border-radius: 12px 0 0 12px;
+      display: flex; flex-direction: column; align-items: center; gap: 9px; cursor: pointer;
+    }
+    .floating-enquiry-tab:hover { background: var(--accent-ochre); }
+    .floating-enquiry-tab .tab-icon { width: 17px; height: 17px; fill: currentColor; }
+    .floating-enquiry-tab .tab-text { writing-mode: vertical-rl; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; transform: rotate(180deg); }
+
+    .page-banner {
+      position: relative; height: 230px; display: flex; align-items: center; justify-content: center;
+      background: #25201C; overflow: hidden;
+    }
+    .page-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.42); }
+    .page-banner-content { position: relative; z-index: 2; text-align: center; color: #FFFFFF; }
+    .page-banner-content h1 { font-size: clamp(34px, 4.2vw, 48px); font-weight: 800; letter-spacing: -0.02em; }
+
+    .product-main-grid {
+      display: grid;
+      grid-template-columns: 410px 1fr;
+      gap: 45px;
+      align-items: start;
+      padding: 50px 0 60px;
+    }
+
+    .spec-sticky-wrap { position: sticky; top: 96px; }
+    .spec-card {
+      background: #241F1C; border-radius: 12px; overflow: hidden;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.14); border: 1px solid rgba(186, 110, 43, 0.2);
+    }
+    .spec-header {
+      background: var(--accent-ochre); color: #FFFFFF; padding: 14px 20px; font-size: 13.5px;
+      font-weight: 800; letter-spacing: 0.12em; display: flex; align-items: center; gap: 10px; text-transform: uppercase;
+    }
+    .spec-header svg { width: 17px; height: 17px; fill: currentColor; }
+    .spec-table-row {
+      display: grid; grid-template-columns: 135px 1fr; gap: 14px; padding: 16px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08); align-items: start;
+    }
+    .spec-col-label { font-size: 11px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.4; }
+    .spec-col-val { font-size: 11.5px; font-weight: 500; color: var(--text-light-muted); line-height: 1.65; text-transform: uppercase; }
+    .spec-note-bar { background: var(--accent-ochre-dark); color: #FFF0E2; padding: 13px 20px; font-size: 11.5px; line-height: 1.5; }
+    .spec-sample-btn {
+      display: flex; align-items: center; justify-content: space-between; width: 100%;
+      background: #FFFFFF; color: var(--accent-ochre); padding: 14px 20px; border-radius: var(--radius-sm);
+      font-size: 12.5px; font-weight: 800; letter-spacing: 0.08em; margin-top: 14px; border: 1px solid var(--border-warm);
+      box-shadow: var(--shadow-sm); cursor: pointer; text-transform: uppercase;
+    }
+    .spec-sample-btn:hover { background: var(--accent-ochre); color: #FFFFFF; border-color: var(--accent-ochre); }
+
+    .intro-header-bar { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+    .accent-bar { width: 4px; height: 34px; background: var(--accent-ochre); border-radius: 2px; flex-shrink: 0; }
+    .intro-title { font-size: clamp(28px, 3vw, 36px); font-weight: 800; color: var(--text-dark); letter-spacing: -0.02em; }
+    .intro-paragraph { font-size: 14px; line-height: 1.75; color: var(--text-muted); margin-bottom: 26px; }
+
+    .gallery-sub-header {
+      font-size: 12.5px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--text-dark); padding-bottom: 9px; border-bottom: 1px solid var(--border-warm); margin-bottom: 20px;
+    }
+    .gallery-pairs-list { display: flex; flex-direction: column; gap: 20px; }
+    .gallery-pair { display: grid; grid-template-columns: 1.15fr 1fr; gap: 16px; align-items: stretch; }
+    .gallery-app-card { height: 195px; border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); background: #2E2722; }
+    .gallery-app-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .gallery-app-card:hover img { transform: scale(1.05); }
+    .gallery-swatch-card {
+      background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--border-warm);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04); padding: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+    }
+    .swatch-img-box { width: 100%; height: 140px; display: flex; align-items: center; justify-content: center; border-radius: 6px; overflow: hidden; background: #FAF8F5; }
+    .swatch-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .gallery-swatch-card:hover .swatch-img-box img { transform: scale(1.06); }
+    .swatch-name { font-size: 12px; font-weight: 700; color: var(--text-dark); margin-top: 8px; letter-spacing: 0.02em; }
+
+    .feature-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 40px 0 60px; }
+    .info-card { background: #FFFFFF; border-radius: var(--radius-lg); padding: 32px 24px; border: 1px solid rgba(222, 215, 205, 0.75); box-shadow: var(--shadow-sm); }
+    .info-card .card-eyebrow { font-size: 10.5px; font-weight: 700; letter-spacing: 0.18em; color: var(--accent-ochre); text-transform: uppercase; margin-bottom: 10px; display: block; }
+    .info-card h3 { font-size: 17px; font-weight: 800; color: var(--text-dark); margin-bottom: 14px; }
+    .info-list { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--text-muted); }
+    .info-list li { display: flex; align-items: flex-start; gap: 8px; }
+    .check-bullet { color: var(--accent-ochre); font-weight: 800; }
+    .tags-container { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .pill-tag { background: var(--bg-cream-soft); border: 1px solid var(--border-warm); border-radius: var(--radius-full); padding: 4px 10px; font-size: 11px; font-weight: 600; color: var(--text-dark); }
+
+    .packing-section { background: #FFFFFF; border-radius: var(--radius-xl); padding: 42px 32px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-warm); margin-bottom: 60px; }
+    .packing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
+    .packing-card { height: 185px; border-radius: var(--radius-md); overflow: hidden; position: relative; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+    .packing-card span { position: absolute; bottom: 10px; left: 10px; right: 10px; background: rgba(0, 0, 0, 0.7); color: #fff; font-size: 11px; font-weight: 600; padding: 4px 8px; border-radius: 4px; text-align: center; }
+
+    .faq-bespoke-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 38px; margin-bottom: 70px; }
+    .faq-title { font-size: 21px; font-weight: 800; margin-bottom: 20px; color: var(--text-dark); }
+    .faq-item { background: #FFFFFF; border: 1px solid var(--border-warm); border-radius: var(--radius-md); margin-bottom: 10px; overflow: hidden; }
+    .faq-question { padding: 15px 18px; font-size: 14px; font-weight: 700; color: var(--text-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-question:hover { color: var(--accent-ochre); }
+    .faq-chevron { transition: transform 0.3s ease; }
+    .faq-item.active .faq-chevron { transform: rotate(180deg); color: var(--accent-ochre); }
+    .faq-answer { display: none; padding: 0 18px 16px; font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+    .faq-item.active .faq-answer { display: block; }
+
+    .bespoke-box { background: #FFFFFF; border: 1px solid var(--border-warm); border-radius: var(--radius-lg); padding: 26px 22px; margin-bottom: 18px; }
+    .bespoke-box h4 { font-size: 16px; font-weight: 800; margin-bottom: 14px; }
+    .bespoke-step { margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--bg-cream-soft); }
+    .bespoke-step strong { display: block; font-size: 13px; color: var(--accent-ochre); margin-bottom: 2px; }
+    .bespoke-step p { font-size: 12px; color: var(--text-muted); margin: 0; }
+
+    .inquiry-cta-dark { background: var(--bg-dark); color: #fff; border-radius: var(--radius-lg); padding: 24px 22px; }
+    .inquiry-cta-dark h4 { font-size: 16px; margin-bottom: 8px; }
+    .inquiry-cta-dark p { font-size: 12px; color: var(--text-light-muted); margin-bottom: 15px; }
+
+    .bottom-cta-bar { background: var(--bg-cream-soft); border: 1px solid var(--border-warm); border-radius: var(--radius-xl); padding: 45px 30px; text-align: center; margin-bottom: 70px; }
+    .bottom-cta-bar h3 { font-size: clamp(22px, 2.4vw, 32px); font-weight: 800; color: var(--text-dark); margin-bottom: 8px; }
+    .bottom-cta-bar p { font-size: 13.5px; color: var(--text-muted); margin-bottom: 22px; }
+    .cta-btn-group { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+    .btn-ochre { display: inline-flex; align-items: center; gap: 8px; padding: 11px 24px; background: var(--accent-ochre); color: #fff; border-radius: var(--radius-full); font-size: 13px; font-weight: 600; }
+    .btn-ochre:hover { background: var(--accent-ochre-dark); transform: translateY(-2px); }
+    .btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 11px 24px; border: 1px solid var(--text-dark); border-radius: var(--radius-full); font-size: 13px; font-weight: 600; }
+    .btn-outline:hover { background: var(--text-dark); color: #fff; }
+    .btn-whatsapp { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; padding: 11px 22px; border-radius: var(--radius-full); font-size: 13px; font-weight: 600; }
+    .btn-whatsapp:hover { background: #1EBE5B; transform: translateY(-2px); }
+
+    footer { background: var(--bg-cream); border-top: 1px solid var(--border-warm); padding: 70px 0 35px; }
+    .footer-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr 1.15fr; gap: 40px; }
+    .footer-brand h3 { font-size: 18px; font-weight: 800; margin-bottom: 12px; text-transform: uppercase; }
+    .footer-brand p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+    .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--text-muted); }
+    .footer-links a:hover { color: var(--accent-ochre); }
+    .footer-bottom { margin-top: 50px; padding-top: 25px; border-top: 1px solid var(--border-warm); display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); }
+
+    @media (max-width: 960px) {
+      .product-main-grid { grid-template-columns: 1fr; }
+      .spec-sticky-wrap { position: static; }
+      .feature-cards-grid { grid-template-columns: 1fr; }
+      .packing-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-bespoke-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-menu { display: none; }
+      .menu-toggle { display: block; }
+    }
+    @media (max-width: 600px) {
+      .gallery-pair { grid-template-columns: 1fr; }
+      .packing-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .floating-enquiry-tab { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-bar">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-title">Shri Sanwariya</span>
+        <span class="brand-sub">Stone Suppliers</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../index.html#about" class="nav-link">About Us</a></li>
+          <li class="dropdown">
+            <span class="nav-link dropdown-btn">Collections <span style="font-size:11px;">▾</span></span>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="natural-sandstone-colors.html" style="font-weight:700; color:var(--accent-ochre);">Natural Sandstone Colors ✨</a></li>
+              <li class="dropdown-item"><a href="sandstone-pavers.html">Sandstone Pavers</a></li>
+              <li class="dropdown-item"><a href="copings.html">Copings</a></li>
+              <li class="dropdown-item"><a href="steps.html">Steps</a></li>
+              <li class="dropdown-item"><a href="cobbles-and-sets.html">Cobbles &amp; Sets</a></li>
+              <li class="dropdown-item"><a href="fire-pits-and-circles.html">Fire Pits &amp; Circles</a></li>
+              <li class="dropdown-item"><a href="roofing.html">Roofing</a></li>
+            </ul>
+          </li>
+          <li><a href="../index.html#facilities" class="nav-link">Facilities</a></li>
+          <li><a href="../index.html#story" class="nav-link">Blog</a></li>
+          <li><a href="#contact" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex; align-items:center; gap:16px;">
+        <a href="#contact" class="btn-quote">Enquire Now</a>
+        <button class="menu-toggle" onclick="alert('Menu: Use navigation links to browse.')">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <aside class="floating-enquiry-tab" onclick="window.location.href='#contact'">
+    <svg class="tab-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    <span class="tab-text">Send Enquiry</span>
+  </aside>
+
+  <div class="page-banner">
+    <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=2000&q=85" alt="Natural Stone Cobbles and Sets">
+    <div class="page-banner-content">
+      <h1>Cobbles &amp; Sets</h1>
+    </div>
+  </div>
+
+  <main>
+    <section class="container product-main-grid">
+      
+      <!-- LEFT: SPECIFICATION CARD -->
+      <div class="spec-sticky-wrap">
+        <div class="spec-card">
+          <div class="spec-header">
+            <svg viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg>
+            <span>GENERAL SPECIFICATION</span>
+          </div>
+
+          <div class="spec-table-row">
+            <div class="spec-col-label">SURFACE:</div>
+            <div class="spec-col-val">HAND-CUT NATURAL SPLIT, TUMBLED ANTIQUE, SAWN SIX-SIDES, FLAMED GRANITE</div>
+          </div>
+
+          <div class="spec-table-row">
+            <div class="spec-col-label">DEPTH / THICKNESS:</div>
+            <div class="spec-col-val">40-50 MM (PEDESTRIAN / LIGHT VEHICULAR), 60-80 MM (HEAVY TRAFFIC DRIVEWAYS)</div>
+          </div>
+
+          <div class="spec-table-row">
+            <div class="spec-col-label">SIZES:</div>
+            <div class="spec-col-val">
+              <div>100X100 MM</div>
+              <div>100X200 MM</div>
+              <div>140X140 MM</div>
+              <div>140X200 MM</div>
+              <div>PRE-MESHED FAN ARCS</div>
+              <div style="color:var(--accent-ochre); margin-top:5px; font-weight:700;">CUSTOM DEPTHS AVAILABLE</div>
+            </div>
+          </div>
+
+          <div class="spec-note-bar">
+            High compressive strength (&gt; 120 MPa) tested for vehicular point loads and frost-heave resilience.
+          </div>
+        </div>
+
+        <button class="spec-sample-btn" onclick="window.location.href='#contact'">
+          <span>📦 REQUEST A SAMPLE</span>
+          <span>▾</span>
+        </button>
+      </div>
+
+      <!-- RIGHT: NARRATIVE + GALLERY -->
+      <div>
+        <div class="intro-header-bar">
+          <div class="accent-bar"></div>
+          <h2 class="intro-title">Cobbles &amp; Sets</h2>
+        </div>
+
+        <p class="intro-paragraph">
+          As a specialized natural stone cobbles and setts supplier, we offer heavy-duty hand-dressed cubic paving blocks. Handcrafted from dense Indian sandstone and granite blocks, our cobbles provide remarkable structural endurance, timeless historic beauty, and unmatched tire traction for residential driveways and civic heritage streets.
+        </p>
+
+        <div class="gallery-sub-header">
+          <span>GALLERY</span>
+        </div>
+
+        <div class="gallery-pairs-list">
+          <div class="gallery-pair">
+            <div class="gallery-app-card">
+              <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=700&q=80" alt="Grey Cobbles Driveway">
+            </div>
+            <div class="gallery-swatch-card">
+              <div class="swatch-img-box">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&q=80" alt="Kandla Grey Setts">
+              </div>
+              <span class="swatch-name">Kandla Grey Tumbled Setts</span>
+            </div>
+          </div>
+
+          <div class="gallery-pair">
+            <div class="gallery-app-card">
+              <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=700&q=80" alt="Raj Green Cobble Walkway">
+            </div>
+            <div class="gallery-swatch-card">
+              <div class="swatch-img-box">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="Raj Green Cobbles">
+              </div>
+              <span class="swatch-name">Raj Green Hand-Cut Cobbles</span>
+            </div>
+          </div>
+
+          <div class="gallery-pair">
+            <div class="gallery-app-card">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80" alt="Sagar Black Driveway">
+            </div>
+            <div class="gallery-swatch-card">
+              <div class="swatch-img-box">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=500&q=80" alt="Sagar Black Setts">
+              </div>
+              <span class="swatch-name">Sagar Black Sawn Setts</span>
+            </div>
+          </div>
+
+          <div class="gallery-pair">
+            <div class="gallery-app-card">
+              <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80" alt="Fan Paving Setts">
+            </div>
+            <div class="gallery-swatch-card">
+              <div class="swatch-img-box">
+                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=500&q=80" alt="Autumn Brown Setts">
+              </div>
+              <span class="swatch-name">Autumn Brown Fan Setts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 3 FEATURE CARDS -->
+    <section class="container">
+      <div class="feature-cards-grid">
+        <div class="info-card">
+          <span class="card-eyebrow">HEAVY VEHICULAR TRAFFIC</span>
+          <h3>Best-fit projects for Cobbles &amp; Sets</h3>
+          <ul class="info-list">
+            <li><span class="check-bullet">✓</span> Residential driveways &amp; car parking courts</li>
+            <li><span class="check-bullet">✓</span> Patio perimeter ribbon edging &amp; apron borders</li>
+            <li><span class="check-bullet">✓</span> Municipal historic town squares &amp; tramway lanes</li>
+            <li><span class="check-bullet">✓</span> Permeable SUDS-compliant drainage paving</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <span class="card-eyebrow">DURABILITY PROFILE</span>
+          <h3>Dimensions &amp; Formats</h3>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
+            High compressive strength (&gt; 120 MPa) prevents crushing under delivery vans and SUVs.
+          </p>
+          <div class="tags-container">
+            <span class="pill-tag">100x100mm</span>
+            <span class="pill-tag">100x200mm</span>
+            <span class="pill-tag">140x140mm</span>
+            <span class="pill-tag">Tumbled</span>
+            <span class="pill-tag">Hand-Cut</span>
+            <span class="pill-tag">50mm / 80mm</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <span class="card-eyebrow">BULK LOGISTICS</span>
+          <h3>Container Packaging</h3>
+          <ul class="info-list">
+            <li><span class="check-bullet">✓</span> Available in 1-ton bulk bags or timber crates</li>
+            <li><span class="check-bullet">✓</span> Up to 28 metric tons loaded per 20ft ocean container</li>
+            <li><span class="check-bullet">✓</span> Ideal for stocking builders merchant display yards</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKING & LOADING -->
+    <section class="container">
+      <div class="packing-section">
+        <div class="center">
+          <span style="font-size:11px; font-weight:700; letter-spacing:0.2em; color:var(--accent-ochre); text-transform:uppercase;">📦 BULK EXPORT PACKAGING</span>
+          <h3 style="font-size:22px; font-weight:800; margin:6px 0 10px;">High-Density Crate &amp; Big-Bag Systems</h3>
+          <p style="font-size:13px; color:var(--text-muted); max-width:640px; margin:0 auto;">
+            Our cobbles are machine-washed and packed in heavy-duty UV-stabilized ton bags or wooden crates with moisture barrier liners.
+          </p>
+        </div>
+
+        <div class="packing-grid">
+          <div class="packing-card">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Sorting">
+            <span>1. Sizing Calibration</span>
+          </div>
+          <div class="packing-card">
+            <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=600&q=80" alt="Bulk Bags">
+            <span>2. 1-Ton Jumbo Bags</span>
+          </div>
+          <div class="packing-card">
+            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80" alt="Wooden Crates">
+            <span>3. ISPM-15 Crating Option</span>
+          </div>
+          <div class="packing-card">
+            <img src="https://images.unsplash.com/photo-1524492417937-2516a506b9b3?auto=format&fit=crop&w=600&q=80" alt="Container Stuffing">
+            <span>4. Direct Container Dispatch</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ & BESPOKE -->
+    <section class="container">
+      <div class="faq-bespoke-grid">
+        <div>
+          <h3 class="faq-title">Questions buyers ask about Cobbles &amp; Sets</h3>
+
+          <div class="faq-item active">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+              <span>What thickness of cobble sett is required for driveways?</span>
+              <span class="faq-chevron">▾</span>
+            </div>
+            <div class="faq-answer">
+              For domestic passenger car driveways, a 40-50mm thick sett installed on a compacted sub-base is sufficient. For heavy SUVs, commercial delivery access, or civic roads, we recommend 60-80mm thickness for maximum interlock and shear resistance.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+              <span>How many 100x100mm setts are there in a square meter?</span>
+              <span class="faq-chevron">▾</span>
+            </div>
+            <div class="faq-answer">
+              Allowing for standard 8-10mm mortar or resin joint gaps, approximately 82 to 86 pieces of 100x100mm cobbles cover one square meter of laid area.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+              <span>Can cobbles be bundled with slabs in container orders?</span>
+              <span class="faq-chevron">▾</span>
+            </div>
+            <div class="faq-answer">
+              Yes, many clients add 2 to 4 crates of matching 100x100mm or 100x200mm cobbles to a container of paving slabs to serve as complementary driveway aprons and patio edging borders.
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="bespoke-box">
+            <h4>Build a bespoke cobbles package</h4>
+            <div class="bespoke-step">
+              <strong>1. Choose size &amp; finish</strong>
+              <p>Select 100x100mm or 100x200mm in hand-cut rustic split or tumbled antique finish.</p>
+            </div>
+            <div class="bespoke-step">
+              <strong>2. Determine packaging method</strong>
+              <p>Specify 1-ton jumbo bags with lifting loops or rigid wooden crates.</p>
+            </div>
+            <div class="bespoke-step" style="border:none; padding:0; margin:0;">
+              <strong>3. Container shipping</strong>
+              <p>Optimal container stuffing up to 28 tons for maximum value per square meter.</p>
+            </div>
+          </div>
+
+          <div class="inquiry-cta-dark">
+            <h4>Request a Cobbles Quote</h4>
+            <p>Tell us your target tonnage or square meters for a fast export pricing estimate.</p>
+            <div style="display:flex; gap:10px;">
+              <a href="#contact" class="btn-ochre" style="padding:9px 18px; font-size:12.5px;">Request Quote</a>
+              <a href="https://wa.me/919462976734?text=Hello%20Shri%20Sanwariya%20Stone,%20I%20need%20a%20quote%20for%20Cobbles." target="_blank" rel="noopener" class="btn-whatsapp" style="padding:9px 16px; font-size:12.5px;">WhatsApp Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="container">
+      <div class="bottom-cta-bar">
+        <h3>Interested in our Cobbles &amp; Sets?</h3>
+        <p>Contact us today for sample setts, packaging options, or a container pricing quotation.</p>
+        <div class="cta-btn-group">
+          <a href="#contact" class="btn-ochre">Request Quote</a>
+          <a href="../assets/catalogue.pdf" download class="btn-outline">Download Brochure 📥</a>
+          <a href="https://wa.me/919462976734" target="_blank" rel="noopener" class="btn-whatsapp">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Shri Sanwariya Stone Suppliers</h3>
+          <p>Premium Indian natural stone for architectural, landscape and export projects.</p>
+          <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-start;">
+            <a href="https://wa.me/919462976734" target="_blank" rel="noopener" class="btn-whatsapp" style="padding:8px 16px; font-size:12px;">WhatsApp Us</a>
+            <a href="../assets/catalogue.pdf" download class="btn-ochre" style="padding:8px 18px; font-size:12px;">Download Catalogue</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <ul class="footer-links">
+            <li><a href="natural-sandstone-colors.html" style="color:var(--accent-ochre); font-weight:700;">Natural Sandstone Colors ✨</a></li>
+            <li><a href="sandstone-pavers.html">Sandstone Pavers</a></li>
+            <li><a href="copings.html">Copings</a></li>
+            <li><a href="steps.html">Steps</a></li>
+            <li><a href="cobbles-and-sets.html">Cobbles &amp; Sets</a></li>
+            <li><a href="fire-pits-and-circles.html">Fire Pits &amp; Circles</a></li>
+            <li><a href="roofing.html">Roofing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="../index.html#about">RK Stone Impex</a></li>
+            <li><a href="../index.html#facilities">Facilities</a></li>
+            <li><a href="../index.html#story">Vision &amp; Story</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support &amp; Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:info@shrisanwariyastone.com">info@shrisanwariyastone.com</a></li>
+            <li><span>+91 9462976734</span></li>
+            <li><span>Mandsaur, Madhya Pradesh, India</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© Shri Sanwariya Stone Suppliers 2026 · All rights reserved.</span>
+        <span>Premium Indian Natural Stone Export</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

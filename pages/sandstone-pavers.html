@@ -1,0 +1,958 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandstone Pavers | Shri Sanwariya Stone Suppliers</title>
+  <meta name="description" content="Premium Indian Sandstone Pavers from Shri Sanwariya Stone Suppliers. Natural split, honed, shotblasted & calibrated patio packs in Kandla Grey, Raj Green, Autumn Brown & Mint.">
+  <meta name="keywords" content="Sandstone Pavers, Indian Sandstone Paving, Calibrated Patio Packs, Kandla Grey, Raj Green, Autumn Brown, Fossil Mint, Mandsaur Stone">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-cream: #FAF7F2;
+      --bg-cream-soft: #F4EFE7;
+      --bg-dark: #241F1C;
+      --accent-ochre: #BA6E2B;
+      --accent-ochre-dark: #A05C20;
+      --text-dark: #221C18;
+      --text-muted: #6E665E;
+      --text-light-muted: #C0B7AC;
+      --border-warm: #E6DFD5;
+      --radius-sm: 8px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 22px;
+      --radius-full: 9999px;
+      --shadow-sm: 0 4px 15px rgba(37, 32, 28, 0.05);
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; transition: var(--transition); }
+
+    .container { width: min(1180px, 92%); margin: 0 auto; }
+    .center { text-align: center; }
+
+    /* HEADER */
+    header {
+      position: sticky; top: 0; z-index: 900; background: rgba(250, 247, 242, 0.96);
+      backdrop-filter: blur(14px); border-bottom: 1px solid rgba(230, 223, 213, 0.85);
+    }
+    .nav-bar { height: 76px; display: flex; align-items: center; justify-content: space-between; }
+    .brand-logo { display: flex; flex-direction: column; }
+    .brand-title { font-size: 16px; font-weight: 800; letter-spacing: 0.05em; color: var(--text-dark); text-transform: uppercase; line-height: 1.1; }
+    .brand-sub { font-size: 8.5px; font-weight: 600; letter-spacing: 0.22em; color: #8C827A; margin-top: 4px; text-transform: uppercase; }
+    .nav-menu { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-link { font-size: 13.5px; font-weight: 500; color: var(--text-dark); padding: 8px 0; }
+    .nav-link:hover { color: var(--accent-ochre); }
+
+    .dropdown { position: relative; }
+    .dropdown-btn { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+    .dropdown-menu {
+      position: absolute; top: 100%; left: -15px; width: 230px; background: #FFFFFF;
+      border: 1px solid var(--border-warm); border-radius: var(--radius-md); padding: 10px;
+      box-shadow: 0 20px 45px rgba(37, 32, 28, 0.1); opacity: 0; visibility: hidden;
+      transform: translateY(12px); transition: var(--transition); list-style: none;
+    }
+    .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-item a { display: block; padding: 9px 12px; font-size: 13px; font-weight: 500; border-radius: var(--radius-sm); }
+    .dropdown-item a:hover { background: var(--bg-cream-soft); color: var(--accent-ochre); padding-left: 16px; }
+
+    .btn-quote { padding: 9px 20px; border: 1px solid var(--text-dark); border-radius: var(--radius-full); font-size: 12.5px; font-weight: 600; }
+    .btn-quote:hover { background: var(--text-dark); color: #fff; }
+    .menu-toggle { display: none; font-size: 24px; color: var(--text-dark); }
+
+    /* FLOATING SIDE TAB */
+    .floating-enquiry-tab {
+      position: fixed; right: 0; top: 48%; transform: translateY(-50%); z-index: 850;
+      background: var(--bg-dark); color: #fff; border: 1px solid rgba(255,255,255,0.15);
+      border-right: none; padding: 14px 9px; border-radius: 12px 0 0 12px;
+      display: flex; flex-direction: column; align-items: center; gap: 9px; cursor: pointer;
+    }
+    .floating-enquiry-tab:hover { background: var(--accent-ochre); }
+    .floating-enquiry-tab .tab-icon { width: 17px; height: 17px; fill: currentColor; }
+    .floating-enquiry-tab .tab-text { writing-mode: vertical-rl; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; transform: rotate(180deg); }
+
+    /* PAGE BANNER */
+    .page-banner {
+      position: relative; height: 230px; display: flex; align-items: center; justify-content: center;
+      background: #25201C; overflow: hidden;
+    }
+    .page-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.42); }
+    .page-banner-content { position: relative; z-index: 2; text-align: center; color: #FFFFFF; }
+    .page-banner-content h1 { font-size: clamp(34px, 4.2vw, 48px); font-weight: 800; letter-spacing: -0.02em; }
+
+    /* MAIN SPLIT GRID (EXACT SCREENSHOT LAYOUT) */
+    .product-main-grid {
+      display: grid;
+      grid-template-columns: 410px 1fr;
+      gap: 45px;
+      align-items: start;
+      padding: 50px 0 60px;
+    }
+
+    /* SPECIFICATION CARD */
+    .spec-sticky-wrap {
+      position: sticky;
+      top: 96px;
+    }
+    .spec-card {
+      background: #241F1C;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.14);
+      border: 1px solid rgba(186, 110, 43, 0.2);
+    }
+    .spec-header {
+      background: var(--accent-ochre);
+      color: #FFFFFF;
+      padding: 14px 20px;
+      font-size: 13.5px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-transform: uppercase;
+    }
+    .spec-header svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+    }
+    .spec-table-row {
+      display: grid;
+      grid-template-columns: 135px 1fr;
+      gap: 14px;
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      align-items: start;
+    }
+    .spec-col-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+    .spec-col-val {
+      font-size: 11.5px;
+      font-weight: 500;
+      color: var(--text-light-muted);
+      line-height: 1.65;
+      text-transform: uppercase;
+    }
+    .spec-note-bar {
+      background: var(--accent-ochre-dark);
+      color: #FFF0E2;
+      padding: 13px 20px;
+      font-size: 11.5px;
+      line-height: 1.5;
+    }
+    .spec-sample-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      background: #FFFFFF;
+      color: var(--accent-ochre);
+      padding: 14px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      margin-top: 14px;
+      border: 1px solid var(--border-warm);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    .spec-sample-btn:hover {
+      background: var(--accent-ochre);
+      color: #FFFFFF;
+      border-color: var(--accent-ochre);
+    }
+
+    /* RIGHT COLUMN: NARRATIVE + GALLERY */
+    .intro-header-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .accent-bar {
+      width: 4px;
+      height: 34px;
+      background: var(--accent-ochre);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .intro-title {
+      font-size: clamp(28px, 3vw, 36px);
+      font-weight: 800;
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+    }
+    .intro-paragraph {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--text-muted);
+      margin-bottom: 26px;
+    }
+
+    /* GALLERY SUBHEADER & PAIRED ROWS */
+    .gallery-sub-header {
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      padding-bottom: 9px;
+      border-bottom: 1px solid var(--border-warm);
+      margin-bottom: 20px;
+    }
+    .gallery-pairs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .gallery-pair {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+    .gallery-app-card {
+      height: 195px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      background: #2E2722;
+    }
+    .gallery-app-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .gallery-app-card:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-swatch-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-warm);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .swatch-img-box {
+      width: 100%;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #FAF8F5;
+    }
+    .swatch-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .gallery-swatch-card:hover .swatch-img-box img {
+      transform: scale(1.06);
+    }
+    .swatch-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-top: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    /* 3 FEATURE CARDS */
+    .feature-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin: 40px 0 60px;
+    }
+    .info-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      border: 1px solid rgba(222, 215, 205, 0.75);
+      box-shadow: var(--shadow-sm);
+    }
+    .info-card .card-eyebrow {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--accent-ochre);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .info-card h3 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+    }
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .info-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .check-bullet {
+      color: var(--accent-ochre);
+      font-weight: 800;
+    }
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .pill-tag {
+      background: var(--bg-cream-soft);
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-full);
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    /* EXPORT QUALITY PACKING & LOADING */
+    .packing-section {
+      background: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 42px 32px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-warm);
+      margin-bottom: 60px;
+    }
+    .packing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .packing-card {
+      height: 185px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .packing-card span {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    /* FAQ & BESPOKE SECTION */
+    .faq-bespoke-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 38px;
+      margin-bottom: 70px;
+    }
+    .faq-title {
+      font-size: 21px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: var(--text-dark);
+    }
+    .faq-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-md);
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 15px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-question:hover { color: var(--accent-ochre); }
+    .faq-chevron { transition: transform 0.3s ease; }
+    .faq-item.active .faq-chevron { transform: rotate(180deg); color: var(--accent-ochre); }
+    .faq-answer {
+      display: none;
+      padding: 0 18px 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    .faq-item.active .faq-answer { display: block; }
+
+    .bespoke-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-lg);
+      padding: 26px 22px;
+      margin-bottom: 18px;
+    }
+    .bespoke-box h4 {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+    .bespoke-step {
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--bg-cream-soft);
+    }
+    .bespoke-step strong { display: block; font-size: 13px; color: var(--accent-ochre); margin-bottom: 2px; }
+    .bespoke-step p { font-size: 12px; color: var(--text-muted); margin: 0; }
+
+    .inquiry-cta-dark {
+      background: var(--bg-dark);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 24px 22px;
+    }
+    .inquiry-cta-dark h4 { font-size: 16px; margin-bottom: 8px; }
+    .inquiry-cta-dark p { font-size: 12px; color: var(--text-light-muted); margin-bottom: 15px; }
+
+    /* BOTTOM CTA BAR */
+    .bottom-cta-bar {
+      background: var(--bg-cream-soft);
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-xl);
+      padding: 45px 30px;
+      text-align: center;
+      margin-bottom: 70px;
+    }
+    .bottom-cta-bar h3 {
+      font-size: clamp(22px, 2.4vw, 32px);
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .bottom-cta-bar p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+    }
+    .cta-btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-ochre {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 24px;
+      background: var(--accent-ochre);
+      color: #fff;
+      border-radius: var(--radius-full);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .btn-ochre:hover { background: var(--accent-ochre-dark); transform: translateY(-2px); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 24px;
+      border: 1px solid var(--text-dark);
+      border-radius: var(--radius-full);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .btn-outline:hover { background: var(--text-dark); color: #fff; }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      padding: 11px 22px;
+      border-radius: var(--radius-full);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .btn-whatsapp:hover { background: #1EBE5B; transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg-cream);
+      border-top: 1px solid var(--border-warm);
+      padding: 70px 0 35px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr 1.15fr; gap: 40px; }
+    .footer-brand h3 { font-size: 18px; font-weight: 800; margin-bottom: 12px; text-transform: uppercase; }
+    .footer-brand p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+    .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--text-muted); }
+    .footer-links a:hover { color: var(--accent-ochre); }
+    .footer-bottom { margin-top: 50px; padding-top: 25px; border-top: 1px solid var(--border-warm); display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .product-main-grid { grid-template-columns: 1fr; }
+      .spec-sticky-wrap { position: static; }
+      .feature-cards-grid { grid-template-columns: 1fr; }
+      .packing-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-bespoke-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-menu { display: none; }
+      .menu-toggle { display: block; }
+    }
+    @media (max-width: 600px) {
+      .gallery-pair { grid-template-columns: 1fr; }
+      .packing-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .floating-enquiry-tab { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-bar">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-title">Shri Sanwariya</span>
+        <span class="brand-sub">Stone Suppliers</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../index.html#about" class="nav-link">About Us</a></li>
+          <li class="dropdown">
+            <span class="nav-link dropdown-btn">Collections <span style="font-size:11px;">▾</span></span>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="natural-sandstone-colors.html" style="font-weight:700; color:var(--accent-ochre);">Natural Sandstone Colors ✨</a></li>
+              <li class="dropdown-item"><a href="sandstone-pavers.html">Sandstone Pavers</a></li>
+              <li class="dropdown-item"><a href="copings.html">Copings</a></li>
+              <li class="dropdown-item"><a href="steps.html">Steps</a></li>
+              <li class="dropdown-item"><a href="cobbles-and-sets.html">Cobbles &amp; Sets</a></li>
+              <li class="dropdown-item"><a href="fire-pits-and-circles.html">Fire Pits &amp; Circles</a></li>
+              <li class="dropdown-item"><a href="roofing.html">Roofing</a></li>
+            </ul>
+          </li>
+          <li><a href="../index.html#facilities" class="nav-link">Facilities</a></li>
+          <li><a href="../index.html#story" class="nav-link">Blog</a></li>
+          <li><a href="#contact" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex; align-items:center; gap:16px;">
+        <a href="#contact" class="btn-quote">Enquire Now</a>
+        <button class="menu-toggle" onclick="alert('Menu: Use navigation links to browse.')">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- FLOATING SIDE TAB -->
+  <aside class="floating-enquiry-tab" onclick="window.location.href='#contact'">
+    <svg class="tab-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    <span class="tab-text">Send Enquiry</span>
+  </aside>
+
+  <!-- BANNER -->
+  <div class="page-banner">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=2000&q=85" alt="Sandstone Pavers Banner">
+    <div class="page-banner-content">
+      <h1>Sandstone Pavers</h1>
+    </div>
+  </div>
+
+  <main>
+    <section class="container product-main-grid">
+      
+      <!-- LEFT COLUMN: GENERAL SPECIFICATION CARD -->
+      <div class="spec-sticky-wrap">
+        <div class="spec-card">
+          <div class="spec-header">
+            <svg viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg>
+            <span>GENERAL SPECIFICATION</span>
+          </div>
+
+          <div class="spec-table-row">
+            <div class="spec-col-label">SURFACE:</div>
+            <div class="spec-col-val">NATURAL, THERMAL, SANDBLAST, SHOTBLAST, HONED, LEATHER, MIRROR, RIVER</div>
+          </div>
+
+          <div class="spec-table-row">
+            <div class="spec-col-label">THICKNESS (SANDSTONE PAVERS):</div>
+            <div class="spec-col-val">15-25 MM, 25-35 MM. CALIBRATED: 20, 22, 25, 30, 40, 50 MM</div>
+          </div>
+
+          <div class="spec-table-row">
+            <div class="spec-col-label">SIZES:</div>
+            <div class="spec-col-val">
+              <div>600X900 MM</div>
+              <div>600X600 MM</div>
+              <div>600X450 MM</div>
+              <div>600X300 MM</div>
+              <div>300X300 MM</div>
+              <div>200X200 MM</div>
+              <div style="color:var(--accent-ochre); margin-top:5px; font-weight:700;">CUSTOM SIZES AVAILABLE</div>
+            </div>
+          </div>
+
+          <div class="spec-note-bar">
+            For custom project specifications, bespoke cutting sizes, or container packaging schedules, please connect with our stone export team directly.
+          </div>
+        </div>
+
+        <button class="spec-sample-btn" onclick="window.location.href='#contact'">
+          <span>📦 REQUEST A SAMPLE</span>
+          <span>▾</span>
+        </button>
+      </div>
+
+      <!-- RIGHT COLUMN: NARRATIVE + GALLERY -->
+      <div>
+        <div class="intro-header-bar">
+          <div class="accent-bar"></div>
+          <h2 class="intro-title">Sandstone Pavers</h2>
+        </div>
+
+        <p class="intro-paragraph">
+          As a leading sandstone pavers supplier, we offer premium wholesale sandstone pavers. Sandstone pavers, one of India's most iconic natural stones, has been cherished for generations for its decorative and functional versatility. From tumbled sandstone pavers to honed sandstone pavers, this sedimentary rock is celebrated for its natural beauty and enduring durability.
+        </p>
+
+        <!-- GALLERY SUBHEADER -->
+        <div class="gallery-sub-header">
+          <span>GALLERY</span>
+        </div>
+
+        <!-- 2-COLUMN PAIRED GALLERY -->
+        <div class="gallery-pairs-list">
+          <!-- Row 1: Kandla Grey -->
+          <div class="gallery-pair">
+            <div class="gallery-app-card">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80" alt="Poolside Sandstone Paving">
+            </div>
+            <div class="gallery-swatch-card">
+              <div class="swatch-img-box">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="Kandla Grey Paver Slab">
+              </div>
+              <span class="swatch-name">Kandla Grey Sandstone</span>
+            </div>
+          </div>
+
+          <!-- Row 2: Autumn Brown -->
+          <div class="gallery-pair">
+            <div class="gallery-app-card">
+              <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80" alt="Autumn Brown Patio Walkway">
+            </div>
+            <div class="gallery-swatch-card">
+              <div class="swatch-img-box">
+                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=500&q=80" alt="Autumn Brown Paver Slab">
+              </div>
+              <span class="swatch-name">Autumn Brown Sandstone</span>
+            </div>
+          </div>
+
+          <!-- Row 3: Raj Green -->
+          <div class="gallery-pair">
+            <div class="gallery-app-card">
+              <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=700&q=80" alt="Winding Natural Stone Walkway">
+            </div>
+            <div class="gallery-swatch-card">
+              <div class="swatch-img-box">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=500&q=80" alt="Raj Green Paver Slab">
+              </div>
+              <span class="swatch-name">Raj Green Sandstone</span>
+            </div>
+          </div>
+
+          <!-- Row 4: Fossil Mint -->
+          <div class="gallery-pair">
+            <div class="gallery-app-card">
+              <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=700&q=80" alt="Fossil Mint Courtyard">
+            </div>
+            <div class="gallery-swatch-card">
+              <div class="swatch-img-box">
+                <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=500&q=80" alt="Fossil Mint Paver Slab">
+              </div>
+              <span class="swatch-name">Fossil Mint Sandstone</span>
+            </div>
+          </div>
+
+          <!-- Row 5: Sagar Black -->
+          <div class="gallery-pair">
+            <div class="gallery-app-card">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80" alt="Sagar Black Terrace Paving">
+            </div>
+            <div class="gallery-swatch-card">
+              <div class="swatch-img-box">
+                <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=500&q=80" alt="Sagar Black Paver Slab">
+              </div>
+              <span class="swatch-name">Sagar Black Sandstone</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 3 FEATURE CARDS (FULL WIDTH CONTAINER) -->
+    <section class="container">
+      <div class="feature-cards-grid">
+        <div class="info-card">
+          <span class="card-eyebrow">APPLICATION DOMAINS</span>
+          <h3>Best-fit projects for Sandstone Pavers</h3>
+          <ul class="info-list">
+            <li><span class="check-bullet">✓</span> Outdoor garden patios &amp; pedestrian pathways</li>
+            <li><span class="check-bullet">✓</span> Commercial plazas, courtyards &amp; hotel landscaping</li>
+            <li><span class="check-bullet">✓</span> Swimming pool surrounds with slip-resistant finish</li>
+            <li><span class="check-bullet">✓</span> Indoor-outdoor transition spaces for modern architecture</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <span class="card-eyebrow">TECHNICAL DIMENSIONS</span>
+          <h3>Finish and size overview</h3>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
+            Calibrated stone is sawn on the underside to guarantee a uniform gauge, ensuring rapid installation on mortar beds.
+          </p>
+          <div class="tags-container">
+            <span class="pill-tag">Natural Cleft</span>
+            <span class="pill-tag">Honed</span>
+            <span class="pill-tag">Sawn</span>
+            <span class="pill-tag">Shotblasted</span>
+            <span class="pill-tag">Tumbled</span>
+            <span class="pill-tag">600x900 mm</span>
+            <span class="pill-tag">600x600 mm</span>
+            <span class="pill-tag">Patio Packs</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <span class="card-eyebrow">GLOBAL DISTRIBUTION</span>
+          <h3>Markets we commonly support</h3>
+          <ul class="info-list">
+            <li><span class="check-bullet">✓</span> UK garden center &amp; builders merchant networks</li>
+            <li><span class="check-bullet">✓</span> North American architectural landscape stone suppliers</li>
+            <li><span class="check-bullet">✓</span> Middle East &amp; European municipal infrastructure projects</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPORT QUALITY PACKING & LOADING -->
+    <section class="container">
+      <div class="packing-section">
+        <div class="center">
+          <span style="font-size:11px; font-weight:700; letter-spacing:0.2em; color:var(--accent-ochre); text-transform:uppercase;">📦 EXPORT QUALITY PACKING &amp; LOADING</span>
+          <h3 style="font-size:22px; font-weight:800; margin:6px 0 10px;">Ensuring Zero Transit Damage Globally</h3>
+          <p style="font-size:13px; color:var(--text-muted); max-width:640px; margin:0 auto;">
+            All stone is thoroughly checked for calibration, bundled with corner protection, and packed in fumigated ISPM-15 compliant sea-worthy wooden crates.
+          </p>
+        </div>
+
+        <div class="packing-grid">
+          <div class="packing-card">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Inspection">
+            <span>1. Calibration Inspection</span>
+          </div>
+          <div class="packing-card">
+            <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=600&q=80" alt="Crate Packing">
+            <span>2. Foam Cushioned Packing</span>
+          </div>
+          <div class="packing-card">
+            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80" alt="Fumigated Crates">
+            <span>3. ISPM-15 Wooden Crates</span>
+          </div>
+          <div class="packing-card">
+            <img src="https://images.unsplash.com/photo-1524492417937-2516a506b9b3?auto=format&fit=crop&w=600&q=80" alt="Container Stuffing">
+            <span>4. Sea Container Loading</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ & BESPOKE PACKAGE -->
+    <section class="container">
+      <div class="faq-bespoke-grid">
+        <div>
+          <h3 class="faq-title">Questions buyers ask about Sandstone Pavers</h3>
+
+          <div class="faq-item active">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+              <span>Can you supply mixed-size patio project packs?</span>
+              <span class="faq-chevron">▾</span>
+            </div>
+            <div class="faq-answer">
+              Yes! We specialize in standard 4-size mixed patio packs (e.g., 900x600, 600x600, 600x290, 290x290 mm) calibrated at uniform 22mm, packaged for quick direct laying on site without pre-sorting.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+              <span>What is the difference between calibrated and hand-cut sandstone paving?</span>
+              <span class="faq-chevron">▾</span>
+            </div>
+            <div class="faq-answer">
+              Calibrated paving slabs are run through mechanical calibrator saws on the bottom to achieve an exact, uniform thickness (typically 22mm). This significantly speeds up installation. Hand-cut paving retains traditional natural cleft variations on both faces.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+              <span>How does Indian sandstone perform in freezing winters?</span>
+              <span class="faq-chevron">▾</span>
+            </div>
+            <div class="faq-answer">
+              Our hard quartzitic sandstones exhibit ultra-low water absorption (&lt; 1.5%) and high flexural density, making them fully resistant to frost weathering and freeze-thaw cycles across UK and European climates.
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="bespoke-box">
+            <h4>Build a bespoke stone package</h4>
+            <div class="bespoke-step">
+              <strong>1. Confirm stone color &amp; dimensions</strong>
+              <p>Select your required sandstone shade, surface finish, and calibrated thickness.</p>
+            </div>
+            <div class="bespoke-step">
+              <strong>2. Add matching copings &amp; steps</strong>
+              <p>Bundle matching single/double bullnose pool copings or steps into the same container.</p>
+            </div>
+            <div class="bespoke-step" style="border:none; padding:0; margin:0;">
+              <strong>3. Container consolidation</strong>
+              <p>We pack mixed-product crates to optimize container volume and lower landed freight costs.</p>
+            </div>
+          </div>
+
+          <div class="inquiry-cta-dark">
+            <h4>Plan your inquiry with real project details</h4>
+            <p>Tell us your approximate square meters/feet and target port for a fast CIF or FOB pricing quote.</p>
+            <div style="display:flex; gap:10px;">
+              <a href="#contact" class="btn-ochre" style="padding:9px 18px; font-size:12.5px;">Request Quote</a>
+              <a href="https://wa.me/919462976734?text=Hello%20Shri%20Sanwariya%20Stone,%20I%20need%20a%20quote%20for%20Sandstone%20Pavers." target="_blank" rel="noopener" class="btn-whatsapp" style="padding:9px 16px; font-size:12.5px;">WhatsApp Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="container">
+      <div class="bottom-cta-bar">
+        <h3>Interested in our Sandstone Pavers?</h3>
+        <p>Contact us today for full physical sample dispatch, technical data sheets, or an immediate container pricing quotation.</p>
+        <div class="cta-btn-group">
+          <a href="#contact" class="btn-ochre">Request Quote</a>
+          <a href="../assets/catalogue.pdf" download class="btn-outline">Download Brochure 📥</a>
+          <a href="https://wa.me/919462976734" target="_blank" rel="noopener" class="btn-whatsapp">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Shri Sanwariya Stone Suppliers</h3>
+          <p>Premium Indian natural stone for architectural, landscape and export projects.</p>
+          <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-start;">
+            <a href="https://wa.me/919462976734" target="_blank" rel="noopener" class="btn-whatsapp" style="padding:8px 16px; font-size:12px;">WhatsApp Us</a>
+            <a href="../assets/catalogue.pdf" download class="btn-ochre" style="padding:8px 18px; font-size:12px;">Download Catalogue</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <ul class="footer-links">
+            <li><a href="natural-sandstone-colors.html" style="color:var(--accent-ochre); font-weight:700;">Natural Sandstone Colors ✨</a></li>
+            <li><a href="sandstone-pavers.html">Sandstone Pavers</a></li>
+            <li><a href="copings.html">Copings</a></li>
+            <li><a href="steps.html">Steps</a></li>
+            <li><a href="cobbles-and-sets.html">Cobbles &amp; Sets</a></li>
+            <li><a href="fire-pits-and-circles.html">Fire Pits &amp; Circles</a></li>
+            <li><a href="roofing.html">Roofing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="../index.html#about">RK Stone Impex</a></li>
+            <li><a href="../index.html#facilities">Facilities</a></li>
+            <li><a href="../index.html#story">Vision &amp; Story</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support &amp; Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:info@shrisanwariyastone.com">info@shrisanwariyastone.com</a></li>
+            <li><span>+91 9462976734</span></li>
+            <li><span>Mandsaur, Madhya Pradesh, India</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© Shri Sanwariya Stone Suppliers 2026 · All rights reserved.</span>
+        <span>Premium Indian Natural Stone Export</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
