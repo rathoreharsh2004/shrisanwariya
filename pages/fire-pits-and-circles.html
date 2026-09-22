@@ -1,39 +1,50 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fire Pits & Circles | Shri Sanwariya Stone Suppliers</title>
-  <meta name="description" content="Natural Sandstone Radial Circle Kits & Fire Pit Ensembles from Shri Sanwariya Stone Suppliers. 2m, 3m & 4m circular patio kits with center stars in Kandla Grey, Raj Green & Autumn Brown.">
-  <meta name="keywords" content="Stone Fire Pits, Sandstone Circle Kits, Radial Patio Circles, Outdoor Fireplace Stone, Garden Stone Circles, Indian Sandstone Circles, Mandsaur Stone">
+  <title>Sandstone Fire Pits &amp; Circles | Shri Sanwariya Stone Suppliers</title>
+  <meta name="description" content="Natural Sandstone Fire Pits, Radial Patio Circles, and Matching Curved Garden Benches from Shri Sanwariya Stone Suppliers. Complete kits in Kandla Grey, Teakwood, Lavender and Raj Green.">
+  <meta name="keywords" content="Sandstone Fire Pits, Stone Fire Pit Kits, Radial Paving Circles, Indian Sandstone Circles, Curved Garden Bench, Outdoor Fireplace Stone, Mandsaur Stone">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg-cream: #FAF7F2;
       --bg-cream-soft: #F4EFE7;
-      --bg-dark: #241F1C;
-      --accent-ochre: #BA6E2B;
-      --accent-ochre-dark: #A05C20;
+      --bg-dark: #221C18;
+      --bg-dark-card: #2B231F;
+      --accent-ochre: #B86539;
+      --accent-ochre-dark: #9E5229;
+      --accent-amber: #BA6E2B;
       --text-dark: #221C18;
       --text-muted: #6E665E;
-      --text-light-muted: #C0B7AC;
+      --text-light-muted: #C8BFB5;
       --border-warm: #E6DFD5;
+      --border-dark: rgba(255, 255, 255, 0.08);
       --radius-sm: 8px;
       --radius-md: 10px;
-      --radius-lg: 16px;
-      --radius-xl: 22px;
+      --radius-lg: 14px;
+      --radius-xl: 20px;
       --radius-full: 9999px;
       --shadow-sm: 0 4px 15px rgba(37, 32, 28, 0.05);
+      --shadow-card: 0 10px 30px rgba(37, 32, 28, 0.08);
       --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-cream); color: var(--text-dark); line-height: 1.65; overflow-x: hidden; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
     a { text-decoration: none; color: inherit; transition: var(--transition); }
     img { display: block; width: 100%; height: 100%; object-fit: cover; }
     button { font-family: inherit; cursor: pointer; border: none; background: none; transition: var(--transition); }
@@ -41,6 +52,7 @@
     .container { width: min(1180px, 92%); margin: 0 auto; }
     .center { text-align: center; }
 
+    /* HEADER */
     header {
       position: sticky; top: 0; z-index: 900; background: rgba(250, 247, 242, 0.96);
       backdrop-filter: blur(14px); border-bottom: 1px solid rgba(230, 223, 213, 0.85);
@@ -56,7 +68,7 @@
     .dropdown { position: relative; }
     .dropdown-btn { display: flex; align-items: center; gap: 5px; cursor: pointer; }
     .dropdown-menu {
-      position: absolute; top: 100%; left: -15px; width: 230px; background: #FFFFFF;
+      position: absolute; top: 100%; left: -15px; width: 240px; background: #FFFFFF;
       border: 1px solid var(--border-warm); border-radius: var(--radius-md); padding: 10px;
       box-shadow: 0 20px 45px rgba(37, 32, 28, 0.1); opacity: 0; visibility: hidden;
       transform: translateY(12px); transition: var(--transition); list-style: none;
@@ -69,523 +81,1443 @@
     .btn-quote:hover { background: var(--text-dark); color: #fff; }
     .menu-toggle { display: none; font-size: 24px; color: var(--text-dark); }
 
-    .floating-enquiry-tab {
-      position: fixed; right: 0; top: 48%; transform: translateY(-50%); z-index: 850;
-      background: var(--bg-dark); color: #fff; border: 1px solid rgba(255,255,255,0.15);
-      border-right: none; padding: 14px 9px; border-radius: 12px 0 0 12px;
-      display: flex; flex-direction: column; align-items: center; gap: 9px; cursor: pointer;
+    /* FLOATING SIDE ACTIONS */
+    .floating-side-actions {
+      position: fixed;
+      right: 20px;
+      top: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 850;
     }
-    .floating-enquiry-tab:hover { background: var(--accent-ochre); }
-    .floating-enquiry-tab .tab-icon { width: 17px; height: 17px; fill: currentColor; }
-    .floating-enquiry-tab .tab-text { writing-mode: vertical-rl; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; transform: rotate(180deg); }
+    .action-circle-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+      transition: var(--transition);
+      color: #fff;
+    }
+    .action-circle-btn:hover {
+      transform: translateY(-3px) scale(1.06);
+    }
+    .action-circle-btn.btn-brochure {
+      background: #8A4F20;
+    }
+    .action-circle-btn.btn-wa {
+      background: #25D366;
+    }
 
+    /* PAGE BANNER */
     .page-banner {
       position: relative; height: 230px; display: flex; align-items: center; justify-content: center;
       background: #25201C; overflow: hidden;
     }
-    .page-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.42); }
+    .page-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.38); }
     .page-banner-content { position: relative; z-index: 2; text-align: center; color: #FFFFFF; }
     .page-banner-content h1 { font-size: clamp(34px, 4.2vw, 48px); font-weight: 800; letter-spacing: -0.02em; }
 
+    /* MAIN SPLIT GRID */
     .product-main-grid {
       display: grid;
-      grid-template-columns: 410px 1fr;
-      gap: 45px;
+      grid-template-columns: 390px 1fr;
+      gap: 40px;
       align-items: start;
-      padding: 50px 0 60px;
+      padding: 45px 0 60px;
     }
 
-    .spec-sticky-wrap { position: sticky; top: 96px; }
+    /* SPECIFICATION CARD (STICKY) */
+    .spec-sticky-wrap {
+      position: sticky;
+      top: 96px;
+    }
     .spec-card {
-      background: #241F1C; border-radius: 12px; overflow: hidden;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.14); border: 1px solid rgba(186, 110, 43, 0.2);
+      background: var(--bg-dark);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+      border: 1px solid rgba(186, 110, 43, 0.25);
     }
     .spec-header {
-      background: var(--accent-ochre); color: #FFFFFF; padding: 14px 20px; font-size: 13.5px;
-      font-weight: 800; letter-spacing: 0.12em; display: flex; align-items: center; gap: 10px; text-transform: uppercase;
+      background: var(--accent-amber);
+      color: #FFFFFF;
+      padding: 13px 20px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-transform: uppercase;
     }
-    .spec-header svg { width: 17px; height: 17px; fill: currentColor; }
-    .spec-table-row {
-      display: grid; grid-template-columns: 135px 1fr; gap: 14px; padding: 16px 20px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08); align-items: start;
+    .spec-header svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
     }
-    .spec-col-label { font-size: 11px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.4; }
-    .spec-col-val { font-size: 11.5px; font-weight: 500; color: var(--text-light-muted); line-height: 1.65; text-transform: uppercase; }
-    .spec-note-bar { background: var(--accent-ochre-dark); color: #FFF0E2; padding: 13px 20px; font-size: 11.5px; line-height: 1.5; }
-    .spec-sample-btn {
-      display: flex; align-items: center; justify-content: space-between; width: 100%;
-      background: #FFFFFF; color: var(--accent-ochre); padding: 14px 20px; border-radius: var(--radius-sm);
-      font-size: 12.5px; font-weight: 800; letter-spacing: 0.08em; margin-top: 14px; border: 1px solid var(--border-warm);
-      box-shadow: var(--shadow-sm); cursor: pointer; text-transform: uppercase;
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #FFFFFF;
+      font-size: 12.5px;
     }
-    .spec-sample-btn:hover { background: var(--accent-ochre); color: #FFFFFF; border-color: var(--accent-ochre); }
-
-    .intro-header-bar { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
-    .accent-bar { width: 4px; height: 34px; background: var(--accent-ochre); border-radius: 2px; flex-shrink: 0; }
-    .intro-title { font-size: clamp(28px, 3vw, 36px); font-weight: 800; color: var(--text-dark); letter-spacing: -0.02em; }
-    .intro-paragraph { font-size: 14px; line-height: 1.75; color: var(--text-muted); margin-bottom: 26px; }
-
-    .gallery-sub-header {
-      font-size: 12.5px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
-      color: var(--text-dark); padding-bottom: 9px; border-bottom: 1px solid var(--border-warm); margin-bottom: 20px;
+    .spec-table tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .gallery-pairs-list { display: flex; flex-direction: column; gap: 20px; }
-    .gallery-pair { display: grid; grid-template-columns: 1.15fr 1fr; gap: 16px; align-items: stretch; }
-    .gallery-app-card { height: 195px; border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); background: #2E2722; }
-    .gallery-app-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-    .gallery-app-card:hover img { transform: scale(1.05); }
-    .gallery-swatch-card {
-      background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--border-warm);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.04); padding: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+    .spec-table tr:last-child {
+      border-bottom: none;
     }
-    .swatch-img-box { width: 100%; height: 140px; display: flex; align-items: center; justify-content: center; border-radius: 6px; overflow: hidden; background: #FAF8F5; }
-    .swatch-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-    .gallery-swatch-card:hover .swatch-img-box img { transform: scale(1.06); }
-    .swatch-name { font-size: 12px; font-weight: 700; color: var(--text-dark); margin-top: 8px; letter-spacing: 0.02em; }
+    .spec-label {
+      width: 40%;
+      padding: 12px 18px;
+      font-weight: 700;
+      color: #C8BFB5;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      vertical-align: top;
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .spec-val {
+      padding: 12px 18px;
+      color: #FFFFFF;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .spec-val ul {
+      margin: 0;
+      padding-left: 16px;
+      list-style-type: disc;
+    }
+    .spec-val li {
+      margin-bottom: 3px;
+    }
+    .spec-val li:last-child {
+      margin-bottom: 0;
+    }
+    .spec-note {
+      background: rgba(186, 110, 43, 0.12);
+      border-top: 1px solid rgba(186, 110, 43, 0.3);
+      padding: 13px 18px;
+      font-size: 11.5px;
+      color: #E2DDD5;
+      line-height: 1.55;
+      font-style: italic;
+    }
 
-    .feature-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 40px 0 60px; }
-    .info-card { background: #FFFFFF; border-radius: var(--radius-lg); padding: 32px 24px; border: 1px solid rgba(222, 215, 205, 0.75); box-shadow: var(--shadow-sm); }
-    .info-card .card-eyebrow { font-size: 10.5px; font-weight: 700; letter-spacing: 0.18em; color: var(--accent-ochre); text-transform: uppercase; margin-bottom: 10px; display: block; }
-    .info-card h3 { font-size: 17px; font-weight: 800; color: var(--text-dark); margin-bottom: 14px; }
-    .info-list { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--text-muted); }
-    .info-list li { display: flex; align-items: flex-start; gap: 8px; }
-    .check-bullet { color: var(--accent-ochre); font-weight: 800; }
-    .tags-container { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-    .pill-tag { background: var(--bg-cream-soft); border: 1px solid var(--border-warm); border-radius: var(--radius-full); padding: 4px 10px; font-size: 11px; font-weight: 600; color: var(--text-dark); }
+    /* SPEC ACCORDIONS */
+    .spec-accordion-box {
+      margin-top: 15px;
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-warm);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .spec-acc-header {
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-dark);
+      background: #FFFFFF;
+      transition: var(--transition);
+      user-select: none;
+    }
+    .spec-acc-header:hover {
+      background: var(--bg-cream-soft);
+      color: var(--accent-ochre);
+    }
+    .spec-acc-header span.acc-icon {
+      font-size: 14px;
+      transition: transform 0.3s ease;
+      color: var(--accent-ochre);
+    }
+    .spec-acc-content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.35s ease;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      background: #FAFAF8;
+    }
+    .spec-accordion-box.open .spec-acc-content {
+      padding: 14px 18px 18px;
+      max-height: 400px;
+      border-top: 1px solid var(--border-warm);
+    }
+    .spec-accordion-box.open .acc-icon {
+      transform: rotate(180deg);
+    }
 
-    .packing-section { background: #FFFFFF; border-radius: var(--radius-xl); padding: 42px 32px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-warm); margin-bottom: 60px; }
-    .packing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
-    .packing-card { height: 185px; border-radius: var(--radius-md); overflow: hidden; position: relative; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-    .packing-card span { position: absolute; bottom: 10px; left: 10px; right: 10px; background: rgba(0, 0, 0, 0.7); color: #fff; font-size: 11px; font-weight: 600; padding: 4px 8px; border-radius: 4px; text-align: center; }
+    /* SPEC BADGES PILLS */
+    .spec-pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 16px;
+    }
+    .spec-pill {
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      color: var(--text-dark);
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      font-size: 11.5px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .spec-pill svg {
+      width: 12px;
+      height: 12px;
+      fill: var(--accent-amber);
+    }
 
-    .faq-bespoke-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 38px; margin-bottom: 70px; }
-    .faq-title { font-size: 21px; font-weight: 800; margin-bottom: 20px; color: var(--text-dark); }
-    .faq-item { background: #FFFFFF; border: 1px solid var(--border-warm); border-radius: var(--radius-md); margin-bottom: 10px; overflow: hidden; }
-    .faq-question { padding: 15px 18px; font-size: 14px; font-weight: 700; color: var(--text-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .faq-question:hover { color: var(--accent-ochre); }
-    .faq-chevron { transition: transform 0.3s ease; }
-    .faq-item.active .faq-chevron { transform: rotate(180deg); color: var(--accent-ochre); }
-    .faq-answer { display: none; padding: 0 18px 16px; font-size: 13px; color: var(--text-muted); line-height: 1.65; }
-    .faq-item.active .faq-answer { display: block; }
+    /* RIGHT CONTENT */
+    .product-details-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    .section-accent-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .accent-bar {
+      width: 4px;
+      height: 28px;
+      background: var(--accent-ochre);
+      border-radius: 2px;
+    }
+    .section-accent-header h2 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text-dark);
+      letter-spacing: -0.01em;
+    }
+    .product-intro-lead {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .gallery-subhead {
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #8C827A;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .gallery-subhead::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border-warm);
+    }
 
-    .bespoke-box { background: #FFFFFF; border: 1px solid var(--border-warm); border-radius: var(--radius-lg); padding: 26px 22px; margin-bottom: 18px; }
-    .bespoke-box h4 { font-size: 16px; font-weight: 800; margin-bottom: 14px; }
-    .bespoke-step { margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--bg-cream-soft); }
-    .bespoke-step strong { display: block; font-size: 13px; color: var(--accent-ochre); margin-bottom: 2px; }
-    .bespoke-step p { font-size: 12px; color: var(--text-muted); margin: 0; }
+    /* GALLERY GRID */
+    .steps-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .step-prod-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .step-prod-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+      border-color: rgba(186, 110, 43, 0.4);
+    }
+    .step-img-wrap {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      background: #EDE7DE;
+      cursor: pointer;
+    }
+    .step-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .step-prod-card:hover .step-img-wrap img {
+      transform: scale(1.05);
+    }
+    .step-prod-body {
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      background: #FFFFFF;
+    }
+    .btn-card-quote {
+      width: 100%;
+      background: var(--text-dark);
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 0;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      letter-spacing: 0.04em;
+      transition: var(--transition);
+      display: block;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-card-quote:hover {
+      background: var(--accent-ochre);
+      color: #FFFFFF;
+    }
 
-    .inquiry-cta-dark { background: var(--bg-dark); color: #fff; border-radius: var(--radius-lg); padding: 24px 22px; }
-    .inquiry-cta-dark h4 { font-size: 16px; margin-bottom: 8px; }
-    .inquiry-cta-dark p { font-size: 12px; color: var(--text-light-muted); margin-bottom: 15px; }
+    /* 3 FEATURE / INFO CARDS */
+    .info-cards-section {
+      padding: 10px 0 60px;
+    }
+    .info-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .info-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-lg);
+      padding: 26px 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+    .info-card-badge {
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-ochre);
+      margin-bottom: 8px;
+    }
+    .info-card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+    .info-card-list {
+      list-style: none;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+    .info-card-list li {
+      margin-bottom: 6px;
+      position: relative;
+      padding-left: 18px;
+    }
+    .info-card-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent-amber);
+      font-weight: 800;
+    }
+    .info-card-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .info-pill-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+    }
+    .info-pill {
+      background: var(--bg-cream-soft);
+      border: 1px solid var(--border-warm);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
 
-    .bottom-cta-bar { background: var(--bg-cream-soft); border: 1px solid var(--border-warm); border-radius: var(--radius-xl); padding: 45px 30px; text-align: center; margin-bottom: 70px; }
-    .bottom-cta-bar h3 { font-size: clamp(22px, 2.4vw, 32px); font-weight: 800; color: var(--text-dark); margin-bottom: 8px; }
-    .bottom-cta-bar p { font-size: 13.5px; color: var(--text-muted); margin-bottom: 22px; }
-    .cta-btn-group { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    /* EXPORT QUALITY PACKING & LOADING */
+    .packing-section {
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-xl);
+      padding: 40px 36px;
+      margin-bottom: 60px;
+      box-shadow: var(--shadow-sm);
+    }
+    .packing-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 30px;
+    }
+    .packing-header h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .packing-header p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .packing-photos-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .packing-photo-card {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--bg-cream-soft);
+      border: 1px solid var(--border-warm);
+    }
+    .packing-photo-img {
+      height: 160px;
+      overflow: hidden;
+    }
+    .packing-photo-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .packing-photo-card:hover .packing-photo-img img {
+      transform: scale(1.06);
+    }
+    .packing-photo-caption {
+      padding: 10px 12px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-align: center;
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-warm);
+    }
 
-    .btn-ochre { display: inline-flex; align-items: center; gap: 8px; padding: 11px 24px; background: var(--accent-ochre); color: #fff; border-radius: var(--radius-full); font-size: 13px; font-weight: 600; }
-    .btn-ochre:hover { background: var(--accent-ochre-dark); transform: translateY(-2px); }
-    .btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 11px 24px; border: 1px solid var(--text-dark); border-radius: var(--radius-full); font-size: 13px; font-weight: 600; }
-    .btn-outline:hover { background: var(--text-dark); color: #fff; }
-    .btn-whatsapp { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; padding: 11px 22px; border-radius: var(--radius-full); font-size: 13px; font-weight: 600; }
-    .btn-whatsapp:hover { background: #1EBE5B; transform: translateY(-2px); }
+    /* BOTTOM SPLIT: FAQS + RELATED / NEXT STEPS */
+    .bottom-split-section {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      margin-bottom: 80px;
+      align-items: start;
+    }
+    .faq-side h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+    .faq-side-sub {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-ochre);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .faq-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-question {
+      padding: 15px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-dark);
+      user-select: none;
+      transition: var(--transition);
+    }
+    .faq-question:hover {
+      color: var(--accent-ochre);
+      background: #FAF7F2;
+    }
+    .faq-arrow {
+      font-size: 14px;
+      color: var(--accent-ochre);
+      transition: transform 0.3s ease;
+    }
+    .faq-answer {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.35s ease;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      background: #FAFAF8;
+    }
+    .faq-item.open .faq-answer {
+      padding: 14px 18px 18px;
+      max-height: 300px;
+      border-top: 1px solid var(--border-warm);
+    }
+    .faq-item.open .faq-arrow {
+      transform: rotate(180deg);
+    }
 
-    footer { background: var(--bg-cream); border-top: 1px solid var(--border-warm); padding: 70px 0 35px; }
-    .footer-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr 1.15fr; gap: 40px; }
-    .footer-brand h3 { font-size: 18px; font-weight: 800; margin-bottom: 12px; text-transform: uppercase; }
-    .footer-brand p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
-    .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--text-muted); }
-    .footer-links a:hover { color: var(--accent-ochre); }
-    .footer-bottom { margin-top: 50px; padding-top: 25px; border-top: 1px solid var(--border-warm); display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); }
+    /* RELATED PRODUCTS & NEXT STEPS BOX */
+    .related-side {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .related-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .related-box-badge {
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-ochre);
+      margin-bottom: 6px;
+      display: block;
+    }
+    .related-box h4 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+    .related-product-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-warm);
+    }
+    .related-product-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .related-prod-info h5 {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 2px;
+    }
+    .related-prod-info p {
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+    .related-link-btn {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-ochre);
+      padding: 5px 10px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-warm);
+      background: var(--bg-cream-soft);
+      white-space: nowrap;
+    }
+    .related-link-btn:hover {
+      background: var(--accent-ochre);
+      color: #FFFFFF;
+      border-color: var(--accent-ochre);
+    }
 
+    .next-steps-dark-box {
+      background: var(--bg-dark);
+      border-radius: var(--radius-lg);
+      padding: 26px 24px;
+      color: #FFFFFF;
+      border: 1px solid rgba(186, 110, 43, 0.3);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    .next-steps-dark-box h4 {
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .next-steps-dark-box p {
+      font-size: 12.5px;
+      color: var(--text-light-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    .next-steps-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .btn-dark-primary {
+      background: var(--accent-amber);
+      color: #FFFFFF;
+      padding: 11px 18px;
+      border-radius: var(--radius-md);
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .btn-dark-primary:hover {
+      background: #A05C20;
+    }
+    .btn-dark-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      padding: 10px 18px;
+      border-radius: var(--radius-md);
+      font-size: 12.5px;
+      font-weight: 600;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: var(--transition);
+    }
+    .btn-dark-secondary:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1C1714;
+      color: #E2DDD5;
+      padding: 60px 0 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+    .footer-brand-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .footer-brand-desc {
+      font-size: 12.5px;
+      color: #A89F95;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+    .footer-col h5 {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 8px;
+      font-size: 12.5px;
+      color: #A89F95;
+    }
+    .footer-col li a:hover {
+      color: var(--accent-amber);
+    }
+    .footer-contact-item {
+      font-size: 12.5px;
+      color: #A89F95;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #7E756B;
+    }
+
+    /* MODAL */
+    .modal-backdrop {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.65);
+      backdrop-filter: blur(5px); z-index: 1000;
+      display: none; align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-box {
+      background: #FFFFFF; border-radius: var(--radius-lg);
+      width: min(520px, 100%); max-height: 90vh; overflow-y: auto;
+      padding: 30px; box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+      position: relative; border: 1px solid var(--border-warm);
+    }
+    .modal-close {
+      position: absolute; top: 18px; right: 20px; font-size: 24px;
+      color: var(--text-muted); cursor: pointer; line-height: 1;
+    }
+    .modal-close:hover { color: var(--accent-ochre); }
+    .modal-title { font-size: 20px; font-weight: 800; color: var(--text-dark); margin-bottom: 6px; }
+    .modal-subtitle { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+    .modal-prod-preview {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--bg-cream-soft); padding: 10px 14px;
+      border-radius: var(--radius-md); border: 1px solid var(--border-warm);
+      margin-bottom: 18px;
+    }
+    .modal-prod-thumb { width: 56px; height: 56px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; background: #e8e2d8; }
+    .modal-prod-name { font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+    .modal-prod-spec { font-size: 11.5px; color: var(--text-muted); }
+    .modal-form-group { margin-bottom: 14px; }
+    .modal-form-group label { display: block; font-size: 12px; font-weight: 700; color: var(--text-dark); margin-bottom: 5px; }
+    .modal-form-group input, .modal-form-group select, .modal-form-group textarea {
+      width: 100%; padding: 10px 13px; font-size: 13px; font-family: inherit;
+      border: 1px solid var(--border-warm); border-radius: var(--radius-sm);
+      background: #FAF7F2; color: var(--text-dark); transition: var(--transition);
+    }
+    .modal-form-group input:focus, .modal-form-group select:focus, .modal-form-group textarea:focus {
+      outline: none; border-color: var(--accent-ochre); background: #FFFFFF;
+    }
+    .modal-submit-btn {
+      width: 100%; background: var(--accent-ochre); color: #FFFFFF;
+      font-size: 13.5px; font-weight: 700; padding: 12px 0; border-radius: var(--radius-md);
+      transition: var(--transition); margin-top: 8px; cursor: pointer;
+    }
+    .modal-submit-btn:hover { background: var(--accent-ochre-dark); }
+    .modal-wa-btn {
+      width: 100%; background: #25D366; color: #FFFFFF;
+      font-size: 13px; font-weight: 700; padding: 10px 0; border-radius: var(--radius-md);
+      transition: var(--transition); margin-top: 8px; cursor: pointer; text-align: center;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .modal-wa-btn:hover { background: #1EBE5D; }
+
+    /* RESPONSIVE */
     @media (max-width: 960px) {
       .product-main-grid { grid-template-columns: 1fr; }
       .spec-sticky-wrap { position: static; }
-      .feature-cards-grid { grid-template-columns: 1fr; }
-      .packing-grid { grid-template-columns: repeat(2, 1fr); }
-      .faq-bespoke-grid { grid-template-columns: 1fr; }
+      .info-cards-grid { grid-template-columns: 1fr; }
+      .packing-photos-grid { grid-template-columns: repeat(2, 1fr); }
+      .bottom-split-section { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
+      .floating-side-actions { display: none; }
+    }
+    @media (max-width: 640px) {
+      .steps-gallery-grid { grid-template-columns: 1fr; }
+      .packing-photos-grid { grid-template-columns: 1fr; }
       .nav-menu { display: none; }
       .menu-toggle { display: block; }
-    }
-    @media (max-width: 600px) {
-      .gallery-pair { grid-template-columns: 1fr; }
-      .packing-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
-      .floating-enquiry-tab { display: none; }
     }
   </style>
 </head>
 <body>
 
+  <!-- HEADER NAVIGATION -->
   <header>
     <div class="container nav-bar">
       <a href="../index.html" class="brand-logo">
         <span class="brand-title">Shri Sanwariya</span>
-        <span class="brand-sub">Stone Suppliers</span>
+        <span class="brand-sub">Stone Suppliers · Mandsaur</span>
       </a>
 
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="../index.html" class="nav-link">Home</a></li>
-          <li><a href="../index.html#about" class="nav-link">About Us</a></li>
-          <li class="dropdown">
-            <span class="nav-link dropdown-btn">Collections <span style="font-size:11px;">▾</span></span>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="natural-sandstone-colors.html" style="font-weight:700; color:var(--accent-ochre);">Natural Sandstone Colors ✨</a></li>
-              <li class="dropdown-item"><a href="sandstone-pavers.html">Sandstone Pavers</a></li>
-              <li class="dropdown-item"><a href="copings.html">Copings</a></li>
-              <li class="dropdown-item"><a href="steps.html">Steps</a></li>
-              <li class="dropdown-item"><a href="cobbles-and-sets.html">Cobbles &amp; Sets</a></li>
-              <li class="dropdown-item"><a href="fire-pits-and-circles.html">Fire Pits &amp; Circles</a></li>
-              <li class="dropdown-item"><a href="roofing.html">Roofing</a></li>
-            </ul>
-          </li>
-          <li><a href="../index.html#facilities" class="nav-link">Facilities</a></li>
-          <li><a href="../index.html#story" class="nav-link">Blog</a></li>
-          <li><a href="#contact" class="nav-link">Contact Us</a></li>
-        </ul>
-      </nav>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../index.html#about" class="nav-link">About Us</a></li>
+        <li class="dropdown">
+          <div class="dropdown-btn nav-link">Products ▾</div>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item"><a href="sandstone-pavers.html">Sandstone Pavers</a></li>
+            <li class="dropdown-item"><a href="copings.html">Copings &amp; Pier Caps</a></li>
+            <li class="dropdown-item"><a href="steps.html">Sandstone Steps</a></li>
+            <li class="dropdown-item"><a href="cobbles-and-sets.html">Cobbles &amp; Sets</a></li>
+            <li class="dropdown-item"><a href="fire-pits-and-circles.html" style="color:var(--accent-ochre); font-weight:700;">Fire Pits &amp; Circles</a></li>
+            <li class="dropdown-item"><a href="roofing.html">Roofing Slates</a></li>
+            <li class="dropdown-item"><a href="natural-sandstone-colors.html">Natural Colors</a></li>
+          </ul>
+        </li>
+        <li><a href="../index.html#processing" class="nav-link">Facilities</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact Us</a></li>
+      </ul>
 
-      <div style="display:flex; align-items:center; gap:16px;">
-        <a href="#contact" class="btn-quote">Enquire Now</a>
-        <button class="menu-toggle" onclick="alert('Menu: Use navigation links to browse.')">☰</button>
-      </div>
+      <button class="btn-quote open-enquiry-btn" data-prod="General Fire Pits Inquiry">Get Quote</button>
+      <div class="menu-toggle">☰</div>
     </div>
   </header>
 
-  <aside class="floating-enquiry-tab" onclick="window.location.href='#contact'">
-    <svg class="tab-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-    <span class="tab-text">Send Enquiry</span>
-  </aside>
-
-  <div class="page-banner">
-    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2000&q=85" alt="Fire Pits and Patio Circles">
-    <div class="page-banner-content">
-      <h1>Fire Pits &amp; Circles</h1>
-    </div>
+  <!-- FLOATING SIDE ACTIONS -->
+  <div class="floating-side-actions">
+    <a href="../index.html#contact" class="action-circle-btn btn-brochure" title="Download Brochure / Project Catalog">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+    </a>
+    <a href="https://wa.me/919425106752?text=Hello%20Shri%20Sanwariya%20Stone,%20I%20am%20interested%20in%20your%20Sandstone%20Fire%20Pits%20and%20Radial%20Circles" target="_blank" rel="noopener noreferrer" class="action-circle-btn btn-wa" title="WhatsApp Us Directly">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+    </a>
   </div>
 
-  <main>
-    <section class="container product-main-grid">
-      
-      <!-- LEFT: SPECIFICATION CARD -->
-      <div class="spec-sticky-wrap">
+  <!-- HERO PAGE BANNER -->
+  <section class="page-banner">
+    <img src="../assets/firepit-lawn-blaze.png" alt="Natural Sandstone Fire Pits &amp; Radial Circles Banner">
+    <div class="page-banner-content">
+      <h1>Sandstone Fire Pits</h1>
+    </div>
+  </section>
+
+  <!-- MAIN PRODUCT & SPECIFICATIONS GRID -->
+  <main class="container">
+    <div class="product-main-grid">
+
+      <!-- LEFT COLUMN: SPECIFICATION CARD (STICKY) -->
+      <aside class="spec-sticky-wrap">
         <div class="spec-card">
           <div class="spec-header">
             <svg viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg>
-            <span>GENERAL SPECIFICATION</span>
+            SANDSTONE SPECIFICATION
           </div>
-
-          <div class="spec-table-row">
-            <div class="spec-col-label">SURFACE:</div>
-            <div class="spec-col-val">NATURAL CLEFT RIVEN, HONED SMOOTH, FLAMED &amp; BRUSHED, ROCKFACE FIRE BOWL</div>
-          </div>
-
-          <div class="spec-table-row">
-            <div class="spec-col-label">THICKNESS:</div>
-            <div class="spec-col-val">22 MM CALIBRATED, 30 MM HEAVY PATIO, 50 MM FIRE PIT COPING CURVES</div>
-          </div>
-
-          <div class="spec-table-row">
-            <div class="spec-col-label">DIAMETERS / SIZES:</div>
-            <div class="spec-col-val">
-              <div>2.0M RADIAL KIT (2-RING)</div>
-              <div>2.8M RADIAL KIT (2-RING)</div>
-              <div>3.0M RADIAL ENSEMBLE (3-RING)</div>
-              <div>4.0M GRAND GATHERING (3-RING)</div>
-              <div>SQUARE CORNER INFILL KITS</div>
-              <div>1000MM / 1200MM FIRE PIT COPINGS</div>
-              <div style="color:var(--accent-ochre); margin-top:5px; font-weight:700;">CUSTOM RADIAL DIAMETERS AVAILABLE</div>
-            </div>
-          </div>
-
-          <div class="spec-note-bar">
-            Thermal-mass stable Indian sandstone tested against repeated campfire thermal expansion &amp; winter frost cycling.
+          <table class="spec-table">
+            <tbody>
+              <tr>
+                <td class="spec-label">MATERIAL / STONE</td>
+                <td class="spec-val">
+                  NATURAL SANDSTONE, GRANITE, SLATE<br>
+                  <span style="font-size:11px; color:#C8BFB5;">Kandla Grey, Raj Green, Teakwood, Mandana Red, Lavender, Autumn Brown</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="spec-label">WALL ELEVATION &amp; THICKNESS</td>
+                <td class="spec-val">
+                  <strong>Height:</strong> 350 mm &ndash; 550 mm (14&Prime; &ndash; 22&Prime;)<br>
+                  <strong>Coping Thickness:</strong> 30 mm, 40 mm, 50 mm Calibrated
+                </td>
+              </tr>
+              <tr>
+                <td class="spec-label">COMMON SIZES</td>
+                <td class="spec-val">
+                  <strong>Square Kits:</strong><br>
+                  900x900 mm &middot; 1000x1000 mm &middot; 1200x1200 mm<br>
+                  <strong>Round Fire Rings:</strong><br>
+                  900 mm &middot; 1000 mm &middot; 1200 mm &middot; 1500 mm DIA<br>
+                  <strong>Radial Circles:</strong> 2.0m, 2.5m, 3.0m, 4.0m Patio Rings
+                </td>
+              </tr>
+              <tr>
+                <td class="spec-label">KIT COMPONENTS</td>
+                <td class="spec-val">
+                  <ul>
+                    <li>Coping Top Perimeter Slabs</li>
+                    <li>Curved / Rectangular Walling Blocks</li>
+                    <li>Steel Burner Insert / Bowl Adapter</li>
+                    <li>Radial Paving Circle Surround</li>
+                    <li>Pre-drilled Gas / Drainage Outlets</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="spec-label">SURFACE FINISHES</td>
+                <td class="spec-val">
+                  Natural Split, Honed, Sawn Smooth, Shotblasted, Rockfaced Hand-Chiseled
+                </td>
+              </tr>
+              <tr>
+                <td class="spec-label">EDGE PROFILES</td>
+                <td class="spec-val">
+                  Full Bullnose, Half Bullnose, Hand-Chiseled Rockface, Sawn Chamfered
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="spec-note">
+            &ldquo;We gladly customize dimensions, kit configurations and surface finishes to suit your exact project requirements.&rdquo;
           </div>
         </div>
 
-        <button class="spec-sample-btn" onclick="window.location.href='#contact'">
-          <span>📦 REQUEST A SAMPLE</span>
-          <span>▾</span>
-        </button>
-      </div>
+        <!-- SPEC ACCORDION: DELIVERY & CARE -->
+        <div class="spec-accordion-box" id="acc-delivery">
+          <div class="spec-acc-header" onclick="toggleAcc('acc-delivery')">
+            <span>DELIVERY &amp; CARE</span>
+            <span class="acc-icon">▾</span>
+          </div>
+          <div class="spec-acc-content">
+            <p><strong>Export Packing:</strong> All fire pit walling blocks and calibrated coping slabs are individually packed with polystyrene separators in heat-treated ISPM-15 export wooden crates.</p>
+            <p style="margin-top:8px;"><strong>Heat Shock Guidance:</strong> Natural sandstone stands up beautifully to high radiant heat. For wood-burning setups, we provide internal fire rings or refractory firebrick liners to maximize structural durability.</p>
+            <p style="margin-top:8px;"><strong>Gas Burning Compatibility:</strong> Compatible with propane / natural gas burner assemblies, lava rocks, or ceramic fire glass pebbles.</p>
+          </div>
+        </div>
 
-      <!-- RIGHT: NARRATIVE + GALLERY -->
-      <div>
-        <div class="intro-header-bar">
+        <!-- TAG PILLS -->
+        <div class="spec-pill-group">
+          <div class="spec-pill">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Thermal Shock Tested
+          </div>
+          <div class="spec-pill">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Complete Masonry Kits
+          </div>
+          <div class="spec-pill">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Pre-assembled Rings
+          </div>
+          <div class="spec-pill">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Worldwide Shipping
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT COLUMN: INTRO LEAD & 10 PRODUCT GALLERY CARDS -->
+      <section class="product-details-wrap">
+        <div class="section-accent-header">
           <div class="accent-bar"></div>
-          <h2 class="intro-title">Fire Pits &amp; Circles</h2>
+          <h2>Sandstone Fire Pits</h2>
         </div>
 
-        <p class="intro-paragraph">
-          As a specialized natural sandstone circle and fire pit manufacturer, we fabricate precision radial patio kits, circular gathering terraces, and curved fire surround copings. Each kit features precision-tapered segments and interlocking central starburst or compass medallions designed for seamless on-site installation and unforgettable outdoor entertaining.
+        <p class="product-intro-lead">
+          Create a warm, inviting gathering spot with our natural sandstone fire pits. Built to withstand high heat and weathering, they add architectural elegance and cozy ambiance to outdoor living spaces. Each ensemble combines precision-cut walling blocks with calibrated coping caps and matching radial patio circle paving, compatible with both natural wood fuel and modern gas burner systems.
         </p>
 
-        <div class="gallery-sub-header">
-          <span>GALLERY</span>
+        <div class="gallery-subhead">
+          <span>AUTHENTIC PRODUCTS &amp; KIT GALLERY</span>
         </div>
 
-        <div class="gallery-pairs-list">
-          <div class="gallery-pair">
-            <div class="gallery-app-card">
-              <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=700&q=80" alt="Stone Fire Pit Gathering">
-            </div>
-            <div class="gallery-swatch-card">
-              <div class="swatch-img-box">
-                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=500&q=80" alt="Autumn Brown Fire Pit Stone">
-              </div>
-              <span class="swatch-name">Autumn Brown Fire Pit Coping</span>
-            </div>
-          </div>
+        <div class="steps-gallery-grid">
 
-          <div class="gallery-pair">
-            <div class="gallery-app-card">
-              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80" alt="Radial Circle Patio">
+          <!-- 1. Lawn Grass Fire Pit Ensemble -->
+          <article class="step-prod-card" onclick="openQuoteModal('Lawn Fire Pit Hearth Ensemble', '../assets/firepit-lawn-blaze.png', 'Square 1000x1000mm · Calibrated 40mm Coping · High-Heat Hearth')">
+            <div class="step-img-wrap">
+              <img src="../assets/firepit-lawn-blaze.png" alt="Lawn Fire Pit Hearth Ensemble" loading="lazy">
             </div>
-            <div class="gallery-swatch-card">
-              <div class="swatch-img-box">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="Kandla Grey Circle Kit">
-              </div>
-              <span class="swatch-name">Kandla Grey Radial Circle Kit</span>
-            </div>
-          </div>
+          </article>
 
-          <div class="gallery-pair">
-            <div class="gallery-app-card">
-              <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80" alt="Center Star Circle Feature">
+          <!-- 2. Lavender Sandstone Fire Pit Kit Poster -->
+          <article class="step-prod-card" onclick="openQuoteModal('Lavender Sandstone Fire Pit Kit', '../assets/firepit-lavender-poster.jpg', '1000x1000mm Square · Lavender Blush · Full Kit with Cap Slabs')">
+            <div class="step-img-wrap">
+              <img src="../assets/firepit-lavender-poster.jpg" alt="Lavender Sandstone Fire Pit Complete Kit" loading="lazy">
             </div>
-            <div class="gallery-swatch-card">
-              <div class="swatch-img-box">
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=500&q=80" alt="Raj Green Compass Circle">
-              </div>
-              <span class="swatch-name">Raj Green Compass Star Circle</span>
-            </div>
-          </div>
+          </article>
 
-          <div class="gallery-pair">
-            <div class="gallery-app-card">
-              <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=700&q=80" alt="Outdoor Lounge Fire Feature">
+          <!-- 3. Courtyard Fire Pit with Chairs -->
+          <article class="step-prod-card" onclick="openQuoteModal('Heritage Courtyard Fire Pit', '../assets/firepit-courtyard-chairs.jpg', 'Square 900x900mm · 400mm Elevation · Courtyard Paving Ensemble')">
+            <div class="step-img-wrap">
+              <img src="../assets/firepit-courtyard-chairs.jpg" alt="Heritage Courtyard Sandstone Fire Pit" loading="lazy">
             </div>
-            <div class="gallery-swatch-card">
-              <div class="swatch-img-box">
-                <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=500&q=80" alt="Fossil Mint Circle Kit">
-              </div>
-              <span class="swatch-name">Fossil Mint Radial Circle Kit</span>
+          </article>
+
+          <!-- 4. Curved Bench Seating & Fire Pit Enclosure -->
+          <article class="step-prod-card" onclick="openQuoteModal('Curved Seating &amp; Fire Pit Enclosure', '../assets/firepit-park-bench-enclosure.png', 'Full Social Circle · Matching Curved Benches + Central Pit Kit')">
+            <div class="step-img-wrap">
+              <img src="../assets/firepit-park-bench-enclosure.png" alt="Curved Stone Seating &amp; Fire Pit Enclosure" loading="lazy">
             </div>
-          </div>
+          </article>
+
+          <!-- 5. Night Blaze Patio Fire Pit -->
+          <article class="step-prod-card" onclick="openQuoteModal('Night-Glow Patio Fire Pit', '../assets/firepit-night-blaze.png', '1200x1200mm Heavy-Duty Pit · Low Wall Integration · Heat Resistant')">
+            <div class="step-img-wrap">
+              <img src="../assets/firepit-night-blaze.png" alt="Night-Glow Patio Fire Pit" loading="lazy">
+            </div>
+          </article>
+
+          <!-- 6. Rustic Masonry Fire Pit -->
+          <article class="step-prod-card" onclick="openQuoteModal('Rustic Masonry Square Pit', '../assets/firepit-masonry-square.png', 'Square 1000x1000mm · 450mm Height · Stratified Sandstone Blocks')">
+            <div class="step-img-wrap">
+              <img src="../assets/firepit-masonry-square.png" alt="Rustic Masonry Square Pit" loading="lazy">
+            </div>
+          </article>
+
+          <!-- 7. Lavender Sandstone Modular Firepit Kit -->
+          <article class="step-prod-card" onclick="openQuoteModal('Lavender Modular Firepit Kit', '../assets/firepit-kit-assembly.jpg', 'Square 1000x1000mm · 450mm Height · Lavender Sandstone Kit')">
+            <div class="step-img-wrap">
+              <img src="../assets/firepit-kit-assembly.jpg" alt="Lavender Modular Firepit Kit" loading="lazy">
+            </div>
+          </article>
+
+          <!-- 8. Curved Sandstone Garden Bench -->
+          <article class="step-prod-card" onclick="openQuoteModal('Curved Sandstone Garden Bench', '../assets/firepit-curved-bench.png', 'Radial Radius 1.5m-3.0m · Solid Sandstone Block · Smooth Honed Top')">
+            <div class="step-img-wrap">
+              <img src="../assets/firepit-curved-bench.png" alt="Curved Sandstone Garden Bench" loading="lazy">
+            </div>
+          </article>
+
+          <!-- 9. Slate Grey Firepit Kit -->
+          <article class="step-prod-card" onclick="openQuoteModal('Slate Grey Firepit Kit', '../assets/firepit-grey-studio.png', 'Square 1000x1000mm · Slate Grey · Complete Coping &amp; Wall Kit')">
+            <div class="step-img-wrap">
+              <img src="../assets/firepit-grey-studio.png" alt="Slate Grey Firepit Kit" loading="lazy">
+            </div>
+          </article>
+
+          <!-- 10. Blue Ice Firepit Ensemble -->
+          <article class="step-prod-card" onclick="openQuoteModal('Blue Ice Firepit Ensemble', '../assets/firepit-blue-ice-studio.png', 'Square 1000x1000mm · Blue Ice · Precision Sawn Top &amp; Wall Blocks')">
+            <div class="step-img-wrap">
+              <img src="../assets/firepit-blue-ice-studio.png" alt="Blue Ice Firepit Ensemble" loading="lazy">
+            </div>
+          </article>
+
+          <!-- 11. Luxury Poolside Estate Ensemble -->
+          <article class="step-prod-card" style="grid-column: 1 / -1;" onclick="openQuoteModal('Luxury Poolside Estate Ensemble', '../assets/firepit-poolside-luxury-estate.png', 'Full Architectural Stone Package · Custom Tailored to Project Blueprints')">
+            <div class="step-img-wrap" style="height: 280px;">
+              <img src="../assets/firepit-poolside-luxury-estate.png" alt="Luxury Poolside Estate Ensemble" loading="lazy" style="object-position: center bottom;">
+            </div>
+          </article>
+
         </div>
-      </div>
+      </section>
 
-    </section>
-
-    <!-- 3 FEATURE CARDS -->
-    <section class="container">
-      <div class="feature-cards-grid">
-        <div class="info-card">
-          <span class="card-eyebrow">DESIGN APPLICATIONS</span>
-          <h3>Best-fit projects for Circles &amp; Fire Pits</h3>
-          <ul class="info-list">
-            <li><span class="check-bullet">✓</span> Central outdoor fire pit conversation lounges</li>
-            <li><span class="check-bullet">✓</span> Garden gazebo and pergola round stone flooring</li>
-            <li><span class="check-bullet">✓</span> Decorative terrace centerpieces &amp; circular plazas</li>
-            <li><span class="check-bullet">✓</span> Water fountain surrounding stone rings</li>
-          </ul>
-        </div>
-
-        <div class="info-card">
-          <span class="card-eyebrow">PRECISION GEOMETRY</span>
-          <h3>Radial Sizing &amp; Segments</h3>
-          <p style="font-size:13px; color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
-            Sawn-cut tapered ring segments guarantee uniform joint widths throughout all concentric rings.
-          </p>
-          <div class="tags-container">
-            <span class="pill-tag">2.0m Diameter</span>
-            <span class="pill-tag">2.8m Diameter</span>
-            <span class="pill-tag">3.0m Diameter</span>
-            <span class="pill-tag">4.0m Diameter</span>
-            <span class="pill-tag">Corner Infill Kits</span>
-            <span class="pill-tag">50mm Copings</span>
-          </div>
-        </div>
-
-        <div class="info-card">
-          <span class="card-eyebrow">BULK LOGISTICS</span>
-          <h3>Export Packaging</h3>
-          <ul class="info-list">
-            <li><span class="check-bullet">✓</span> Individually crated with numbered placement blueprints</li>
-            <li><span class="check-bullet">✓</span> Up to 26 metric tons loaded per 20ft ocean container</li>
-            <li><span class="check-bullet">✓</span> High margin retail product for landscape merchant yards</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- PACKING & LOADING -->
-    <section class="container">
-      <div class="packing-section">
-        <div class="center">
-          <span style="font-size:11px; font-weight:700; letter-spacing:0.2em; color:var(--accent-ochre); text-transform:uppercase;">📦 RADIAL CRATE EXPORT PACKAGING</span>
-          <h3 style="font-size:22px; font-weight:800; margin:6px 0 10px;">Individually Banded Circle Crates</h3>
-          <p style="font-size:13px; color:var(--text-muted); max-width:640px; margin:0 auto;">
-            Each circle kit is pre-assembled in our factory yard, calibrated, numbered, and packed in reinforced ISPM-15 heat-treated crates with protective foam interleaving.
-          </p>
-        </div>
-
-        <div class="packing-grid">
-          <div class="packing-card">
-            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Numbered Radial Sorting">
-            <span>1. Numbered Ring Calibration</span>
-          </div>
-          <div class="packing-card">
-            <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=600&q=80" alt="Protective Spacers">
-            <span>2. Protective Foam Spacers</span>
-          </div>
-          <div class="packing-card">
-            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80" alt="Wooden Crates">
-            <span>3. ISPM-15 Heat-Treated Crates</span>
-          </div>
-          <div class="packing-card">
-            <img src="https://images.unsplash.com/photo-1524492417937-2516a506b9b3?auto=format&fit=crop&w=600&q=80" alt="Container Stuffing">
-            <span>4. Direct Container Dispatch</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ & BESPOKE -->
-    <section class="container">
-      <div class="faq-bespoke-grid">
-        <div>
-          <h3 class="faq-title">Questions buyers ask about Fire Pits &amp; Circles</h3>
-
-          <div class="faq-item active">
-            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-              <span>Do sandstone fire pits withstand direct flame and high heat?</span>
-              <span class="faq-chevron">▾</span>
-            </div>
-            <div class="faq-answer">
-              Our Indian sandstone copings and wall blocks are naturally heat-resistant. For direct open-flame fire pits, we supply stone copings designed to cap fire-brick liners or steel fire bowl inserts to prevent thermal shock and ensure lifelong durability.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-              <span>Are the radial kits supplied with squaring-off corner sets?</span>
-              <span class="faq-chevron">▾</span>
-            </div>
-            <div class="faq-answer">
-              Yes, our 2.0m, 2.8m, and 3.0m circle kits can be ordered either as standalone circular features or with matching corner squaring-off infill kits that convert the circle into a flush rectangular patio grid.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-              <span>How difficult is it to assemble a 3-ring circular patio kit?</span>
-              <span class="faq-chevron">▾</span>
-            </div>
-            <div class="faq-answer">
-              Every segment is calibrated and numbered on the underside according to the accompanying installation blueprint, making assembly straightforward and intuitive on site.
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="bespoke-box">
-            <h4>Build a bespoke circle &amp; fire pit package</h4>
-            <div class="bespoke-step">
-              <strong>1. Choose diameter &amp; design</strong>
-              <p>Select 2.0m, 2.8m, 3.0m, or 4.0m with center star or plain centerpiece.</p>
-            </div>
-            <div class="bespoke-step">
-              <strong>2. Add copings &amp; corner sets</strong>
-              <p>Add curved fire pit bullnose copings and corner squaring kits to match your project.</p>
-            </div>
-            <div class="bespoke-step" style="border:none; padding:0; margin:0;">
-              <strong>3. Container mixed shipment</strong>
-              <p>Combine multiple circle crates alongside standard patio paving slabs.</p>
-            </div>
-          </div>
-
-          <div class="inquiry-cta-dark">
-            <h4>Request a Circle Kit Quote</h4>
-            <p>Tell us your target diameter and stone color for a swift export quotation.</p>
-            <div style="display:flex; gap:10px;">
-              <a href="#contact" class="btn-ochre" style="padding:9px 18px; font-size:12.5px;">Request Quote</a>
-              <a href="https://wa.me/919462976734?text=Hello%20Shri%20Sanwariya%20Stone,%20I%20need%20a%20quote%20for%20Fire%20Pits%20and%20Circles." target="_blank" rel="noopener" class="btn-whatsapp" style="padding:9px 16px; font-size:12.5px;">WhatsApp Us</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BOTTOM CTA -->
-    <section class="container">
-      <div class="bottom-cta-bar">
-        <h3>Interested in our Fire Pits &amp; Circles?</h3>
-        <p>Contact us today for dimensional layouts, sample kits, or a direct container shipment quote.</p>
-        <div class="cta-btn-group">
-          <a href="#contact" class="btn-ochre">Request Quote</a>
-          <a href="../assets/catalogue.pdf" download class="btn-outline">Download Brochure 📥</a>
-          <a href="https://wa.me/919462976734" target="_blank" rel="noopener" class="btn-whatsapp">Chat on WhatsApp</a>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer id="contact">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3>Shri Sanwariya Stone Suppliers</h3>
-          <p>Premium Indian natural stone for architectural, landscape and export projects.</p>
-          <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-start;">
-            <a href="https://wa.me/919462976734" target="_blank" rel="noopener" class="btn-whatsapp" style="padding:8px 16px; font-size:12px;">WhatsApp Us</a>
-            <a href="../assets/catalogue.pdf" download class="btn-ochre" style="padding:8px 18px; font-size:12px;">Download Catalogue</a>
+  <!-- 3 FEATURE / INFO CARDS SECTION -->
+  <section class="container info-cards-section">
+    <div class="info-cards-grid">
+
+      <!-- Card 1: Applications -->
+      <div class="info-card">
+        <span class="info-card-badge">APPLICATIONS</span>
+        <h4 class="info-card-title">Best-fit projects for Sandstone Fire Pits</h4>
+        <ul class="info-card-list">
+          <li>Private patios, courtyard retreats &amp; backyards</li>
+          <li>Resort &amp; hospitality open-air gathering lounges</li>
+          <li>Commercial event terraces &amp; rooftop clubhouses</li>
+          <li>Poolside living &amp; night entertainment settings</li>
+        </ul>
+        <div class="info-pill-wrap">
+          <span class="info-pill">Residential</span>
+          <span class="info-pill">Commercial</span>
+          <span class="info-pill">Resort Patio</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Finishes & Sizes -->
+      <div class="info-card">
+        <span class="info-card-badge">FINISHES &amp; SPECS</span>
+        <h4 class="info-card-title">Finish and size overview</h4>
+        <p class="info-card-desc">
+          <strong>Surface Options:</strong> Natural Split, Honed, Sawn Smooth, Shotblasted, Rockface Chiseled.<br>
+          <strong>Packaging:</strong> Export-grade fumigated wooden crates with internal high-density foam protection for zero-damage transit.
+        </p>
+        <div class="info-pill-wrap">
+          <span class="info-pill">Heat Safe</span>
+          <span class="info-pill">Calibrated Coping</span>
+          <span class="info-pill">Custom Radius</span>
+          <span class="info-pill">Gas &amp; Wood</span>
+        </div>
+      </div>
+
+      <!-- Card 3: Export Support -->
+      <div class="info-card">
+        <span class="info-card-badge">EXPORT SUPPORT</span>
+        <h4 class="info-card-title">Markets we commonly support</h4>
+        <ul class="info-card-list">
+          <li>UK, Ireland, Germany, France, Poland &amp; Benelux</li>
+          <li>United States, Canada, Australia &amp; New Zealand</li>
+          <li>UAE, Qatar, Saudi Arabia &amp; Middle East</li>
+        </ul>
+        <p class="info-card-desc" style="font-size:11.5px; margin-bottom:12px;">
+          Every shipment is documented for dimension consistency, safe crating packaging, and comprehensive support for project delivery. We provide custom tailored stone fire pits that match your project architectural dimensions.
+        </p>
+        <div class="info-pill-wrap">
+          <span class="info-pill">FCL &amp; LCL</span>
+          <span class="info-pill">CIF &amp; FOB</span>
+          <span class="info-pill">ISPM-15 Crated</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPORT QUALITY PACKING & LOADING -->
+  <section class="container">
+    <div class="packing-section">
+      <div class="packing-header">
+        <h3>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent-amber)"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg>
+          Export Quality Packing &amp; Loading
+        </h3>
+        <p>To ensure safe international transit, each fire pit kit, coping slab, and radial circle segment is securely crated in ISPM-15 heat-treated wood with high-density foam cushioning, corner protectors, and heavy-duty steel banding.</p>
+      </div>
+
+      <div class="packing-photos-grid">
+        <!-- Photo 1 -->
+        <div class="packing-photo-card">
+          <div class="packing-photo-img">
+            <img src="../assets/packing-calibration-slabs.png" alt="Calibrated Stone Stack Inspection" loading="lazy">
           </div>
+          <div class="packing-photo-caption">Calibrated Stone Inspection</div>
         </div>
 
-        <div class="footer-col">
-          <h4>Collections</h4>
-          <ul class="footer-links">
-            <li><a href="natural-sandstone-colors.html" style="color:var(--accent-ochre); font-weight:700;">Natural Sandstone Colors ✨</a></li>
-            <li><a href="sandstone-pavers.html">Sandstone Pavers</a></li>
-            <li><a href="copings.html">Copings</a></li>
-            <li><a href="steps.html">Steps</a></li>
-            <li><a href="cobbles-and-sets.html">Cobbles &amp; Sets</a></li>
-            <li><a href="fire-pits-and-circles.html">Fire Pits &amp; Circles</a></li>
-            <li><a href="roofing.html">Roofing</a></li>
-          </ul>
+        <!-- Photo 2 -->
+        <div class="packing-photo-card">
+          <div class="packing-photo-img">
+            <img src="../assets/packing-covered-yard.png" alt="Covered Processing &amp; Staging Yard" loading="lazy">
+          </div>
+          <div class="packing-photo-caption">Covered Staging Yard</div>
         </div>
 
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul class="footer-links">
-            <li><a href="../index.html#about">About Us</a></li>
-            <li><a href="../index.html#about">RK Stone Impex</a></li>
-            <li><a href="../index.html#facilities">Facilities</a></li>
-            <li><a href="../index.html#story">Vision &amp; Story</a></li>
-          </ul>
+        <!-- Photo 3 -->
+        <div class="packing-photo-card">
+          <div class="packing-photo-img">
+            <img src="../assets/packing-wooden-crate.png" alt="Heavy-Duty ISPM-15 Wooden Crates" loading="lazy">
+          </div>
+          <div class="packing-photo-caption">ISPM-15 Certified Crates</div>
         </div>
 
-        <div class="footer-col">
-          <h4>Support &amp; Contact</h4>
-          <ul class="footer-links">
-            <li><a href="mailto:info@shrisanwariyastone.com">info@shrisanwariyastone.com</a></li>
-            <li><span>+91 9462976734</span></li>
-            <li><span>Mandsaur, Madhya Pradesh, India</span></li>
-          </ul>
+        <!-- Photo 4 -->
+        <div class="packing-photo-card">
+          <div class="packing-photo-img">
+            <img src="../assets/packing-truck-loading.png" alt="Container Stuffing &amp; Global Dispatch" loading="lazy">
+          </div>
+          <div class="packing-photo-caption">Container Stuffing &amp; Dispatch</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM SECTION: FAQS + RELATED PRODUCTS / NEXT STEPS -->
+  <section class="container bottom-split-section">
+
+    <!-- LEFT: FAQS -->
+    <div class="faq-side">
+      <span class="faq-side-sub">FREQUENTLY ASKED QUESTIONS</span>
+      <h3>Questions buyers ask about Sandstone Fire Pits</h3>
+
+      <!-- FAQ 1 -->
+      <div class="faq-item open" id="faq-1">
+        <div class="faq-question" onclick="toggleFaq('faq-1')">
+          <span>Can fire pits be customized to project-specific dimensions?</span>
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! We specialize in tailor-made stone masonry. We produce square fire pits from 600 mm up to 1800 mm, circular fire rings up to 2.5 m diameter, and custom radial benches to match your landscape architecture drawings with bespoke coping edge profiles.</p>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <span>© Shri Sanwariya Stone Suppliers 2026 · All rights reserved.</span>
-        <span>Premium Indian Natural Stone Export</span>
+      <!-- FAQ 2 -->
+      <div class="faq-item" id="faq-2">
+        <div class="faq-question" onclick="toggleFaq('faq-2')">
+          <span>Do you supply matching paving stones or stone circles for fire pits?</span>
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely. We supply matching natural sandstone patio pavers, 2.0m to 4.0m radial circular paving kits, cobblestone borders, and pool copings in matching colors like Kandla Grey, Raj Green, Teakwood, and Mandana Red for a cohesive outdoor living space.</p>
+        </div>
       </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item" id="faq-3">
+        <div class="faq-question" onclick="toggleFaq('faq-3')">
+          <span>Are natural sandstone fire pits safe for high-heat wood burning?</span>
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes. Our dense Indian quartzitic sandstone has high thermal stability. For wood-burning setups, we recommend kit configurations that include heavy-gauge steel fire bowl inserts or firebrick liners to evenly distribute heat and protect stone longevity.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item" id="faq-4">
+        <div class="faq-question" onclick="toggleFaq('faq-4')">
+          <span>Can these fire pits accommodate propane (LPG) or natural gas burners?</span>
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes. Our kits can be factory pre-drilled with discreet gas line conduit holes and control panel recesses to seamlessly accommodate modern electronic ignition gas burners, lava rock, or fire glass.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: RELATED PRODUCTS & NEXT STEPS -->
+    <div class="related-side">
+
+      <!-- RELATED PRODUCTS BOX -->
+      <div class="related-box">
+        <span class="related-box-badge">RELATED PRODUCTS</span>
+        <h4>Build a complete stone package</h4>
+
+        <div class="related-product-row">
+          <div class="related-prod-info">
+            <h5>Sandstone Pavers</h5>
+            <p>Hand-cut &amp; calibrated patio flagstones in 4-size project packs.</p>
+          </div>
+          <a href="sandstone-pavers.html" class="related-link-btn">View Pavers →</a>
+        </div>
+
+        <div class="related-product-row">
+          <div class="related-prod-info">
+            <h5>Sandstone Steps</h5>
+            <p>Solid bullnose &amp; rockfaced tread steps for elevation transitions.</p>
+          </div>
+          <a href="steps.html" class="related-link-btn">View Steps →</a>
+        </div>
+
+        <div class="related-product-row">
+          <div class="related-prod-info">
+            <h5>Copings &amp; Pier Caps</h5>
+            <p>Perimeter wall coping stones and column caps matching fire pit stonework.</p>
+          </div>
+          <a href="copings.html" class="related-link-btn">View Copings →</a>
+        </div>
+
+        <div class="related-product-row">
+          <div class="related-prod-info">
+            <h5>Cobbles &amp; Sets</h5>
+            <p>Natural split cubic stones for surrounding radial aprons &amp; fire pit rings.</p>
+          </div>
+          <a href="cobbles-and-sets.html" class="related-link-btn">View Cobbles →</a>
+        </div>
+      </div>
+
+      <!-- NEXT STEPS DARK BOX -->
+      <div class="next-steps-dark-box">
+        <h4>Plan your inquiry with real project details</h4>
+        <p>Choose dimensions, stone color, and layout to receive custom factory-direct quotes promptly for container shipping to your port or yard.</p>
+        <div class="next-steps-actions">
+          <button class="btn-dark-primary open-enquiry-btn" data-prod="Custom Fire Pit Package">Request a Quote</button>
+          <a href="https://wa.me/919425106752?text=Hello%20Shri%20Sanwariya%20Stone,%20I%20need%20a%20quote%20for%20Sandstone%20Fire%20Pits" target="_blank" rel="noopener noreferrer" class="btn-dark-secondary">WhatsApp Direct Chat 💬</a>
+          <a href="../index.html" class="btn-dark-secondary">Back to Home Page ↗</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand-title">Shri Sanwariya Stone Suppliers</div>
+        <p class="footer-brand-desc">
+          Direct Quarry Owners &amp; Precision Stone Fabricators in Mandsaur, Madhya Pradesh, India. Specializing in natural sandstone pavers, coping caps, steps, cobbles, fire pit ensembles, and roofing slates for worldwide architects and landscape contractors.
+        </p>
+        <p style="font-size:12px; color:#A89F95;">
+          <strong>Factory Yard:</strong> Industrial Area, Mandsaur, MP, India 458001
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="sandstone-pavers.html">Sandstone Pavers</a></li>
+          <li><a href="copings.html">Copings &amp; Caps</a></li>
+          <li><a href="steps.html">Sandstone Steps</a></li>
+          <li><a href="cobbles-and-sets.html">Cobbles &amp; Sets</a></li>
+          <li><a href="fire-pits-and-circles.html">Fire Pits &amp; Circles</a></li>
+          <li><a href="roofing.html">Roofing Slates</a></li>
+          <li><a href="natural-sandstone-colors.html">Natural Colors</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#about">About Us</a></li>
+          <li><a href="../index.html#processing">Facilities</a></li>
+          <li><a href="../index.html#contact">Get Quotation</a></li>
+          <li><a href="https://wa.me/919425106752" target="_blank" rel="noopener noreferrer">WhatsApp Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Export Inquiries</h5>
+        <div class="footer-contact-item">
+          <strong>Phone:</strong> +91 94251 06752
+        </div>
+        <div class="footer-contact-item">
+          <strong>Email:</strong> info@sanwariyastone.com
+        </div>
+        <div class="footer-contact-item">
+          <strong>Markets:</strong> UK, Europe, USA, Canada, Australia, UAE
+        </div>
+        <div class="footer-contact-item">
+          <strong>Packing:</strong> ISPM-15 Certified Crates
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Shri Sanwariya Stone Suppliers. All rights reserved.</div>
+      <div>Designed for International Trade &amp; Landscape Architecture</div>
     </div>
   </footer>
 
+  <!-- ENQUIRY MODAL POPUP -->
+  <div class="modal-backdrop" id="quoteModal">
+    <div class="modal-box">
+      <div class="modal-close" onclick="closeQuoteModal()">&times;</div>
+      <h3 class="modal-title">Request Quotation</h3>
+      <p class="modal-subtitle">Tell us your project requirements and receive CIF / FOB pricing with container packing details within 24 hours.</p>
+
+      <div class="modal-prod-preview" id="modalProdPreview">
+        <div class="modal-prod-thumb">
+          <img id="modalPreviewImg" src="../assets/firepit-lawn-blaze.png" alt="Selected Product">
+        </div>
+        <div>
+          <div class="modal-prod-name" id="modalProdName">Lawn Fire Pit Hearth Ensemble</div>
+          <div class="modal-prod-spec" id="modalProdSpec">Square 1000x1000mm · Calibrated Coping · High-Heat Hearth</div>
+        </div>
+      </div>
+
+      <form id="quoteForm" onsubmit="handleQuoteSubmit(event)">
+        <input type="hidden" id="formProdInput" name="product" value="Lawn Fire Pit Hearth Ensemble">
+
+        <div class="modal-form-group">
+          <label for="clientName">Full Name *</label>
+          <input type="text" id="clientName" required placeholder="John Doe">
+        </div>
+
+        <div class="modal-form-group">
+          <label for="clientEmail">Email Address *</label>
+          <input type="email" id="clientEmail" required placeholder="john@example.com">
+        </div>
+
+        <div class="modal-form-group">
+          <label for="clientPhone">Phone / WhatsApp Number *</label>
+          <input type="tel" id="clientPhone" required placeholder="+44 7123 456789">
+        </div>
+
+        <div class="modal-form-group">
+          <label for="clientQty">Estimated Quantity / Dimensions *</label>
+          <input type="text" id="clientQty" required placeholder="e.g. 5 Complete Kits or 1 Full 20ft Container">
+        </div>
+
+        <div class="modal-form-group">
+          <label for="clientDest">Destination Port / City</label>
+          <input type="text" id="clientDest" placeholder="e.g. Felixstowe, UK / Houston, USA">
+        </div>
+
+        <div class="modal-form-group">
+          <label for="clientMsg">Project Notes / Custom Sizing</label>
+          <textarea id="clientMsg" rows="3" placeholder="Specify stone color (Kandla Grey, Teakwood, etc.), height, gas vs wood burning..."></textarea>
+        </div>
+
+        <button type="submit" class="modal-submit-btn">Send Inquiry For Quick Quote →</button>
+
+        <a id="modalWaDirect" href="https://wa.me/919425106752" target="_blank" rel="noopener noreferrer" class="modal-wa-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          Chat Directly on WhatsApp
+        </a>
+      </form>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Accordion handler for Specification card
+    function toggleAcc(id) {
+      const box = document.getElementById(id);
+      if (box) {
+        box.classList.toggle('open');
+      }
+    }
+
+    // FAQ Accordion Handler
+    function toggleFaq(id) {
+      const item = document.getElementById(id);
+      if (item) {
+        item.classList.toggle('open');
+      }
+    }
+
+    // Modal Handlers
+    const modal = document.getElementById('quoteModal');
+    const previewImg = document.getElementById('modalPreviewImg');
+    const previewName = document.getElementById('modalProdName');
+    const previewSpec = document.getElementById('modalProdSpec');
+    const formProdInput = document.getElementById('formProdInput');
+    const waDirectBtn = document.getElementById('modalWaDirect');
+
+    function openQuoteModal(prodName, prodImg, prodSpec) {
+      prodName = prodName || 'Sandstone Fire Pits';
+      prodImg = prodImg || '../assets/firepit-lawn-blaze.png';
+      prodSpec = prodSpec || 'Natural Sandstone Architectural Fire Pit Ensemble';
+
+      if (previewName) previewName.textContent = prodName;
+      if (previewSpec) previewSpec.textContent = prodSpec;
+      if (previewImg) previewImg.src = prodImg;
+      if (formProdInput) formProdInput.value = prodName;
+
+      const waText = encodeURIComponent(`Hello Shri Sanwariya Stone, I am inquiring about: ${prodName} (${prodSpec}).`);
+      if (waDirectBtn) {
+        waDirectBtn.href = `https://wa.me/919425106752?text=${waText}`;
+      }
+
+      if (modal) modal.classList.add('open');
+    }
+
+    document.querySelectorAll('.open-enquiry-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const prodName = this.getAttribute('data-prod') || 'Sandstone Fire Pits';
+        const prodImg = this.getAttribute('data-img') || '../assets/firepit-lawn-blaze.png';
+        const prodSpec = this.getAttribute('data-spec') || 'Natural Sandstone Architectural Fire Pit Ensemble';
+        openQuoteModal(prodName, prodImg, prodSpec);
+      });
+    });
+
+    function closeQuoteModal() {
+      if (modal) modal.classList.remove('open');
+    }
+
+    if (modal) {
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          closeQuoteModal();
+        }
+      });
+    }
+
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('clientName').value;
+      const prod = formProdInput ? formProdInput.value : 'Fire Pit Kit';
+      alert(`Thank you, ${name}! Your quote request for "${prod}" has been sent. Our export team will contact you within 24 hours.`);
+      closeQuoteModal();
+      document.getElementById('quoteForm').reset();
+    }
+  </script>
 </body>
 </html>

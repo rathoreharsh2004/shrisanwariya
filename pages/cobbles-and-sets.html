@@ -1,39 +1,50 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cobbles & Sets | Shri Sanwariya Stone Suppliers</title>
-  <meta name="description" content="Hand-Cut & Tumbled Natural Stone Cobbles & Setts from Shri Sanwariya Stone Suppliers. Heavy-duty driveway setts, fan-pattern paving, and cubic stones in Kandla Grey, Raj Green & Sagar Black.">
-  <meta name="keywords" content="Cobbles and Sets, Sandstone Cobbles, Driveway Setts, Tumbled Stone Cubes, Fan Paving Setts, Indian Granite Cobbles, Mandsaur Stone">
+  <title>Sandstone Cobbles &amp; Setts | Shri Sanwariya Stone Suppliers</title>
+  <meta name="description" content="Handcrafted Indian Sandstone Cobbles, Driveway Setts &amp; Radial Fan Paving from Shri Sanwariya Stone Suppliers. Heavy-duty 50mm/60mm/80mm cubic stones in Kandla Grey, Sagar Black, Mandana Red and Autumn Brown.">
+  <meta name="keywords" content="Sandstone Cobbles, Cobbles and Setts, Driveway Setts, Granite Cobbles, Hand Cut Cobbles, Tumbled Setts, Radial Fan Paving, Indian Stone Cobbles, Mandsaur Stone">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg-cream: #FAF7F2;
       --bg-cream-soft: #F4EFE7;
-      --bg-dark: #241F1C;
-      --accent-ochre: #BA6E2B;
-      --accent-ochre-dark: #A05C20;
+      --bg-dark: #221C18;
+      --bg-dark-card: #2B231F;
+      --accent-ochre: #B86539;
+      --accent-ochre-dark: #9E5229;
+      --accent-amber: #BA6E2B;
       --text-dark: #221C18;
       --text-muted: #6E665E;
-      --text-light-muted: #C0B7AC;
+      --text-light-muted: #C8BFB5;
       --border-warm: #E6DFD5;
+      --border-dark: rgba(255, 255, 255, 0.08);
       --radius-sm: 8px;
       --radius-md: 10px;
-      --radius-lg: 16px;
-      --radius-xl: 22px;
+      --radius-lg: 14px;
+      --radius-xl: 20px;
       --radius-full: 9999px;
       --shadow-sm: 0 4px 15px rgba(37, 32, 28, 0.05);
+      --shadow-card: 0 10px 30px rgba(37, 32, 28, 0.08);
       --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; font-size: 16px; }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-cream); color: var(--text-dark); line-height: 1.65; overflow-x: hidden; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
     a { text-decoration: none; color: inherit; transition: var(--transition); }
     img { display: block; width: 100%; height: 100%; object-fit: cover; }
     button { font-family: inherit; cursor: pointer; border: none; background: none; transition: var(--transition); }
@@ -41,6 +52,7 @@
     .container { width: min(1180px, 92%); margin: 0 auto; }
     .center { text-align: center; }
 
+    /* HEADER */
     header {
       position: sticky; top: 0; z-index: 900; background: rgba(250, 247, 242, 0.96);
       backdrop-filter: blur(14px); border-bottom: 1px solid rgba(230, 223, 213, 0.85);
@@ -56,7 +68,7 @@
     .dropdown { position: relative; }
     .dropdown-btn { display: flex; align-items: center; gap: 5px; cursor: pointer; }
     .dropdown-menu {
-      position: absolute; top: 100%; left: -15px; width: 230px; background: #FFFFFF;
+      position: absolute; top: 100%; left: -15px; width: 240px; background: #FFFFFF;
       border: 1px solid var(--border-warm); border-radius: var(--radius-md); padding: 10px;
       box-shadow: 0 20px 45px rgba(37, 32, 28, 0.1); opacity: 0; visibility: hidden;
       transform: translateY(12px); transition: var(--transition); list-style: none;
@@ -69,156 +81,713 @@
     .btn-quote:hover { background: var(--text-dark); color: #fff; }
     .menu-toggle { display: none; font-size: 24px; color: var(--text-dark); }
 
-    .floating-enquiry-tab {
-      position: fixed; right: 0; top: 48%; transform: translateY(-50%); z-index: 850;
-      background: var(--bg-dark); color: #fff; border: 1px solid rgba(255,255,255,0.15);
-      border-right: none; padding: 14px 9px; border-radius: 12px 0 0 12px;
-      display: flex; flex-direction: column; align-items: center; gap: 9px; cursor: pointer;
+    /* FLOATING SIDE ACTIONS */
+    .floating-side-actions {
+      position: fixed;
+      right: 20px;
+      top: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 850;
     }
-    .floating-enquiry-tab:hover { background: var(--accent-ochre); }
-    .floating-enquiry-tab .tab-icon { width: 17px; height: 17px; fill: currentColor; }
-    .floating-enquiry-tab .tab-text { writing-mode: vertical-rl; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; transform: rotate(180deg); }
+    .action-circle-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      transition: var(--transition);
+    }
+    .action-circle-btn:hover {
+      transform: scale(1.08) translateY(-2px);
+    }
+    .btn-brochure {
+      background: #73482F;
+      color: #FFFFFF;
+    }
+    .btn-wa {
+      background: #25D366;
+      color: #FFFFFF;
+    }
 
+    /* PAGE BANNER */
     .page-banner {
-      position: relative; height: 230px; display: flex; align-items: center; justify-content: center;
-      background: #25201C; overflow: hidden;
+      width: min(1180px, 92%);
+      margin: 20px auto 40px;
+      height: 280px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow-sm);
     }
-    .page-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.42); }
-    .page-banner-content { position: relative; z-index: 2; text-align: center; color: #FFFFFF; }
-    .page-banner-content h1 { font-size: clamp(34px, 4.2vw, 48px); font-weight: 800; letter-spacing: -0.02em; }
+    .page-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 50%;
+      filter: brightness(0.78);
+    }
+    .page-banner-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(26, 21, 18, 0.4);
+    }
+    .page-banner-content h1 {
+      font-size: clamp(34px, 4vw, 50px);
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.01em;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.45);
+    }
 
+    /* PRODUCT MAIN GRID (2 COLUMNS) */
     .product-main-grid {
       display: grid;
-      grid-template-columns: 410px 1fr;
-      gap: 45px;
+      grid-template-columns: 370px 1fr;
+      gap: 40px;
       align-items: start;
-      padding: 50px 0 60px;
+      margin-bottom: 60px;
     }
 
-    .spec-sticky-wrap { position: sticky; top: 96px; }
+    /* LEFT: SPECIFICATION CARD */
+    .spec-sticky-wrap {
+      position: sticky;
+      top: 96px;
+    }
     .spec-card {
-      background: #241F1C; border-radius: 12px; overflow: hidden;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.14); border: 1px solid rgba(186, 110, 43, 0.2);
+      background: #2D2520;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      color: #FFFFFF;
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
     .spec-header {
-      background: var(--accent-ochre); color: #FFFFFF; padding: 14px 20px; font-size: 13.5px;
-      font-weight: 800; letter-spacing: 0.12em; display: flex; align-items: center; gap: 10px; text-transform: uppercase;
+      background: linear-gradient(135deg, #BA6E2B, #A05C20);
+      padding: 13px 20px;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .spec-header svg { width: 17px; height: 17px; fill: currentColor; }
+    .spec-header svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
     .spec-table-row {
-      display: grid; grid-template-columns: 135px 1fr; gap: 14px; padding: 16px 20px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08); align-items: start;
+      padding: 13px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      font-size: 11.5px;
+      line-height: 1.5;
     }
-    .spec-col-label { font-size: 11px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.4; }
-    .spec-col-val { font-size: 11.5px; font-weight: 500; color: var(--text-light-muted); line-height: 1.65; text-transform: uppercase; }
-    .spec-note-bar { background: var(--accent-ochre-dark); color: #FFF0E2; padding: 13px 20px; font-size: 11.5px; line-height: 1.5; }
+    .spec-table-row:last-of-type {
+      border-bottom: none;
+    }
+    .spec-col-label {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #D6C2B4;
+      margin-bottom: 4px;
+    }
+    .spec-col-val {
+      color: #FFFFFF;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .spec-note-bar {
+      padding: 13px 20px;
+      background: #251E19;
+      font-size: 11px;
+      color: #C2B7AC;
+      line-height: 1.55;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
     .spec-sample-btn {
-      display: flex; align-items: center; justify-content: space-between; width: 100%;
-      background: #FFFFFF; color: var(--accent-ochre); padding: 14px 20px; border-radius: var(--radius-sm);
-      font-size: 12.5px; font-weight: 800; letter-spacing: 0.08em; margin-top: 14px; border: 1px solid var(--border-warm);
-      box-shadow: var(--shadow-sm); cursor: pointer; text-transform: uppercase;
+      width: 100%;
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-sm);
+      padding: 13px 18px;
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--text-dark);
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+      transition: var(--transition);
     }
-    .spec-sample-btn:hover { background: var(--accent-ochre); color: #FFFFFF; border-color: var(--accent-ochre); }
+    .spec-sample-btn:hover {
+      background: var(--bg-cream-soft);
+      border-color: var(--accent-amber);
+    }
+    .spec-pills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 12px;
+    }
+    .spec-chip {
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-full);
+      padding: 4px 12px;
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
 
-    .intro-header-bar { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
-    .accent-bar { width: 4px; height: 34px; background: var(--accent-ochre); border-radius: 2px; flex-shrink: 0; }
-    .intro-title { font-size: clamp(28px, 3vw, 36px); font-weight: 800; color: var(--text-dark); letter-spacing: -0.02em; }
-    .intro-paragraph { font-size: 14px; line-height: 1.75; color: var(--text-muted); margin-bottom: 26px; }
+    /* RIGHT COLUMN: NARRATIVE + GALLERY */
+    .intro-header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .intro-title-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .accent-bar {
+      width: 4px;
+      height: 34px;
+      background: var(--accent-amber);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .intro-title {
+      font-size: clamp(26px, 2.8vw, 34px);
+      font-weight: 800;
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+    }
+    .intro-paragraph {
+      font-size: 13.5px;
+      line-height: 1.75;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
 
+    /* GALLERY SUBHEADER & GRID (MATCHING SCREENSHOT) */
     .gallery-sub-header {
-      font-size: 12.5px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
-      color: var(--text-dark); padding-bottom: 9px; border-bottom: 1px solid var(--border-warm); margin-bottom: 20px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-warm);
+      margin-bottom: 18px;
     }
-    .gallery-pairs-list { display: flex; flex-direction: column; gap: 20px; }
-    .gallery-pair { display: grid; grid-template-columns: 1.15fr 1fr; gap: 16px; align-items: stretch; }
-    .gallery-app-card { height: 195px; border-radius: var(--radius-md); overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); background: #2E2722; }
-    .gallery-app-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-    .gallery-app-card:hover img { transform: scale(1.05); }
-    .gallery-swatch-card {
-      background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--border-warm);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.04); padding: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+    .cobbles-gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
     }
-    .swatch-img-box { width: 100%; height: 140px; display: flex; align-items: center; justify-content: center; border-radius: 6px; overflow: hidden; background: #FAF8F5; }
-    .swatch-img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-    .gallery-swatch-card:hover .swatch-img-box img { transform: scale(1.06); }
-    .swatch-name { font-size: 12px; font-weight: 700; color: var(--text-dark); margin-top: 8px; letter-spacing: 0.02em; }
+    .cobbles-card {
+      height: 200px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      background: #2E2722;
+      cursor: pointer;
+      position: relative;
+      transition: var(--transition);
+    }
+    .cobbles-card.tall-card {
+      height: 310px;
+    }
+    .cobbles-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .cobbles-card:hover img {
+      transform: scale(1.05);
+    }
+    .cobbles-card-badge {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      background: rgba(34, 28, 24, 0.88);
+      backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: var(--transition);
+    }
+    .cobbles-card:hover .cobbles-card-badge {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-    .feature-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 40px 0 60px; }
-    .info-card { background: #FFFFFF; border-radius: var(--radius-lg); padding: 32px 24px; border: 1px solid rgba(222, 215, 205, 0.75); box-shadow: var(--shadow-sm); }
-    .info-card .card-eyebrow { font-size: 10.5px; font-weight: 700; letter-spacing: 0.18em; color: var(--accent-ochre); text-transform: uppercase; margin-bottom: 10px; display: block; }
-    .info-card h3 { font-size: 17px; font-weight: 800; color: var(--text-dark); margin-bottom: 14px; }
-    .info-list { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--text-muted); }
-    .info-list li { display: flex; align-items: flex-start; gap: 8px; }
-    .check-bullet { color: var(--accent-ochre); font-weight: 800; }
-    .tags-container { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-    .pill-tag { background: var(--bg-cream-soft); border: 1px solid var(--border-warm); border-radius: var(--radius-full); padding: 4px 10px; font-size: 11px; font-weight: 600; color: var(--text-dark); }
+    /* 3 FEATURE CARDS */
+    .feature-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 40px 0 55px;
+    }
+    .info-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-md);
+      padding: 26px 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .card-eyebrow {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-amber);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .info-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+      line-height: 1.35;
+    }
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .info-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.5;
+    }
+    .check-bullet {
+      color: var(--accent-amber);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .pill-tag {
+      background: var(--bg-cream-soft);
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-full);
+      padding: 3px 9px;
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
 
-    .packing-section { background: #FFFFFF; border-radius: var(--radius-xl); padding: 42px 32px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-warm); margin-bottom: 60px; }
-    .packing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
-    .packing-card { height: 185px; border-radius: var(--radius-md); overflow: hidden; position: relative; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-    .packing-card span { position: absolute; bottom: 10px; left: 10px; right: 10px; background: rgba(0, 0, 0, 0.7); color: #fff; font-size: 11px; font-weight: 600; padding: 4px 8px; border-radius: 4px; text-align: center; }
+    /* EXPORT QUALITY PACKING & LOADING */
+    .packing-section {
+      background: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 38px 28px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-warm);
+      margin-bottom: 55px;
+    }
+    .packing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: 22px;
+    }
+    .packing-card {
+      height: 175px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .packing-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .packing-card:hover img {
+      transform: scale(1.06);
+    }
+    .packing-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(34, 28, 24, 0.9) 0%, rgba(34, 28, 24, 0.3) 70%, transparent 100%);
+      color: #FFFFFF;
+      padding: 18px 10px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
 
-    .faq-bespoke-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 38px; margin-bottom: 70px; }
-    .faq-title { font-size: 21px; font-weight: 800; margin-bottom: 20px; color: var(--text-dark); }
-    .faq-item { background: #FFFFFF; border: 1px solid var(--border-warm); border-radius: var(--radius-md); margin-bottom: 10px; overflow: hidden; }
-    .faq-question { padding: 15px 18px; font-size: 14px; font-weight: 700; color: var(--text-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .faq-question:hover { color: var(--accent-ochre); }
-    .faq-chevron { transition: transform 0.3s ease; }
-    .faq-item.active .faq-chevron { transform: rotate(180deg); color: var(--accent-ochre); }
-    .faq-answer { display: none; padding: 0 18px 16px; font-size: 13px; color: var(--text-muted); line-height: 1.65; }
-    .faq-item.active .faq-answer { display: block; }
+    /* FAQ & BESPOKE PACKAGES SECTION */
+    .faq-bespoke-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      margin-bottom: 70px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 15px 18px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .faq-chevron {
+      font-size: 11px;
+      color: var(--text-muted);
+      transition: transform 0.3s ease;
+    }
+    .faq-answer {
+      padding: 0 18px 16px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      display: none;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+    }
 
-    .bespoke-box { background: #FFFFFF; border: 1px solid var(--border-warm); border-radius: var(--radius-lg); padding: 26px 22px; margin-bottom: 18px; }
-    .bespoke-box h4 { font-size: 16px; font-weight: 800; margin-bottom: 14px; }
-    .bespoke-step { margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--bg-cream-soft); }
-    .bespoke-step strong { display: block; font-size: 13px; color: var(--accent-ochre); margin-bottom: 2px; }
-    .bespoke-step p { font-size: 12px; color: var(--text-muted); margin: 0; }
+    .related-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .related-box h4 {
+      font-size: 14.5px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text-dark);
+    }
+    .related-item {
+      padding: 12px 14px;
+      background: var(--bg-cream-soft);
+      border-radius: var(--radius-sm);
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .related-item:hover {
+      background: #EFE7DC;
+      transform: translateX(3px);
+    }
+    .related-item strong {
+      display: block;
+      font-size: 13px;
+      color: var(--text-dark);
+      margin-bottom: 2px;
+    }
+    .related-item p {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
 
-    .inquiry-cta-dark { background: var(--bg-dark); color: #fff; border-radius: var(--radius-lg); padding: 24px 22px; }
-    .inquiry-cta-dark h4 { font-size: 16px; margin-bottom: 8px; }
-    .inquiry-cta-dark p { font-size: 12px; color: var(--text-light-muted); margin-bottom: 15px; }
+    /* CTA DARK CONTAINER */
+    .inquiry-dark-box {
+      background: #241E1A;
+      border-radius: var(--radius-md);
+      padding: 28px;
+      color: #FFFFFF;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .inquiry-dark-box h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .inquiry-dark-box p {
+      font-size: 12px;
+      color: var(--text-light-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    .inquiry-actions-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .btn-terracotta {
+      background: var(--accent-amber);
+      color: #FFFFFF;
+      padding: 9px 18px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-terracotta:hover {
+      background: #A35B1D;
+    }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 18px;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 600;
+      color: #FFFFFF;
+      background: rgba(255,255,255,0.06);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #25D366;
+      color: #fff;
+      padding: 9px 18px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .btn-whatsapp:hover {
+      background: #1EBE5B;
+      transform: translateY(-2px);
+    }
 
-    .bottom-cta-bar { background: var(--bg-cream-soft); border: 1px solid var(--border-warm); border-radius: var(--radius-xl); padding: 45px 30px; text-align: center; margin-bottom: 70px; }
-    .bottom-cta-bar h3 { font-size: clamp(22px, 2.4vw, 32px); font-weight: 800; color: var(--text-dark); margin-bottom: 8px; }
-    .bottom-cta-bar p { font-size: 13.5px; color: var(--text-muted); margin-bottom: 22px; }
-    .cta-btn-group { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    /* FOOTER */
+    footer {
+      background: var(--bg-cream-soft);
+      border-top: 1px solid var(--border-warm);
+      padding: 60px 0 30px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr 1fr 1.15fr;
+      gap: 36px;
+    }
+    .footer-brand h3 {
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .footer-brand p {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .footer-col h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      color: var(--text-dark);
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+    .footer-links a {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    .footer-links a:hover {
+      color: var(--accent-ochre);
+      padding-left: 4px;
+    }
+    .footer-bottom {
+      margin-top: 45px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-warm);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-    .btn-ochre { display: inline-flex; align-items: center; gap: 8px; padding: 11px 24px; background: var(--accent-ochre); color: #fff; border-radius: var(--radius-full); font-size: 13px; font-weight: 600; }
-    .btn-ochre:hover { background: var(--accent-ochre-dark); transform: translateY(-2px); }
-    .btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 11px 24px; border: 1px solid var(--text-dark); border-radius: var(--radius-full); font-size: 13px; font-weight: 600; }
-    .btn-outline:hover { background: var(--text-dark); color: #fff; }
-    .btn-whatsapp { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; padding: 11px 22px; border-radius: var(--radius-full); font-size: 13px; font-weight: 600; }
-    .btn-whatsapp:hover { background: #1EBE5B; transform: translateY(-2px); }
+    /* MODAL STYLES */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(18, 14, 11, 0.7);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      padding: 20px;
+    }
+    .modal-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-box {
+      background: #FFFFFF;
+      width: min(540px, 94%);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+      position: relative;
+      transform: translateY(15px);
+      transition: transform 0.3s ease;
+    }
+    .modal-backdrop.active .modal-box {
+      transform: translateY(0);
+    }
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      font-size: 20px;
+      color: var(--text-muted);
+      line-height: 1;
+      padding: 6px;
+    }
+    .modal-close:hover {
+      color: var(--text-dark);
+    }
+    .form-group {
+      margin-bottom: 14px;
+    }
+    .form-label {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 5px;
+      color: var(--text-dark);
+    }
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--border-warm);
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: inherit;
+      background: var(--bg-cream-soft);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--accent-amber);
+      background: #FFFFFF;
+    }
 
-    footer { background: var(--bg-cream); border-top: 1px solid var(--border-warm); padding: 70px 0 35px; }
-    .footer-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr 1.15fr; gap: 40px; }
-    .footer-brand h3 { font-size: 18px; font-weight: 800; margin-bottom: 12px; text-transform: uppercase; }
-    .footer-brand p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
-    .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--text-muted); }
-    .footer-links a:hover { color: var(--accent-ochre); }
-    .footer-bottom { margin-top: 50px; padding-top: 25px; border-top: 1px solid var(--border-warm); display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); }
-
-    @media (max-width: 960px) {
-      .product-main-grid { grid-template-columns: 1fr; }
-      .spec-sticky-wrap { position: static; }
-      .feature-cards-grid { grid-template-columns: 1fr; }
-      .packing-grid { grid-template-columns: repeat(2, 1fr); }
-      .faq-bespoke-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .nav-menu { display: none; }
-      .menu-toggle { display: block; }
+    /* RESPONSIVE MEDIA QUERIES */
+    @media (max-width: 980px) {
+      .product-main-grid {
+        grid-template-columns: 1fr;
+      }
+      .spec-sticky-wrap {
+        position: static;
+      }
+      .feature-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .packing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .faq-bespoke-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .nav-menu {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+      }
     }
     @media (max-width: 600px) {
-      .gallery-pair { grid-template-columns: 1fr; }
-      .packing-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .floating-enquiry-tab { display: none; }
+      .cobbles-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .packing-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .floating-side-actions {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="container nav-bar">
       <a href="../index.html" class="brand-logo">
@@ -231,328 +800,376 @@
           <li><a href="../index.html" class="nav-link">Home</a></li>
           <li><a href="../index.html#about" class="nav-link">About Us</a></li>
           <li class="dropdown">
-            <span class="nav-link dropdown-btn">Collections <span style="font-size:11px;">▾</span></span>
+            <span class="nav-link dropdown-btn">Collections ▾</span>
             <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="natural-sandstone-colors.html" style="font-weight:700; color:var(--accent-ochre);">Natural Sandstone Colors ✨</a></li>
+              <li class="dropdown-item"><a href="natural-sandstone-colors.html">Natural Sandstone Colors</a></li>
               <li class="dropdown-item"><a href="sandstone-pavers.html">Sandstone Pavers</a></li>
               <li class="dropdown-item"><a href="copings.html">Copings</a></li>
               <li class="dropdown-item"><a href="steps.html">Steps</a></li>
-              <li class="dropdown-item"><a href="cobbles-and-sets.html">Cobbles &amp; Sets</a></li>
+              <li class="dropdown-item"><a href="cobbles-and-sets.html" style="font-weight:700; color:var(--accent-ochre);">Cobbles &amp; Sets</a></li>
               <li class="dropdown-item"><a href="fire-pits-and-circles.html">Fire Pits &amp; Circles</a></li>
               <li class="dropdown-item"><a href="roofing.html">Roofing</a></li>
             </ul>
           </li>
           <li><a href="../index.html#facilities" class="nav-link">Facilities</a></li>
-          <li><a href="../index.html#story" class="nav-link">Blog</a></li>
-          <li><a href="#contact" class="nav-link">Contact Us</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
       <div style="display:flex; align-items:center; gap:16px;">
-        <a href="#contact" class="btn-quote">Enquire Now</a>
-        <button class="menu-toggle" onclick="alert('Menu: Use navigation links to browse.')">☰</button>
+        <button class="btn-quote" onclick="openQuoteModal('Sandstone Cobbles &amp; Setts')">Get Quote</button>
+        <button class="menu-toggle" onclick="alert('Menu: Use navigation links to browse.')" aria-label="Toggle menu">☰</button>
       </div>
     </div>
   </header>
 
-  <aside class="floating-enquiry-tab" onclick="window.location.href='#contact'">
-    <svg class="tab-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-    <span class="tab-text">Send Enquiry</span>
+  <!-- FLOATING SIDE ACTIONS (PDF & WHATSAPP) -->
+  <aside class="floating-side-actions">
+    <a href="../assets/catalogue.pdf" download class="action-circle-btn btn-brochure" title="Download Product Catalogue PDF">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <line x1="12" y1="18" x2="12" y2="12"></line>
+        <line x1="9" y1="15" x2="15" y2="15"></line>
+      </svg>
+    </a>
+    <a href="https://wa.me/919462976734?text=Hello%20Shri%20Sanwariya%20Stone%20Suppliers,%20I%20am%20interested%20in%20Sandstone%20Cobbles%20%26%20Setts." target="_blank" rel="noopener noreferrer" class="action-circle-btn btn-wa" title="Instant WhatsApp Assistance">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.184 1.564 5.938l-1.656 6.046 6.196-1.625c1.706.93 3.66 1.463 5.74 1.463 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/>
+      </svg>
+    </a>
   </aside>
 
+  <!-- PAGE BANNER (MATCHING SCREENSHOT) -->
   <div class="page-banner">
-    <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=2000&q=85" alt="Natural Stone Cobbles and Sets">
+    <img src="../assets/cobbles-concentric-circle-plaza.png" alt="Sandstone Cobbles &amp; Setts">
     <div class="page-banner-content">
-      <h1>Cobbles &amp; Sets</h1>
+      <h1>Sandstone Cobbles &amp; Setts</h1>
     </div>
   </div>
 
   <main>
     <section class="container product-main-grid">
       
-      <!-- LEFT: SPECIFICATION CARD -->
+      <!-- LEFT: SPECIFICATION CARD (MATCHING SCREENSHOT) -->
       <div class="spec-sticky-wrap">
         <div class="spec-card">
           <div class="spec-header">
             <svg viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg>
-            <span>GENERAL SPECIFICATION</span>
+            <span>SANDSTONE SPECIFICATION</span>
           </div>
 
           <div class="spec-table-row">
-            <div class="spec-col-label">SURFACE:</div>
-            <div class="spec-col-val">HAND-CUT NATURAL SPLIT, TUMBLED ANTIQUE, SAWN SIX-SIDES, FLAMED GRANITE</div>
+            <div class="spec-col-label">STONE:</div>
+            <div class="spec-col-val">NATURAL SANDSTONE, GRANITE, LIMESTONE</div>
           </div>
 
           <div class="spec-table-row">
-            <div class="spec-col-label">DEPTH / THICKNESS:</div>
-            <div class="spec-col-val">40-50 MM (PEDESTRIAN / LIGHT VEHICULAR), 60-80 MM (HEAVY TRAFFIC DRIVEWAYS)</div>
+            <div class="spec-col-label">THICKNESS:</div>
+            <div class="spec-col-val">40-60 MM, 50 MM, 60 MM, 80-100 MM (HEAVY TRAFFIC)</div>
           </div>
 
           <div class="spec-table-row">
-            <div class="spec-col-label">SIZES:</div>
-            <div class="spec-col-val">
-              <div>100X100 MM</div>
-              <div>100X200 MM</div>
-              <div>140X140 MM</div>
-              <div>140X200 MM</div>
-              <div>PRE-MESHED FAN ARCS</div>
-              <div style="color:var(--accent-ochre); margin-top:5px; font-weight:700;">CUSTOM DEPTHS AVAILABLE</div>
-            </div>
+            <div class="spec-col-label">COMMON SIZES:</div>
+            <div class="spec-col-val">100x100 MM, 100x200 MM, 140x140 MM, 140x200 MM, FAN PAVING SETS, RADIAL CIRCLES</div>
+          </div>
+
+          <div class="spec-table-row">
+            <div class="spec-col-label">FINISHES:</div>
+            <div class="spec-col-val">HAND CUT / NATURAL SPLIT, TUMBLED, SAWN &amp; SHOTBLASTED, FLAMED</div>
+          </div>
+
+          <div class="spec-table-row">
+            <div class="spec-col-label">EDGE PROFILES:</div>
+            <div class="spec-col-val">HAND CUT, SAWN, TUMBLED ANTIQUE</div>
           </div>
 
           <div class="spec-note-bar">
-            High compressive strength (&gt; 120 MPa) tested for vehicular point loads and frost-heave resilience.
+            We gladly customize sizes, thickness tolerances and surface finishes to suit your exact project requirements.
           </div>
         </div>
 
-        <button class="spec-sample-btn" onclick="window.location.href='#contact'">
-          <span>📦 REQUEST A SAMPLE</span>
+        <button class="spec-sample-btn" onclick="openQuoteModal('Sandstone Cobbles &amp; Setts Delivery &amp; Care / Sample')">
+          <span>DELIVERY &amp; CARE</span>
           <span>▾</span>
         </button>
+
+        <div class="spec-pills-row">
+          <span class="spec-chip">Driveway Ready</span>
+          <span class="spec-chip">Hand Cut &amp; Tumbled</span>
+          <span class="spec-chip">Radial Fans Available</span>
+        </div>
       </div>
 
-      <!-- RIGHT: NARRATIVE + GALLERY -->
+      <!-- RIGHT: NARRATIVE + GALLERY (MATCHING SCREENSHOT) -->
       <div>
         <div class="intro-header-bar">
-          <div class="accent-bar"></div>
-          <h2 class="intro-title">Cobbles &amp; Sets</h2>
+          <div class="intro-title-group">
+            <div class="accent-bar"></div>
+            <h2 class="intro-title">Sandstone Cobbles &amp; Setts</h2>
+          </div>
         </div>
 
         <p class="intro-paragraph">
-          As a specialized natural stone cobbles and setts supplier, we offer heavy-duty hand-dressed cubic paving blocks. Handcrafted from dense Indian sandstone and granite blocks, our cobbles provide remarkable structural endurance, timeless historic beauty, and unmatched tire traction for residential driveways and civic heritage streets.
+          Crafted with precision and care, our sandstone cobbles and setts are designed to withstand heavy traffic while maintaining their natural beauty. Whether for a driveway, courtyard, or a meandering pathway, they provide traditional durability and timeless European paving character.
         </p>
 
         <div class="gallery-sub-header">
           <span>GALLERY</span>
         </div>
 
-        <div class="gallery-pairs-list">
-          <div class="gallery-pair">
-            <div class="gallery-app-card">
-              <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=700&q=80" alt="Grey Cobbles Driveway">
-            </div>
-            <div class="gallery-swatch-card">
-              <div class="swatch-img-box">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&q=80" alt="Kandla Grey Setts">
-              </div>
-              <span class="swatch-name">Kandla Grey Tumbled Setts</span>
-            </div>
+        <!-- 12 GALLERY CARDS (2 COLS MATCHING SCREENSHOT) -->
+        <div class="cobbles-gallery-grid">
+
+          <!-- Card 1 (Row 1 Left): Swirl fan circle paving in grey/white -->
+          <div class="cobbles-card" onclick="openQuoteModal('Concentric Swirl Fan Cobbles Paving', '../assets/cobbles-swirl-circle-patio.png')">
+            <img src="../assets/cobbles-swirl-circle-patio.png" alt="Concentric Swirl Fan Cobbles Courtyard Paving">
           </div>
 
-          <div class="gallery-pair">
-            <div class="gallery-app-card">
-              <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=700&q=80" alt="Raj Green Cobble Walkway">
-            </div>
-            <div class="gallery-swatch-card">
-              <div class="swatch-img-box">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="Raj Green Cobbles">
-              </div>
-              <span class="swatch-name">Raj Green Hand-Cut Cobbles</span>
-            </div>
+          <!-- Card 2 (Row 1 Right): Pile of black/charcoal cubic setts -->
+          <div class="cobbles-card" onclick="openQuoteModal('Sagar Black Tumbled Cubic Setts 100x100mm', '../assets/cobbles-pile-black-setts.jpg')">
+            <img src="../assets/cobbles-pile-black-setts.jpg" alt="Sagar Black Cubic Sandstone Setts 100x100mm">
           </div>
 
-          <div class="gallery-pair">
-            <div class="gallery-app-card">
-              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80" alt="Sagar Black Driveway">
-            </div>
-            <div class="gallery-swatch-card">
-              <div class="swatch-img-box">
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=500&q=80" alt="Sagar Black Setts">
-              </div>
-              <span class="swatch-name">Sagar Black Sawn Setts</span>
-            </div>
+          <!-- Card 3 (Row 2 Left): Concentric circle cobblestone patio -->
+          <div class="cobbles-card" onclick="openQuoteModal('Concentric Radial Circle Plaza Paving', '../assets/cobbles-concentric-circle-plaza.png')">
+            <img src="../assets/cobbles-concentric-circle-plaza.png" alt="Concentric Radial Circle Cobblestone Plaza Paving">
           </div>
 
-          <div class="gallery-pair">
-            <div class="gallery-app-card">
-              <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80" alt="Fan Paving Setts">
-            </div>
-            <div class="gallery-swatch-card">
-              <div class="swatch-img-box">
-                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=500&q=80" alt="Autumn Brown Setts">
-              </div>
-              <span class="swatch-name">Autumn Brown Fan Setts</span>
-            </div>
+          <!-- Card 4 (Row 2 Right): Grid cobblestone paving angle -->
+          <div class="cobbles-card" onclick="openQuoteModal('Precision Grid Cobblestone Paving', '../assets/cobbles-grid-paving-angle.png')">
+            <img src="../assets/cobbles-grid-paving-angle.png" alt="Precision Grid Cobblestone Paving Installation">
           </div>
+
+          <!-- Card 5 (Row 3 Left): Huge mound of light grey cubic cobbles -->
+          <div class="cobbles-card tall-card" onclick="openQuoteModal('Kandla Grey Hand-Cut Cobbles 100x100mm Pile', '../assets/cobbles-pile-grey-mound.jpg')">
+            <img src="../assets/cobbles-pile-grey-mound.jpg" alt="Kandla Grey Hand-Cut Sandstone Cobbles Pile 100x100mm">
+          </div>
+
+          <!-- Card 6 (Row 3 Right): Grid cobblestone driveway with red sandstone border -->
+          <div class="cobbles-card" onclick="openQuoteModal('Grid Cobblestone Paving with Red Border', '../assets/cobbles-driveway-red-border.png')">
+            <img src="../assets/cobbles-driveway-red-border.png" alt="Grid Cobblestone Paving with Mandana Red Border">
+          </div>
+
+          <!-- Card 7 (Row 4 Left): Public walkway paving with workers -->
+          <div class="cobbles-card" onclick="openQuoteModal('Commercial Walkway &amp; Public Streetscape Installation', '../assets/cobbles-public-walkway-workers.png')">
+            <img src="../assets/cobbles-public-walkway-workers.png" alt="Commercial Public Walkway Cobblestone Installation">
+          </div>
+
+          <!-- Card 7 (Row 4 Right): Red/terracotta 4x4 cobbles swatch -->
+          <div class="cobbles-card" onclick="openQuoteModal('Mandana Red Hand-Cut Cobbles 100x100mm', '../assets/cobbles-swatch-red-terracotta.png')">
+            <img src="../assets/cobbles-swatch-red-terracotta.png" alt="Mandana Red Hand-Cut Sandstone Cobbles 100x100mm">
+          </div>
+
+          <!-- Card 8 (Row 5 Left): Luxury garden estate driveway pathway with dark cobbles -->
+          <div class="cobbles-card tall-card" onclick="openQuoteModal('Luxury Estate Cobblestone Pathway Project', '../assets/cobbles-villa-pathway-garden.jpg')">
+            <img src="../assets/cobbles-villa-pathway-garden.jpg" alt="Luxury Villa Estate Cobblestone Pathway Paving">
+          </div>
+
+          <!-- Card 9 (Row 5 Right): Golden/buff 4x4 cobbles swatch -->
+          <div class="cobbles-card" onclick="openQuoteModal('Autumn Brown / Buff Sandstone Cobbles 100x100mm', '../assets/cobbles-swatch-golden-buff.png')">
+            <img src="../assets/cobbles-swatch-golden-buff.png" alt="Golden Buff Autumn Sandstone Cobbles 100x100mm">
+          </div>
+
+          <!-- Card 10 (Row 6 Left): Black cobbles arranged in an inverted fan/triangle -->
+          <div class="cobbles-card tall-card" onclick="openQuoteModal('Fan Radial Segment Cobblestone Layout', '../assets/cobbles-fan-triangle-layout.jpg')">
+            <img src="../assets/cobbles-fan-triangle-layout.jpg" alt="Radial Fan Segment Cobblestone Paving Template">
+          </div>
+
+          <!-- Card 11 (Row 6 Right Top): Beige/grey 4x4 cobbles swatch -->
+          <div class="cobbles-card" onclick="openQuoteModal('Camel Dust / Beige Grey Sandstone Cobbles 100x100mm', '../assets/cobbles-swatch-beige-grey.png')">
+            <img src="../assets/cobbles-swatch-beige-grey.png" alt="Camel Dust Beige Grey Sandstone Cobbles 100x100mm">
+          </div>
+
+          <!-- Card 12 (Row 6 Right Bottom): 4 rectangular ochre cobbles -->
+          <div class="cobbles-card" onclick="openQuoteModal('Ochre Rectangular Sandstone Setts 100x200mm', '../assets/cobbles-swatch-ochre-rectangular.png')">
+            <img src="../assets/cobbles-swatch-ochre-rectangular.png" alt="Ochre Rectangular Sandstone Setts 100x200mm">
+          </div>
+
         </div>
       </div>
 
     </section>
 
-    <!-- 3 FEATURE CARDS -->
+    <!-- 3 FEATURE CARDS (MATCHING SCREENSHOT) -->
     <section class="container">
       <div class="feature-cards-grid">
+        <!-- Card 1: Applications -->
         <div class="info-card">
-          <span class="card-eyebrow">HEAVY VEHICULAR TRAFFIC</span>
-          <h3>Best-fit projects for Cobbles &amp; Sets</h3>
+          <span class="card-eyebrow">APPLICATIONS</span>
+          <h3>Best-fit projects for Sandstone Cobbles &amp; Setts</h3>
           <ul class="info-list">
-            <li><span class="check-bullet">✓</span> Residential driveways &amp; car parking courts</li>
-            <li><span class="check-bullet">✓</span> Patio perimeter ribbon edging &amp; apron borders</li>
-            <li><span class="check-bullet">✓</span> Municipal historic town squares &amp; tramway lanes</li>
-            <li><span class="check-bullet">✓</span> Permeable SUDS-compliant drainage paving</li>
+            <li><span class="check-bullet">✓</span> Driveways &amp; heavy vehicular access ramps</li>
+            <li><span class="check-bullet">✓</span> Courtyards &amp; heritage palace restoration</li>
+            <li><span class="check-bullet">✓</span> Pathway edgings, tree surrounds &amp; borders</li>
+            <li><span class="check-bullet">✓</span> Public squares &amp; commercial streetscapes</li>
           </ul>
         </div>
 
+        <!-- Card 2: Formats & Finishes -->
         <div class="info-card">
-          <span class="card-eyebrow">DURABILITY PROFILE</span>
-          <h3>Dimensions &amp; Formats</h3>
-          <p style="font-size:13px; color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
-            High compressive strength (&gt; 120 MPa) prevents crushing under delivery vans and SUVs.
+          <span class="card-eyebrow">FORMATS &amp; FINISHES</span>
+          <h3>Finish and size overview</h3>
+          <p style="font-size:12.5px; color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
+            Hand-cut rustic edges or tumbled antique cobblestones. Standard dimensions: 100x100x50mm, 100x200x50mm, 140x140x60mm, and custom radial circle setts. Heavy-duty 80-100mm available for heavy transport. Packaging: Sea-worthy fumigated wooden crates.
           </p>
           <div class="tags-container">
-            <span class="pill-tag">100x100mm</span>
-            <span class="pill-tag">100x200mm</span>
-            <span class="pill-tag">140x140mm</span>
+            <span class="pill-tag">Hand Cut</span>
             <span class="pill-tag">Tumbled</span>
-            <span class="pill-tag">Hand-Cut</span>
-            <span class="pill-tag">50mm / 80mm</span>
+            <span class="pill-tag">Sawn &amp; Honed</span>
+            <span class="pill-tag">Driveway 60mm</span>
+            <span class="pill-tag">Radial Fan</span>
+            <span class="pill-tag">ISPM-15 Crated</span>
           </div>
         </div>
 
+        <!-- Card 3: Export Support -->
         <div class="info-card">
-          <span class="card-eyebrow">BULK LOGISTICS</span>
-          <h3>Container Packaging</h3>
+          <span class="card-eyebrow">EXPORT SUPPORT</span>
+          <h3>Markets we commonly support</h3>
           <ul class="info-list">
-            <li><span class="check-bullet">✓</span> Available in 1-ton bulk bags or timber crates</li>
-            <li><span class="check-bullet">✓</span> Up to 28 metric tons loaded per 20ft ocean container</li>
-            <li><span class="check-bullet">✓</span> Ideal for stocking builders merchant display yards</li>
+            <li><span class="check-bullet">✓</span> UK merchant &amp; landscaper networks</li>
+            <li><span class="check-bullet">✓</span> European municipal &amp; heritage projects</li>
+            <li><span class="check-bullet">✓</span> GCC private estates &amp; luxury developments</li>
           </ul>
+          <p style="font-size:12px; color:var(--text-muted); line-height:1.55; margin-top:10px;">
+            Every crate undergoes rigorous sorting for consistent thickness tolerances, edge dressing, and pallet stabilization to guarantee zero transit damage during international sea shipping.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- PACKING & LOADING -->
+    <!-- EXPORT QUALITY PACKING & LOADING (MATCHING SCREENSHOT) -->
     <section class="container">
       <div class="packing-section">
         <div class="center">
-          <span style="font-size:11px; font-weight:700; letter-spacing:0.2em; color:var(--accent-ochre); text-transform:uppercase;">📦 BULK EXPORT PACKAGING</span>
-          <h3 style="font-size:22px; font-weight:800; margin:6px 0 10px;">High-Density Crate &amp; Big-Bag Systems</h3>
-          <p style="font-size:13px; color:var(--text-muted); max-width:640px; margin:0 auto;">
-            Our cobbles are machine-washed and packed in heavy-duty UV-stabilized ton bags or wooden crates with moisture barrier liners.
+          <span style="font-size:11px; font-weight:700; letter-spacing:0.18em; color:var(--accent-amber); text-transform:uppercase;">📦 EXPORT QUALITY PACKING &amp; LOADING</span>
+          <p style="font-size:13px; color:var(--text-muted); max-width:680px; margin:8px auto 0; line-height:1.6;">
+            We ensure full safety during handling and transit with custom export-grade packaging and rigorous loading procedures.
           </p>
         </div>
 
         <div class="packing-grid">
           <div class="packing-card">
-            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Sorting">
-            <span>1. Sizing Calibration</span>
+            <img src="../assets/packing-calibration-slabs.png" alt="Calibration Inspection &amp; Sawn Stack">
+            <div class="packing-label">Calibration Inspection</div>
           </div>
           <div class="packing-card">
-            <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=600&q=80" alt="Bulk Bags">
-            <span>2. 1-Ton Jumbo Bags</span>
+            <img src="../assets/packing-covered-yard.png" alt="Covered Yard Storage">
+            <div class="packing-label">Covered Yard Storage</div>
           </div>
           <div class="packing-card">
-            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80" alt="Wooden Crates">
-            <span>3. ISPM-15 Crating Option</span>
+            <img src="../assets/packing-wooden-crate.png" alt="ISPM-15 Fumigated Wooden Export Crate">
+            <div class="packing-label">ISPM-15 Wooden Crates</div>
           </div>
           <div class="packing-card">
-            <img src="https://images.unsplash.com/photo-1524492417937-2516a506b9b3?auto=format&fit=crop&w=600&q=80" alt="Container Stuffing">
-            <span>4. Direct Container Dispatch</span>
+            <img src="../assets/packing-truck-loading.png" alt="Sea Container Export Loading">
+            <div class="packing-label">Container Loading</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ & BESPOKE -->
+    <!-- FAQ & BESPOKE PACKAGES (MATCHING SCREENSHOT) -->
     <section class="container">
       <div class="faq-bespoke-grid">
+        
+        <!-- Left: FAQ Accordion -->
         <div>
-          <h3 class="faq-title">Questions buyers ask about Cobbles &amp; Sets</h3>
+          <span style="font-size:11px; font-weight:700; letter-spacing:0.18em; color:var(--accent-amber); text-transform:uppercase; display:block; margin-bottom:4px;">FAQS</span>
+          <h2 style="font-size:22px; font-weight:800; color:var(--text-dark); margin-bottom:20px;">Questions buyers ask about Sandstone Cobbles &amp; Setts</h2>
 
           <div class="faq-item active">
-            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-              <span>What thickness of cobble sett is required for driveways?</span>
-              <span class="faq-chevron">▾</span>
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Are your cobbles suitable for heavy vehicular and commercial traffic?</span>
+              <span class="faq-chevron">▼</span>
             </div>
-            <div class="faq-answer">
-              For domestic passenger car driveways, a 40-50mm thick sett installed on a compacted sub-base is sufficient. For heavy SUVs, commercial delivery access, or civic roads, we recommend 60-80mm thickness for maximum interlock and shear resistance.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-              <span>How many 100x100mm setts are there in a square meter?</span>
-              <span class="faq-chevron">▾</span>
-            </div>
-            <div class="faq-answer">
-              Allowing for standard 8-10mm mortar or resin joint gaps, approximately 82 to 86 pieces of 100x100mm cobbles cover one square meter of laid area.
+            <div class="faq-answer" style="display:block;">
+              Yes. When laid on a suitable mortar or concrete sub-base, our 50mm and 60mm thick setts easily withstand heavy driveway and passenger SUV traffic. For commercial plazas, roadway crossings, and bus lanes, we manufacture heavy-duty 80mm and 100mm thick setts.
             </div>
           </div>
 
           <div class="faq-item">
-            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
-              <span>Can cobbles be bundled with slabs in container orders?</span>
-              <span class="faq-chevron">▾</span>
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Can cobbles be supplied in pre-formed fan or circular patterns?</span>
+              <span class="faq-chevron">▼</span>
             </div>
             <div class="faq-answer">
-              Yes, many clients add 2 to 4 crates of matching 100x100mm or 100x200mm cobbles to a container of paving slabs to serve as complementary driveway aprons and patio edging borders.
+              Yes, we provide individual radius-cut tapered setts for authentic on-site radial paving and concentric circles, as well as pre-assembled mesh-backed fan segments for rapid commercial installation.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>What colors and stone types are available in setts?</span>
+              <span class="faq-chevron">▼</span>
+            </div>
+            <div class="faq-answer">
+              We quarry and process setts in Kandla Grey, Raj Green, Sagar Black, Mandana Red, Autumn Brown, and Camel Dust in hand-cut rustic, tumbled antique, or sawn shotblasted finishes.
             </div>
           </div>
         </div>
 
+        <!-- Right: Related Products & Inquiry CTA -->
         <div>
-          <div class="bespoke-box">
-            <h4>Build a bespoke cobbles package</h4>
-            <div class="bespoke-step">
-              <strong>1. Choose size &amp; finish</strong>
-              <p>Select 100x100mm or 100x200mm in hand-cut rustic split or tumbled antique finish.</p>
+          <span style="font-size:11px; font-weight:700; letter-spacing:0.18em; color:var(--accent-amber); text-transform:uppercase; display:block; margin-bottom:4px;">RELATED PRODUCTS</span>
+          <div class="related-box">
+            <h4>Build a complete stone package</h4>
+
+            <div class="related-item" onclick="window.location.href='sandstone-pavers.html'">
+              <strong>Sandstone Pavers</strong>
+              <p>Frame large format 600x900 patio paving with contrasting hand-cut cobbles for distinctive apron borders.</p>
             </div>
-            <div class="bespoke-step">
-              <strong>2. Determine packaging method</strong>
-              <p>Specify 1-ton jumbo bags with lifting loops or rigid wooden crates.</p>
+
+            <div class="related-item" onclick="window.location.href='steps.html'">
+              <strong>Steps &amp; Risers</strong>
+              <p>Connect elevated terraces and driveway elevations with solid 150mm block steps and bullnose step treads.</p>
             </div>
-            <div class="bespoke-step" style="border:none; padding:0; margin:0;">
-              <strong>3. Container shipping</strong>
-              <p>Optimal container stuffing up to 28 tons for maximum value per square meter.</p>
+
+            <div class="related-item" onclick="window.location.href='fire-pits-and-circles.html'">
+              <strong>Fire Pits &amp; Radial Circles</strong>
+              <p>Centerpiece radial stone circles and masonry fire pit kits crafted from matching quarry sandstone.</p>
             </div>
           </div>
 
-          <div class="inquiry-cta-dark">
-            <h4>Request a Cobbles Quote</h4>
-            <p>Tell us your target tonnage or square meters for a fast export pricing estimate.</p>
-            <div style="display:flex; gap:10px;">
-              <a href="#contact" class="btn-ochre" style="padding:9px 18px; font-size:12.5px;">Request Quote</a>
-              <a href="https://wa.me/919462976734?text=Hello%20Shri%20Sanwariya%20Stone,%20I%20need%20a%20quote%20for%20Cobbles." target="_blank" rel="noopener" class="btn-whatsapp" style="padding:9px 16px; font-size:12.5px;">WhatsApp Us</a>
+          <!-- Dark Inquiry CTA Card (Matching Screenshot) -->
+          <div class="inquiry-dark-box">
+            <span style="font-size:10px; font-weight:800; letter-spacing:0.18em; color:var(--accent-amber); text-transform:uppercase; display:block; margin-bottom:6px;">NEXT STEPS</span>
+            <h4>Plan your inquiry with real project details</h4>
+            <p>Tell us your dimensions, square footage requirement, desired finish (Hand Cut or Tumbled), and port of delivery for an accurate CIF/FOB export quotation.</p>
+
+            <div class="inquiry-actions-row">
+              <button class="btn-terracotta" onclick="openQuoteModal('Sandstone Cobbles Project Inquiry')">Enquire Now →</button>
+              <a href="../assets/catalogue.pdf" download class="btn-outline">View Full Specs ↗</a>
+              <a href="https://wa.me/919462976734?text=Hello%20Shri%20Sanwariya%20Stone%20Suppliers,%20I%20need%20a%20quote%20for%20Sandstone%20Cobbles%20%26%20Setts." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">WhatsApp Instant</a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- BOTTOM CTA -->
-    <section class="container">
-      <div class="bottom-cta-bar">
-        <h3>Interested in our Cobbles &amp; Sets?</h3>
-        <p>Contact us today for sample setts, packaging options, or a container pricing quotation.</p>
-        <div class="cta-btn-group">
-          <a href="#contact" class="btn-ochre">Request Quote</a>
-          <a href="../assets/catalogue.pdf" download class="btn-outline">Download Brochure 📥</a>
-          <a href="https://wa.me/919462976734" target="_blank" rel="noopener" class="btn-whatsapp">Chat on WhatsApp</a>
-        </div>
       </div>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer id="contact">
+  <footer>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h3>Shri Sanwariya Stone Suppliers</h3>
-          <p>Premium Indian natural stone for architectural, landscape and export projects.</p>
-          <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-start;">
-            <a href="https://wa.me/919462976734" target="_blank" rel="noopener" class="btn-whatsapp" style="padding:8px 16px; font-size:12px;">WhatsApp Us</a>
-            <a href="../assets/catalogue.pdf" download class="btn-ochre" style="padding:8px 18px; font-size:12px;">Download Catalogue</a>
+          <h3>Shri Sanwariya</h3>
+          <p>Export-grade Indian sandstone and architectural stone products. Direct quarry manufacturing and precision fabrication for global delivery.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn-quote" onclick="openQuoteModal('General Inquiry')">Quick Enquiry</button>
+            <a href="https://wa.me/919462976734" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">WhatsApp</a>
           </div>
         </div>
 
         <div class="footer-col">
-          <h4>Collections</h4>
+          <h4>COLLECTIONS</h4>
           <ul class="footer-links">
-            <li><a href="natural-sandstone-colors.html" style="color:var(--accent-ochre); font-weight:700;">Natural Sandstone Colors ✨</a></li>
+            <li><a href="natural-sandstone-colors.html">15 Natural Colors</a></li>
             <li><a href="sandstone-pavers.html">Sandstone Pavers</a></li>
             <li><a href="copings.html">Copings</a></li>
-            <li><a href="steps.html">Steps</a></li>
+            <li><a href="steps.html">Steps &amp; Risers</a></li>
             <li><a href="cobbles-and-sets.html">Cobbles &amp; Sets</a></li>
             <li><a href="fire-pits-and-circles.html">Fire Pits &amp; Circles</a></li>
             <li><a href="roofing.html">Roofing</a></li>
@@ -560,31 +1177,164 @@
         </div>
 
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4>SPECIFICATIONS</h4>
           <ul class="footer-links">
-            <li><a href="../index.html#about">About Us</a></li>
-            <li><a href="../index.html#about">RK Stone Impex</a></li>
-            <li><a href="../index.html#facilities">Facilities</a></li>
-            <li><a href="../index.html#story">Vision &amp; Story</a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal('100x100x50mm Cobbles')">100x100x50mm Setts</a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal('100x200x50mm Cobbles')">100x200x50mm Rectangular</a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal('Tumbled Antique Cobbles')">Tumbled Antique Finish</a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal('Radial Fan Mesh Cobbles')">Radial Fan Setts</a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal('Commercial 80mm Setts')">Commercial 80mm Roadway</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Support &amp; Contact</h4>
-          <ul class="footer-links">
-            <li><a href="mailto:info@shrisanwariyastone.com">info@shrisanwariyastone.com</a></li>
-            <li><span>+91 9462976734</span></li>
-            <li><span>Mandsaur, Madhya Pradesh, India</span></li>
-          </ul>
+          <h4>CONTACT &amp; EXPORT</h4>
+          <p style="font-size:12.5px; color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
+            Mandsaur, Madhya Pradesh, India<br>
+            Direct: +91 94629 76734<br>
+            Email: sales@shrisanwariyastone.com
+          </p>
+          <a href="../assets/catalogue.pdf" download class="btn-outline" style="color:var(--text-dark); border-color:var(--border-warm); background:#fff;">Download Catalogue PDF</a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© Shri Sanwariya Stone Suppliers 2026 · All rights reserved.</span>
-        <span>Premium Indian Natural Stone Export</span>
+        <div>© 2026 Shri Sanwariya Stone Suppliers. All rights reserved.</div>
+        <div style="display:flex; gap:16px;">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#facilities">Facilities</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <!-- QUOTE & SAMPLE REQUEST MODAL -->
+  <div class="modal-backdrop" id="quoteModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeQuoteModal()" aria-label="Close modal">✕</button>
+      
+      <div id="modalImgPreviewWrap" style="display:none; width:100%; height:130px; border-radius:8px; overflow:hidden; margin-bottom:16px; border:1px solid var(--border-warm);">
+        <img id="modalImgPreview" src="" alt="Product Preview" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+
+      <h3 style="font-size:18px; font-weight:800; margin-bottom:4px; color:var(--text-dark);" id="modalTitle">Request Quotation &amp; Samples</h3>
+      <p style="font-size:12.5px; color:var(--text-muted); margin-bottom:18px;">Direct factory quotation from Shri Sanwariya Stone Suppliers.</p>
+
+      <form id="quoteForm" onsubmit="handleQuoteSubmit(event)">
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-input" id="clientName" placeholder="Full name or company" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone / WhatsApp</label>
+          <input type="tel" class="form-input" id="clientPhone" placeholder="+91 / International number" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Selected Stone Product</label>
+          <select class="form-select" id="stoneProduct">
+            <option value="Sandstone Cobbles & Sets">Sandstone Cobbles &amp; Sets (General)</option>
+            <option value="100x100x50mm Hand-Cut Cobbles">100x100x50mm Hand-Cut Cobbles</option>
+            <option value="100x200x50mm Rectangular Setts">100x200x50mm Rectangular Setts</option>
+            <option value="Tumbled Antique Cobbles">Tumbled Antique Cubic Setts</option>
+            <option value="Radial Fan Pattern Setts">Radial Fan Pattern Setts</option>
+            <option value="Commercial 80mm/100mm Roadway Setts">Commercial 80mm/100mm Roadway Setts</option>
+            <option value="Sagar Black Cubic Setts">Sagar Black Cubic Setts</option>
+            <option value="Mandana Red Hand-Cut Setts">Mandana Red Hand-Cut Setts</option>
+            <option value="Kandla Grey Cobbles">Kandla Grey Cobbles</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Project Details &amp; Quantity</label>
+          <textarea class="form-textarea" id="clientMessage" rows="3" placeholder="Sq. meters / Sq. feet, destination port, finish preference..."></textarea>
+        </div>
+        <div style="display:flex; gap:10px; margin-top:20px;">
+          <button type="submit" class="btn-terracotta" style="flex:1; justify-content:center; padding:12px;">Submit Request →</button>
+          <button type="button" class="btn-whatsapp" onclick="sendViaWhatsApp()" style="justify-content:center; padding:12px;">WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const quoteModal = document.getElementById('quoteModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const stoneProductSelect = document.getElementById('stoneProduct');
+
+    function openQuoteModal(productName = '', imgSrc = '') {
+      if (productName) {
+        modalTitle.textContent = `Enquiry: ${productName}`;
+        let matched = false;
+        for (let i = 0; i < stoneProductSelect.options.length; i++) {
+          if (stoneProductSelect.options[i].text.toLowerCase().includes(productName.toLowerCase()) || 
+              productName.toLowerCase().includes(stoneProductSelect.options[i].text.toLowerCase())) {
+            stoneProductSelect.selectedIndex = i;
+            matched = true;
+            break;
+          }
+        }
+        if (!matched) {
+          const opt = new Option(productName, productName, true, true);
+          stoneProductSelect.add(opt);
+        }
+      } else {
+        modalTitle.textContent = 'Request Quotation & Samples';
+      }
+
+      const previewWrap = document.getElementById('modalImgPreviewWrap');
+      const previewImg = document.getElementById('modalImgPreview');
+      if (imgSrc) {
+        previewImg.src = imgSrc;
+        previewWrap.style.display = 'block';
+      } else {
+        previewWrap.style.display = 'none';
+        previewImg.src = '';
+      }
+      quoteModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeQuoteModal() {
+      quoteModal.classList.remove('active');
+      document.body.style.overflow = '';
+      const previewWrap = document.getElementById('modalImgPreviewWrap');
+      if (previewWrap) previewWrap.style.display = 'none';
+    }
+
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('clientName').value;
+      const phone = document.getElementById('clientPhone').value;
+      const prod = document.getElementById('stoneProduct').value;
+      alert(`Thank you, ${name}! Your enquiry for ${prod} has been recorded. Our export team will reach you at ${phone}.`);
+      closeQuoteModal();
+      e.target.reset();
+    }
+
+    function sendViaWhatsApp() {
+      const name = document.getElementById('clientName').value || 'Customer';
+      const phone = document.getElementById('clientPhone').value || '';
+      const prod = document.getElementById('stoneProduct').value || 'Sandstone Cobbles & Setts';
+      const msg = document.getElementById('clientMessage').value || '';
+      const text = `Hello Shri Sanwariya Stone Suppliers,%0A%0AMy Name: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AProduct: ${encodeURIComponent(prod)}%0ADetails: ${encodeURIComponent(msg)}`;
+      window.open(`https://wa.me/919462976734?text=${text}`, '_blank');
+    }
+
+    function toggleFaq(el) {
+      const parent = el.closest('.faq-item');
+      parent.classList.toggle('active');
+    }
+
+    // Close on backdrop click
+    quoteModal.addEventListener('click', (e) => {
+      if (e.target === quoteModal) closeQuoteModal();
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeQuoteModal();
+    });
+  </script>
 </body>
 </html>

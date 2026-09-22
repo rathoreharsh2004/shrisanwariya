@@ -684,6 +684,320 @@
     }
 
     /* -------------------------------------------------------------
+       NATURAL SANDSTONE COLORS (15 SWATCHES) GRID & CONTROLS
+       ------------------------------------------------------------- */
+    .collection-controls-bar {
+      padding: 24px 0 18px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 25px;
+    }
+    .filter-pills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .filter-pill {
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      font-size: 12.5px;
+      font-weight: 600;
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-pill:hover, .filter-pill.active {
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      border-color: var(--bg-dark);
+    }
+    .search-box-wrap {
+      position: relative;
+      width: 280px;
+    }
+    .search-input {
+      width: 100%;
+      padding: 8px 14px 8px 36px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-warm);
+      background: #FFFFFF;
+      font-family: inherit;
+      font-size: 13px;
+      color: var(--text-dark);
+      outline: none;
+      transition: var(--transition);
+    }
+    .search-input:focus {
+      border-color: var(--terracotta);
+      box-shadow: 0 0 0 3px rgba(184, 101, 57, 0.12);
+    }
+    .search-icon-svg {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+      fill: #8C827A;
+    }
+
+    .colors-collection-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-bottom: 50px;
+      text-align: left;
+    }
+    .color-stone-card {
+      background: #FFFFFF;
+      border: 1px solid #ECE5DA;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+    .color-stone-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+      border-color: rgba(184, 101, 57, 0.4);
+    }
+    .stone-swatch-box {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #EDE8E0;
+      position: relative;
+    }
+    .stone-swatch-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .color-stone-card:hover .stone-swatch-box img {
+      transform: scale(1.06);
+    }
+    .stone-details-body {
+      padding: 20px 18px 18px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .stone-code-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .stone-code {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: var(--terracotta);
+      text-transform: uppercase;
+    }
+    .founding-badge {
+      font-size: 8px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 1px 5px;
+      border: 1px solid #D1C7BA;
+      border-radius: 3px;
+      color: #8A7E72;
+    }
+    .stone-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-dark);
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+    .stone-description {
+      font-size: 12px;
+      line-height: 1.55;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    .stone-meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid #EFEAE3;
+      margin-bottom: 14px;
+    }
+    .meta-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .meta-label {
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #998F85;
+      margin-bottom: 2px;
+    }
+    .meta-value {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.35;
+    }
+    .view-stone-btn {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: auto;
+    }
+    .view-stone-btn span {
+      transition: transform 0.25s ease;
+    }
+    .color-stone-card:hover .view-stone-btn {
+      color: var(--terracotta);
+    }
+    .color-stone-card:hover .view-stone-btn span {
+      transform: translateX(4px);
+    }
+
+    .modal-stone-layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 24px;
+      align-items: start;
+      text-align: left;
+    }
+    .modal-img-wrap {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      box-shadow: var(--shadow-sm);
+    }
+
+    @media (max-width: 1080px) {
+      .colors-collection-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 780px) {
+      .colors-collection-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .collection-controls-bar { flex-direction: column; align-items: stretch; }
+      .search-box-wrap { width: 100%; }
+      .modal-stone-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .colors-collection-grid { grid-template-columns: 1fr; }
+    }
+
+    /* -------------------------------------------------------------
+       SANDSTONE PAVERS SHOWCASE ON INDEX
+       ------------------------------------------------------------- */
+    .pavers-showcase-wrap {
+      margin-top: 55px;
+      padding-top: 50px;
+      border-top: 1px solid var(--border-warm);
+      text-align: left;
+    }
+    .pavers-finishes-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin: 30px 0 35px;
+    }
+    .paver-finish-card {
+      background: #FFFFFF;
+      border: 1px solid #ECE5DA;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+    .paver-finish-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--terracotta);
+    }
+    .paver-finish-img-wrap {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #FFFFFF;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+    .paver-finish-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+    .paver-finish-card:hover .paver-finish-img-wrap img {
+      transform: scale(1.05);
+    }
+    .paver-finish-body {
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      border-top: 1px solid #F2ECE3;
+      background: #FAF8F5;
+    }
+    .paver-finish-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+    .paver-finish-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .paver-finish-link {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    @media (max-width: 1024px) {
+      .pavers-finishes-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 580px) {
+      .pavers-finishes-grid { grid-template-columns: 1fr; }
+    }
+
+    /* -------------------------------------------------------------
        CATALOGUE SECTION (DARK CONTAINER)
        ------------------------------------------------------------- */
     .catalog-section {
@@ -810,6 +1124,55 @@
     }
 
     /* -------------------------------------------------------------
+       EXPORT QUALITY PACKING & LOADING
+       ------------------------------------------------------------- */
+    .packing-section {
+      background: var(--bg-cream-card);
+      border-radius: var(--radius-lg);
+      padding: 38px 28px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(222, 215, 205, 0.65);
+      margin-top: 45px;
+    }
+    .packing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: 22px;
+    }
+    .packing-card {
+      height: 185px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .packing-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .packing-card:hover img {
+      transform: scale(1.05);
+    }
+    .packing-card span {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 5px 8px;
+      border-radius: 4px;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+
+    /* -------------------------------------------------------------
        HOW IT ALL STARTED (OUR VISION)
        ------------------------------------------------------------- */
     .story-section {
@@ -827,19 +1190,91 @@
       position: relative;
       border-radius: var(--radius-lg);
       overflow: hidden;
-      height: 430px;
+      height: 480px;
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+      background: #1B1612;
     }
 
-    .story-visual img {
+    .team-carousel {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .team-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+
+    .team-slide.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .team-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top center;
       transition: transform 0.6s ease;
     }
 
-    .story-visual:hover img {
-      transform: scale(1.05);
+    .team-slide:hover img {
+      transform: scale(1.04);
+    }
+
+    .team-slide-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(18, 14, 11, 0.95) 0%, rgba(18, 14, 11, 0.7) 65%, transparent 100%);
+      padding: 30px 22px 18px;
+      color: #FFFFFF;
+      z-index: 2;
+    }
+
+    .team-slide-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 3px;
+    }
+
+    .team-slide-tagline {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-amber);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .team-slide-dots {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      gap: 7px;
+      z-index: 3;
+    }
+
+    .team-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      padding: 0;
+    }
+
+    .team-dot.active {
+      background: var(--accent-amber);
+      transform: scale(1.25);
     }
 
     .story-info h2 {
@@ -847,7 +1282,7 @@
       font-weight: 700;
       line-height: 1.2;
       letter-spacing: -0.02em;
-      margin: 10px 0 18px;
+      margin: 10px 0 8px;
     }
 
     .story-info p {
@@ -859,6 +1294,132 @@
 
     .story-info .btn-light-outline {
       margin-top: 14px;
+    }
+
+    /* LEADERSHIP STORY CARDS */
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 45px;
+    }
+
+    .leader-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+
+    .leader-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--accent-amber);
+      transform: translateY(-4px);
+    }
+
+    .leader-img-wrap {
+      width: 100%;
+      height: 310px;
+      position: relative;
+      overflow: hidden;
+      background: #1B1612;
+    }
+
+    .leader-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.6s ease;
+    }
+
+    .leader-card:hover .leader-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .leader-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .leader-badge {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-amber);
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+
+    .leader-name {
+      font-size: 19px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+
+    .leader-role {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--terracotta-light);
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    .leader-desc {
+      font-size: 13.5px;
+      color: var(--text-light-muted);
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+
+    .leader-desc p {
+      font-size: 13.5px;
+      margin-bottom: 10px;
+    }
+
+    .leader-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 14px;
+    }
+
+    .leader-list li {
+      font-size: 12.5px;
+      color: var(--text-light-muted);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+    }
+
+    .leader-list li span {
+      color: var(--accent-amber);
+      font-weight: bold;
+    }
+
+    .leader-quote {
+      font-style: italic;
+      border-left: 2px solid var(--accent-amber);
+      padding-left: 12px;
+      margin-top: auto;
+      font-size: 12.5px;
+      color: #E2D9D0;
+    }
+
+    @media (max-width: 960px) {
+      .leadership-grid {
+        grid-template-columns: 1fr;
+      }
+      .leader-img-wrap {
+        height: 340px;
+      }
     }
 
     /* -------------------------------------------------------------
@@ -1133,6 +1694,7 @@
     }
 
     .form-input, .form-select, .form-textarea {
+      
       width: 100%;
       padding: 11px 14px;
       border: 1px solid var(--border-warm);
@@ -1203,6 +1765,9 @@
       .capabilities-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+      .packing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
       .footer-grid {
         grid-template-columns: 1fr 1fr;
       }
@@ -1247,6 +1812,9 @@
         grid-template-columns: 1fr;
       }
       .capabilities-grid {
+        grid-template-columns: 1fr;
+      }
+      .packing-grid {
         grid-template-columns: 1fr;
       }
       .stats-bar {
@@ -1299,6 +1867,119 @@
       color: var(--text-dark);
       padding: 8px 0;
     }
+
+    /* STORY / LEADERSHIP MODAL */
+    .story-modal-box {
+      max-width: 1000px;
+      width: 95%;
+      max-height: 88vh;
+      overflow-y: auto;
+      padding: 40px 36px 36px;
+    }
+
+    .story-leaders-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      margin-top: 8px;
+    }
+
+    .story-leader-card {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 28px;
+      align-items: flex-start;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border-warm);
+    }
+
+    .story-leader-card:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .story-leader-img {
+      width: 180px;
+      height: 210px;
+      border-radius: 12px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .story-leader-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .story-leader-info h4 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin: 6px 0 4px;
+      line-height: 1.2;
+    }
+
+    .story-leader-role {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--terracotta);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+
+    .story-leader-desc p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .story-leader-desc p strong {
+      color: var(--text-dark);
+    }
+
+    .story-quote {
+      margin: 12px 0 0;
+      padding: 12px 16px;
+      border-left: 3px solid var(--accent-amber);
+      background: rgba(217,147,41,0.07);
+      border-radius: 0 8px 8px 0;
+      font-size: 13.5px;
+      font-style: italic;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    .story-resp-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .story-resp-list li {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .story-resp-list li span {
+      color: var(--accent-amber);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 640px) {
+      .story-modal-box { padding: 28px 18px 24px; }
+      .story-leader-card { grid-template-columns: 1fr; }
+      .story-leader-img { width: 100%; height: 200px; }
+    }
   </style>
 </head>
 <body>
@@ -1324,6 +2005,7 @@
               Products <span class="dropdown-arrow">▾</span>
             </span>
             <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="#colors" style="font-weight:700; color:var(--terracotta); border-bottom:1px dashed var(--border-warm); padding-bottom:8px; margin-bottom:4px; display:block;">✨ View Colors On Page ↓</a></li>
               <li class="dropdown-item"><a href="pages/natural-sandstone-colors.html" style="font-weight:700; color:var(--accent-ochre);">Natural Sandstone Colors ✨</a></li>
               <li class="dropdown-item"><a href="pages/sandstone-pavers.html">Sandstone Pavers</a></li>
               <li class="dropdown-item"><a href="pages/copings.html">Copings</a></li>
@@ -1334,7 +2016,7 @@
             </ul>
           </li>
           <li><a href="#facilities" class="nav-link">Facilities</a></li>
-          <li><a href="#story" class="nav-link">Blog</a></li>
+          <li><a href="pages/our-story.html" class="nav-link">Our Story</a></li>
           <li><a href="#contact" class="nav-link">Contact Us</a></li>
         </ul>
       </nav>
@@ -1350,6 +2032,7 @@
     <div class="mobile-drawer" id="mobileDrawer">
       <a href="#home" class="mobile-link">Home</a>
       <a href="#about" class="mobile-link">About Us</a>
+      <a href="#colors" class="mobile-link" style="font-weight:700; color:var(--terracotta);">✨ View Colors On Page</a>
       <a href="#products" class="mobile-link">Our Collections</a>
       <a href="pages/natural-sandstone-colors.html" class="mobile-link" style="padding-left:14px; font-size:13.5px; font-weight:700; color:var(--accent-ochre);">↳ Natural Sandstone Colors ✨</a>
       <a href="pages/sandstone-pavers.html" class="mobile-link" style="padding-left:14px; font-size:13.5px;">↳ Sandstone Pavers</a>
@@ -1359,7 +2042,7 @@
       <a href="pages/fire-pits-and-circles.html" class="mobile-link" style="padding-left:14px; font-size:13.5px;">↳ Fire Pits &amp; Circles</a>
       <a href="pages/roofing.html" class="mobile-link" style="padding-left:14px; font-size:13.5px;">↳ Roofing</a>
       <a href="#facilities" class="mobile-link">Facilities</a>
-      <a href="#story" class="mobile-link">Our Story</a>
+      <a href="pages/our-story.html" class="mobile-link">Our Story</a>
       <a href="#showcase" class="mobile-link">Showcase</a>
       <a href="#contact" class="mobile-link">Contact Us</a>
       <button class="btn-terracotta pill open-enquiry-btn" style="justify-content:center; margin-top:8px;">Get Free Quote</button>
@@ -1413,8 +2096,8 @@
         <div class="rd-grid reveal">
           <div class="rd-copy">
             <h3>Experience Our World</h3>
-            <p>Discover a dedicated natural-stone experience built around Indian sandstone manufacturing, thoughtful customisation and reliable supply. Our showcase brings together stone applications, finishes and ideas that help clients visualize materials for architectural and landscape projects.</p>
-            <p>From material selection to processing and dispatch, our approach combines traditional stone knowledge with a modern, client-focused way of working.</p>
+            <p>RK Sandstone is a family-run sandstone business based in Bijoliya, Rajasthan, India, with a strong foundation in the natural stone industry.</p>
+            <p>The Dhakar family has been associated with the sandstone business since 2005, with the experience and foundation built by Mr. Dinesh Kumar Dhaakad. From quarry selection to precision calibration, custom architectural fabrication and global dispatch, our legacy blends generational stone mastery with modern export quality.</p>
           </div>
 
           <!-- RD Natural Stones Gold Emblem Box -->
@@ -1439,7 +2122,7 @@
             <span class="stat-label">EMPLOYEES</span>
           </div>
           <div class="stat-item">
-            <span class="stat-value">500+</span>
+            <span class="stat-value">100+</span>
             <span class="stat-label">ANNUAL CONTAINERS</span>
           </div>
         </div>
@@ -1451,64 +2134,467 @@
          ============================================================= -->
     <section class="section-spacing products-section" id="products">
       <div class="container center">
-        <!-- FEATURED PALETTE BANNER: NATURAL SANDSTONE COLORS -->
-        <a href="pages/natural-sandstone-colors.html" style="display:block; text-align:left; background:#FFFFFF; border:1px solid var(--border-warm); border-radius:var(--radius-lg); padding:24px 30px; margin-bottom:30px; box-shadow:0 6px 20px rgba(37,32,28,0.05); transition:var(--transition); text-decoration:none;">
-          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
-            <div style="display:flex; align-items:center; gap:18px;">
-              <div style="width:52px; height:52px; border-radius:12px; background:#241F1C; color:#DEC196; display:flex; align-items:center; justify-content:center; font-size:24px; flex-shrink:0;">✨</div>
-              <div>
-                <span style="font-size:10.5px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent-ochre);">FLAGSHIP PALETTE COLLECTION</span>
-                <h3 style="font-size:20px; font-weight:800; color:var(--text-dark); margin:2px 0 4px;">Natural Sandstone Colors (15 Swatches)</h3>
-                <p style="font-size:13px; color:var(--text-muted); margin:0;">Direct quarry beds from Bijolia &amp; Bundi belts — Kandla Grey, Autumn Brown, Mint, Raveena, Buff &amp; more.</p>
-              </div>
+
+        <!-- =========================================================
+             SECTION 1: NATURAL SANDSTONE COLORS COLLECTION (15 SWATCHES)
+             ========================================================= -->
+        <div class="reveal" id="colors">
+          <span class="eyebrow">15 AUTHENTIC QUARRY BEDS &amp; GEOLOGIES</span>
+          <h2 class="section-title">Natural Sandstone Colors Collection</h2>
+          <p class="section-subtitle">Directly extracted from the historic Bijolia &amp; Bundi sandstone belts. Available across all architectural formats.</p>
+        </div>
+
+        <!-- CONTROLS: CATEGORY FILTER PILLS + SEARCH -->
+        <div class="collection-controls-bar reveal">
+          <div class="filter-pills-list">
+            <button class="filter-pill active" onclick="filterCategory('all', this)">All 15 Colors</button>
+            <button class="filter-pill" onclick="filterCategory('grey', this)">Greys &amp; Silvers</button>
+            <button class="filter-pill" onclick="filterCategory('warm', this)">Warm &amp; Browns</button>
+            <button class="filter-pill" onclick="filterCategory('green', this)">Greens &amp; Celadon</button>
+            <button class="filter-pill" onclick="filterCategory('variegated', this)">Variegated &amp; Exotics</button>
+          </div>
+
+          <div class="search-box-wrap">
+            <svg class="search-icon-svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search stone, code, district..." oninput="handleSearch(this.value)">
+          </div>
+        </div>
+
+        <!-- 4-COLUMN COLORS GRID (15 CARDS MATCHING SCREENSHOT) -->
+        <div class="colors-collection-grid reveal" id="colorsGrid">
+
+          <!-- 1. Khadipur Grey -->
+          <div class="color-stone-card" data-category="grey" onclick="window.location.href='pages/khadipur-grey.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/khadipur-grey-swatch-main.jpg" alt="Khadipur Grey Sandstone">
             </div>
-            <div style="display:inline-flex; align-items:center; gap:8px; background:var(--bg-dark); color:#FFFFFF; padding:10px 22px; border-radius:var(--radius-full); font-size:12.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;">
-              <span>Explore 15 Colors</span>
-              <span>→</span>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-01</span>
+              </div>
+              <h3 class="stone-title">Khadipur Grey</h3>
+              <p class="stone-description">A cool, restrained grey from the Khadipur block of the Bijolia belt.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Bhilwara District</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
-        </a>
+
+          <!-- 2. Kandla Grey -->
+          <div class="color-stone-card" data-category="grey" onclick="window.location.href='pages/kandla-grey.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/kandla-grey-swatch-main.jpg" alt="Kandla Grey Sandstone">
+            </div>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-02</span>
+                <span class="founding-badge">FOUNDING</span>
+              </div>
+              <h3 class="stone-title">Kandla Grey</h3>
+              <p class="stone-description">The founding stone. Worked since 1972 across the Bijolia belt.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Bundi District</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
+            </div>
+          </div>
+
+          <!-- 3. Autumn Brown -->
+          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/autumn-brown.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/autumn-brown-swatch-main.jpg" alt="Autumn Brown Sandstone">
+            </div>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-03</span>
+              </div>
+              <h3 class="stone-title">Autumn Brown</h3>
+              <p class="stone-description">The warm-brown anchor of the Bijolia belt — Nayanagar quarry, since the 1980s.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Bhilwara District</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
+            </div>
+          </div>
+
+          <!-- 4. Raj Blend -->
+          <div class="color-stone-card" data-category="variegated" onclick="window.location.href='pages/raj-blend.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/raj-blend-swatch-main.jpg" alt="Raj Blend Sandstone">
+            </div>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-04</span>
+              </div>
+              <h3 class="stone-title">Raj Blend</h3>
+              <p class="stone-description">A naturally variegated warm bed from the Bijolia tehsil.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Bhilwara District</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
+            </div>
+          </div>
+
+          <!-- 5. Garda Green -->
+          <div class="color-stone-card" data-category="green" onclick="window.location.href='pages/garda-green.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/garda-green-swatch-main.jpg" alt="Garda Green Sandstone">
+            </div>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-05</span>
+              </div>
+              <h3 class="stone-title">Garda Green</h3>
+              <p class="stone-description">A sage-to-khaki green from the family's owned Garda block, Bundi District.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Bundi District</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
+            </div>
+          </div>
+
+          <!-- 6. Slate Grey -->
+          <div class="color-stone-card" data-category="grey" onclick="window.location.href='pages/slate-grey.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/slate-grey-swatch-main.png" alt="Slate Grey Sandstone">
+            </div>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-06</span>
+                <span class="founding-badge">FOUNDING</span>
+              </div>
+              <h3 class="stone-title">Slate Grey</h3>
+              <p class="stone-description">A dark, uniform grey from the founding-era Bundi blocks. Since 1972.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Bundi District</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
+            </div>
+          </div>
+
+          <!-- 7. Raveena -->
+          <div class="color-stone-card" data-category="green" onclick="window.location.href='pages/raveena.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/raveena-swatch-main.png" alt="Raveena Sandstone">
+            </div>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-07</span>
+              </div>
+              <h3 class="stone-title">Raveena</h3>
+              <p class="stone-description">A pale celadon-mint from the Khokri block. Worked since the 1990s.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Bhilwara District</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
+            </div>
+          </div>
+
+          <!-- 8. Mint -->
+          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/mint.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/mint-swatch-main.png" alt="Mint Fossil Sandstone">
+            </div>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-08</span>
+              </div>
+              <h3 class="stone-title">Mint</h3>
+              <p class="stone-description">The fossil-bearing mint bed. Marine impressions across selected slabs.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Bhilwara District</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
+            </div>
+          </div>
+
+          <!-- 9. Buff -->
+          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/buff.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/buff-swatch-main.jpg" alt="Buff Sandstone">
+            </div>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-09</span>
+              </div>
+              <h3 class="stone-title">Buff</h3>
+              <p class="stone-description">A pale yellow-beige from the family's Bhootii block and the wider Bijolia tehsil.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Bhilwara District</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
+            </div>
+          </div>
+
+          <!-- 10. Camel Dust -->
+          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/camel-dust.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/camel-dust-swatch-main.jpg" alt="Camel Dust Sandstone">
+            </div>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-10</span>
+              </div>
+              <h3 class="stone-title">Camel Dust</h3>
+              <p class="stone-description">A tan-to-camel mid-tone from the Bijolia tehsil. Bhootii and beyond.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Bhilwara District</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
+            </div>
+          </div>
+
+          <!-- 11. Red Choco -->
+          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/red-choco.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/red-choco-swatch-main.png" alt="Red Choco Sandstone">
+            </div>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-11</span>
+              </div>
+              <h3 class="stone-title">Red Choco</h3>
+              <p class="stone-description">A deep cocoa-red from the Kasiriya block. Renamed from the trade's Kasariya Red.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Bhilwara District</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
+            </div>
+          </div>
+
+          <!-- 12. Dual Tone -->
+          <div class="color-stone-card" data-category="variegated" onclick="window.location.href='pages/dual-tone.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/dual-tone-swatch-main.jpg" alt="Dual Tone Sandstone">
+            </div>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-12</span>
+              </div>
+              <h3 class="stone-title">Dual Tone</h3>
+              <p class="stone-description">Buff and dove-grey in a single slab. The UK trade's Indian York.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Bhilwara District</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
+            </div>
+          </div>
+
+          <!-- 13. Mocha Blend -->
+          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/mocha-blend.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/mocha-blend-swatch-main.png" alt="Mocha Blend Sandstone">
+            </div>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-13</span>
+              </div>
+              <h3 class="stone-title">Mocha Blend</h3>
+              <p class="stone-description">Honey, walnut, cinnamon, cocoa — the variegated brown bed of three KHADANE blocks.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Bhilwara District</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
+            </div>
+          </div>
+
+          <!-- 14. Rainbow -->
+          <div class="color-stone-card" data-category="variegated" onclick="window.location.href='pages/rainbow.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/rainbow-swatch-main.jpg" alt="Rainbow Sandstone">
+            </div>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-14</span>
+              </div>
+              <h3 class="stone-title">Rainbow</h3>
+              <p class="stone-description">Dramatic wave-patterned sandstone with rich swirls of violet, orange, plum, and golden amber.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Nagaur / Khatu Belt</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
+            </div>
+          </div>
+
+          <!-- 15. White -->
+          <div class="color-stone-card" data-category="grey" onclick="window.location.href='pages/white.html'">
+            <div class="stone-swatch-box">
+              <img src="assets/white-swatch-main.png" alt="White Quartzitic Sandstone">
+            </div>
+            <div class="stone-details-body">
+              <div class="stone-code-row">
+                <span class="stone-code">KHD-0-15</span>
+              </div>
+              <h3 class="stone-title">White</h3>
+              <p class="stone-description">Clean, ultra-pale quartzitic sandstone with subtle silvery veining and a pure, luminous modern presence.</p>
+              <div class="stone-meta-grid">
+                <div class="meta-col">
+                  <span class="meta-label">ORIGIN</span>
+                  <span class="meta-value">Bansi Paharpur / Dholpur Belt</span>
+                </div>
+                <div class="meta-col">
+                  <span class="meta-label">SCOPE</span>
+                  <span class="meta-value">All 21 formats</span>
+                </div>
+              </div>
+              <div class="view-stone-btn">VIEW STONE <span>→</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="display:flex; justify-content:center; gap:14px; margin-bottom:60px; flex-wrap:wrap;">
+          <a href="pages/natural-sandstone-colors.html" class="btn-outline">Open Dedicated Colors Gallery ↗</a>
+          <button class="btn-terracotta pill open-enquiry-btn" style="justify-content:center;">Request Stone Sample Box 📦</button>
+        </div>
+
+        <!-- =========================================================
+             SECTION 2: ARCHITECTURAL COLLECTIONS BY APPLICATION
+             ========================================================= -->
+        <div class="reveal" style="border-top:1px solid var(--border-warm); padding-top:55px;">
+          <span class="eyebrow">ARCHITECTURAL STONE APPLICATIONS</span>
+          <h2 class="section-title">Collections By Application</h2>
+          <p class="section-subtitle">Explore our specialized manufacturing lines for paving, landscaping, and heritage architecture.</p>
+        </div>
 
         <!-- 6 Product Collection Cards (3 x 2) -->
         <div class="products-grid reveal">
           <!-- 1. Sandstone Pavers -->
           <a href="pages/sandstone-pavers.html" class="product-card">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="Sandstone Pavers">
+            <img src="assets/sandstone-pavers-pool.png" alt="Sandstone Pavers">
             <div class="product-badge">Sandstone Pavers <span>→</span></div>
           </a>
 
           <!-- 2. Copings -->
           <a href="pages/copings.html" class="product-card">
-            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Copings">
+            <img src="assets/coping-residence-porch-steps.png" alt="Natural Stone Copings">
             <div class="product-badge">Copings <span>→</span></div>
           </a>
 
           <!-- 3. Steps -->
           <a href="pages/steps.html" class="product-card">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Steps">
+            <img src="assets/steps-villa-columns-porch.png" alt="Sandstone Steps">
             <div class="product-badge">Steps <span>→</span></div>
           </a>
 
           <!-- 4. Cobbles & Sets -->
           <a href="pages/cobbles-and-sets.html" class="product-card">
-            <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=900&q=80" alt="Cobbles & Sets">
+            <img src="assets/cobbles-concentric-circle-plaza.png" alt="Sandstone Cobbles &amp; Sets">
             <div class="product-badge">Cobbles &amp; Sets <span>→</span></div>
           </a>
 
           <!-- 5. Fire Pits & Circles -->
           <a href="pages/fire-pits-and-circles.html" class="product-card">
-            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80" alt="Fire Pits & Circles">
+            <img src="assets/firepit-lawn-blaze.png" alt="Natural Sandstone Fire Pits &amp; Radial Circles">
             <div class="product-badge">Fire Pits &amp; Circles <span>→</span></div>
           </a>
 
           <!-- 6. Roofing -->
           <a href="pages/roofing.html" class="product-card">
-            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80" alt="Natural Stone Roofing">
+            <img src="assets/roofing-house-installed-cottage.jpg" alt="Natural Sandstone Roofing Slates &amp; Shingles">
             <div class="product-badge">Roofing <span>→</span></div>
           </a>
         </div>
 
-        <a href="#contact" class="btn-outline">Explore All Collections →</a>
       </div>
     </section>
 
@@ -1628,6 +2714,36 @@
             <p>Finishing and processing options selected to suit architectural and landscape applications.</p>
           </div>
         </div>
+
+        <!-- EXPORT QUALITY PACKING & LOADING -->
+        <div class="packing-section reveal">
+          <div style="text-align: center;">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.18em; color: var(--terracotta); text-transform: uppercase;">📦 EXPORT QUALITY PACKING &amp; LOADING</span>
+            <h3 style="font-size: 22px; font-weight: 700; color: var(--text-dark); margin: 8px 0 6px;">International Crating &amp; Containerized Transit</h3>
+            <p style="font-size: 13.5px; color: var(--text-muted); max-width: 720px; margin: 0 auto; line-height: 1.65;">
+              Every consignment is inspected, stacked with protective foam, and secured in IPPC ISPM-15 certified heat-treated wooden crates, plastic shrink-wrapped and steel-strapped for safe ocean container transport.
+            </p>
+          </div>
+
+          <div class="packing-grid">
+            <div class="packing-card">
+              <img src="assets/packing-calibration-slabs.png" alt="Calibration Inspection &amp; Sawn Slabs Stack">
+              <span>1. Calibration Inspection</span>
+            </div>
+            <div class="packing-card">
+              <img src="assets/packing-covered-yard.png" alt="Crate &amp; Slab Storage in Covered Factory Yard">
+              <span>2. Covered Yard Storage</span>
+            </div>
+            <div class="packing-card">
+              <img src="assets/packing-wooden-crate.png" alt="ISPM-15 Heat-Treated Fumigated Wooden Crate">
+              <span>3. ISPM-15 Wooden Crates</span>
+            </div>
+            <div class="packing-card">
+              <img src="assets/packing-truck-loading.png" alt="Sea Container &amp; Flatbed Truck Loading">
+              <span>4. Sea Container Loading</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1638,19 +2754,95 @@
       <div class="container">
         <div class="dark-card-container reveal">
           <div class="story-layout">
-            <!-- Studio / Boardroom visual -->
+            <!-- Our Vision Leadership Visuals (All 3 Images with Name & Tagline) -->
             <div class="story-visual">
-              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85" alt="Shri Sanwariya natural stone architectural studio and office">
+              <div class="team-carousel" id="teamCarousel">
+                <!-- Dot navigation -->
+                <div class="team-slide-dots">
+                  <button class="team-dot active" onclick="showTeamSlide(0)" aria-label="Slide 1"></button>
+                  <button class="team-dot" onclick="showTeamSlide(1)" aria-label="Slide 2"></button>
+                  <button class="team-dot" onclick="showTeamSlide(2)" aria-label="Slide 3"></button>
+                </div>
+
+                <!-- Slide 1: Mr. Dinesh Kumar Dhaakad -->
+                <div class="team-slide active">
+                  <img src="assets/team-dinesh-kumar-dhaakad.jpg" alt="Mr. Dinesh Kumar Dhaakad - Managing Director &amp; Owner">
+                  <div class="team-slide-caption">
+                    <div class="team-slide-name">Mr. Dinesh Kumar Dhaakad</div>
+                    <div class="team-slide-tagline">Managing Director &amp; Owner • Experience Since 2001</div>
+                  </div>
+                </div>
+
+                <!-- Slide 2: Arman Dhakar -->
+                <div class="team-slide">
+                  <img src="assets/team-arman-dhakar.jpg" alt="Arman Dhakar - Director – Leadership and Business Development">
+                  <div class="team-slide-caption">
+                    <div class="team-slide-name">Arman Dhakar</div>
+                    <div class="team-slide-tagline">Director – Leadership &amp; Business Development</div>
+                  </div>
+                </div>
+
+                <!-- Slide 3: Jaswant Dhakad -->
+                <div class="team-slide">
+                  <img src="assets/team-jaswant-dhakad.jpg" alt="Jaswant Dhakad - Quality &amp; Operations">
+                  <div class="team-slide-caption">
+                    <div class="team-slide-name">Jaswant Dhakad</div>
+                    <div class="team-slide-tagline">Director – Quality &amp; Operations • Premium Quality Control</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Narrative -->
             <div class="story-info">
-              <span class="eyebrow light">OUR VISION</span>
+              <span class="eyebrow light">OUR VISION &amp; LEADERSHIP</span>
               <h2>How It All Started</h2>
-              <p>Rooted in the natural-stone ecosystem of Mandsaur, Shri Sanwariya Stone Suppliers brings together material knowledge, craftsmanship and a commitment to dependable relationships.</p>
-              <p>Our ambition is to connect the character of Indian sandstone with architects, designers, landscapers, builders and buyers worldwide — building trusted relationships through consistency, communication and quality.</p>
-              <a href="#about" class="btn-light-outline">Discover Our Story →</a>
+              <p style="font-size: 13.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-amber); margin-bottom: 14px;">Behind the vision, Business, Leadership and Quality — SHRI SANWARIYA STONE</p>
+              <p>Rooted in the natural-stone ecosystem of Bijoliya &amp; Mandsaur, Shri Sanwariya Stone Suppliers brings together generational quarrying mastery, modern manufacturing infrastructure, and an unyielding commitment to dependable global buyer relationships.</p>
+              <p>Our ambition is to connect the timeless character of premium Indian natural sandstone with architects, designers, builders, and international importers worldwide — backed by certified consistency and direct mine-to-port transparency.</p>
+              <a href="pages/our-story.html" class="btn-light-outline">Discover Our Story →</a>
             </div>
+          </div>
+
+          <!-- THREE LEADERSHIP & VISION CARDS -->
+          <div class="leadership-grid">
+
+            <!-- Leader 1: Mr. Dinesh Kumar Dhaakad -->
+            <div class="leader-card">
+              <div class="leader-img-wrap">
+                <img src="assets/team-dinesh-kumar-dhaakad.jpg" alt="Mr. Dinesh Kumar Dhaakad - Managing Director &amp; Owner">
+              </div>
+              <div class="leader-body">
+                <span class="leader-badge">Established Experience Since 2001</span>
+                <h3 class="leader-name">Mr. Dinesh Kumar Dhaakad</h3>
+                <div class="leader-role">Managing Director &amp; Owner</div>
+              </div>
+            </div>
+
+            <!-- Leader 2: Arman Dhakar -->
+            <div class="leader-card">
+              <div class="leader-img-wrap">
+                <img src="assets/team-arman-dhakar.jpg" alt="Arman Dhakar - Director – Leadership and Business Development">
+              </div>
+              <div class="leader-body">
+                <span class="leader-badge">Second Generation Leadership</span>
+                <h3 class="leader-name">Arman Dhakar</h3>
+                <div class="leader-role">Director – Leadership &amp; Business Development</div>
+              </div>
+            </div>
+
+            <!-- Leader 3: Jaswant Dhakad -->
+            <div class="leader-card">
+              <div class="leader-img-wrap">
+                <img src="assets/team-jaswant-dhakad.jpg" alt="Jaswant Dhakad - Quality &amp; Operations">
+              </div>
+              <div class="leader-body">
+                <span class="leader-badge">Premium Quality Control</span>
+                <h3 class="leader-name">Jaswant Dhakad</h3>
+                <div class="leader-role">Director – Quality &amp; Operations</div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -1880,6 +3072,53 @@
   </div>
 
   <!-- =============================================================
+       INTERACTIVE STONE DETAIL MODAL (15 SWATCHES)
+       ============================================================= -->
+  <div class="modal-backdrop" id="stoneModal">
+    <div class="modal-box" style="max-width: 680px;">
+      <button class="modal-close" onclick="closeStoneModal()" aria-label="Close modal">✕</button>
+      
+      <div class="modal-stone-layout">
+        <div class="modal-img-wrap" style="aspect-ratio:1/1; overflow:hidden; border-radius:10px;">
+          <img id="modalStoneImg" src="" alt="Stone Swatch" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+
+        <div>
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+            <span id="modalStoneCode" class="stone-code"></span>
+            <span id="modalStoneBadge" class="founding-badge" style="display:none;">FOUNDING</span>
+          </div>
+
+          <h2 id="modalStoneTitle" style="font-family:'Playfair Display',serif; font-size:24px; font-weight:700; margin-bottom:8px; color:var(--text-dark);"></h2>
+          <p id="modalStoneDesc" style="font-size:13.5px; color:var(--text-muted); line-height:1.6; margin-bottom:16px;"></p>
+
+          <div style="background:var(--bg-cream-soft); padding:14px 16px; border-radius:8px; border:1px solid var(--border-warm); margin-bottom:18px;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:12px;">
+              <div>
+                <strong style="display:block; color:var(--text-muted); font-size:10px; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:3px;">Quarry Origin:</strong>
+                <span id="modalStoneOrigin" style="font-weight:700; color:var(--text-dark);"></span>
+              </div>
+              <div>
+                <strong style="display:block; color:var(--text-muted); font-size:10px; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:3px;">Scope / Formats:</strong>
+                <span id="modalStoneScope" style="font-weight:700; color:var(--text-dark);"></span>
+              </div>
+            </div>
+          </div>
+
+          <div style="font-size:12px; color:var(--text-muted); margin-bottom:20px;">
+            <strong style="color:var(--text-dark);">Available In:</strong> Sandstone Pavers, Copings, Step Treads, Cobbles &amp; Sets, Radial Circles, and Heritage Roofing.
+          </div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a id="modalWhatsAppBtn" href="#" target="_blank" rel="noopener" class="btn-whatsapp" style="padding:10px 18px; font-size:12.5px;">Enquire on WhatsApp</a>
+            <button id="modalQuoteBtn" class="btn-terracotta pill" style="padding:10px 18px; font-size:12.5px;" onclick="openEnquiryModalForCurrentStone()">Request Sample</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============================================================
        VIDEO LIGHTBOX MODAL
        ============================================================= -->
   <div class="modal-backdrop" id="videoModal">
@@ -2019,8 +3258,221 @@
       document.body.style.overflow = '';
     }
 
+    // =============================================================
+    // NATURAL SANDSTONE COLORS (15 SWATCHES) DATA & MODAL LOGIC
+    // =============================================================
+    const STONES_DATA = [
+      {
+        code: "KHD-0-01",
+        title: "Khadipur Grey",
+        isFounding: false,
+        desc: "A cool, restrained grey from the Khadipur block of the Bijolia belt.",
+        origin: "Bhilwara District",
+        scope: "All 21 formats",
+        img: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        code: "KHD-0-02",
+        title: "Kandla Grey",
+        isFounding: true,
+        desc: "The founding stone. Worked since 1972 across the Bijolia belt.",
+        origin: "Bundi District",
+        scope: "All 21 formats",
+        img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        code: "KHD-0-03",
+        title: "Autumn Brown",
+        isFounding: false,
+        desc: "The warm-brown anchor of the Bijolia belt — Nayanagar quarry, since the 1980s.",
+        origin: "Bhilwara District",
+        scope: "All 21 formats",
+        img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        code: "KHD-0-04",
+        title: "Raj Blend",
+        isFounding: false,
+        desc: "A naturally variegated warm bed from the Bijolia tehsil.",
+        origin: "Bhilwara District",
+        scope: "All 21 formats",
+        img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        code: "KHD-0-05",
+        title: "Garda Green",
+        isFounding: false,
+        desc: "A sage-to-khaki green from the family's owned Garda block, Bundi District.",
+        origin: "Bundi District",
+        scope: "All 21 formats",
+        img: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        code: "KHD-0-06",
+        title: "Slate Grey",
+        isFounding: true,
+        desc: "A dark, uniform grey from the founding-era Bundi blocks. Since 1972.",
+        origin: "Bundi District",
+        scope: "All 21 formats",
+        img: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        code: "KHD-0-07",
+        title: "Raveena",
+        isFounding: false,
+        desc: "A pale celadon-mint from the Khokri block. Worked since the 1990s.",
+        origin: "Bhilwara District",
+        scope: "All 21 formats",
+        img: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        code: "KHD-0-08",
+        title: "Mint",
+        isFounding: false,
+        desc: "The fossil-bearing mint bed. Marine impressions across selected slabs.",
+        origin: "Bhilwara District",
+        scope: "All 21 formats",
+        img: "https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        code: "KHD-0-09",
+        title: "Buff",
+        isFounding: false,
+        desc: "A pale yellow-beige from the family's Bhootii block and the wider Bijolia tehsil.",
+        origin: "Bhilwara District",
+        scope: "All 21 formats",
+        img: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        code: "KHD-0-10",
+        title: "Camel Dust",
+        isFounding: false,
+        desc: "A tan-to-camel mid-tone from the Bijolia tehsil. Bhootii and beyond.",
+        origin: "Bhilwara District",
+        scope: "All 21 formats",
+        img: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        code: "KHD-0-11",
+        title: "Red Choco",
+        isFounding: false,
+        desc: "A deep cocoa-red from the Kasiriya block. Renamed from the trade's Kasariya Red.",
+        origin: "Bhilwara District",
+        scope: "All 21 formats",
+        img: "https://images.unsplash.com/photo-1524492417937-2516a506b9b3?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        code: "KHD-0-12",
+        title: "Dual Tone",
+        isFounding: false,
+        desc: "Buff and dove-grey in a single slab. The UK trade's Indian York.",
+        origin: "Bhilwara District",
+        scope: "All 21 formats",
+        img: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        code: "KHD-0-13",
+        title: "Mocha Blend",
+        isFounding: false,
+        desc: "Honey, walnut, cinnamon, cocoa — the variegated brown bed of three KHADANE blocks.",
+        origin: "Bhilwara District",
+        scope: "All 21 formats",
+        img: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        code: "KHD-0-14",
+        title: "Rainbow",
+        isFounding: false,
+        desc: "The full-spectrum variegated bed. Warm and cool tones blend across each piece; no two alike.",
+        origin: "Bhilwara District",
+        scope: "All 21 formats",
+        img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=85"
+      },
+      {
+        code: "KHD-0-15",
+        title: "White",
+        isFounding: false,
+        desc: "A pale, cool-toned quartzitic sandstone. The tightest stone in the owned range.",
+        origin: "Bijolia belt",
+        scope: "Full format range — on enquiry",
+        img: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=700&q=85"
+      }
+    ];
+
+    const stoneModal = document.getElementById('stoneModal');
+    let currentSelectedStone = null;
+
+    function openStoneModal(index) {
+      const stone = STONES_DATA[index];
+      if (!stone) return;
+      currentSelectedStone = stone;
+
+      document.getElementById('modalStoneImg').src = stone.img;
+      document.getElementById('modalStoneCode').innerText = stone.code;
+      document.getElementById('modalStoneTitle').innerText = stone.title;
+      document.getElementById('modalStoneDesc').innerText = stone.desc;
+      document.getElementById('modalStoneOrigin').innerText = stone.origin;
+      document.getElementById('modalStoneScope').innerText = stone.scope;
+
+      const badge = document.getElementById('modalStoneBadge');
+      if (stone.isFounding) {
+        badge.style.display = 'inline-block';
+      } else {
+        badge.style.display = 'none';
+      }
+
+      const waMsg = encodeURIComponent(`Hello Shri Sanwariya Stone, I am interested in ${stone.title} (${stone.code}) from ${stone.origin}. Please provide pricing and sample availability.`);
+      document.getElementById('modalWhatsAppBtn').href = `https://wa.me/919462976734?text=${waMsg}`;
+
+      stoneModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeStoneModal() {
+      if (stoneModal) stoneModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function openEnquiryModalForCurrentStone() {
+      closeStoneModal();
+      if (currentSelectedStone) {
+        setTimeout(() => {
+          openEnquiryModal('Natural Sandstone Colors - ' + currentSelectedStone.title + ' (' + currentSelectedStone.code + ')');
+        }, 250);
+      }
+    }
+
+    function filterCategory(cat, btn) {
+      document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.color-stone-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function handleSearch(query) {
+      const q = query.toLowerCase().trim();
+      const cards = document.querySelectorAll('.color-stone-card');
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(q)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
     // Close modals on backdrop click
-    [enquiryModal, productModal, videoModal].forEach(modal => {
+    [enquiryModal, productModal, videoModal, stoneModal].forEach(modal => {
+      if (!modal) return;
       modal.addEventListener('click', (e) => {
         if (e.target === modal) {
           modal.classList.remove('active');
@@ -2030,14 +3482,127 @@
       });
     });
 
-    // Close modals on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeEnquiryModal();
-        closeProductModal();
-        closeVideoModal();
+    // Team carousel in How It All Started section
+    let currentTeamIdx = 0;
+    const teamSlides = document.querySelectorAll('.team-slide');
+    const teamDots = document.querySelectorAll('.team-dot');
+
+    function showTeamSlide(idx) {
+      if (!teamSlides.length) return;
+      currentTeamIdx = idx % teamSlides.length;
+      teamSlides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentTeamIdx);
+      });
+      teamDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentTeamIdx);
+      });
+    }
+
+    if (teamSlides.length > 1) {
+      setInterval(() => {
+        showTeamSlide(currentTeamIdx + 1);
+      }, 4500);
+    }
+
+    /* ---- Story / Leadership Modal ---- */
+    function openStoryModal() {
+      const m = document.getElementById('storyModal');
+      if (m) { m.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    }
+    function closeStoryModal() {
+      const m = document.getElementById('storyModal');
+      if (m) { m.classList.remove('active'); document.body.style.overflow = ''; }
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const sm = document.getElementById('storyModal');
+      if (sm) {
+        sm.addEventListener('click', function(e) {
+          if (e.target === sm) closeStoryModal();
+        });
       }
     });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeStoryModal();
+    });
   </script>
+  <!-- =============================================================
+       LEADERSHIP / DISCOVER OUR STORY MODAL
+       ============================================================= -->
+  <div class="modal-backdrop" id="storyModal">
+    <div class="modal-box story-modal-box">
+      <button class="modal-close" onclick="closeStoryModal()" aria-label="Close modal">✕</button>
+      <span class="eyebrow">OUR VISION &amp; LEADERSHIP</span>
+      <h3 style="font-size:26px; font-weight:800; margin-bottom:4px; color:var(--text-dark);">How It All Started</h3>
+      <p style="font-size:13px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-amber); margin-bottom:24px;">Behind the Vision, Business, Leadership and Quality — SHRI SANWARIYA STONE</p>
+
+      <div class="story-leaders-grid">
+
+        <!-- Leader 1 -->
+        <div class="story-leader-card">
+          <div class="story-leader-img">
+            <img src="assets/team-dinesh-kumar-dhaakad.jpg" alt="Mr. Dinesh Kumar Dhaakad">
+          </div>
+          <div class="story-leader-info">
+            <span class="leader-badge" style="background:rgba(217,147,41,0.15); color:var(--accent-amber); padding:4px 12px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px; display:inline-block;">Established Experience Since 2001</span>
+            <h4>Mr. Dinesh Kumar Dhaakad</h4>
+            <div class="story-leader-role">Managing Director &amp; Owner</div>
+            <div class="story-leader-desc">
+              <p>Mr. Dinesh Kumar Dhaakad is the Managing Director and Owner of Shri Sanwariya Stone, with experience in the sandstone mining industry since 2001.</p>
+              <p>Since the beginning of his journey, he has been involved in sandstone mining operations, gaining extensive practical knowledge of natural sandstone, mining processes, stone quality and the selection of suitable raw material.</p>
+              <p>With years of experience in the sandstone industry, his focus has remained on quality, reliable material and consistent standards. His experience in sandstone mining has provided a strong foundation for the company's work in natural stone.</p>
+              <p>Today, Shri Sanwariya Stone carries forward this experience with a focus on supplying quality sandstone and maintaining reliable standards from the mining stage onward.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leader 2 -->
+        <div class="story-leader-card">
+          <div class="story-leader-img">
+            <img src="assets/team-arman-dhakar.jpg" alt="Arman Dhakar">
+          </div>
+          <div class="story-leader-info">
+            <span class="leader-badge" style="background:rgba(217,147,41,0.15); color:var(--accent-amber); padding:4px 12px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px; display:inline-block;">Second Generation Leadership</span>
+            <h4>Arman Dhakar</h4>
+            <div class="story-leader-role">Director – Leadership &amp; Business Development</div>
+            <div class="story-leader-desc">
+              <p>I am Arman Dhakar, representing the second generation of our family business. Since 2024, I have taken an active role in expanding the business with a modern approach and connecting our products directly with buyers through online platforms.</p>
+              <p><strong>Our Own Mines &amp; Factory:</strong> We operate our own sandstone mining business, Shri Sanwariya Sandstone Supplier, along with our own processing and manufacturing facility, RK Stone Impex. Having our own mining and manufacturing setup allows us to maintain better control over quality, processing, finishing, and supply.</p>
+              <p><strong>Direct-to-Client Model:</strong> We work directly with our clients without unnecessary middlemen, providing reasonable, transparent pricing and delivering genuine value without price markups.</p>
+              <p><strong>Our Vision:</strong> Our goal is to take our sandstone products beyond local markets and connect directly with buyers across India and worldwide. We focus on consistency, quality, commitment, and long-term business relationships.</p>
+              <blockquote class="story-quote">"Building on our family legacy since 2005, while creating a stronger and more connected future for RK Sandstone."</blockquote>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leader 3 -->
+        <div class="story-leader-card">
+          <div class="story-leader-img">
+            <img src="assets/team-jaswant-dhakad.jpg" alt="Jaswant Dhakad">
+          </div>
+          <div class="story-leader-info">
+            <span class="leader-badge" style="background:rgba(217,147,41,0.15); color:var(--accent-amber); padding:4px 12px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px; display:inline-block;">Premium Quality Control</span>
+            <h4>Jaswant Dhakad</h4>
+            <div class="story-leader-role">Director – Quality &amp; Operations</div>
+            <div class="story-leader-desc">
+              <p>Mr. Jaswant Dhakad, son of Mr. Hari Shankar Dhakad, is a key member of our team and plays an important role in managing our day-to-day operations and coordinating the entire team.</p>
+              <p>He is responsible for maintaining our focus on premium quality and consistent standards throughout the production and dispatch process. Before any material leaves the factory, Jaswant personally ensures that the product is properly checked for quality, finishing, specifications, and overall presentation.</p>
+              <p style="font-weight:700; color:var(--text-dark); margin-bottom:8px;">Key Responsibilities:</p>
+              <ul class="story-resp-list">
+                <li><span>✓</span> Managing and coordinating the team</li>
+                <li><span>✓</span> Monitoring production and day-to-day operations</li>
+                <li><span>✓</span> Maintaining premium quality standards</li>
+                <li><span>✓</span> Final inspection before material dispatch</li>
+                <li><span>✓</span> Checking finishing and product quality</li>
+                <li><span>✓</span> Ensuring consistency in every order</li>
+                <li><span>✓</span> Helping maintain long-term customer trust</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

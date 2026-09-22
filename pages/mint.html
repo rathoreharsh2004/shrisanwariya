@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mint Sandstone (KHD-0-08) | Shri Sanwariya Stone Suppliers</title>
+  <meta name="description" content="Mint Natural Sandstone (KHD-0-08) by Shri Sanwariya Stone Suppliers. Pale mint-green and warm tones with occasional dendritic fossil markings from Bijolia, Rajasthan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* -------------------------------------------------------
+       ROOT VARIABLES & RESET
+    ------------------------------------------------------- */
+    :root {
+      --bg-cream: #F5F2EB;
+      --bg-warm-white: #FAF8F5;
+      --bg-card: #FFFFFF;
+      --bg-dark: #1A1714;
+      --bg-dark-surface: #24201C;
+      --border-warm: #E4DEC9;
+      --border-dark: #322D27;
+      --text-dark: #1A1714;
+      --text-muted: #6E665E;
+      --text-lt-muted: #A8A096;
+      --accent-amber: #8A6828;
+      --accent-amber-light: #DFC89B;
+      --gold-rd: #DEC196;
+      --terracotta: #C46238;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-full: 9999px;
+      --shadow-soft: 0 4px 20px rgba(26,23,20,0.06);
+      --transition: all 0.25s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* -------------------------------------------------------
+       STICKY HEADER / NAV
+    ------------------------------------------------------- */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(245,242,235,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-warm);
+    }
+    .nav-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .brand-logo {
+      display: flex; flex-direction: column;
+      line-height: 1.15;
+    }
+    .brand-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px; font-weight: 700;
+      letter-spacing: 0.04em; color: var(--text-dark);
+    }
+    .brand-sub {
+      font-size: 9.5px; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--terracotta);
+    }
+    .nav-menu { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-link {
+      font-size: 13.5px; font-weight: 500; color: var(--text-muted);
+      transition: var(--transition);
+    }
+    .nav-link:hover { color: var(--text-dark); }
+    .nav-link.active { color: var(--text-dark); font-weight: 600; }
+    .nav-cta {
+      background: var(--text-dark); color: #fff;
+      font-size: 12.5px; font-weight: 600; letter-spacing: 0.06em;
+      padding: 9px 18px; border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+    .nav-cta:hover { background: var(--terracotta); color: #fff; }
+
+    /* -------------------------------------------------------
+       BREADCRUMB
+    ------------------------------------------------------- */
+    .breadcrumb-bar {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(228,222,201,0.6);
+      font-size: 12px; color: var(--text-lt-muted);
+    }
+    .breadcrumb-bar a { color: var(--text-muted); transition: var(--transition); }
+    .breadcrumb-bar a:hover { color: var(--text-dark); }
+    .breadcrumb-sep { margin: 0 7px; opacity: 0.5; }
+
+    /* -------------------------------------------------------
+       HERO SECTION
+    ------------------------------------------------------- */
+    .stone-hero {
+      padding: 48px 0 64px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 52px;
+      align-items: center;
+    }
+    .stone-code-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--terracotta);
+      margin-bottom: 12px;
+    }
+    .stone-code-badge::before {
+      content: ''; display: inline-block;
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--terracotta);
+    }
+    .stone-name-hero {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(38px, 4.8vw, 58px);
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.05;
+      margin-bottom: 6px;
+    }
+    .stone-name-devanagari {
+      font-size: 16px; font-weight: 500;
+      color: var(--accent-amber);
+      margin-bottom: 18px;
+      letter-spacing: 0.02em;
+    }
+    .stone-tagline {
+      font-size: 16.5px; line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      max-width: 500px;
+    }
+    .hero-meta-row {
+      display: flex; gap: 32px;
+      padding: 20px 0;
+      border-top: 1px solid var(--border-warm);
+      border-bottom: 1px solid var(--border-warm);
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .hero-meta-item { display: flex; flex-direction: column; }
+    .hero-meta-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--text-lt-muted); margin-bottom: 3px;
+    }
+    .hero-meta-val { font-size: 13.5px; font-weight: 600; color: var(--text-dark); }
+
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--text-dark); color: #fff;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.04em;
+      padding: 13px 26px; border-radius: var(--radius-sm);
+      transition: var(--transition);
+      cursor: pointer; border: none;
+    }
+    .btn-primary:hover { background: var(--terracotta); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--text-dark);
+      font-size: 13px; font-weight: 600; letter-spacing: 0.04em;
+      padding: 12px 22px; border-radius: var(--radius-sm);
+      border: 1px solid var(--border-warm);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .btn-secondary:hover { border-color: var(--text-dark); background: rgba(0,0,0,0.03); }
+
+    .hero-swatch {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: #EAE6DF;
+      box-shadow: 0 12px 40px rgba(26,23,20,0.12);
+    }
+    .hero-swatch img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .hero-swatch:hover img { transform: scale(1.03); }
+    .hero-swatch-label {
+      position: absolute; bottom: 16px; left: 16px;
+      background: rgba(26,23,20,0.72);
+      backdrop-filter: blur(8px);
+      color: #fff; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 6px 12px; border-radius: var(--radius-full);
+    }
+
+    /* -------------------------------------------------------
+       SOURCE STORY SECTION
+    ------------------------------------------------------- */
+    .source-section {
+      padding: 64px 0;
+      border-top: 1px solid var(--border-warm);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .source-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent-amber); margin-bottom: 10px;
+    }
+    .source-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 2.5vw, 30px); font-weight: 700;
+      color: var(--text-dark); line-height: 1.25; margin-bottom: 18px;
+    }
+    .source-text { font-size: 14.5px; color: var(--text-muted); line-height: 1.75; }
+    .source-text p { margin-bottom: 12px; }
+    .source-text p:last-child { margin-bottom: 0; }
+
+    /* -------------------------------------------------------
+       VISUAL GALLERY
+    ------------------------------------------------------- */
+    .gallery-section { padding: 64px 0; }
+    .gallery-section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--terracotta); margin-bottom: 10px;
+    }
+    .gallery-section-heading {
+      font-size: clamp(22px, 2.5vw, 30px); font-weight: 800;
+      color: var(--text-dark); margin-bottom: 30px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 14px;
+    }
+    .gallery-img {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: #EAE6DF;
+    }
+    .gallery-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .gallery-img:hover img { transform: scale(1.04); }
+    .gallery-img.tall { grid-row: 1 / 3; }
+
+    /* -------------------------------------------------------
+       SPECS TABLE
+    ------------------------------------------------------- */
+    .specs-section {
+      padding: 72px 0;
+      border-top: 1px solid var(--border-warm);
+    }
+    .specs-header {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      margin-bottom: 32px; flex-wrap: wrap; gap: 16px;
+    }
+    .specs-heading { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: var(--text-dark); }
+    .specs-code-tag {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--text-muted);
+      border: 1px solid var(--border-warm); padding: 6px 14px; border-radius: var(--radius-full);
+    }
+
+    .specs-table { width: 100%; border-collapse: collapse; }
+    .specs-table tr { border-bottom: 1px solid var(--border-warm); }
+    .specs-table tr:last-child { border-bottom: none; }
+    .specs-table td {
+      padding: 14px 0;
+      font-size: 14px;
+    }
+    .specs-table td:first-child {
+      width: 220px;
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.13em;
+      text-transform: uppercase; color: var(--terracotta);
+    }
+    .specs-table td:last-child {
+      font-weight: 500; color: var(--text-dark);
+    }
+
+    /* -------------------------------------------------------
+       DARK STRIPE
+    ------------------------------------------------------- */
+    .dark-stripe {
+      background: var(--bg-dark);
+      color: #fff;
+      padding: 64px 0;
+      margin: 40px 0;
+    }
+    .dark-stripe-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+    }
+    .dark-stripe-tag {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold-rd); margin-bottom: 12px;
+    }
+    .dark-stripe-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(20px, 2.2vw, 27px); font-weight: 700;
+      color: #fff; line-height: 1.3; margin-bottom: 14px;
+    }
+    .dark-stripe-p { font-size: 14px; color: var(--text-lt-muted); line-height: 1.7; }
+
+    /* -------------------------------------------------------
+       STANDARD SIZES GRID
+    ------------------------------------------------------- */
+    .sizes-section { padding: 64px 0; }
+    .sizes-section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--terracotta); margin-bottom: 8px;
+    }
+    .sizes-section-heading {
+      font-size: clamp(22px, 2.5vw, 30px); font-weight: 800;
+      color: var(--text-dark); margin-bottom: 32px;
+    }
+    .sizes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .size-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      transition: var(--transition);
+    }
+    .size-card:hover {
+      border-color: var(--text-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-soft);
+    }
+    .size-badge {
+      display: inline-block;
+      font-size: 9.5px; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--terracotta);
+      background: rgba(196,98,56,0.08); padding: 3px 8px;
+      border-radius: var(--radius-full); margin-bottom: 12px;
+    }
+    .size-dimensions {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700; color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+    .size-use { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+    /* -------------------------------------------------------
+       BOTTOM CTA SECTION
+    ------------------------------------------------------- */
+    .stone-cta {
+      background: var(--bg-dark-surface);
+      color: #fff;
+      padding: 72px 0;
+      border-top: 1px solid var(--border-dark);
+    }
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .cta-tag {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold-rd); margin-bottom: 12px;
+    }
+    .cta-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 3.2vw, 40px); font-weight: 700;
+      line-height: 1.2; color: #fff; margin-bottom: 14px;
+    }
+    .cta-p { font-size: 14.5px; color: var(--text-lt-muted); line-height: 1.65; max-width: 460px; }
+    .cta-actions { display: flex; flex-direction: column; gap: 12px; }
+    .btn-gold {
+      display: block; width: 100%;
+      background: var(--gold-rd); color: var(--bg-dark);
+      padding: 14px 24px; border-radius: var(--radius-sm);
+      font-size: 13.5px; font-weight: 700; letter-spacing: 0.06em;
+      text-align: center; transition: var(--transition);
+      cursor: pointer; border: none;
+    }
+    .btn-gold:hover { background: #E8D3B2; }
+    .btn-border-gold {
+      display: block; width: 100%;
+      padding: 13px 24px;
+      border: 1px solid rgba(222,193,150,0.35); border-radius: var(--radius-sm);
+      font-size: 13px; font-weight: 600; color: var(--gold-rd);
+      text-align: center;
+    }
+    .btn-border-gold:hover { background: rgba(222,193,150,0.1); border-color: var(--gold-rd); }
+    .cta-note { font-size: 12px; color: var(--text-lt-muted); opacity: 0.6; text-align: center; margin-top: 14px; }
+
+    /* -------------------------------------------------------
+       FOOTER
+    ------------------------------------------------------- */
+    footer {
+      background: var(--bg-dark); padding: 28px 0;
+      text-align: center; border-top: 1px solid var(--border-dark);
+    }
+    footer p { font-size: 12.5px; color: #6E665E; }
+    footer a { color: var(--gold-rd); }
+    footer a:hover { color: #fff; }
+
+    /* -------------------------------------------------------
+       RESPONSIVE
+    ------------------------------------------------------- */
+    @media (max-width: 960px) {
+      .hero-grid, .dark-stripe-grid, .cta-grid { grid-template-columns: 1fr; }
+      .source-section { grid-template-columns: 1fr; gap: 28px; }
+      .hero-swatch { aspect-ratio: 16/9; max-height: 380px; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-img.tall { grid-row: auto; }
+      .sizes-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .sizes-grid { grid-template-columns: 1fr; }
+      .hero-meta-row { gap: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <div class="container nav-bar">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-title">Shri Sanwariya</span>
+        <span class="brand-sub">Stone Suppliers</span>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../index.html#about" class="nav-link">About Us</a></li>
+          <li><a href="natural-sandstone-colors.html" class="nav-link">Colors</a></li>
+          <li><a href="../index.html#products" class="nav-link">Products</a></li>
+          <li><a href="our-story.html" class="nav-link">Our Story</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#quote" class="nav-cta">Inquire Now</a>
+    </div>
+  </header>
+
+  <!-- ============ BREADCRUMB ============ -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="natural-sandstone-colors.html">Natural Sandstone Colors</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Mint (KHD-0-08)</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ HERO SECTION ============ -->
+    <section class="stone-hero">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- LEFT: Details -->
+          <div>
+            <div class="stone-code-badge">KHD-0-08 · Certified Sandstone</div>
+            <h1 class="stone-name-hero">Mint.</h1>
+            <div class="stone-name-devanagari">मिंट सैंड</div>
+            <p class="stone-tagline">
+              Pale mint green and warm tones with occasional dendritic fossil markings. Celebrated across global projects for its light-reflective elegance and natural cool thermal properties.
+            </p>
+
+            <div class="hero-meta-row">
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Origin</span>
+                <span class="hero-meta-val">Bijolia, Rajasthan</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Code</span>
+                <span class="hero-meta-val">KHD-0-08</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Formats</span>
+                <span class="hero-meta-val">Sawn / Honed / Calibrated</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Status</span>
+                <span class="hero-meta-val">Active Quarry · 1990s</span>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#quote" class="btn-primary">Request a Sample &rarr;</a>
+              <a href="../assets/shri-sanwariya-brochure.pdf" download class="btn-secondary">Download Catalogue</a>
+            </div>
+          </div>
+
+          <!-- RIGHT: Swatch -->
+          <div class="hero-swatch">
+            <img src="../assets/mint-swatch-main.png" alt="Mint Natural Sandstone Dendritic Swatch">
+            <span class="hero-swatch-label">Natural Finish · Mint</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOURCE SECTION ============ -->
+    <section>
+      <div class="container">
+        <div class="source-section">
+          <div>
+            <p class="source-label">Source</p>
+            <h2 class="source-heading">Bijolia Belt,<br>Rajasthan</h2>
+          </div>
+          <div class="source-text">
+            <p>Mined from the renowned stone-bearing layers of the Bijolia belt in Rajasthan, Mint sandstone is globally cherished for its serene aesthetic and unique mineral characteristics.</p>
+            <p>The stone features a luminous pale celadon and soft mint foundation accented by subtle ochre banding. Distinctively, select beds exhibit exquisite dendritic manganese dendrites—delicate, fern-like crystal patterns formed naturally over millions of years within the rock fissures.</p>
+            <p>Its fine-to-medium grained quartzitic composition gives it high compressive strength, exceptional frost resistance, and a cooling surface temperature that remains pleasant under bare feet even during high summer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VISUAL GALLERY ============ -->
+    <section class="gallery-section">
+      <div class="container">
+        <p class="gallery-section-label">Visual Reference</p>
+        <h2 class="gallery-section-heading">Stone in Application</h2>
+        <div class="gallery-grid">
+          <div class="gallery-img tall">
+            <img src="../assets/mint-pattern-modular.png" alt="Mint sandstone multi-size modular paving layout pattern">
+          </div>
+          <div class="gallery-img">
+            <img src="../assets/mint-patio-courtyard.png" alt="Contemporary modern courtyard patio paved in Mint sandstone with monolithic stone bench">
+          </div>
+          <div class="gallery-img">
+            <img src="../assets/mint-terrace-mountain.png" alt="Alpine mountain chalet terrace paved in calibrated Mint sandstone pavers">
+          </div>
+          <div class="gallery-img">
+            <img src="../assets/mint-swatch-main.png" alt="Close-up detail of natural dendritic fossil-leaf marking on warm mint stone">
+          </div>
+          <div class="gallery-img">
+            <img src="../assets/mint-floating-slab.png" alt="Mint natural hand-dressed architectural slab 3D edge profile">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECHNICAL SPECIFICATIONS ============ -->
+    <section class="specs-section">
+      <div class="container">
+        <div class="specs-header">
+          <div>
+            <p class="gallery-section-label">Technical Reference</p>
+            <h2 class="specs-heading">Specifications &amp; Testing Data</h2>
+          </div>
+          <span class="specs-code-tag">Laboratory Tested · CE &amp; ASTM Standards</span>
+        </div>
+
+        <table class="specs-table">
+          <tbody>
+            <tr>
+              <td>PETROGRAPHIC TYPE</td>
+              <td>Quartzitic Natural Sandstone (Vindhyan Supergroup)</td>
+            </tr>
+            <tr>
+              <td>QUARRY CODE</td>
+              <td>KHD-0-08</td>
+            </tr>
+            <tr>
+              <td>BULK DENSITY</td>
+              <td>2,580 kg/m³ (EN 1936)</td>
+            </tr>
+            <tr>
+              <td>WATER ABSORPTION</td>
+              <td>1.25% by mass (EN 13755) — Low Porosity</td>
+            </tr>
+            <tr>
+              <td>COMPRESSIVE STRENGTH</td>
+              <td>135 N/mm² (EN 1926)</td>
+            </tr>
+            <tr>
+              <td>FLEXURAL STRENGTH</td>
+              <td>18.2 N/mm² (EN 12372)</td>
+            </tr>
+            <tr>
+              <td>SLIP RESISTANCE</td>
+              <td>PTV 68 (Dry) / 55 (Wet) — BS 7976-2 (Extremely Low Slip Risk)</td>
+            </tr>
+            <tr>
+              <td>FROST RESISTANCE</td>
+              <td>Fully Frost Resistant (Passes 56 Freeze/Thaw Cycles, EN 12371)</td>
+            </tr>
+            <tr>
+              <td>PRIMARY FINISHES</td>
+              <td>Natural Cleft / Riven, Sawn Six Sides, Honed, Tumbled, Shotblasted, Flamed</td>
+            </tr>
+            <tr>
+              <td>STANDARD THICKNESS</td>
+              <td>22mm Calibrated (Project standard), 25mm, 30mm, 40mm, 50mm Architectural</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ DARK INFO STRIPE ============ -->
+    <div class="dark-stripe">
+      <div class="container">
+        <div class="dark-stripe-grid">
+          <div>
+            <p class="dark-stripe-tag">Quarry Selection</p>
+            <h3 class="dark-stripe-heading">Direct from Bijolia Formation</h3>
+            <p class="dark-stripe-p">
+              Each block of Mint sandstone is selected for structural soundness and fine grain consistency. Slabs are inspected and hand-sorted in our factory yard prior to export packing to ensure uniform color distribution across project crates.
+            </p>
+          </div>
+          <div>
+            <p class="dark-stripe-tag">Architectural Advantage</p>
+            <h3 class="dark-stripe-heading">Solar Reflectance &amp; Natural Fossils</h3>
+            <p class="dark-stripe-p">
+              Mint's pale reflective tones retain substantially less solar heat than darker flags, while natural dendritic crystallization provides botanical interest that no artificial porcelain tile can replicate.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ STANDARD SIZES GRID ============ -->
+    <section class="sizes-section">
+      <div class="container">
+        <p class="sizes-section-label">Dimensional Formats</p>
+        <h2 class="sizes-section-heading">Standard Production Sizes</h2>
+
+        <div class="sizes-grid">
+          <div class="size-card">
+            <span class="size-badge">Large Format</span>
+            <div class="size-dimensions">900 &times; 600 mm</div>
+            <p class="size-use">Calibrated 22mm. Primary unit for expansive terraces, pool decks, and commercial plazas.</p>
+          </div>
+
+          <div class="size-card">
+            <span class="size-badge">Square Flag</span>
+            <div class="size-dimensions">600 &times; 600 mm</div>
+            <p class="size-use">Calibrated 22mm. Classic square flagstone for modern courtyard coursing and checker patterns.</p>
+          </div>
+
+          <div class="size-card">
+            <span class="size-badge">Standard Courser</span>
+            <div class="size-dimensions">600 &times; 290 mm</div>
+            <p class="size-use">Calibrated 22mm. Essential intermediate element for 4-size random modular patio layouts.</p>
+          </div>
+
+          <div class="size-card">
+            <span class="size-badge">Infill Flag</span>
+            <div class="size-dimensions">290 &times; 290 mm</div>
+            <p class="size-use">Calibrated 22mm. Small infill paving stone ensuring continuous staggered joints without cutting.</p>
+          </div>
+
+          <div class="size-card">
+            <span class="size-badge">Pool Coping</span>
+            <div class="size-dimensions">900 &times; 350 mm</div>
+            <p class="size-use">Full bullnose or pencil round edge profile. 30mm/40mm thick for seamless swimming pool edging.</p>
+          </div>
+
+          <div class="size-card">
+            <span class="size-badge">Treads &amp; Risers</span>
+            <div class="size-dimensions">1000 &times; 350 mm</div>
+            <p class="size-use">Bullnosed front edge with sawn underside. Heavy-duty garden and terrace steps.</p>
+          </div>
+
+          <div class="size-card">
+            <span class="size-badge">Setts &amp; Cobbles</span>
+            <div class="size-dimensions">100 &times; 100 mm</div>
+            <p class="size-use">40–60mm thickness, hand-split edges. High-traffic driveway edging and path perimeters.</p>
+          </div>
+
+          <div class="size-card">
+            <span class="size-badge">Pier Caps</span>
+            <div class="size-dimensions">500 &times; 500 mm</div>
+            <p class="size-use">Pyramid or 4-way apex drip-grooved caps for garden gate piers and structural columns.</p>
+          </div>
+
+          <div class="size-card">
+            <span class="size-badge">Wall Cladding</span>
+            <div class="size-dimensions">Linear Strips</div>
+            <p class="size-use">Z-shaped interlocking or loose strip walling for interior feature walls and exterior facades.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA SECTION ============ -->
+    <section class="stone-cta" id="quote">
+      <div class="container">
+        <div class="cta-grid">
+          <div>
+            <p class="cta-tag">Direct Quarry Supply</p>
+            <h2 class="cta-heading">Specify Mint Sandstone for Your Next Project</h2>
+            <p class="cta-p">
+              We process container loads for commercial distributors, landscape architects, and municipal developers worldwide. Request physical hand samples or contact our export sales desk today.
+            </p>
+          </div>
+          <div>
+            <div class="cta-actions">
+              <button class="btn-gold" onclick="openInquiryModal('Mint (KHD-0-08)')">Send Project Inquiry &rarr;</button>
+              <a href="https://wa.me/919929841804?text=Hello,%20I%20am%20interested%20in%20Mint%20Sandstone%20(KHD-0-08)" target="_blank" class="btn-border-gold">Chat via WhatsApp</a>
+            </div>
+            <p class="cta-note">Average container dispatch within 10–14 days. Full export documentation included.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Shri Sanwariya Stone Suppliers. All rights reserved. | <a href="../index.html">Home</a> &middot; <a href="natural-sandstone-colors.html">Sandstone Colors</a> &middot; <a href="../index.html#contact">Contact</a></p>
+    </div>
+  </footer>
+
+  <!-- Simple Inquiry Modal Script -->
+  <script>
+    function openInquiryModal(stoneName) {
+      const subject = encodeURIComponent("Project Inquiry: " + stoneName);
+      const body = encodeURIComponent("Hi Shri Sanwariya Stone Suppliers,\n\nI would like to inquire about specifications, pricing, and sample delivery for " + stoneName + ".\n\nProject details:\n- Quantity:\n- Format / Thickness:\n- Delivery Destination:\n\nThank you!");
+      window.location.href = "mailto:sales@shrisanwariyastone.com?subject=" + subject + "&body=" + body;
+    }
+  </script>
+</body>
+</html>
+

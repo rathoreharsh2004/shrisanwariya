@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raj Blend Sandstone | Shri Sanwariya Stone Suppliers</title>
+  <meta name="description" content="Raj Blend — a naturally variegated warm bed from the Bijolia tehsil of Bhilwara District. Rich tones of warm brown, dove grey, ochre, and olive in a certified export grade natural sandstone.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* -------------------------------------------------------  TOKENS  ------------------------------------------------------- */
+    :root {
+      --bg-cream:      #FAF7F2;
+      --bg-cream-soft: #F4EFE7;
+      --bg-dark:       #25201C;
+      --bg-dark-card:  #201B17;
+      --terracotta:    #B86539;
+      --terracotta-dark:#9F532B;
+      --terracotta-soft:rgba(184,101,57,0.12);
+      --gold-rd:       #DEC196;
+      --accent-amber:  #D99329;
+      --text-dark:     #221C18;
+      --text-muted:    #6E665E;
+      --text-lt-muted: #C8BEB5;
+      --border-warm:   #E6DFD5;
+      --border-dark:   #38302A;
+      --radius-sm:     8px;
+      --radius-md:     14px;
+      --radius-lg:     20px;
+      --radius-full:   9999px;
+      --shadow-card:   0 10px 30px rgba(37,32,28,0.07);
+      --transition:    all 0.35s cubic-bezier(0.16,1,0.3,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    img { display: block; width: 100%; object-fit: cover; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; transition: var(--transition); }
+    .container { width: min(1140px, 92%); margin: 0 auto; }
+
+    /* -------------------------------------------------------  HEADER  ------------------------------------------------------- */
+    header {
+      position: sticky; top: 0; z-index: 900;
+      background: rgba(250,247,242,0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(230,223,213,0.8);
+    }
+    .nav-bar { height: 76px; display: flex; align-items: center; justify-content: space-between; }
+    .brand-logo { display: flex; flex-direction: column; }
+    .brand-title { font-size: 16px; font-weight: 800; letter-spacing: 0.05em; color: var(--text-dark); text-transform: uppercase; line-height: 1.1; }
+    .brand-sub   { font-size: 8.5px; font-weight: 600; letter-spacing: 0.22em; color: #8C827A; margin-top: 4px; text-transform: uppercase; }
+    .nav-menu { display: flex; align-items: center; gap: 24px; list-style: none; }
+    .nav-link { font-size: 13px; font-weight: 500; color: var(--text-dark); padding: 6px 0; position: relative; }
+    .nav-link:hover { color: var(--terracotta); }
+    .btn-nav-cta {
+      padding: 10px 22px; background: var(--terracotta); color: #fff;
+      border-radius: var(--radius-full); font-size: 13px; font-weight: 700;
+    }
+    .btn-nav-cta:hover { background: var(--terracotta-dark); transform: translateY(-1px); }
+    .menu-toggle { font-size: 22px; color: var(--text-dark); display: none; }
+    @media (max-width: 860px) { .nav-menu { display: none; } .menu-toggle { display: block; } }
+
+    /* -------------------------------------------------------  BREADCRUMB  ------------------------------------------------------- */
+    .breadcrumb {
+      padding: 14px 0;
+      font-size: 12px; font-weight: 600; color: var(--text-muted);
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--border-warm);
+    }
+    .breadcrumb a { color: var(--text-muted); }
+    .breadcrumb a:hover { color: var(--terracotta); }
+    .breadcrumb span { margin: 0 7px; opacity: 0.4; }
+
+    /* -------------------------------------------------------  HERO  ------------------------------------------------------- */
+    .stone-hero {
+      padding: 56px 0 0;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 56px;
+      align-items: flex-start;
+    }
+    .hero-left {}
+    .badge-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .stone-code-tag {
+      display: inline-block;
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent-amber);
+      background: rgba(217,147,41,0.12);
+      border: 1px solid rgba(217,147,41,0.28);
+      border-radius: var(--radius-full);
+      padding: 5px 14px;
+    }
+    .variegated-tag {
+      display: inline-block;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #fff;
+      background: var(--terracotta);
+      border-radius: var(--radius-full);
+      padding: 4px 12px;
+    }
+    .stone-hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 700; line-height: 1.05;
+      color: var(--text-dark); letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .stone-hero-name em { font-style: italic; color: var(--accent-amber); }
+    .stone-hero-tagline {
+      font-size: 13px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--terracotta);
+      margin-bottom: 18px;
+    }
+    .stone-hero-desc {
+      font-size: 15px; color: var(--text-muted); line-height: 1.75;
+      max-width: 480px; margin-bottom: 32px;
+    }
+
+    .hero-meta-row {
+      display: flex; gap: 32px; flex-wrap: wrap;
+      padding: 20px 0; border-top: 1px solid var(--border-warm);
+      margin-bottom: 28px;
+    }
+    .hero-meta-item { display: flex; flex-direction: column; gap: 4px; }
+    .hero-meta-label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); opacity: 0.7; }
+    .hero-meta-value { font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+
+    .btn-enquire {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 30px; background: var(--terracotta); color: #fff;
+      border-radius: var(--radius-full); font-size: 13.5px; font-weight: 700;
+    }
+    .btn-enquire:hover { background: var(--terracotta-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(184,101,57,0.3); }
+
+    .btn-outline-dark {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 26px;
+      border: 1px solid var(--text-dark); border-radius: var(--radius-full);
+      font-size: 13px; font-weight: 600; color: var(--text-dark);
+    }
+    .btn-outline-dark:hover { background: var(--text-dark); color: #fff; transform: translateY(-2px); }
+
+    /* Hero swatch image */
+    .hero-swatch {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      aspect-ratio: 4/5;
+      position: relative;
+    }
+    .hero-swatch img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-swatch-label {
+      position: absolute; bottom: 16px; right: 16px;
+      background: rgba(34,28,24,0.75); color: #fff;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 6px 14px; border-radius: var(--radius-full);
+      backdrop-filter: blur(6px);
+    }
+
+    /* -------------------------------------------------------  SOURCE SECTION  ------------------------------------------------------- */
+    .source-section {
+      padding: 72px 0 56px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--border-warm);
+    }
+    .source-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent-amber); margin-bottom: 10px;
+    }
+    .source-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 2.5vw, 30px); font-weight: 700;
+      color: var(--text-dark); line-height: 1.25; margin-bottom: 18px;
+    }
+    .source-text { font-size: 14.5px; color: var(--text-muted); line-height: 1.75; }
+    .source-text p { margin-bottom: 12px; }
+    .source-text p:last-child { margin-bottom: 0; }
+
+    /* -------------------------------------------------------  VISUAL GALLERY  ------------------------------------------------------- */
+    .gallery-section { padding: 64px 0; }
+    .gallery-section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--terracotta); margin-bottom: 10px;
+    }
+    .gallery-section-heading {
+      font-size: clamp(22px, 2.5vw, 30px); font-weight: 800;
+      color: var(--text-dark); margin-bottom: 30px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 14px;
+    }
+    .gallery-img {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: #EAE6DF;
+    }
+    .gallery-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .gallery-img:hover img { transform: scale(1.04); }
+    .gallery-img.tall { grid-row: 1 / 3; }
+
+    /* -------------------------------------------------------  SPECS TABLE  ------------------------------------------------------- */
+    .specs-section {
+      padding: 72px 0;
+      border-top: 1px solid var(--border-warm);
+    }
+    .specs-header {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      margin-bottom: 32px; flex-wrap: wrap; gap: 16px;
+    }
+    .specs-heading { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: var(--text-dark); }
+    .specs-code-tag {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--text-muted);
+      border: 1px solid var(--border-warm); padding: 6px 14px; border-radius: var(--radius-full);
+    }
+
+    .specs-table { width: 100%; border-collapse: collapse; }
+    .specs-table tr { border-bottom: 1px solid var(--border-warm); }
+    .specs-table tr:last-child { border-bottom: none; }
+    .specs-table td {
+      padding: 14px 0;
+      font-size: 14px;
+    }
+    .specs-table td:first-child {
+      width: 220px;
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.13em;
+      text-transform: uppercase; color: var(--terracotta); padding-right: 20px;
+    }
+    .specs-table td:last-child { color: var(--text-dark); font-weight: 500; }
+
+    .specs-note {
+      margin-top: 20px; font-size: 12.5px; color: var(--text-muted);
+      line-height: 1.6; padding: 14px 18px;
+      background: var(--bg-cream-soft, #F4EFE7);
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--accent-amber);
+    }
+
+    /* -------------------------------------------------------  DARK INFO STRIPE  ------------------------------------------------------- */
+    .dark-stripe {
+      background: var(--bg-dark);
+      padding: 72px 0;
+    }
+    .dark-stripe-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .dark-stripe-left {}
+    .dark-stripe-eyebrow {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold-rd); margin-bottom: 12px;
+    }
+    .dark-stripe-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 3vw, 36px); font-weight: 700;
+      color: #fff; line-height: 1.2; margin-bottom: 6px;
+    }
+    .dark-stripe-heading em { font-style: italic; color: var(--accent-amber); }
+    .dark-stripe-sub {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold-rd); opacity: 0.7;
+      margin-bottom: 18px;
+    }
+    .dark-stripe-text { font-size: 14.5px; color: var(--text-lt-muted); line-height: 1.75; }
+    .dark-stripe-text p { margin-bottom: 12px; }
+    .dark-stripe-text p:last-child { margin-bottom: 0; }
+    .dark-stripe-right {}
+    .dark-stripe-right p {
+      font-size: 14.5px; color: var(--text-lt-muted); line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .dark-stripe-pill {
+      display: inline-block; margin-top: 6px;
+      padding: 8px 20px;
+      border: 1px solid rgba(222,193,150,0.3);
+      border-radius: var(--radius-full);
+      font-size: 11.5px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent-amber);
+    }
+
+    /* -------------------------------------------------------  STANDARD SIZES  ------------------------------------------------------- */
+    .sizes-section { padding: 80px 0; }
+    .sizes-header { margin-bottom: 36px; }
+    .sizes-eyebrow {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--terracotta); margin-bottom: 8px;
+    }
+    .sizes-heading { font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: var(--text-dark); margin-bottom: 6px; }
+    .sizes-sub { font-size: 14px; color: var(--text-muted); }
+
+    .sizes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .size-card {
+      background: #fff;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-md);
+      padding: 22px 20px;
+      transition: var(--transition);
+    }
+    .size-card:hover { box-shadow: var(--shadow-card); border-color: var(--accent-amber); transform: translateY(-2px); }
+    .size-card-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;
+    }
+    .size-card-dims {
+      font-size: 16px; font-weight: 800; color: var(--text-dark); margin-bottom: 4px;
+    }
+    .size-card-note { font-size: 12px; color: var(--text-muted); }
+
+    .sizes-custom-note {
+      padding: 20px 24px;
+      background: var(--bg-cream-soft, #F4EFE7);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-warm);
+      font-size: 14px; color: var(--text-muted); line-height: 1.65;
+    }
+    .sizes-custom-note strong { color: var(--text-dark); }
+
+    /* -------------------------------------------------------  CTA SECTION  ------------------------------------------------------- */
+    .cta-section {
+      background: var(--bg-dark-card, #201B17);
+      padding: 80px 0;
+    }
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 56px;
+      align-items: center;
+    }
+    .cta-left {}
+    .cta-eyebrow {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold-rd); margin-bottom: 12px;
+    }
+    .cta-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 3vw, 38px); font-weight: 700;
+      color: #fff; line-height: 1.2; margin-bottom: 8px;
+    }
+    .cta-heading em { font-style: italic; color: var(--accent-amber); }
+    .cta-sub { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-rd); opacity: 0.6; margin-bottom: 18px; }
+    .cta-text { font-size: 14.5px; color: var(--text-lt-muted); line-height: 1.7; }
+    .cta-right {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+    }
+    .cta-right h4 { font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 20px; }
+    .cta-options { display: flex; flex-direction: column; gap: 12px; }
+    .btn-amber-solid {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 14px 24px; background: var(--accent-amber); color: #fff;
+      border-radius: var(--radius-sm); font-size: 13.5px; font-weight: 700;
+      text-align: center;
+    }
+    .btn-amber-solid:hover { background: #c07c1a; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(217,147,41,0.35); }
+    .btn-border-gold {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 13px 24px;
+      border: 1px solid rgba(222,193,150,0.35); border-radius: var(--radius-sm);
+      font-size: 13px; font-weight: 600; color: var(--gold-rd);
+      text-align: center;
+    }
+    .btn-border-gold:hover { background: rgba(222,193,150,0.1); border-color: var(--gold-rd); }
+    .cta-note { font-size: 12px; color: var(--text-lt-muted); opacity: 0.6; text-align: center; margin-top: 14px; }
+
+    /* -------------------------------------------------------  FOOTER  ------------------------------------------------------- */
+    footer {
+      background: var(--bg-dark); padding: 28px 0;
+      text-align: center; border-top: 1px solid var(--border-dark);
+    }
+    footer p { font-size: 12.5px; color: #6E665E; }
+    footer a { color: var(--gold-rd); }
+    footer a:hover { color: #fff; }
+
+    /* -------------------------------------------------------  RESPONSIVE  ------------------------------------------------------- */
+    @media (max-width: 960px) {
+      .hero-grid, .dark-stripe-grid, .cta-grid { grid-template-columns: 1fr; }
+      .source-section { grid-template-columns: 1fr; gap: 28px; }
+      .hero-swatch { aspect-ratio: 16/9; max-height: 380px; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-img.tall { grid-row: auto; }
+      .sizes-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .sizes-grid { grid-template-columns: 1fr; }
+      .hero-meta-row { gap: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <div class="container nav-bar">
+      <a href="../index.html" class="brand-logo">
+        <span class="brand-title">Shri Sanwariya</span>
+        <span class="brand-sub">Stone Suppliers</span>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../index.html#about" class="nav-link">About Us</a></li>
+          <li><a href="natural-sandstone-colors.html" class="nav-link">Colors</a></li>
+          <li><a href="../index.html#products" class="nav-link">Products</a></li>
+          <li><a href="our-story.html" class="nav-link">Our Story</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <a href="../index.html#contact" class="btn-nav-cta">Enquire Now</a>
+        <button class="menu-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ BREADCRUMB ============ -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <span>›</span>
+      <a href="natural-sandstone-colors.html">Natural Sandstone Colors</a>
+      <span>›</span>
+      Raj Blend
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="stone-hero">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- LEFT: Text -->
+          <div class="hero-left">
+            <div class="badge-row">
+              <span class="stone-code-tag">KHD-0-04 · Natural Sandstone</span>
+              <span class="variegated-tag">NATURALLY VARIEGATED</span>
+            </div>
+            <h1 class="stone-hero-name">Raj<br><em>Blend.</em></h1>
+            <p class="stone-hero-tagline">Naturally Variegated Warm Bed · Bijolia Tehsil · Rajasthan</p>
+            <p class="stone-hero-desc">A naturally variegated warm sandstone bed quarried across the historic Bijolia tehsil of Bhilwara District. Renowned for its harmonious blend of warm buff, autumn brown, subtle grey, and gentle green undertones, offering an authentic traditional stone aesthetic.</p>
+
+            <div class="hero-meta-row">
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Origin</span>
+                <span class="hero-meta-value">Bhilwara District</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Stone Code</span>
+                <span class="hero-meta-value">KHD-0-04</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Formats Available</span>
+                <span class="hero-meta-value">All 21 formats</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Color Nature</span>
+                <span class="hero-meta-value">Variegated Multi-Tone</span>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:12px; flex-wrap:wrap;">
+              <a href="../index.html#contact" class="btn-enquire">Request a Sample →</a>
+              <a href="../assets/catalogue.pdf" target="_blank" class="btn-outline-dark">Download Catalogue</a>
+            </div>
+          </div>
+
+          <!-- RIGHT: Swatch -->
+          <div class="hero-swatch">
+            <img src="../assets/raj-blend-swatch-main.jpg" alt="Raj Blend Natural Sandstone Swatch">
+            <span class="hero-swatch-label">Natural Finish · Raj Blend</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOURCE SECTION ============ -->
+    <section>
+      <div class="container">
+        <div class="source-section">
+          <div>
+            <p class="source-label">Source</p>
+            <h2 class="source-heading">Bijolia Tehsil,<br>Bhilwara District</h2>
+          </div>
+          <div class="source-text">
+            <p>Quarried from the natural variegated beds across the Bijolia sandstone belt, Raj Blend captures the full spectrum of the regional geology in every batch.</p>
+            <p>Unlike single-color stones, Raj Blend is cherished for its organic tonal tapestry. No two slabs are identical, displaying warm ochres, soft dove greys, gentle purplish-browns, and rich autumnal highlights that create warmth and timeless prestige across large patio and landscape areas.</p>
+            <p>Shri Sanwariya Stone Suppliers carefully balances the multi-tone ratio in every calibrated crate pack, guaranteeing a harmonious blend upon installation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VISUAL GALLERY ============ -->
+    <section class="gallery-section">
+      <div class="container">
+        <p class="gallery-section-label">Visual Reference</p>
+        <h2 class="gallery-section-heading">Stone in Application</h2>
+        <div class="gallery-grid">
+          <div class="gallery-img tall">
+            <img src="../assets/raj-blend-pattern-modular.png" alt="Raj Blend modular pattern paving texture layout">
+          </div>
+          <div class="gallery-img">
+            <img src="../assets/raj-blend-patio-courtyard.png" alt="Raj Blend residential terrace courtyard patio paving">
+          </div>
+          <div class="gallery-img">
+            <img src="../assets/raj-blend-zen-garden-patio.png" alt="Raj Blend patio set in landscaped stone garden">
+          </div>
+          <div class="gallery-img">
+            <img src="../assets/raj-blend-yard-layout.png" alt="Raj Blend factory yard dry-laid color blend verification">
+          </div>
+          <div class="gallery-img">
+            <img src="../assets/raj-blend-floating-slab.png" alt="Raj Blend natural cleft hand-cut slab profile">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECHNICAL SPECIFICATIONS ============ -->
+    <section class="specs-section">
+      <div class="container">
+        <div class="specs-header">
+          <h2 class="specs-heading">Technical Specification</h2>
+          <span class="specs-code-tag">KHD-0-04 · Raj Blend</span>
+        </div>
+
+        <table class="specs-table">
+          <tbody>
+            <tr>
+              <td>Stone Type</td>
+              <td>Fine-to-Medium Grain Natural Sedimentary Sandstone</td>
+            </tr>
+            <tr>
+              <td>Colour</td>
+              <td>Naturally variegated blend of warm buff, autumn brown, dove grey and subtle olive</td>
+            </tr>
+            <tr>
+              <td>Origin</td>
+              <td>Bijolia Tehsil, Bhilwara District, Rajasthan, India</td>
+            </tr>
+            <tr>
+              <td>Finish Options</td>
+              <td>Natural riven cleft, Sawn edge, Calibrated, Tumbled, Shotblast, Bullnose</td>
+            </tr>
+            <tr>
+              <td>Standard Thickness</td>
+              <td>18mm / 22mm / 25mm / 30mm (custom thickness on request)</td>
+            </tr>
+            <tr>
+              <td>Water Absorption</td>
+              <td>&lt; 1.4% by weight (high frost &amp; salt resistance)</td>
+            </tr>
+            <tr>
+              <td>Standard Formats</td>
+              <td>Project Packs (900×600, 600×600, 600×290, 290×290), Slabs, Steps, Cobbles</td>
+            </tr>
+            <tr>
+              <td>Applications</td>
+              <td>Garden patios, classical terraces, pool margins, pathway paving, steps, wall coping</td>
+            </tr>
+            <tr>
+              <td>Export Readiness</td>
+              <td>Packed in fumigated, robust wooden crates with corner protections</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="specs-note">
+          Because Raj Blend is a naturally multi-toned stone, color and cleft textures naturally vary from slab to slab. Slabs are graded and packed to deliver an aesthetically balanced blend.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ DARK INFO STRIPE ============ -->
+    <section class="dark-stripe">
+      <div class="container">
+        <div class="dark-stripe-grid">
+
+          <div class="dark-stripe-left">
+            <p class="dark-stripe-eyebrow">Natural Tapestry</p>
+            <h2 class="dark-stripe-heading">Why Raj Blend is the<br><em>Most Popular Choice</em></h2>
+            <p class="dark-stripe-sub">Warm · Authentic · Forgiving Surface</p>
+            <div class="dark-stripe-text">
+              <p>Raj Blend is often described as the most natural-looking stone available. Because it contains both warm and cool mineral undertones, it harmonizes effortlessly with almost any exterior wall color, garden border, or landscaping style.</p>
+              <p>Its variegated surface is also exceptionally forgiving with outdoor dust, leaves, and daily weathering, maintaining an attractive appearance year-round with minimal maintenance.</p>
+            </div>
+          </div>
+
+          <div class="dark-stripe-right">
+            <p style="font-size:10.5px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold-rd); opacity:0.7; margin-bottom:14px;">Key Advantages</p>
+            <p><strong>Effortless Pairing:</strong> Blends warm terracotta tones with cool greys to complement any architectural style.</p>
+            <p><strong>Natural Slip Safety:</strong> Traditional hand-cleft texture gives certified slip resistance under foot.</p>
+            <p><strong>Proven Weathering:</strong> Resists severe freeze-thaw cycles without delaminating or spalling.</p>
+            <span class="dark-stripe-pill">Naturally Variegated · Direct Mine Quality</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STANDARD SIZES ============ -->
+    <section class="sizes-section">
+      <div class="container">
+        <div class="sizes-header">
+          <p class="sizes-eyebrow">Format &amp; Sizing</p>
+          <h2 class="sizes-heading">Standard Formats &amp;<br>Custom Possibilities</h2>
+          <p class="sizes-sub">Available in mixed four-size patio project packs or single calibrated dimensions.</p>
+        </div>
+
+        <div class="sizes-grid">
+          <div class="size-card">
+            <p class="size-card-label">Patio Pack · Extra Large</p>
+            <p class="size-card-dims">900 × 600 mm</p>
+            <p class="size-card-note">22mm calibrated · natural cleft</p>
+          </div>
+          <div class="size-card">
+            <p class="size-card-label">Patio Pack · Square</p>
+            <p class="size-card-dims">600 × 600 mm</p>
+            <p class="size-card-note">22mm calibrated · natural cleft</p>
+          </div>
+          <div class="size-card">
+            <p class="size-card-label">Patio Pack · Medium</p>
+            <p class="size-card-dims">600 × 290 mm</p>
+            <p class="size-card-note">22mm calibrated · hand-cut edge</p>
+          </div>
+          <div class="size-card">
+            <p class="size-card-label">Patio Pack · Small</p>
+            <p class="size-card-dims">290 × 290 mm</p>
+            <p class="size-card-note">22mm calibrated · hand-cut edge</p>
+          </div>
+          <div class="size-card">
+            <p class="size-card-label">Pool Coping</p>
+            <p class="size-card-dims">600 × 300 × 30 mm</p>
+            <p class="size-card-note">Bullnose edge or rockface rebate</p>
+          </div>
+          <div class="size-card">
+            <p class="size-card-label">Step Tread</p>
+            <p class="size-card-dims">900 × 350 × 50 mm</p>
+            <p class="size-card-note">Bullnose or rockface front edge</p>
+          </div>
+          <div class="size-card">
+            <p class="size-card-label">Cobbles / Setts</p>
+            <p class="size-card-dims">100 × 100 × 50 mm</p>
+            <p class="size-card-note">Driveways, borders &amp; courtyards</p>
+          </div>
+          <div class="size-card">
+            <p class="size-card-label">Pier Caps</p>
+            <p class="size-card-dims">500 × 500 × 50 mm</p>
+            <p class="size-card-note">Apex pyramid with drip groove</p>
+          </div>
+          <div class="size-card">
+            <p class="size-card-label">Wall Cladding</p>
+            <p class="size-card-dims">Random Strips</p>
+            <p class="size-card-note">20–30mm thickness · natural face</p>
+          </div>
+        </div>
+
+        <div class="sizes-custom-note">
+          <strong>Bespoke Dimensions &amp; Project Supply:</strong> We cut step treads, pool copings, column caps, radial circles, and architectural blocks to custom drawings. Direct container loads and LCL shipments available worldwide.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA SECTION ============ -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-grid">
+
+          <div class="cta-left">
+            <p class="cta-eyebrow">Direct Quarry Supply</p>
+            <h2 class="cta-heading">Specify Raj Blend<br>for <em>Your Next Project</em></h2>
+            <p class="cta-sub">Direct From Bijolia Mines · Export Ready · Transparent Pricing</p>
+            <p class="cta-text">Add timeless warmth and variegated beauty to your landscape design. Shri Sanwariya Stone Suppliers delivers certified Raj Blend sandstone directly from our Rajasthan mining operations with reliable container-grade consistency.</p>
+          </div>
+
+          <div class="cta-right">
+            <h4>Request Quotation</h4>
+            <div class="cta-options">
+              <a href="../index.html#contact" class="btn-amber-solid">Request a Quote →</a>
+              <a href="../assets/catalogue.pdf" target="_blank" class="btn-border-gold">Download Catalogue</a>
+              <a href="natural-sandstone-colors.html" class="btn-border-gold">All 15 Stone Colors</a>
+            </div>
+            <p class="cta-note">Specialist response within 24 hours</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p>© 2026 <a href="../index.html">Shri Sanwariya Stone Suppliers</a> · Raj Blend · KHD-0-04 · Bijolia Belt, Rajasthan</p>
+  </footer>
+
+</body>
+</html>
+
