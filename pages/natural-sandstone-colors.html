@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;0,600;0,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -204,6 +204,8 @@
     }
 
     .color-stone-card {
+      transform: translateZ(0);
+      contain: layout style paint;
       background: #FFFFFF;
       border: 1px solid var(--border-card);
       border-radius: var(--radius-sm);
@@ -424,6 +426,7 @@
       .footer-grid { grid-template-columns: 1fr; }
       .floating-enquiry-tab { display: none; }
     }
+      .stone-chunk-hidden { display: none !important; }
   </style>
 </head>
 <body>
@@ -518,7 +521,7 @@
       <!-- 1. Khadipur Grey -->
       <div class="color-stone-card" data-category="grey" onclick="window.location.href='khadipur-grey.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/khadipur-grey-swatch-main.jpg" alt="Khadipur Grey Sandstone">
+          <img src="../assets/khadipur-grey-swatch-main.webp" fetchpriority="high" decoding="async" alt="Khadipur Grey Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -543,7 +546,7 @@
       <!-- 2. Kandla Grey -->
       <div class="color-stone-card" data-category="grey" onclick="window.location.href='kandla-grey.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/kandla-grey-swatch-main.jpg" alt="Kandla Grey Sandstone">
+          <img src="../assets/kandla-grey-swatch-main.webp" loading="lazy" decoding="async" alt="Kandla Grey Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -569,7 +572,7 @@
       <!-- 3. Autumn Brown -->
       <div class="color-stone-card" data-category="warm" onclick="window.location.href='autumn-brown.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/autumn-brown-swatch-main.jpg" alt="Autumn Brown Sandstone">
+          <img src="../assets/autumn-brown-swatch-main.webp" loading="lazy" decoding="async" alt="Autumn Brown Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -594,7 +597,7 @@
       <!-- 4. Raj Blend -->
       <div class="color-stone-card" data-category="variegated" onclick="window.location.href='raj-blend.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/raj-blend-swatch-main.jpg" alt="Raj Blend Sandstone">
+          <img src="../assets/raj-blend-swatch-main.webp" loading="lazy" decoding="async" alt="Raj Blend Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -619,7 +622,7 @@
       <!-- 5. Garda Green -->
       <div class="color-stone-card" data-category="green" onclick="window.location.href='garda-green.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/garda-green-swatch-main.jpg" alt="Garda Green Sandstone">
+          <img src="../assets/garda-green-swatch-main.webp" loading="lazy" decoding="async" alt="Garda Green Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -644,7 +647,7 @@
       <!-- 6. Slate Grey -->
       <div class="color-stone-card" data-category="grey" onclick="window.location.href='slate-grey.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/slate-grey-swatch-main.png" alt="Slate Grey Sandstone">
+          <img src="../assets/slate-grey-swatch-main.webp" loading="lazy" decoding="async" alt="Slate Grey Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -670,7 +673,7 @@
       <!-- 7. Raveena -->
       <div class="color-stone-card" data-category="green" onclick="window.location.href='raveena.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/raveena-swatch-main.png" alt="Raveena Sandstone">
+          <img src="../assets/raveena-swatch-main.webp" loading="lazy" decoding="async" alt="Raveena Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -695,7 +698,7 @@
       <!-- 8. Mint -->
       <div class="color-stone-card" data-category="warm" onclick="window.location.href='mint.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/mint-swatch-main.png" alt="Mint Fossil Sandstone">
+          <img src="../assets/mint-swatch-main.webp" loading="lazy" decoding="async" alt="Mint Fossil Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -718,9 +721,9 @@
       </div>
 
       <!-- 9. Buff -->
-      <div class="color-stone-card" data-category="warm" onclick="window.location.href='buff.html'">
+      <div class="color-stone-card stone-chunk-hidden" data-category="warm" onclick="window.location.href='buff.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/buff-swatch-main.jpg" alt="Buff Sandstone">
+          <img src="../assets/buff-swatch-main.webp" loading="lazy" decoding="async" alt="Buff Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -743,9 +746,9 @@
       </div>
 
       <!-- 10. Camel Dust -->
-      <div class="color-stone-card" data-category="warm" onclick="window.location.href='camel-dust.html'">
+      <div class="color-stone-card stone-chunk-hidden" data-category="warm" onclick="window.location.href='camel-dust.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/camel-dust-swatch-main.jpg" alt="Camel Dust Sandstone">
+          <img src="../assets/camel-dust-swatch-main.webp" loading="lazy" decoding="async" alt="Camel Dust Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -768,9 +771,9 @@
       </div>
 
       <!-- 11. Red Choco -->
-      <div class="color-stone-card" data-category="warm" onclick="window.location.href='red-choco.html'">
+      <div class="color-stone-card stone-chunk-hidden" data-category="warm" onclick="window.location.href='red-choco.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/red-choco-swatch-main.png" alt="Red Choco Sandstone">
+          <img src="../assets/red-choco-swatch-main.webp" loading="lazy" decoding="async" alt="Red Choco Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -793,9 +796,9 @@
       </div>
 
       <!-- 12. Dual Tone -->
-      <div class="color-stone-card" data-category="variegated" onclick="window.location.href='dual-tone.html'">
+      <div class="color-stone-card stone-chunk-hidden" data-category="variegated" onclick="window.location.href='dual-tone.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/dual-tone-swatch-main.jpg" alt="Dual Tone Sandstone">
+          <img src="../assets/dual-tone-swatch-main.webp" loading="lazy" decoding="async" alt="Dual Tone Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -818,9 +821,9 @@
       </div>
 
       <!-- 13. Mocha Blend -->
-      <div class="color-stone-card" data-category="warm" onclick="window.location.href='mocha-blend.html'">
+      <div class="color-stone-card stone-chunk-hidden" data-category="warm" onclick="window.location.href='mocha-blend.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/mocha-blend-swatch-main.png" alt="Mocha Blend Sandstone">
+          <img src="../assets/mocha-blend-swatch-main.webp" loading="lazy" decoding="async" alt="Mocha Blend Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -843,9 +846,9 @@
       </div>
 
       <!-- 14. Rainbow -->
-      <div class="color-stone-card" data-category="variegated" onclick="window.location.href='rainbow.html'">
+      <div class="color-stone-card stone-chunk-hidden" data-category="variegated" onclick="window.location.href='rainbow.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/rainbow-swatch-main.jpg" alt="Rainbow Sandstone">
+          <img src="../assets/rainbow-swatch-main.webp" loading="lazy" decoding="async" alt="Rainbow Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -868,9 +871,9 @@
       </div>
 
       <!-- 15. White -->
-      <div class="color-stone-card" data-category="grey" onclick="window.location.href='white.html'">
+      <div class="color-stone-card stone-chunk-hidden" data-category="grey" onclick="window.location.href='white.html'">
         <div class="stone-swatch-box">
-          <img src="../assets/white-swatch-main.png" alt="White Quartzitic Sandstone">
+          <img src="../assets/white-swatch-main.webp" loading="lazy" decoding="async" alt="White Quartzitic Sandstone">
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
@@ -939,19 +942,19 @@
 
       <div class="packing-grid">
         <div class="packing-card">
-          <img src="../assets/packing-calibration-slabs.png" alt="Calibration Inspection & Sawn Slabs Stack">
+          <img src="../assets/packing-calibration-slabs.webp" loading="lazy" decoding="async" alt="Calibration Inspection & Sawn Slabs Stack">
           <span>1. Calibration Inspection</span>
         </div>
         <div class="packing-card">
-          <img src="../assets/packing-covered-yard.png" alt="Crate & Slab Storage in Covered Factory Yard">
+          <img src="../assets/packing-covered-yard.webp" loading="lazy" decoding="async" alt="Crate & Slab Storage in Covered Factory Yard">
           <span>2. Covered Yard Storage</span>
         </div>
         <div class="packing-card">
-          <img src="../assets/packing-wooden-crate.png" alt="ISPM-15 Heat-Treated Fumigated Wooden Crate">
+          <img src="../assets/packing-wooden-crate.webp" loading="lazy" decoding="async" alt="ISPM-15 Heat-Treated Fumigated Wooden Crate">
           <span>3. ISPM-15 Wooden Crates</span>
         </div>
         <div class="packing-card">
-          <img src="../assets/packing-truck-loading.png" alt="Sea Container & Flatbed Truck Loading">
+          <img src="../assets/packing-truck-loading.webp" loading="lazy" decoding="async" alt="Sea Container & Flatbed Truck Loading">
           <span>4. Sea Container Loading</span>
         </div>
       </div>
@@ -1262,9 +1265,24 @@
       window.location.href = `mailto:info@shrisanwariyastone.com?subject=${encodeURIComponent(topic || 'Natural Sandstone Colors Enquiry')}`;
     }
 
+    
+    let stoneObserver = null;
+    function revealAllChunks() {
+      document.querySelectorAll('.color-stone-card.stone-chunk-hidden').forEach(c => c.classList.remove('stone-chunk-hidden'));
+      if (stoneObserver) { stoneObserver.disconnect(); stoneObserver = null; }
+    }
+    const sentinel = document.getElementById('stoneGridSentinel');
+    if (sentinel && 'IntersectionObserver' in window) {
+      stoneObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) revealAllChunks(); });
+      }, { rootMargin: '250px' });
+      stoneObserver.observe(sentinel);
+    }
+
     function filterCategory(cat, btn) {
+      revealAllChunks();
       document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
+      if (btn) btn.classList.add('active');
 
       const cards = document.querySelectorAll('.color-stone-card');
       cards.forEach(card => {
@@ -1277,11 +1295,12 @@
     }
 
     function handleSearch(query) {
+      revealAllChunks();
       const q = query.toLowerCase().trim();
       const cards = document.querySelectorAll('.color-stone-card');
 
       cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
+        const text = (card.textContent || '').toLowerCase();
         if (text.includes(q)) {
           card.style.display = 'flex';
         } else {

@@ -10,7 +10,7 @@
   <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;0,600;0,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     /* -------------------------------------------------------------
@@ -755,6 +755,20 @@
       margin-bottom: 50px;
       text-align: left;
     }
+    
+    /* Performance optimizations for GPU composition & layout preservation */
+    .color-stone-card {
+      transform: translateZ(0);
+      contain: layout style paint;
+    }
+    .product-card {
+      transform: translateZ(0);
+      contain: layout style paint;
+    }
+    .stone-chunk-hidden {
+      display: none !important;
+    }
+
     .color-stone-card {
       background: #FFFFFF;
       border: 1px solid #ECE5DA;
@@ -2116,7 +2130,7 @@
     <div class="container nav-bar">
       <!-- BRAND LOGO -->
       <a href="#home" class="brand-logo image-brand-logo" aria-label="Shri Sanwariya Stone Suppliers">
-        <img src="assets/logo.png" alt="Shri Sanwariya Stone Suppliers logo" class="site-logo">
+        <img src="assets/logo.webp" alt="Shri Sanwariya Stone Suppliers logo" class="site-logo" width="190" height="48" decoding="async">
       </a>
 
       <!-- MAIN NAVIGATION -->
@@ -2193,9 +2207,9 @@
       <div class="container">
         <div class="hero-frame hero-slider" id="heroSlider">
           <div class="hero-slides">
-            <div class="hero-slide active"><img class="hero-bg-img" src="assets/hero1.jpeg" alt="Premium natural stone showcase"></div>
-            <div class="hero-slide"><img class="hero-bg-img" src="assets/hero2.jpeg" alt="Shri Sanwariya Stone Suppliers natural stone"></div>
-            <div class="hero-slide"><img class="hero-bg-img" src="assets/hero3.jpeg" alt="Indian natural sandstone and stone processing"></div>
+            <div class="hero-slide active"><img class="hero-bg-img" src="assets/hero1.webp" alt="Premium natural stone showcase" width="1400" height="750" fetchpriority="high" decoding="async"></div>
+            <div class="hero-slide"><img class="hero-bg-img" src="assets/hero2.webp" alt="Shri Sanwariya Stone Suppliers natural stone" width="1400" height="750" loading="lazy" decoding="async"></div>
+            <div class="hero-slide"><img class="hero-bg-img" src="assets/hero3.webp" alt="Indian natural sandstone and stone processing" width="1400" height="750" loading="lazy" decoding="async"></div>
           </div>
           <div class="hero-overlay"></div>
           <div class="hero-content">
@@ -2236,16 +2250,16 @@
           <div class="rd-box-panel rk-media-panel">
             <div class="rk-slider" id="rkSlider">
               <div class="rk-slides">
-                <div class="rk-slide active"><img src="assets/rk1.jpeg" alt="RK Stone Impex — natural stone showcase 1"></div>
-                <div class="rk-slide"><img src="assets/rk2.jpeg" alt="RK Stone Impex — natural stone showcase 2"></div>
-                <div class="rk-slide"><img src="assets/rk3.jpeg" alt="RK Stone Impex — natural stone showcase 3"></div>
-                <div class="rk-slide"><img src="assets/rk4.jpeg" alt="RK Stone Impex — natural stone showcase 4"></div>
-                <div class="rk-slide"><img src="assets/rk5.jpeg" alt="RK Stone Impex — natural stone showcase 5"></div>
-                <div class="rk-slide"><img src="assets/rk6.jpeg" alt="RK Stone Impex — natural stone showcase 6"></div>
-                <div class="rk-slide"><img src="assets/rk7.jpeg" alt="RK Stone Impex — natural stone showcase 7"></div>
-                <div class="rk-slide"><img src="assets/rk8.jpeg" alt="RK Stone Impex — natural stone showcase 8"></div>
-                <div class="rk-slide"><img src="assets/rk9.jpeg" alt="RK Stone Impex — natural stone showcase 9"></div>
-                <div class="rk-slide"><img src="assets/rk10.jpeg" alt="RK Stone Impex — natural stone showcase 10"></div>
+                <div class="rk-slide active"><img src="assets/rk1.webp" alt="RK Stone Impex — natural stone showcase 1" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="rk-slide"><img src="assets/rk2.webp" alt="RK Stone Impex — natural stone showcase 2" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="rk-slide"><img src="assets/rk3.webp" alt="RK Stone Impex — natural stone showcase 3" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="rk-slide"><img src="assets/rk4.webp" alt="RK Stone Impex — natural stone showcase 4" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="rk-slide"><img src="assets/rk5.webp" alt="RK Stone Impex — natural stone showcase 5" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="rk-slide"><img src="assets/rk6.webp" alt="RK Stone Impex — natural stone showcase 6" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="rk-slide"><img src="assets/rk7.webp" alt="RK Stone Impex — natural stone showcase 7" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="rk-slide"><img src="assets/rk8.webp" alt="RK Stone Impex — natural stone showcase 8" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="rk-slide"><img src="assets/rk9.webp" alt="RK Stone Impex — natural stone showcase 9" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="rk-slide"><img src="assets/rk10.webp" alt="RK Stone Impex — natural stone showcase 10" width="800" height="533" loading="lazy" decoding="async"></div>
               </div>
               <button class="media-nav media-prev" onclick="moveRKSlide(-1)" aria-label="Previous RK Stone image">‹</button>
               <button class="media-nav media-next" onclick="moveRKSlide(1)" aria-label="Next RK Stone image">›</button>
@@ -2315,7 +2329,7 @@
           <!-- 1. Khadipur Grey -->
           <div class="color-stone-card" data-category="grey" onclick="window.location.href='pages/khadipur-grey.html'">
             <div class="stone-swatch-box">
-              <img src="assets/khadipur-grey-swatch-main.jpg" alt="Khadipur Grey Sandstone">
+              <img src="assets/khadipur-grey-swatch-main.webp" alt="Khadipur Grey Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2340,7 +2354,7 @@
           <!-- 2. Kandla Grey -->
           <div class="color-stone-card" data-category="grey" onclick="window.location.href='pages/kandla-grey.html'">
             <div class="stone-swatch-box">
-              <img src="assets/kandla-grey-swatch-main.jpg" alt="Kandla Grey Sandstone">
+              <img src="assets/kandla-grey-swatch-main.webp" alt="Kandla Grey Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2366,7 +2380,7 @@
           <!-- 3. York Grey -->
           <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/autumn-brown.html'">
             <div class="stone-swatch-box">
-              <img src="assets/autumn-brown-swatch-main.jpg" alt="York Grey Sandstone">
+              <img src="assets/autumn-brown-swatch-main.webp" alt="York Grey Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2391,7 +2405,7 @@
           <!-- 4. Raj Blend -->
           <div class="color-stone-card" data-category="variegated" onclick="window.location.href='pages/raj-blend.html'">
             <div class="stone-swatch-box">
-              <img src="assets/raj-blend-swatch-main.jpg" alt="Raj Blend Sandstone">
+              <img src="assets/raj-blend-swatch-main.webp" alt="Raj Blend Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2416,7 +2430,7 @@
           <!-- 5. Garda Green -->
           <div class="color-stone-card" data-category="green" onclick="window.location.href='pages/garda-green.html'">
             <div class="stone-swatch-box">
-              <img src="assets/garda-green-swatch-main.jpg" alt="Garda Green Sandstone">
+              <img src="assets/garda-green-swatch-main.webp" alt="Garda Green Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2441,7 +2455,7 @@
           <!-- 6. Slate Grey -->
           <div class="color-stone-card" data-category="grey" onclick="window.location.href='pages/slate-grey.html'">
             <div class="stone-swatch-box">
-              <img src="assets/slate-grey-swatch-main.png" alt="Slate Grey Sandstone">
+              <img src="assets/slate-grey-swatch-main.webp" alt="Slate Grey Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2467,7 +2481,7 @@
           <!-- 7. Raveena -->
           <div class="color-stone-card" data-category="green" onclick="window.location.href='pages/raveena.html'">
             <div class="stone-swatch-box">
-              <img src="assets/raveena-swatch-main.png" alt="Raveena Sandstone">
+              <img src="assets/raveena-swatch-main.webp" alt="Raveena Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2492,7 +2506,7 @@
           <!-- 8. Mint -->
           <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/mint.html'">
             <div class="stone-swatch-box">
-              <img src="assets/mint-swatch-main.png" alt="Mint Fossil Sandstone">
+              <img src="assets/mint-swatch-main.webp" alt="Mint Fossil Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2515,9 +2529,9 @@
           </div>
 
           <!-- 9. Buff -->
-          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/buff.html'">
+          <div class="color-stone-card stone-chunk-hidden" data-category="warm" onclick="window.location.href='pages/buff.html'">
             <div class="stone-swatch-box">
-              <img src="assets/buff-swatch-main.jpg" alt="Buff Sandstone">
+              <img src="assets/buff-swatch-main.webp" alt="Buff Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2540,9 +2554,9 @@
           </div>
 
           <!-- 10. Camel Dust -->
-          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/camel-dust.html'">
+          <div class="color-stone-card stone-chunk-hidden" data-category="warm" onclick="window.location.href='pages/camel-dust.html'">
             <div class="stone-swatch-box">
-              <img src="assets/camel-dust-swatch-main.jpg" alt="Camel Dust Sandstone">
+              <img src="assets/camel-dust-swatch-main.webp" alt="Camel Dust Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2565,9 +2579,9 @@
           </div>
 
           <!-- 11. Red Choco -->
-          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/red-choco.html'">
+          <div class="color-stone-card stone-chunk-hidden" data-category="warm" onclick="window.location.href='pages/red-choco.html'">
             <div class="stone-swatch-box">
-              <img src="assets/red-choco-swatch-main.png" alt="Red Choco Sandstone">
+              <img src="assets/red-choco-swatch-main.webp" alt="Red Choco Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2590,9 +2604,9 @@
           </div>
 
           <!-- 12. Dual Tone -->
-          <div class="color-stone-card" data-category="variegated" onclick="window.location.href='pages/dual-tone.html'">
+          <div class="color-stone-card stone-chunk-hidden" data-category="variegated" onclick="window.location.href='pages/dual-tone.html'">
             <div class="stone-swatch-box">
-              <img src="assets/dual-tone-swatch-main.jpg" alt="Dual Tone Sandstone">
+              <img src="assets/dual-tone-swatch-main.webp" alt="Dual Tone Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2615,9 +2629,9 @@
           </div>
 
           <!-- 13. Mocha Blend -->
-          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/mocha-blend.html'">
+          <div class="color-stone-card stone-chunk-hidden" data-category="warm" onclick="window.location.href='pages/mocha-blend.html'">
             <div class="stone-swatch-box">
-              <img src="assets/mocha-blend-swatch-main.png" alt="Mocha Blend Sandstone">
+              <img src="assets/mocha-blend-swatch-main.webp" alt="Mocha Blend Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2640,9 +2654,9 @@
           </div>
 
           <!-- 14. Rainbow -->
-          <div class="color-stone-card" data-category="variegated" onclick="window.location.href='pages/rainbow.html'">
+          <div class="color-stone-card stone-chunk-hidden" data-category="variegated" onclick="window.location.href='pages/rainbow.html'">
             <div class="stone-swatch-box">
-              <img src="assets/rainbow-swatch-main.jpg" alt="Rainbow Sandstone">
+              <img src="assets/rainbow-swatch-main.webp" alt="Rainbow Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2665,9 +2679,9 @@
           </div>
 
           <!-- 15. White -->
-          <div class="color-stone-card" data-category="grey" onclick="window.location.href='pages/white.html'">
+          <div class="color-stone-card stone-chunk-hidden" data-category="grey" onclick="window.location.href='pages/white.html'">
             <div class="stone-swatch-box">
-              <img src="assets/white-swatch-main.png" alt="White Quartzitic Sandstone">
+              <img src="assets/white-swatch-main.webp" alt="White Quartzitic Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
             <div class="stone-details-body">
               <div class="stone-code-row">
@@ -2709,37 +2723,37 @@
         <div class="products-grid reveal">
           <!-- 1. Sandstone Pavers -->
           <a href="pages/sandstone-pavers.html" class="product-card">
-            <img src="assets/sandstone-pavers-pool.png" alt="Sandstone Pavers">
+            <img src="assets/sandstone-pavers-pool.webp" alt="Sandstone Pavers" width="600" height="400" loading="lazy" decoding="async">
             <div class="product-badge">Sandstone Pavers <span>→</span></div>
           </a>
 
           <!-- 2. Copings -->
           <a href="pages/copings.html" class="product-card">
-            <img src="assets/coping-residence-porch-steps.png" alt="Natural Stone Copings">
+            <img src="assets/coping-residence-porch-steps.webp" alt="Natural Stone Copings" width="600" height="400" loading="lazy" decoding="async">
             <div class="product-badge">Copings <span>→</span></div>
           </a>
 
           <!-- 3. Steps -->
           <a href="pages/steps.html" class="product-card">
-            <img src="assets/steps-villa-columns-porch.png" alt="Sandstone Steps">
+            <img src="assets/steps-villa-columns-porch.webp" alt="Sandstone Steps" width="600" height="400" loading="lazy" decoding="async">
             <div class="product-badge">Steps <span>→</span></div>
           </a>
 
           <!-- 4. Cobbles & Sets -->
           <a href="pages/cobbles-and-sets.html" class="product-card">
-            <img src="assets/cobbles-concentric-circle-plaza.png" alt="Sandstone Cobbles &amp; Sets">
+            <img src="assets/cobbles-concentric-circle-plaza.webp" alt="Sandstone Cobbles &amp; Sets" width="600" height="400" loading="lazy" decoding="async">
             <div class="product-badge">Cobbles &amp; Sets <span>→</span></div>
           </a>
 
           <!-- 5. Fire Pits & Circles -->
           <a href="pages/fire-pits-and-circles.html" class="product-card">
-            <img src="assets/firepit-lawn-blaze.png" alt="Natural Sandstone Fire Pits &amp; Radial Circles">
+            <img src="assets/firepit-lawn-blaze.webp" alt="Natural Sandstone Fire Pits &amp; Radial Circles" width="600" height="400" loading="lazy" decoding="async">
             <div class="product-badge">Fire Pits &amp; Circles <span>→</span></div>
           </a>
 
           <!-- 6. Roofing -->
           <a href="pages/roofing.html" class="product-card">
-            <img src="assets/roofing-house-installed-cottage.jpg" alt="Natural Sandstone Roofing Slates &amp; Shingles">
+            <img src="assets/roofing-house-installed-cottage.webp" alt="Natural Sandstone Roofing Slates &amp; Shingles" width="600" height="400" loading="lazy" decoding="async">
             <div class="product-badge">Roofing <span>→</span></div>
           </a>
         </div>
@@ -2876,19 +2890,19 @@
 
           <div class="packing-grid">
             <div class="packing-card">
-              <img src="assets/packing-calibration-slabs.png" alt="Calibration Inspection &amp; Sawn Slabs Stack">
+              <img src="assets/packing-calibration-slabs.webp" width="640" height="427" loading="lazy" decoding="async" alt="Calibration Inspection &amp; Sawn Slabs Stack">
               <span>1. Calibration Inspection</span>
             </div>
             <div class="packing-card">
-              <img src="assets/packing-covered-yard.png" alt="Crate &amp; Slab Storage in Covered Factory Yard">
+              <img src="assets/packing-covered-yard.webp" width="640" height="427" loading="lazy" decoding="async" alt="Crate &amp; Slab Storage in Covered Factory Yard">
               <span>2. Covered Yard Storage</span>
             </div>
             <div class="packing-card">
-              <img src="assets/packing-wooden-crate.png" alt="ISPM-15 Heat-Treated Fumigated Wooden Crate">
+              <img src="assets/packing-wooden-crate.webp" width="640" height="427" loading="lazy" decoding="async" alt="ISPM-15 Heat-Treated Fumigated Wooden Crate">
               <span>3. ISPM-15 Wooden Crates</span>
             </div>
             <div class="packing-card">
-              <img src="assets/packing-truck-loading.png" alt="Sea Container &amp; Flatbed Truck Loading">
+              <img src="assets/packing-truck-loading.webp" width="640" height="427" loading="lazy" decoding="async" alt="Sea Container &amp; Flatbed Truck Loading">
               <span>4. Sea Container Loading</span>
             </div>
           </div>
@@ -2915,7 +2929,7 @@
 
                 <!-- Slide 1: Mr. Dinesh Kumar Dhakad -->
                 <div class="team-slide active">
-                  <img src="assets/team-dinesh-kumar-dhaakad.jpg" alt="Mr. Dinesh Kumar Dhakad - Managing Director &amp; Owner">
+                  <img src="assets/team-dinesh-kumar-dhaakad.webp" width="400" height="400" loading="lazy" decoding="async" alt="Mr. Dinesh Kumar Dhakad - Managing Director &amp; Owner">
                   <div class="team-slide-caption">
                     <div class="team-slide-name">Mr. Dinesh Kumar Dhakad</div>
                     <div class="team-slide-tagline">Managing Director &amp; Owner • Experience Since 2001</div>
@@ -2924,7 +2938,7 @@
 
                 <!-- Slide 2: Arman Dhakad -->
                 <div class="team-slide">
-                  <img src="assets/team-arman-dhakar.jpg" alt="Arman Dhakad - Director – Leadership and Business Development">
+                  <img src="assets/team-arman-dhakar.webp" width="400" height="400" loading="lazy" decoding="async" alt="Arman Dhakad - Director – Leadership and Business Development">
                   <div class="team-slide-caption">
                     <div class="team-slide-name">Arman Dhakad</div>
                     <div class="team-slide-tagline">Director – Leadership &amp; Business Development</div>
@@ -2933,7 +2947,7 @@
 
                 <!-- Slide 3: Jaswant Dhakad -->
                 <div class="team-slide jaswant-slide">
-                  <img src="assets/team-jaswant-dhakad.jpg" alt="Jaswant Dhakad - Quality &amp; Operations">
+                  <img src="assets/team-jaswant-dhakad.webp" width="400" height="400" loading="lazy" decoding="async" alt="Jaswant Dhakad - Quality &amp; Operations">
                   <div class="team-slide-caption">
                     <div class="team-slide-name">Jaswant Dhakad</div>
                     <div class="team-slide-tagline">Director – Quality &amp; Operations • Premium Quality Control</div>
@@ -2970,14 +2984,14 @@
 
         <div class="showcase-slider reveal" id="showcaseSlider">
           <div class="showcase-track">
-            <div class="showcase-video-slide active"><video src="assets/v1.mp4" muted playsinline preload="metadata"></video></div>
-            <div class="showcase-video-slide"><video src="assets/v2.mp4" muted playsinline preload="metadata"></video></div>
-            <div class="showcase-video-slide"><video src="assets/v3.mp4" muted playsinline preload="metadata"></video></div>
-            <div class="showcase-video-slide"><video src="assets/v4.mp4" muted playsinline preload="metadata"></video></div>
-            <div class="showcase-video-slide"><video src="assets/v5.mp4" muted playsinline preload="metadata"></video></div>
-            <div class="showcase-video-slide"><video src="assets/v6.mp4" muted playsinline preload="metadata"></video></div>
-            <div class="showcase-video-slide"><video src="assets/v7.mp4" muted playsinline preload="metadata"></video></div>
-            <div class="showcase-video-slide"><video src="assets/v8.mp4" muted playsinline preload="metadata"></video></div>
+            <div class="showcase-video-slide active"><video src="assets/v1.mp4" muted playsinline preload="none"></video></div>
+            <div class="showcase-video-slide"><video src="assets/v2.mp4" muted playsinline preload="none"></video></div>
+            <div class="showcase-video-slide"><video src="assets/v3.mp4" muted playsinline preload="none"></video></div>
+            <div class="showcase-video-slide"><video src="assets/v4.mp4" muted playsinline preload="none"></video></div>
+            <div class="showcase-video-slide"><video src="assets/v5.mp4" muted playsinline preload="none"></video></div>
+            <div class="showcase-video-slide"><video src="assets/v6.mp4" muted playsinline preload="none"></video></div>
+            <div class="showcase-video-slide"><video src="assets/v7.mp4" muted playsinline preload="none"></video></div>
+            <div class="showcase-video-slide"><video src="assets/v8.mp4" muted playsinline preload="none"></video></div>
           </div>
           <button class="showcase-nav showcase-prev" onclick="moveShowcase(-1)" aria-label="Previous showcase video">‹</button>
           <button class="showcase-nav showcase-next" onclick="moveShowcase(1)" aria-label="Next showcase video">›</button>
@@ -3012,21 +3026,21 @@
           <div class="process-media-wrap reveal">
             <div class="process-media-slider" id="processSlider">
               <div class="process-media-track">
-                <div class="process-media-slide active"><img src="assets/our1.jpeg" alt="Stone processing and quality process 1"></div>
-                <div class="process-media-slide"><img src="assets/our2.jpeg" alt="Stone processing and quality process 2"></div>
-                <div class="process-media-slide"><img src="assets/our3.jpeg" alt="Stone processing and quality process 3"></div>
-                <div class="process-media-slide"><img src="assets/our4.jpeg" alt="Stone processing and quality process 4"></div>
-                <div class="process-media-slide"><img src="assets/our5.jpeg" alt="Stone processing and quality process 5"></div>
-                <div class="process-media-slide"><img src="assets/our6.jpeg" alt="Stone processing and quality process 6"></div>
-                <div class="process-media-slide"><img src="assets/our7.jpeg" alt="Stone processing and quality process 7"></div>
-                <div class="process-media-slide"><img src="assets/our8.jpeg" alt="Stone processing and quality process 8"></div>
-                <div class="process-media-slide"><img src="assets/our9.jpeg" alt="Stone processing and quality process 9"></div>
-                <div class="process-media-slide"><img src="assets/our10.jpeg" alt="Stone processing and quality process 10"></div>
-                <div class="process-media-slide"><img src="assets/our11.jpeg" alt="Stone processing and quality process 11"></div>
-                <div class="process-media-slide"><img src="assets/our12.jpeg" alt="Stone processing and quality process 12"></div>
-                <div class="process-media-slide"><img src="assets/our13.jpeg" alt="Stone processing and quality process 13"></div>
-                <div class="process-media-slide"><img src="assets/our14.jpeg" alt="Stone processing and quality process 14"></div>
-                <div class="process-media-slide process-video-slide"><video src="assets/our.mp4" muted playsinline preload="metadata"></video></div>
+                <div class="process-media-slide active"><img src="assets/our1.webp" alt="Stone processing and quality process 1" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="process-media-slide"><img src="assets/our2.webp" alt="Stone processing and quality process 2" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="process-media-slide"><img src="assets/our3.webp" alt="Stone processing and quality process 3" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="process-media-slide"><img src="assets/our4.webp" alt="Stone processing and quality process 4" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="process-media-slide"><img src="assets/our5.webp" alt="Stone processing and quality process 5" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="process-media-slide"><img src="assets/our6.webp" alt="Stone processing and quality process 6" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="process-media-slide"><img src="assets/our7.webp" alt="Stone processing and quality process 7" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="process-media-slide"><img src="assets/our8.webp" alt="Stone processing and quality process 8" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="process-media-slide"><img src="assets/our9.webp" alt="Stone processing and quality process 9" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="process-media-slide"><img src="assets/our10.webp" alt="Stone processing and quality process 10" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="process-media-slide"><img src="assets/our11.webp" alt="Stone processing and quality process 11" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="process-media-slide"><img src="assets/our12.webp" alt="Stone processing and quality process 12" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="process-media-slide"><img src="assets/our13.webp" alt="Stone processing and quality process 13" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="process-media-slide"><img src="assets/our14.webp" alt="Stone processing and quality process 14" width="800" height="533" loading="lazy" decoding="async"></div>
+                <div class="process-media-slide process-video-slide"><video src="assets/our.mp4" muted playsinline preload="none"></video></div>
               </div>
               <button class="media-nav media-prev" onclick="moveProcessSlide(-1)" aria-label="Previous process media">‹</button>
               <button class="media-nav media-next" onclick="moveProcessSlide(1)" aria-label="Next process media">›</button>
@@ -3115,7 +3129,7 @@
             <a class="btn-light-outline" href="https://maps.app.goo.gl/Gws7p63XHvWBjjHc8" target="_blank" rel="noopener">Open in Google Maps →</a>
           </div>
           <div class="map-frame">
-            <iframe title="Shri Sanwariya Stone Suppliers location map" src="https://www.google.com/maps?q=25.142194,75.335361&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe title="Shri Sanwariya Stone Suppliers location map" src="https://www.google.com/maps?q=25.142194,75.335361&amp;z=15&amp;output=embed" loading="lazy" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -3352,15 +3366,18 @@
        ============================================================= -->
   <script>
     // IntersectionObserver for scroll animations
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+    }
 
     // Mobile Menu Toggle
     const menuToggle = document.getElementById('menuToggle');
@@ -3659,7 +3676,42 @@
       }
     }
 
+    // Progressive Chunk Observer for Stone Colors
+    let stoneSentinelObserver = null;
+    function revealAllStoneChunks() {
+      const hiddenCards = document.querySelectorAll('.color-stone-card.stone-chunk-hidden');
+      hiddenCards.forEach(c => c.classList.remove('stone-chunk-hidden'));
+      if (stoneSentinelObserver) {
+        stoneSentinelObserver.disconnect();
+        stoneSentinelObserver = null;
+      }
+    }
+
+    function initStoneObserver() {
+      const sentinel = document.getElementById('stoneGridSentinel');
+      if (!sentinel || !('IntersectionObserver' in window)) {
+        revealAllStoneChunks();
+        return;
+      }
+      stoneSentinelObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            revealAllStoneChunks();
+          }
+        });
+      }, { rootMargin: '250px' });
+      stoneSentinelObserver.observe(sentinel);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initStoneObserver);
+    } else {
+      initStoneObserver();
+    }
+
     function filterCategory(cat, btn) {
+      revealAllStoneChunks();
+
       document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
       if (btn) btn.classList.add('active');
 
@@ -3674,11 +3726,13 @@
     }
 
     function handleSearch(query) {
+      revealAllStoneChunks();
+
       const q = query.toLowerCase().trim();
       const cards = document.querySelectorAll('.color-stone-card');
 
       cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
+        const text = (card.textContent || '').toLowerCase();
         if (text.includes(q)) {
           card.style.display = 'flex';
         } else {
@@ -3852,7 +3906,7 @@
         <!-- Leader 1 -->
         <div class="story-leader-card">
           <div class="story-leader-img">
-            <img src="assets/team-dinesh-kumar-dhaakad.jpg" alt="Mr. Dinesh Kumar Dhakad">
+            <img src="assets/team-dinesh-kumar-dhaakad.webp" alt="Mr. Dinesh Kumar Dhakad" width="400" height="400" loading="lazy" decoding="async">
           </div>
           <div class="story-leader-info">
             <span class="leader-badge" style="background:rgba(217,147,41,0.15); color:var(--accent-amber); padding:4px 12px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px; display:inline-block;">Established Experience Since 2001</span>
@@ -3870,7 +3924,7 @@
         <!-- Leader 2 -->
         <div class="story-leader-card">
           <div class="story-leader-img">
-            <img src="assets/team-arman-dhakar.jpg" alt="Arman Dhakad">
+            <img src="assets/team-arman-dhakar.webp" alt="Arman Dhakad" width="400" height="400" loading="lazy" decoding="async">
           </div>
           <div class="story-leader-info">
             <span class="leader-badge" style="background:rgba(217,147,41,0.15); color:var(--accent-amber); padding:4px 12px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px; display:inline-block;">Second Generation Leadership</span>
@@ -3889,7 +3943,7 @@
         <!-- Leader 3 -->
         <div class="story-leader-card">
           <div class="story-leader-img">
-            <img src="assets/team-jaswant-dhakad.jpg" alt="Jaswant Dhakad">
+            <img src="assets/team-jaswant-dhakad.webp" alt="Jaswant Dhakad" width="400" height="400" loading="lazy" decoding="async">
           </div>
           <div class="story-leader-info">
             <span class="leader-badge" style="background:rgba(217,147,41,0.15); color:var(--accent-amber); padding:4px 12px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px; display:inline-block;">Premium Quality Control</span>
