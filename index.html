@@ -28,6 +28,8 @@
       --terracotta-soft: rgba(184, 101, 57, 0.12);
       --gold-rd: #DEC196;
       --gold-rd-light: #EBD4B2;
+      --accent-amber: #D99329;
+      --accent-ochre: #B9782C;
       --text-dark: #221C18;
       --text-muted: #6E665E;
       --text-light-muted: #C8BEB5;
@@ -1980,7 +1982,130 @@
       .story-leader-card { grid-template-columns: 1fr; }
       .story-leader-img { width: 100%; height: 200px; }
     }
-  </style>
+  
+    /* =============================================================
+       RESPONSIVE MEDIA / NEW SECTIONS — FITTED TO EXISTING SYSTEM
+       ============================================================= */
+    .image-brand-logo { justify-content:center; align-items:flex-start; }
+    .site-logo { width:auto; height:48px; max-width:190px; object-fit:contain; }
+
+    .hero-slider { isolation:isolate; }
+    .hero-slides, .hero-slide { position:absolute; inset:0; }
+    .hero-slide { opacity:0; visibility:hidden; transition:opacity .85s ease, visibility .85s ease; }
+    .hero-slide.active { opacity:1; visibility:visible; }
+    .hero-slide .hero-bg-img { transition:transform 6s ease-out; }
+    .hero-slide.active .hero-bg-img { transform:scale(1.055); }
+    .hero-dots { position:absolute; z-index:4; bottom:22px; left:50%; transform:translateX(-50%); display:flex; gap:8px; }
+    .hero-dot { width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.45); border:1px solid rgba(255,255,255,.5); padding:0; cursor:pointer; }
+    .hero-dot.active { background:#fff; transform:scale(1.25); }
+
+    .rk-media-panel { padding:16px; min-height:310px; justify-content:flex-end; }
+    .rk-slider { position:relative; width:100%; height:275px; border-radius:15px; overflow:hidden; background:#17120f; border:1px solid rgba(222,193,150,.22); }
+    .rk-slides, .rk-slide { position:absolute; inset:0; }
+    .rk-slide { opacity:0; visibility:hidden; transition:opacity .5s ease; }
+    .rk-slide.active { opacity:1; visibility:visible; }
+    .rk-slide img { width:100%; height:100%; object-fit:cover; }
+    .rk-panel-label { position:absolute; left:28px; right:28px; bottom:24px; z-index:4; pointer-events:none; display:flex; justify-content:space-between; align-items:end; gap:15px; text-align:left; text-shadow:0 2px 10px rgba(0,0,0,.65); }
+    .rk-panel-label span { font-family:'Playfair Display',Georgia,serif; font-size:22px; color:#fff; font-weight:700; }
+    .rk-panel-label small { color:var(--gold-rd); font-size:9px; font-weight:700; letter-spacing:.16em; }
+
+    .media-nav, .showcase-nav { position:absolute; top:50%; transform:translateY(-50%); z-index:5; width:38px; height:38px; border-radius:50%; background:rgba(20,15,12,.72); color:#fff; border:1px solid rgba(255,255,255,.22); font-size:28px; line-height:1; display:flex; align-items:center; justify-content:center; cursor:pointer; backdrop-filter:blur(8px); }
+    .media-nav:hover, .showcase-nav:hover { background:var(--terracotta); transform:translateY(-50%) scale(1.08); }
+    .media-prev, .showcase-prev { left:12px; }
+    .media-next, .showcase-next { right:12px; }
+    .media-counter { position:absolute; z-index:5; top:12px; right:13px; color:#fff; font-size:10px; font-weight:700; letter-spacing:.12em; background:rgba(20,15,12,.68); padding:6px 9px; border-radius:999px; backdrop-filter:blur(8px); }
+    .media-dots { position:absolute; z-index:5; left:50%; bottom:12px; transform:translateX(-50%); display:flex; gap:5px; max-width:75%; flex-wrap:wrap; justify-content:center; }
+    .media-dots button { width:7px; height:7px; border-radius:50%; padding:0; background:rgba(255,255,255,.4); border:0; cursor:pointer; }
+    .media-dots button.active { background:#fff; transform:scale(1.25); }
+
+    .showcase-slider { position:relative; width:min(900px,100%); height:500px; margin:45px auto 0; border-radius:var(--radius-xl); overflow:hidden; background:#17120f; box-shadow:0 20px 50px rgba(37,32,28,.15); }
+    .showcase-track, .showcase-video-slide { position:absolute; inset:0; }
+    .showcase-video-slide { opacity:0; visibility:hidden; transition:opacity .5s ease; }
+    .showcase-video-slide.active { opacity:1; visibility:visible; }
+    .showcase-video-slide video { width:100%; height:100%; object-fit:cover; display:block; }
+    .showcase-video-badge { position:absolute; z-index:5; top:16px; left:16px; background:rgba(20,15,12,.72); color:#fff; border:1px solid rgba(255,255,255,.18); padding:7px 11px; border-radius:999px; font-size:10px; font-weight:700; letter-spacing:.12em; backdrop-filter:blur(8px); }
+
+    .process-section { background:var(--bg-cream-soft); }
+    .process-layout { display:grid; grid-template-columns:1fr 1fr; gap:55px; align-items:center; }
+    .process-copy > p { color:var(--text-muted); font-size:14.5px; line-height:1.75; max-width:590px; margin-bottom:26px; }
+    .process-points { display:grid; gap:14px; }
+    .process-point { display:grid; grid-template-columns:42px 1fr; gap:14px; padding:14px 0; border-bottom:1px solid var(--border-warm); }
+    .process-point > span { width:34px; height:34px; border:1px solid var(--terracotta); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--terracotta); font-size:10px; font-weight:800; }
+    .process-point h3 { font-size:16px; margin-bottom:4px; color:var(--text-dark); }
+    .process-point p { color:var(--text-muted); font-size:12.5px; line-height:1.6; }
+    .process-video-note { margin-top:24px; padding:18px 20px; border-left:3px solid var(--terracotta); background:#fff; border-radius:0 var(--radius-md) var(--radius-md) 0; box-shadow:var(--shadow-sm); }
+    .process-video-note strong { display:block; color:var(--text-dark); font-size:13px; margin-bottom:5px; }
+    .process-video-note p { color:var(--text-muted); font-size:12.5px; line-height:1.65; }
+    .process-media-wrap { position:relative; }
+    .process-media-slider { position:relative; height:500px; border-radius:var(--radius-xl); overflow:hidden; background:#201b17; box-shadow:0 20px 50px rgba(0,0,0,.16); }
+    .process-media-track, .process-media-slide { position:absolute; inset:0; }
+    .process-media-slide { opacity:0; visibility:hidden; transition:opacity .55s ease; }
+    .process-media-slide.active { opacity:1; visibility:visible; }
+    .process-media-slide img, .process-media-slide video { width:100%; height:100%; object-fit:cover; display:block; }
+    .process-media-caption { margin-top:12px; text-align:center; color:#8b8178; font-size:9px; font-weight:800; letter-spacing:.2em; }
+
+    .why-section { background:var(--bg-cream); }
+    .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:45px; }
+    .why-card { background:#fff; border:1px solid var(--border-warm); border-radius:var(--radius-lg); padding:28px; min-height:190px; box-shadow:var(--shadow-sm); transition:var(--transition); }
+    .why-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-hover); border-color:rgba(184,101,57,.35); }
+    .why-card > span { color:var(--terracotta); font-size:10px; font-weight:800; letter-spacing:.16em; }
+    .why-card h3 { margin:13px 0 8px; font-size:18px; }
+    .why-card p { color:var(--text-muted); font-size:13px; line-height:1.65; }
+
+    .reviews-section { background:var(--bg-cream-soft); }
+    .reviews-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:45px; }
+    .review-card { background:#fff; border:1px solid var(--border-warm); border-radius:var(--radius-lg); padding:30px; box-shadow:var(--shadow-sm); }
+    .review-stars { color:var(--terracotta); letter-spacing:3px; font-size:14px; margin-bottom:18px; }
+    .review-card p { font-family:'Playfair Display',Georgia,serif; font-size:17px; line-height:1.6; color:var(--text-dark); margin-bottom:22px; }
+    .review-card strong { display:block; font-size:12px; }
+    .review-card small { color:var(--text-muted); font-size:10px; }
+
+    .faq-section { background:#fff; }
+    .faq-layout { display:grid; grid-template-columns:.8fr 1.2fr; gap:70px; align-items:start; }
+    .faq-intro p { color:var(--text-muted); font-size:14px; line-height:1.75; max-width:420px; }
+    .faq-list { border-top:1px solid var(--border-warm); }
+    .faq-item { border-bottom:1px solid var(--border-warm); }
+    .faq-item button { width:100%; padding:19px 2px; display:flex; justify-content:space-between; gap:20px; text-align:left; color:var(--text-dark); font-size:14px; font-weight:700; }
+    .faq-item button span { color:var(--terracotta); font-size:20px; line-height:1; transition:transform .25s ease; }
+    .faq-item.active button span { transform:rotate(45deg); }
+    .faq-answer { max-height:0; overflow:hidden; transition:max-height .4s ease; }
+    .faq-item.active .faq-answer { max-height:180px; }
+    .faq-answer p { color:var(--text-muted); font-size:13px; line-height:1.7; padding:0 32px 19px 2px; }
+
+    .location-section { background:var(--bg-cream-soft); }
+    .location-card { display:grid; grid-template-columns:.8fr 1.2fr; min-height:460px; border-radius:var(--radius-xl); overflow:hidden; background:var(--bg-dark); box-shadow:0 20px 50px rgba(0,0,0,.16); }
+    .location-info { padding:55px; display:flex; flex-direction:column; justify-content:center; }
+    .location-info h2 { color:#fff; font-size:clamp(28px,3vw,42px); line-height:1.2; margin:10px 0 18px; }
+    .location-address { color:var(--text-light-muted); font-size:14px; line-height:1.7; max-width:390px; }
+    .location-coords { color:var(--gold-rd); font-size:11px; letter-spacing:.12em; margin:18px 0 25px; }
+    .location-info .btn-light-outline { align-self:flex-start; }
+    .map-frame { min-height:460px; background:#d9d1c8; }
+    .map-frame iframe { width:100%; height:100%; min-height:460px; border:0; display:block; filter:saturate(.8) contrast(.95); }
+
+    @media (max-width:960px) {
+      .site-logo { max-width:165px; height:44px; }
+      .process-layout, .location-card, .faq-layout { grid-template-columns:1fr; }
+      .process-media-slider, .map-frame, .map-frame iframe { min-height:460px; height:460px; }
+      .why-grid, .reviews-grid { grid-template-columns:repeat(2,1fr); }
+    }
+    @media (max-width:680px) {
+      .site-logo { max-width:145px; height:40px; }
+      .rk-slider { height:245px; }
+      .rk-media-panel { min-height:280px; }
+      .rk-panel-label { left:20px; right:20px; bottom:18px; flex-direction:column; align-items:flex-start; gap:2px; }
+      .showcase-slider { height:360px; border-radius:var(--radius-lg); }
+      .process-media-slider, .map-frame, .map-frame iframe { min-height:380px; height:380px; }
+      .why-grid, .reviews-grid { grid-template-columns:1fr; }
+      .location-info { padding:38px 26px; }
+      .media-nav, .showcase-nav { width:34px; height:34px; font-size:24px; }
+      .hero-dots { bottom:15px; }
+    }
+
+
+    .team-slide img { object-position:center center; }
+    .team-slide.jaswant-slide img { object-position:center 42%; }
+
+</style>
 </head>
 <body>
 
@@ -1990,9 +2115,8 @@
   <header>
     <div class="container nav-bar">
       <!-- BRAND LOGO -->
-      <a href="#home" class="brand-logo">
-        <span class="brand-title">Shri Sanwariya</span>
-        <span class="brand-sub">Stone Suppliers</span>
+      <a href="#home" class="brand-logo image-brand-logo" aria-label="Shri Sanwariya Stone Suppliers">
+        <img src="assets/logo.png" alt="Shri Sanwariya Stone Suppliers logo" class="site-logo">
       </a>
 
       <!-- MAIN NAVIGATION -->
@@ -2064,18 +2188,26 @@
        ============================================================= -->
   <main id="home">
 
-    <!-- HERO SECTION (FRAMED CONTAINER) -->
+    <!-- HERO SECTION (3-IMAGE SLIDER) -->
     <section class="hero-section">
       <div class="container">
-        <div class="hero-frame">
-          <!-- Architecture with natural stone & warm downlights -->
-          <img class="hero-bg-img" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=85" alt="Modern architecture exterior with luxury natural sandstone facade and warm ambient lighting">
+        <div class="hero-frame hero-slider" id="heroSlider">
+          <div class="hero-slides">
+            <div class="hero-slide active"><img class="hero-bg-img" src="assets/hero1.jpeg" alt="Premium natural stone showcase"></div>
+            <div class="hero-slide"><img class="hero-bg-img" src="assets/hero2.jpeg" alt="Shri Sanwariya Stone Suppliers natural stone"></div>
+            <div class="hero-slide"><img class="hero-bg-img" src="assets/hero3.jpeg" alt="Indian natural sandstone and stone processing"></div>
+          </div>
           <div class="hero-overlay"></div>
           <div class="hero-content">
             <span class="eyebrow light">Indian Natural Stone • Export Ready</span>
             <h1 class="hero-title">Shri Sanwariya Stone Suppliers</h1>
             <p class="hero-subtitle">Transforming Spaces with Premium Indian Sandstone Slabs &amp; Natural Stone</p>
             <em class="hero-tagline">Your Vision, Our Stone</em>
+          </div>
+          <div class="hero-dots" aria-label="Hero image navigation">
+            <button class="hero-dot active" onclick="showHeroSlide(0)" aria-label="Hero slide 1"></button>
+            <button class="hero-dot" onclick="showHeroSlide(1)" aria-label="Hero slide 2"></button>
+            <button class="hero-dot" onclick="showHeroSlide(2)" aria-label="Hero slide 3"></button>
           </div>
         </div>
       </div>
@@ -2097,13 +2229,30 @@
           <div class="rd-copy">
             <h3>Experience Our World</h3>
             <p>RK Sandstone is a family-run sandstone business based in Bijoliya, Rajasthan, India, with a strong foundation in the natural stone industry.</p>
-            <p>The Dhakar family has been associated with the sandstone business since 2005, with the experience and foundation built by Mr. Dinesh Kumar Dhaakad. From quarry selection to precision calibration, custom architectural fabrication and global dispatch, our legacy blends generational stone mastery with modern export quality.</p>
+            <p>The Dhakad family has been associated with the sandstone business since 2005, with the experience and foundation built by Mr. Dinesh Kumar Dhakad. From quarry selection to precision calibration, custom architectural fabrication and global dispatch, our legacy blends generational stone mastery with modern export quality.</p>
           </div>
 
-          <!-- RD Natural Stones Gold Emblem Box -->
-          <div class="rd-box-panel">
-            <div class="rd-monogram">RK</div>
-            <div class="rd-sub-brand">STONE<br>IMPEX</div>
+          <!-- RK STONE IMPEX MEDIA SLIDER -->
+          <div class="rd-box-panel rk-media-panel">
+            <div class="rk-slider" id="rkSlider">
+              <div class="rk-slides">
+                <div class="rk-slide active"><img src="assets/rk1.jpeg" alt="RK Stone Impex — natural stone showcase 1"></div>
+                <div class="rk-slide"><img src="assets/rk2.jpeg" alt="RK Stone Impex — natural stone showcase 2"></div>
+                <div class="rk-slide"><img src="assets/rk3.jpeg" alt="RK Stone Impex — natural stone showcase 3"></div>
+                <div class="rk-slide"><img src="assets/rk4.jpeg" alt="RK Stone Impex — natural stone showcase 4"></div>
+                <div class="rk-slide"><img src="assets/rk5.jpeg" alt="RK Stone Impex — natural stone showcase 5"></div>
+                <div class="rk-slide"><img src="assets/rk6.jpeg" alt="RK Stone Impex — natural stone showcase 6"></div>
+                <div class="rk-slide"><img src="assets/rk7.jpeg" alt="RK Stone Impex — natural stone showcase 7"></div>
+                <div class="rk-slide"><img src="assets/rk8.jpeg" alt="RK Stone Impex — natural stone showcase 8"></div>
+                <div class="rk-slide"><img src="assets/rk9.jpeg" alt="RK Stone Impex — natural stone showcase 9"></div>
+                <div class="rk-slide"><img src="assets/rk10.jpeg" alt="RK Stone Impex — natural stone showcase 10"></div>
+              </div>
+              <button class="media-nav media-prev" onclick="moveRKSlide(-1)" aria-label="Previous RK Stone image">‹</button>
+              <button class="media-nav media-next" onclick="moveRKSlide(1)" aria-label="Next RK Stone image">›</button>
+              <div class="media-counter" id="rkCounter">01 / 10</div>
+              <div class="media-dots rk-dots"></div>
+            </div>
+            <div class="rk-panel-label"><span>RK STONE IMPEX</span><small>PROCESSING • FINISHING • DISPATCH</small></div>
           </div>
         </div>
 
@@ -2764,26 +2913,26 @@
                   <button class="team-dot" onclick="showTeamSlide(2)" aria-label="Slide 3"></button>
                 </div>
 
-                <!-- Slide 1: Mr. Dinesh Kumar Dhaakad -->
+                <!-- Slide 1: Mr. Dinesh Kumar Dhakad -->
                 <div class="team-slide active">
-                  <img src="assets/team-dinesh-kumar-dhaakad.jpg" alt="Mr. Dinesh Kumar Dhaakad - Managing Director &amp; Owner">
+                  <img src="assets/team-dinesh-kumar-dhaakad.jpg" alt="Mr. Dinesh Kumar Dhakad - Managing Director &amp; Owner">
                   <div class="team-slide-caption">
-                    <div class="team-slide-name">Mr. Dinesh Kumar Dhaakad</div>
+                    <div class="team-slide-name">Mr. Dinesh Kumar Dhakad</div>
                     <div class="team-slide-tagline">Managing Director &amp; Owner • Experience Since 2001</div>
                   </div>
                 </div>
 
-                <!-- Slide 2: Arman Dhakar -->
+                <!-- Slide 2: Arman Dhakad -->
                 <div class="team-slide">
-                  <img src="assets/team-arman-dhakar.jpg" alt="Arman Dhakar - Director – Leadership and Business Development">
+                  <img src="assets/team-arman-dhakar.jpg" alt="Arman Dhakad - Director – Leadership and Business Development">
                   <div class="team-slide-caption">
-                    <div class="team-slide-name">Arman Dhakar</div>
+                    <div class="team-slide-name">Arman Dhakad</div>
                     <div class="team-slide-tagline">Director – Leadership &amp; Business Development</div>
                   </div>
                 </div>
 
                 <!-- Slide 3: Jaswant Dhakad -->
-                <div class="team-slide">
+                <div class="team-slide jaswant-slide">
                   <img src="assets/team-jaswant-dhakad.jpg" alt="Jaswant Dhakad - Quality &amp; Operations">
                   <div class="team-slide-caption">
                     <div class="team-slide-name">Jaswant Dhakad</div>
@@ -2804,101 +2953,169 @@
             </div>
           </div>
 
-          <!-- THREE LEADERSHIP & VISION CARDS -->
-          <div class="leadership-grid">
+        </div>
+      </div>
+    </section>
 
-            <!-- Leader 1: Mr. Dinesh Kumar Dhaakad -->
-            <div class="leader-card">
-              <div class="leader-img-wrap">
-                <img src="assets/team-dinesh-kumar-dhaakad.jpg" alt="Mr. Dinesh Kumar Dhaakad - Managing Director &amp; Owner">
-              </div>
-              <div class="leader-body">
-                <span class="leader-badge">Established Experience Since 2001</span>
-                <h3 class="leader-name">Mr. Dinesh Kumar Dhaakad</h3>
-                <div class="leader-role">Managing Director &amp; Owner</div>
-              </div>
+    <!-- =============================================================
+         NATURAL STONE SHOWCASE (8 VIDEO MANUAL SLIDER)
+         ============================================================= -->
+    <section class="section-spacing showcase-section" id="showcase">
+      <div class="container center">
+        <div class="reveal">
+          <span class="eyebrow">NATURAL STONE SHOWCASE</span>
+          <h2 class="section-title">See the Stone in Motion</h2>
+          <p class="section-subtitle">Explore real stone textures, finishes, processing and applications through our visual showcase.</p>
+        </div>
+
+        <div class="showcase-slider reveal" id="showcaseSlider">
+          <div class="showcase-track">
+            <div class="showcase-video-slide active"><video src="assets/v1.mp4" muted playsinline preload="metadata"></video></div>
+            <div class="showcase-video-slide"><video src="assets/v2.mp4" muted playsinline preload="metadata"></video></div>
+            <div class="showcase-video-slide"><video src="assets/v3.mp4" muted playsinline preload="metadata"></video></div>
+            <div class="showcase-video-slide"><video src="assets/v4.mp4" muted playsinline preload="metadata"></video></div>
+            <div class="showcase-video-slide"><video src="assets/v5.mp4" muted playsinline preload="metadata"></video></div>
+            <div class="showcase-video-slide"><video src="assets/v6.mp4" muted playsinline preload="metadata"></video></div>
+            <div class="showcase-video-slide"><video src="assets/v7.mp4" muted playsinline preload="metadata"></video></div>
+            <div class="showcase-video-slide"><video src="assets/v8.mp4" muted playsinline preload="metadata"></video></div>
+          </div>
+          <button class="showcase-nav showcase-prev" onclick="moveShowcase(-1)" aria-label="Previous showcase video">‹</button>
+          <button class="showcase-nav showcase-next" onclick="moveShowcase(1)" aria-label="Next showcase video">›</button>
+          <div class="showcase-video-badge">MUTED • <span id="showcaseCounter">01 / 08</span></div>
+          <div class="media-dots showcase-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================
+         OUR PROCESS
+         ============================================================= -->
+    <section class="section-spacing process-section" id="process">
+      <div class="container">
+        <div class="process-layout">
+          <div class="process-copy reveal">
+            <span class="eyebrow">OUR PROCESS</span>
+            <h2 class="section-title">Maintaining Quality. Delivering Safely.</h2>
+            <p>Every order moves through a controlled process designed to maintain the natural character, finish and consistency of the stone from selection to dispatch.</p>
+            <div class="process-points">
+              <div class="process-point"><span>01</span><div><h3>Quality Selection</h3><p>Stone is checked for material quality, texture, finish, specifications and consistency before it moves forward.</p></div></div>
+              <div class="process-point"><span>02</span><div><h3>Processing &amp; Finishing</h3><p>We focus on accurate processing and the required finish so the material is ready for its intended architectural application.</p></div></div>
+              <div class="process-point"><span>03</span><div><h3>Safe Packaging</h3><p>Finished material is packed carefully for secure handling, loading and transportation, helping protect the stone until it reaches the client.</p></div></div>
+              <div class="process-point"><span>04</span><div><h3>Direct &amp; Reliable Dispatch</h3><p>From our facility to the client, we focus on dependable coordination and safe delivery with attention to every order.</p></div></div>
             </div>
-
-            <!-- Leader 2: Arman Dhakar -->
-            <div class="leader-card">
-              <div class="leader-img-wrap">
-                <img src="assets/team-arman-dhakar.jpg" alt="Arman Dhakar - Director – Leadership and Business Development">
-              </div>
-              <div class="leader-body">
-                <span class="leader-badge">Second Generation Leadership</span>
-                <h3 class="leader-name">Arman Dhakar</h3>
-                <div class="leader-role">Director – Leadership &amp; Business Development</div>
-              </div>
+            <div class="process-video-note">
+              <strong>Anti-Slip Surface Finish</strong>
+              <p>The stone texture can be processed to create a rougher, slip-resistant surface. This finish is especially useful around swimming pools and other areas where water exposure is high.</p>
             </div>
+          </div>
 
-            <!-- Leader 3: Jaswant Dhakad -->
-            <div class="leader-card">
-              <div class="leader-img-wrap">
-                <img src="assets/team-jaswant-dhakad.jpg" alt="Jaswant Dhakad - Quality &amp; Operations">
+          <div class="process-media-wrap reveal">
+            <div class="process-media-slider" id="processSlider">
+              <div class="process-media-track">
+                <div class="process-media-slide active"><img src="assets/our1.jpeg" alt="Stone processing and quality process 1"></div>
+                <div class="process-media-slide"><img src="assets/our2.jpeg" alt="Stone processing and quality process 2"></div>
+                <div class="process-media-slide"><img src="assets/our3.jpeg" alt="Stone processing and quality process 3"></div>
+                <div class="process-media-slide"><img src="assets/our4.jpeg" alt="Stone processing and quality process 4"></div>
+                <div class="process-media-slide"><img src="assets/our5.jpeg" alt="Stone processing and quality process 5"></div>
+                <div class="process-media-slide"><img src="assets/our6.jpeg" alt="Stone processing and quality process 6"></div>
+                <div class="process-media-slide"><img src="assets/our7.jpeg" alt="Stone processing and quality process 7"></div>
+                <div class="process-media-slide"><img src="assets/our8.jpeg" alt="Stone processing and quality process 8"></div>
+                <div class="process-media-slide"><img src="assets/our9.jpeg" alt="Stone processing and quality process 9"></div>
+                <div class="process-media-slide"><img src="assets/our10.jpeg" alt="Stone processing and quality process 10"></div>
+                <div class="process-media-slide"><img src="assets/our11.jpeg" alt="Stone processing and quality process 11"></div>
+                <div class="process-media-slide"><img src="assets/our12.jpeg" alt="Stone processing and quality process 12"></div>
+                <div class="process-media-slide"><img src="assets/our13.jpeg" alt="Stone processing and quality process 13"></div>
+                <div class="process-media-slide"><img src="assets/our14.jpeg" alt="Stone processing and quality process 14"></div>
+                <div class="process-media-slide process-video-slide"><video src="assets/our.mp4" muted playsinline preload="metadata"></video></div>
               </div>
-              <div class="leader-body">
-                <span class="leader-badge">Premium Quality Control</span>
-                <h3 class="leader-name">Jaswant Dhakad</h3>
-                <div class="leader-role">Director – Quality &amp; Operations</div>
-              </div>
+              <button class="media-nav media-prev" onclick="moveProcessSlide(-1)" aria-label="Previous process media">‹</button>
+              <button class="media-nav media-next" onclick="moveProcessSlide(1)" aria-label="Next process media">›</button>
+              <div class="media-counter" id="processCounter">01 / 15</div>
+              <div class="media-dots process-dots"></div>
             </div>
-
+            <div class="process-media-caption">QUALITY • FINISHING • PACKAGING • DISPATCH</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =============================================================
-         NATURAL STONE SHOWCASE (3 VIDEO CARDS)
+         WHY US
          ============================================================= -->
-    <section class="section-spacing showcase-section" id="showcase">
-      <div class="container center">
-        <div class="reveal">
-          <h2 class="section-title">Natural Stone Showcase</h2>
-          <p class="section-subtitle">Experience the texture and quality of our diverse stone collection.</p>
+    <section class="section-spacing why-section" id="why-us">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">WHY CHOOSE US</span>
+          <h2 class="section-title">Built Around Stone, Quality &amp; Trust</h2>
+          <p class="section-subtitle">A practical approach to natural stone — from our own ecosystem and processing capabilities to careful quality checks and client-focused dispatch.</p>
         </div>
+        <div class="why-grid">
+          <article class="why-card reveal"><span>01</span><h3>Direct-to-Client</h3><p>We focus on direct communication and transparent coordination with buyers, reducing unnecessary layers between the stone source and client.</p></article>
+          <article class="why-card reveal"><span>02</span><h3>Own Mining &amp; Factory</h3><p>Our mining and processing ecosystem helps us maintain better control over material selection, processing and finishing.</p></article>
+          <article class="why-card reveal"><span>03</span><h3>Quality Control</h3><p>Material is checked for specifications, finishing, consistency and presentation before dispatch.</p></article>
+          <article class="why-card reveal"><span>04</span><h3>Safe Packaging</h3><p>Careful packing and loading are part of the process so the finished stone is protected during handling and transportation.</p></article>
+          <article class="why-card reveal"><span>05</span><h3>Experienced Leadership</h3><p>Generational stone-industry experience is combined with a modern approach to business development and buyer relationships.</p></article>
+          <article class="why-card reveal"><span>06</span><h3>Consistent Supply Focus</h3><p>Our process is designed around dependable material, clear specifications and long-term business relationships.</p></article>
+        </div>
+      </div>
+    </section>
 
-        <div class="showcase-grid reveal">
-          <!-- Showcase 1 -->
-          <div class="showcase-card" onclick="openVideoModal('Heritage Indian Sandstone Architecture', 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1')">
-            <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=85" alt="Heritage Sandstone Temple Architecture">
-            <div class="showcase-play-btn">
-              <svg viewBox="0 0 24 24">
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-              </svg>
-            </div>
-            <div class="showcase-caption">
-              <span>Heritage Architecture</span>
-              <span>02:45</span>
-            </div>
+    <!-- =============================================================
+         REVIEWS
+         ============================================================= -->
+    <section class="section-spacing reviews-section" id="reviews">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">CLIENT FEEDBACK</span>
+          <h2 class="section-title">What Our Buyers Value</h2>
+          <p class="section-subtitle">A clean review layout ready for verified client testimonials.</p>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card reveal"><div class="review-stars">★★★★★</div><p>“Consistent material quality, clear communication and careful attention to the finishing and dispatch process.”</p><strong>Stone &amp; Landscape Buyer</strong><small>Client Feedback</small></article>
+          <article class="review-card reveal"><div class="review-stars">★★★★★</div><p>“The team understands natural stone requirements and keeps the process focused from selection through delivery.”</p><strong>Architectural Buyer</strong><small>Client Feedback</small></article>
+          <article class="review-card reveal"><div class="review-stars">★★★★★</div><p>“Good coordination, professional handling and a strong focus on quality before material leaves the facility.”</p><strong>Project Buyer</strong><small>Client Feedback</small></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================
+         FAQ
+         ============================================================= -->
+    <section class="section-spacing faq-section" id="faq">
+      <div class="container">
+        <div class="faq-layout">
+          <div class="faq-intro reveal">
+            <span class="eyebrow">FAQ</span>
+            <h2 class="section-title">Questions, Answered Clearly.</h2>
+            <p>Everything important about our natural stone supply, quality, packaging and buyer coordination in one place.</p>
           </div>
-
-          <!-- Showcase 2 -->
-          <div class="showcase-card" onclick="openVideoModal('Temple & Monumental Stone Carvings', 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1')">
-            <img src="https://images.unsplash.com/photo-1524492417937-2516a506b9b3?auto=format&fit=crop&w=1000&q=85" alt="Indian Monumental Sandstone Carving">
-            <div class="showcase-play-btn">
-              <svg viewBox="0 0 24 24">
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-              </svg>
-            </div>
-            <div class="showcase-caption">
-              <span>Carving Artistry</span>
-              <span>03:12</span>
-            </div>
+          <div class="faq-list reveal">
+            <div class="faq-item active"><button onclick="toggleFaq(this)">What natural stone do you supply?<span>+</span></button><div class="faq-answer"><p>We supply Indian natural sandstone and related stone products across architectural, landscaping and project requirements, subject to availability and specifications.</p></div></div>
+            <div class="faq-item"><button onclick="toggleFaq(this)">Do you handle bulk orders?<span>+</span></button><div class="faq-answer"><p>Yes. Buyers can discuss project quantities, specifications, finishes and dispatch requirements directly with the team.</p></div></div>
+            <div class="faq-item"><button onclick="toggleFaq(this)">How do you maintain quality?<span>+</span></button><div class="faq-answer"><p>Material is checked through selection, processing, finishing and final inspection so the order is reviewed before dispatch.</p></div></div>
+            <div class="faq-item"><button onclick="toggleFaq(this)">Is the stone safely packaged?<span>+</span></button><div class="faq-answer"><p>Yes. Safe packaging and careful loading are part of the dispatch process to help protect the stone during transportation to the client.</p></div></div>
+            <div class="faq-item"><button onclick="toggleFaq(this)">Can you provide specific finishes?<span>+</span></button><div class="faq-answer"><p>Finishing depends on the stone and application. Discuss the required surface, dimensions and use case with the team for the appropriate option.</p></div></div>
+            <div class="faq-item"><button onclick="toggleFaq(this)">Where are you located?<span>+</span></button><div class="faq-answer"><p>Our location is 48RP+Q6R, Bijoliya Khurd, Veekam Pura, Rajasthan 311602.</p></div></div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Showcase 3 -->
-          <div class="showcase-card" onclick="openVideoModal('Facility & Modern Processing Tour', 'https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1')">
-            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=85" alt="High Tech Stone Cutting and Polishing Workshop">
-            <div class="showcase-play-btn">
-              <svg viewBox="0 0 24 24">
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-              </svg>
-            </div>
-            <div class="showcase-caption">
-              <span>Factory Tour</span>
-              <span>04:20</span>
-            </div>
+    <!-- =============================================================
+         LOCATION / MAP
+         ============================================================= -->
+    <section class="section-spacing location-section" id="location">
+      <div class="container">
+        <div class="location-card reveal">
+          <div class="location-info">
+            <span class="eyebrow light">VISIT / LOCATION</span>
+            <h2>Find Shri Sanwariya Stone Suppliers</h2>
+            <p class="location-address">48RP+Q6R, Bijoliya Khurd, Veekam Pura, Rajasthan 311602</p>
+            <p class="location-coords">25°08'31.9&quot;N 75°20'07.3&quot;E</p>
+            <a class="btn-light-outline" href="https://maps.app.goo.gl/Gws7p63XHvWBjjHc8" target="_blank" rel="noopener">Open in Google Maps →</a>
+          </div>
+          <div class="map-frame">
+            <iframe title="Shri Sanwariya Stone Suppliers location map" src="https://www.google.com/maps?q=25.142194,75.335361&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -3524,7 +3741,102 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeStoryModal();
     });
-  </script>
+  
+    /* =============================================================
+       NEW MANUAL MEDIA SLIDERS + FAQ
+       ============================================================= */
+    function setupDots(containerSelector, count, activeIndex, callback) {
+      const container = document.querySelector(containerSelector);
+      if (!container) return;
+      container.innerHTML = '';
+      for (let i = 0; i < count; i++) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        b.className = i === activeIndex ? 'active' : '';
+        b.addEventListener('click', () => callback(i));
+        container.appendChild(b);
+      }
+    }
+
+    let heroIndex = 0;
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroDotsEls = document.querySelectorAll('.hero-dot');
+    function showHeroSlide(index) {
+      if (!heroSlides.length) return;
+      heroIndex = (index + heroSlides.length) % heroSlides.length;
+      heroSlides.forEach((s,i) => s.classList.toggle('active', i === heroIndex));
+      heroDotsEls.forEach((d,i) => d.classList.toggle('active', i === heroIndex));
+    }
+    if (heroSlides.length > 1) setInterval(() => showHeroSlide(heroIndex + 1), 5000);
+
+    let rkIndex = 0;
+    const rkSlides = document.querySelectorAll('.rk-slide');
+    function showRKSlide(index) {
+      if (!rkSlides.length) return;
+      rkIndex = (index + rkSlides.length) % rkSlides.length;
+      rkSlides.forEach((s,i) => s.classList.toggle('active', i === rkIndex));
+      const counter = document.getElementById('rkCounter');
+      if (counter) counter.textContent = String(rkIndex + 1).padStart(2,'0') + ' / ' + String(rkSlides.length).padStart(2,'0');
+      document.querySelectorAll('.rk-dots button').forEach((d,i) => d.classList.toggle('active', i === rkIndex));
+    }
+    function moveRKSlide(step) { showRKSlide(rkIndex + step); }
+
+    let showcaseIndex = 0;
+    const showcaseSlides = document.querySelectorAll('.showcase-video-slide');
+    function showShowcase(index) {
+      if (!showcaseSlides.length) return;
+      showcaseIndex = (index + showcaseSlides.length) % showcaseSlides.length;
+      showcaseSlides.forEach((s,i) => {
+        s.classList.toggle('active', i === showcaseIndex);
+        const v = s.querySelector('video');
+        if (v) { v.muted = true; if (i !== showcaseIndex) { v.pause(); v.currentTime = 0; } else { v.play().catch(() => {}); } }
+      });
+      const counter = document.getElementById('showcaseCounter');
+      if (counter) counter.textContent = String(showcaseIndex + 1).padStart(2,'0') + ' / ' + String(showcaseSlides.length).padStart(2,'0');
+      document.querySelectorAll('.showcase-dots button').forEach((d,i) => d.classList.toggle('active', i === showcaseIndex));
+    }
+    function moveShowcase(step) { showShowcase(showcaseIndex + step); }
+
+    let processIndex = 0;
+    const processSlides = document.querySelectorAll('.process-media-slide');
+    function showProcessSlide(index) {
+      if (!processSlides.length) return;
+      processIndex = (index + processSlides.length) % processSlides.length;
+      processSlides.forEach((s,i) => {
+        s.classList.toggle('active', i === processIndex);
+        const v = s.querySelector('video');
+        if (v) { v.muted = true; if (i !== processIndex) { v.pause(); v.currentTime = 0; } else { v.play().catch(() => {}); } }
+      });
+      const counter = document.getElementById('processCounter');
+      if (counter) counter.textContent = String(processIndex + 1).padStart(2,'0') + ' / ' + String(processSlides.length).padStart(2,'0');
+      document.querySelectorAll('.process-dots button').forEach((d,i) => d.classList.toggle('active', i === processIndex));
+    }
+    function moveProcessSlide(step) { showProcessSlide(processIndex + step); }
+
+    function toggleFaq(button) {
+      const item = button.closest('.faq-item');
+      if (!item) return;
+      const wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+      if (!wasActive) item.classList.add('active');
+    }
+
+    setupDots('.rk-dots', rkSlides.length, 0, showRKSlide);
+    setupDots('.showcase-dots', showcaseSlides.length, 0, showShowcase);
+    setupDots('.process-dots', processSlides.length, 0, showProcessSlide);
+    showRKSlide(0);
+    showShowcase(0);
+    showProcessSlide(0);
+
+    // Keep every showcase/process video muted, including after browser interactions.
+    document.querySelectorAll('.showcase-video-slide video, .process-media-slide video').forEach(v => {
+      v.muted = true;
+      v.setAttribute('muted','');
+      v.setAttribute('playsinline','');
+    });
+
+</script>
   <!-- =============================================================
        LEADERSHIP / DISCOVER OUR STORY MODAL
        ============================================================= -->
@@ -3540,14 +3852,14 @@
         <!-- Leader 1 -->
         <div class="story-leader-card">
           <div class="story-leader-img">
-            <img src="assets/team-dinesh-kumar-dhaakad.jpg" alt="Mr. Dinesh Kumar Dhaakad">
+            <img src="assets/team-dinesh-kumar-dhaakad.jpg" alt="Mr. Dinesh Kumar Dhakad">
           </div>
           <div class="story-leader-info">
             <span class="leader-badge" style="background:rgba(217,147,41,0.15); color:var(--accent-amber); padding:4px 12px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px; display:inline-block;">Established Experience Since 2001</span>
-            <h4>Mr. Dinesh Kumar Dhaakad</h4>
+            <h4>Mr. Dinesh Kumar Dhakad</h4>
             <div class="story-leader-role">Managing Director &amp; Owner</div>
             <div class="story-leader-desc">
-              <p>Mr. Dinesh Kumar Dhaakad is the Managing Director and Owner of Shri Sanwariya Stone, with experience in the sandstone mining industry since 2001.</p>
+              <p>Mr. Dinesh Kumar Dhakad is the Managing Director and Owner of Shri Sanwariya Stone, with experience in the sandstone mining industry since 2001.</p>
               <p>Since the beginning of his journey, he has been involved in sandstone mining operations, gaining extensive practical knowledge of natural sandstone, mining processes, stone quality and the selection of suitable raw material.</p>
               <p>With years of experience in the sandstone industry, his focus has remained on quality, reliable material and consistent standards. His experience in sandstone mining has provided a strong foundation for the company's work in natural stone.</p>
               <p>Today, Shri Sanwariya Stone carries forward this experience with a focus on supplying quality sandstone and maintaining reliable standards from the mining stage onward.</p>
@@ -3558,14 +3870,14 @@
         <!-- Leader 2 -->
         <div class="story-leader-card">
           <div class="story-leader-img">
-            <img src="assets/team-arman-dhakar.jpg" alt="Arman Dhakar">
+            <img src="assets/team-arman-dhakar.jpg" alt="Arman Dhakad">
           </div>
           <div class="story-leader-info">
             <span class="leader-badge" style="background:rgba(217,147,41,0.15); color:var(--accent-amber); padding:4px 12px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px; display:inline-block;">Second Generation Leadership</span>
-            <h4>Arman Dhakar</h4>
+            <h4>Arman Dhakad</h4>
             <div class="story-leader-role">Director – Leadership &amp; Business Development</div>
             <div class="story-leader-desc">
-              <p>I am Arman Dhakar, representing the second generation of our family business. Since 2024, I have taken an active role in expanding the business with a modern approach and connecting our products directly with buyers through online platforms.</p>
+              <p>I am Arman Dhakad, representing the second generation of our family business. Since 2024, I have taken an active role in expanding the business with a modern approach and connecting our products directly with buyers through online platforms.</p>
               <p><strong>Our Own Mines &amp; Factory:</strong> We operate our own sandstone mining business, Shri Sanwariya Sandstone Supplier, along with our own processing and manufacturing facility, RK Stone Impex. Having our own mining and manufacturing setup allows us to maintain better control over quality, processing, finishing, and supply.</p>
               <p><strong>Direct-to-Client Model:</strong> We work directly with our clients without unnecessary middlemen, providing reasonable, transparent pricing and delivering genuine value without price markups.</p>
               <p><strong>Our Vision:</strong> Our goal is to take our sandstone products beyond local markets and connect directly with buyers across India and worldwide. We focus on consistency, quality, commitment, and long-term business relationships.</p>
