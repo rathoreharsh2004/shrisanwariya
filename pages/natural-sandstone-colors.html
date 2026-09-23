@@ -256,11 +256,7 @@
       margin-bottom: 8px;
     }
     .stone-code {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      color: var(--accent-ochre);
-      text-transform: uppercase;
+      display: none !important;
     }
     .founding-badge {
       font-size: 8px;
@@ -512,7 +508,7 @@
 
       <div class="search-box-wrap">
         <svg class="search-icon-svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-        <input type="text" id="searchInput" class="search-input" placeholder="Search stone, code, district..." oninput="handleSearch(this.value)">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search stone, district..." oninput="handleSearch(this.value)">
       </div>
     </div>
 
@@ -525,9 +521,6 @@
           <img src="../assets/khadipur-grey-swatch-main.webp" fetchpriority="high" decoding="async" alt="Khadipur Grey Sandstone">
         </div>
         <div class="stone-details-body">
-          <div class="stone-code-row">
-            <span class="stone-code">KHD-0-01</span>
-          </div>
           <h3 class="stone-title">Khadipur Grey</h3>
           <p class="stone-description">A cool, restrained grey from the Khadipur block of the Bijolia belt.</p>
           <div class="stone-meta-grid">
@@ -551,7 +544,6 @@
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
-            <span class="stone-code">KHD-0-02</span>
             <span class="founding-badge">FOUNDING</span>
           </div>
           <h3 class="stone-title">Kandla Grey</h3>
@@ -576,9 +568,6 @@
           <img src="../assets/autumn-brown-swatch-main.webp" loading="lazy" decoding="async" alt="Autumn Brown Sandstone">
         </div>
         <div class="stone-details-body">
-          <div class="stone-code-row">
-            <span class="stone-code">KHD-0-03</span>
-          </div>
           <h3 class="stone-title">Autumn Brown</h3>
           <p class="stone-description">The warm-brown anchor of the Bijolia belt — Nayanagar quarry, since the 1980s.</p>
           <div class="stone-meta-grid">
@@ -601,9 +590,6 @@
           <img src="../assets/raj-blend-swatch-main.webp" loading="lazy" decoding="async" alt="Raj Blend Sandstone">
         </div>
         <div class="stone-details-body">
-          <div class="stone-code-row">
-            <span class="stone-code">KHD-0-04</span>
-          </div>
           <h3 class="stone-title">Raj Blend</h3>
           <p class="stone-description">A naturally variegated warm bed from the Bijolia tehsil.</p>
           <div class="stone-meta-grid">
@@ -626,9 +612,6 @@
           <img src="../assets/garda-green-swatch-main.webp" loading="lazy" decoding="async" alt="Garda Green Sandstone">
         </div>
         <div class="stone-details-body">
-          <div class="stone-code-row">
-            <span class="stone-code">KHD-0-05</span>
-          </div>
           <h3 class="stone-title">Garda Green</h3>
           <p class="stone-description">A sage-to-khaki green from the family's owned Garda block, Bundi District.</p>
           <div class="stone-meta-grid">
@@ -652,7 +635,6 @@
         </div>
         <div class="stone-details-body">
           <div class="stone-code-row">
-            <span class="stone-code">KHD-0-06</span>
             <span class="founding-badge">FOUNDING</span>
           </div>
           <h3 class="stone-title">Slate Grey</h3>
@@ -677,9 +659,6 @@
           <img src="../assets/raveena-swatch-main.webp" loading="lazy" decoding="async" alt="Raveena Sandstone">
         </div>
         <div class="stone-details-body">
-          <div class="stone-code-row">
-            <span class="stone-code">KHD-0-07</span>
-          </div>
           <h3 class="stone-title">Raveena</h3>
           <p class="stone-description">A pale celadon-mint from the Khokri block. Worked since the 1990s.</p>
           <div class="stone-meta-grid">
@@ -702,9 +681,6 @@
           <img src="../assets/mint-swatch-main.webp" loading="lazy" decoding="async" alt="Mint Fossil Sandstone">
         </div>
         <div class="stone-details-body">
-          <div class="stone-code-row">
-            <span class="stone-code">KHD-0-08</span>
-          </div>
           <h3 class="stone-title">Mint</h3>
           <p class="stone-description">The fossil-bearing mint bed. Marine impressions across selected slabs.</p>
           <div class="stone-meta-grid">
@@ -727,9 +703,6 @@
           <img src="../assets/buff-swatch-main.webp" loading="lazy" decoding="async" alt="Buff Sandstone">
         </div>
         <div class="stone-details-body">
-          <div class="stone-code-row">
-            <span class="stone-code">KHD-0-09</span>
-          </div>
           <h3 class="stone-title">Buff</h3>
           <p class="stone-description">A pale yellow-beige from the family's Bhootii block and the wider Bijolia tehsil.</p>
           <div class="stone-meta-grid">
@@ -752,9 +725,6 @@
           <img src="../assets/camel-dust-swatch-main.webp" loading="lazy" decoding="async" alt="Camel Dust Sandstone">
         </div>
         <div class="stone-details-body">
-          <div class="stone-code-row">
-            <span class="stone-code">KHD-0-10</span>
-          </div>
           <h3 class="stone-title">Camel Dust</h3>
           <p class="stone-description">A tan-to-camel mid-tone from the Bijolia tehsil. Bhootii and beyond.</p>
           <div class="stone-meta-grid">
@@ -777,9 +747,6 @@
           <img src="../assets/red-choco-swatch-main.webp" loading="lazy" decoding="async" alt="Red Choco Sandstone">
         </div>
         <div class="stone-details-body">
-          <div class="stone-code-row">
-            <span class="stone-code">KHD-0-11</span>
-          </div>
           <h3 class="stone-title">Red Choco</h3>
           <p class="stone-description">A deep cocoa-red from the Kasiriya block. Renamed from the trade's Kasariya Red.</p>
           <div class="stone-meta-grid">
@@ -802,9 +769,6 @@
           <img src="../assets/dual-tone-swatch-main.webp" loading="lazy" decoding="async" alt="Dual Tone Sandstone">
         </div>
         <div class="stone-details-body">
-          <div class="stone-code-row">
-            <span class="stone-code">KHD-0-12</span>
-          </div>
           <h3 class="stone-title">Dual Tone</h3>
           <p class="stone-description">Buff and dove-grey in a single slab. The UK trade's Indian York.</p>
           <div class="stone-meta-grid">
@@ -827,9 +791,6 @@
           <img src="../assets/mocha-blend-swatch-main.webp" loading="lazy" decoding="async" alt="Mocha Blend Sandstone">
         </div>
         <div class="stone-details-body">
-          <div class="stone-code-row">
-            <span class="stone-code">KHD-0-13</span>
-          </div>
           <h3 class="stone-title">Mocha Blend</h3>
           <p class="stone-description">Honey, walnut, cinnamon, cocoa — the variegated brown bed of three KHADANE blocks.</p>
           <div class="stone-meta-grid">
@@ -852,9 +813,6 @@
           <img src="../assets/rainbow-swatch-main.webp" loading="lazy" decoding="async" alt="Rainbow Sandstone">
         </div>
         <div class="stone-details-body">
-          <div class="stone-code-row">
-            <span class="stone-code">KHD-0-14</span>
-          </div>
           <h3 class="stone-title">Rainbow</h3>
           <p class="stone-description">Dramatic wave-patterned sandstone with rich swirls of violet, orange, plum, and golden amber.</p>
           <div class="stone-meta-grid">
@@ -877,9 +835,6 @@
           <img src="../assets/white-swatch-main.webp" loading="lazy" decoding="async" alt="White Quartzitic Sandstone">
         </div>
         <div class="stone-details-body">
-          <div class="stone-code-row">
-            <span class="stone-code">KHD-0-15</span>
-          </div>
           <h3 class="stone-title">White</h3>
           <p class="stone-description">Clean, ultra-pale quartzitic sandstone with subtle silvery veining and a pure, luminous modern presence.</p>
           <div class="stone-meta-grid">
@@ -1040,7 +995,6 @@
 
         <div>
           <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-            <span id="modalStoneCode" class="stone-code"></span>
             <span id="modalStoneBadge" class="founding-badge" style="display:none;">FOUNDING</span>
           </div>
 
@@ -1076,7 +1030,6 @@
   <script>
     const STONES_DATA = [
       {
-        code: "KHD-0-01",
         title: "Khadipur Grey",
         isFounding: false,
         desc: "A cool, restrained grey from the Khadipur block of the Bijolia belt.",
@@ -1085,7 +1038,6 @@
         img: "../assets/khadipur-grey-swatch-main.webp"
       },
       {
-        code: "KHD-0-02",
         title: "Kandla Grey",
         isFounding: true,
         desc: "The founding stone. Worked since 1972 across the Bijolia belt.",
@@ -1094,7 +1046,6 @@
         img: "../assets/kandla-grey-swatch-main.webp"
       },
       {
-        code: "KHD-0-03",
         title: "Autumn Brown",
         isFounding: false,
         desc: "The warm-brown anchor of the Bijolia belt — Nayanagar quarry, since the 1980s.",
@@ -1103,7 +1054,6 @@
         img: "../assets/autumn-brown-swatch-main.webp"
       },
       {
-        code: "KHD-0-04",
         title: "Raj Blend",
         isFounding: false,
         desc: "A naturally variegated warm bed from the Bijolia tehsil.",
@@ -1112,7 +1062,6 @@
         img: "../assets/raj-blend-swatch-main.webp"
       },
       {
-        code: "KHD-0-05",
         title: "Garda Green",
         isFounding: false,
         desc: "A sage-to-khaki green from the family's owned Garda block, Bundi District.",
@@ -1121,7 +1070,6 @@
         img: "../assets/garda-green-swatch-main.webp"
       },
       {
-        code: "KHD-0-06",
         title: "Slate Grey",
         isFounding: true,
         desc: "A dark, uniform grey from the founding-era Bundi blocks. Since 1972.",
@@ -1130,7 +1078,6 @@
         img: "../assets/slate-grey-swatch-main.webp"
       },
       {
-        code: "KHD-0-07",
         title: "Raveena",
         isFounding: false,
         desc: "A pale celadon-mint from the Khokri block. Worked since the 1990s.",
@@ -1139,7 +1086,6 @@
         img: "../assets/raveena-swatch-main.webp"
       },
       {
-        code: "KHD-0-08",
         title: "Mint",
         isFounding: false,
         desc: "The fossil-bearing mint bed. Marine impressions across selected slabs.",
@@ -1148,7 +1094,6 @@
         img: "../assets/mint-swatch-main.webp"
       },
       {
-        code: "KHD-0-09",
         title: "Buff",
         isFounding: false,
         desc: "A pale yellow-beige from the family's Bhootii block and the wider Bijolia tehsil.",
@@ -1157,7 +1102,6 @@
         img: "../assets/buff-swatch-main.webp"
       },
       {
-        code: "KHD-0-10",
         title: "Camel Dust",
         isFounding: false,
         desc: "A tan-to-camel mid-tone from the Bijolia tehsil. Bhootii and beyond.",
@@ -1166,7 +1110,6 @@
         img: "../assets/camel-dust-swatch-main.webp"
       },
       {
-        code: "KHD-0-11",
         title: "Red Choco",
         isFounding: false,
         desc: "A deep cocoa-red from the Kasiriya block. Renamed from the trade's Kasariya Red.",
@@ -1175,7 +1118,6 @@
         img: "../assets/red-choco-swatch-main.webp"
       },
       {
-        code: "KHD-0-12",
         title: "Dual Tone",
         isFounding: false,
         desc: "Buff and dove-grey in a single slab. The UK trade's Indian York.",
@@ -1184,7 +1126,6 @@
         img: "../assets/dual-tone-swatch-main.webp"
       },
       {
-        code: "KHD-0-13",
         title: "Mocha Blend",
         isFounding: false,
         desc: "Honey, walnut, cinnamon, cocoa — the variegated brown bed of three KHADANE blocks.",
@@ -1193,7 +1134,6 @@
         img: "../assets/mocha-blend-swatch-main.webp"
       },
       {
-        code: "KHD-0-14",
         title: "Rainbow",
         isFounding: false,
         desc: "The full-spectrum variegated bed. Warm and cool tones blend across each piece; no two alike.",
@@ -1202,7 +1142,6 @@
         img: "../assets/rainbow-swatch-main.webp"
       },
       {
-        code: "KHD-0-15",
         title: "White",
         isFounding: false,
         desc: "A pale, cool-toned quartzitic sandstone. The tightest stone in the owned range.",
@@ -1220,7 +1159,6 @@
       currentSelectedStone = stone;
 
       document.getElementById('modalStoneImg').src = stone.img;
-      document.getElementById('modalStoneCode').innerText = stone.code;
       document.getElementById('modalStoneTitle').innerText = stone.title;
       document.getElementById('modalStoneDesc').innerText = stone.desc;
       document.getElementById('modalStoneOrigin').innerText = stone.origin;
