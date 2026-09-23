@@ -770,6 +770,42 @@
       display: none !important;
     }
 
+    /* Main page shows 7 featured varieties; remaining 8 appear via View All Varieties */
+    .color-stone-card.main-hidden {
+      display: none !important;
+    }
+
+    .view-all-varieties-wrap {
+      display: flex;
+      justify-content: center;
+      margin: -15px 0 35px;
+    }
+
+    .view-all-varieties-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border-radius: var(--radius-full);
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      border: 1px solid var(--bg-dark);
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .view-all-varieties-btn:hover {
+      background: var(--terracotta);
+      border-color: var(--terracotta);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(184, 101, 57, 0.25);
+    }
+
     .color-stone-card {
       background: #FFFFFF;
       border: 1px solid #ECE5DA;
@@ -817,6 +853,7 @@
       margin-bottom: 6px;
     }
     .stone-code {
+      display: none !important;
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.16em;
@@ -914,7 +951,7 @@
       .colors-collection-grid { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 780px) {
-      .colors-collection-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .colors-collection-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; opacity: 1; transform: none; }
       .collection-controls-bar { flex-direction: column; align-items: stretch; }
       .search-box-wrap { width: 100%; }
       .modal-stone-layout { grid-template-columns: 1fr; }
@@ -2325,7 +2362,7 @@
         </div>
 
         <!-- 4-COLUMN COLORS GRID (15 CARDS MATCHING SCREENSHOT) -->
-        <div class="colors-collection-grid reveal" id="colorsGrid">
+        <div class="colors-collection-grid" id="colorsGrid">
 
           <!-- 1. Khadipur Grey -->
           <div class="color-stone-card" data-category="grey" onclick="window.location.href='pages/khadipur-grey.html'">
@@ -2505,7 +2542,7 @@
           </div>
 
           <!-- 8. Mint -->
-          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/mint.html'">
+          <div class="color-stone-card main-hidden" data-category="warm" onclick="window.location.href='pages/mint.html'">
             <div class="stone-swatch-box">
               <img src="assets/mint-swatch-main.webp" alt="Mint Fossil Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
@@ -2530,7 +2567,7 @@
           </div>
 
           <!-- 9. Buff -->
-          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/buff.html'">
+          <div class="color-stone-card main-hidden" data-category="warm" onclick="window.location.href='pages/buff.html'">
             <div class="stone-swatch-box">
               <img src="assets/buff-swatch-main.webp" alt="Buff Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
@@ -2555,7 +2592,7 @@
           </div>
 
           <!-- 10. Camel Dust -->
-          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/camel-dust.html'">
+          <div class="color-stone-card main-hidden" data-category="warm" onclick="window.location.href='pages/camel-dust.html'">
             <div class="stone-swatch-box">
               <img src="assets/camel-dust-swatch-main.webp" alt="Camel Dust Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
@@ -2580,7 +2617,7 @@
           </div>
 
           <!-- 11. Red Choco -->
-          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/red-choco.html'">
+          <div class="color-stone-card main-hidden" data-category="warm" onclick="window.location.href='pages/red-choco.html'">
             <div class="stone-swatch-box">
               <img src="assets/red-choco-swatch-main.webp" alt="Red Choco Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
@@ -2605,7 +2642,7 @@
           </div>
 
           <!-- 12. Dual Tone -->
-          <div class="color-stone-card" data-category="variegated" onclick="window.location.href='pages/dual-tone.html'">
+          <div class="color-stone-card main-hidden" data-category="variegated" onclick="window.location.href='pages/dual-tone.html'">
             <div class="stone-swatch-box">
               <img src="assets/dual-tone-swatch-main.webp" alt="Dual Tone Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
@@ -2630,7 +2667,7 @@
           </div>
 
           <!-- 13. Mocha Blend -->
-          <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/mocha-blend.html'">
+          <div class="color-stone-card main-hidden" data-category="warm" onclick="window.location.href='pages/mocha-blend.html'">
             <div class="stone-swatch-box">
               <img src="assets/mocha-blend-swatch-main.webp" alt="Mocha Blend Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
@@ -2655,7 +2692,7 @@
           </div>
 
           <!-- 14. Rainbow -->
-          <div class="color-stone-card" data-category="variegated" onclick="window.location.href='pages/rainbow.html'">
+          <div class="color-stone-card main-hidden" data-category="variegated" onclick="window.location.href='pages/rainbow.html'">
             <div class="stone-swatch-box">
               <img src="assets/rainbow-swatch-main.webp" alt="Rainbow Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
@@ -2680,7 +2717,7 @@
           </div>
 
           <!-- 15. White -->
-          <div class="color-stone-card" data-category="grey" onclick="window.location.href='pages/white.html'">
+          <div class="color-stone-card main-hidden" data-category="grey" onclick="window.location.href='pages/white.html'">
             <div class="stone-swatch-box">
               <img src="assets/white-swatch-main.webp" alt="White Quartzitic Sandstone" width="300" height="300" loading="lazy" decoding="async">
             </div>
@@ -2704,6 +2741,12 @@
             </div>
           </div>
 
+        </div>
+
+        <div class="view-all-varieties-wrap" id="viewAllVarietiesWrap">
+          <button type="button" class="view-all-varieties-btn" id="viewAllVarietiesBtn" onclick="showAllStoneVarieties()">
+            View All Varieties <span>→</span>
+          </button>
         </div>
 
         <div style="display:flex; justify-content:center; gap:14px; margin-bottom:60px; flex-wrap:wrap;">
@@ -3710,6 +3753,15 @@
       initStoneObserver();
     }
 
+    function showAllStoneVarieties() {
+      document.querySelectorAll('.color-stone-card.main-hidden').forEach(card => {
+        card.classList.remove('main-hidden');
+      });
+
+      const wrap = document.getElementById('viewAllVarietiesWrap');
+      if (wrap) wrap.style.display = 'none';
+    }
+
     function filterCategory(cat, btn) {
       revealAllStoneChunks();
 
@@ -3728,6 +3780,7 @@
 
     function handleSearch(query) {
       revealAllStoneChunks();
+      if (query.trim()) showAllStoneVarieties();
 
       const q = query.toLowerCase().trim();
       const cards = document.querySelectorAll('.color-stone-card');
