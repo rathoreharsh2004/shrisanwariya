@@ -15,8 +15,8 @@
 
   <style>
     /* -------------------------------------------------------------
-       DESIGN TOKENS & SYSTEM
-       ------------------------------------------------------------- */
+        DESIGN TOKENS & SYSTEM
+        ------------------------------------------------------------- */
     :root {
       --bg-cream: #FAF7F2;
       --bg-cream-card: #FFFFFF;
@@ -209,8 +209,8 @@
     }
 
     /* -------------------------------------------------------------
-       STICKY HEADER & NAVIGATION
-       ------------------------------------------------------------- */
+        STICKY HEADER & NAVIGATION
+        ------------------------------------------------------------- */
     header {
       position: sticky;
       top: 0;
@@ -232,24 +232,6 @@
     .brand-logo {
       display: flex;
       flex-direction: column;
-    }
-
-    .brand-title {
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      color: var(--text-dark);
-      line-height: 1.1;
-      text-transform: uppercase;
-    }
-
-    .brand-sub {
-      font-size: 8.5px;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      color: #8C827A;
-      margin-top: 4px;
-      text-transform: uppercase;
     }
 
     .nav-menu {
@@ -375,53 +357,75 @@
     }
 
     /* -------------------------------------------------------------
-       FLOATING "SEND ENQUIRY" VERTICAL TAB
-       ------------------------------------------------------------- */
-    .floating-enquiry-tab {
+        FLOATING FLOATING QUICK CONTACT WIDGET (WHATSAPP & CALL)
+        ------------------------------------------------------------- */
+    .floating-contact-stack {
       position: fixed;
       right: 0;
       top: 48%;
       transform: translateY(-50%);
       z-index: 850;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .floating-widget-btn {
       background: var(--bg-dark);
       color: #FFFFFF;
       border: 1px solid rgba(255, 255, 255, 0.15);
       border-right: none;
-      padding: 14px 9px;
+      padding: 12px 10px;
       border-radius: 12px 0 0 12px;
       box-shadow: -4px 8px 24px rgba(0, 0, 0, 0.22);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 9px;
+      gap: 6px;
       cursor: pointer;
       transition: var(--transition);
+      text-decoration: none;
     }
 
-    .floating-enquiry-tab:hover {
-      background: var(--terracotta);
+    .floating-widget-btn.whatsapp {
+      background: #25D366;
+      border-color: #1EBE5B;
+    }
+
+    .floating-widget-btn.whatsapp:hover {
+      background: #1EBE5B;
       padding-right: 14px;
     }
 
-    .floating-enquiry-tab .tab-icon {
-      width: 17px;
-      height: 17px;
+    .floating-widget-btn.call {
+      background: var(--terracotta);
+      border-color: var(--terracotta-dark);
+    }
+
+    .floating-widget-btn.call:hover {
+      background: var(--terracotta-dark);
+      padding-right: 14px;
+    }
+
+    .floating-widget-btn .widget-icon {
+      width: 18px;
+      height: 18px;
       fill: currentColor;
     }
 
-    .floating-enquiry-tab .tab-text {
+    .floating-widget-btn .widget-text {
       writing-mode: vertical-rl;
       text-orientation: mixed;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.16em;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       transform: rotate(180deg);
     }
 
     /* -------------------------------------------------------------
-       HERO SECTION (FRAMED CONTAINER)
-       ------------------------------------------------------------- */
+        HERO SECTION (FRAMED CONTAINER)
+        ------------------------------------------------------------- */
     .hero-section {
       padding: 22px 0 65px;
     }
@@ -500,79 +504,10 @@
     }
 
     /* -------------------------------------------------------------
-       RK Stones Impex & STATS
-       ------------------------------------------------------------- */
+        RK Stones Impex & STATS
+        ------------------------------------------------------------- */
     .rd-section {
       background: var(--bg-cream);
-    }
-
-    .rd-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 45px;
-      align-items: center;
-      margin-top: 50px;
-    }
-
-    .rd-copy h3 {
-      font-size: clamp(24px, 2.5vw, 32px);
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 18px;
-      letter-spacing: -0.02em;
-    }
-
-    .rd-copy p {
-      font-size: 14.5px;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      line-height: 1.7;
-    }
-
-    .rd-box-panel {
-      background: var(--bg-dark);
-      border-radius: var(--radius-lg);
-      padding: 60px 40px;
-      min-height: 310px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
-      border: 1px solid rgba(222, 193, 150, 0.15);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .rd-box-panel::before {
-      content: '';
-      position: absolute;
-      inset: 12px;
-      border: 1px solid rgba(222, 193, 150, 0.2);
-      border-radius: 12px;
-      pointer-events: none;
-    }
-
-    .rd-box-panel .rd-monogram {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(38px, 4.5vw, 54px);
-      font-weight: 700;
-      color: var(--gold-rd);
-      line-height: 1;
-      letter-spacing: 0.08em;
-      margin-bottom: 8px;
-      text-shadow: 0 2px 10px rgba(222, 193, 150, 0.25);
-    }
-
-    .rd-box-panel .rd-sub-brand {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--gold-rd-light);
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      line-height: 1.4;
     }
 
     /* OUR STORY / RK STONE IMPEX BANNER */
@@ -623,7 +558,14 @@
     .rd-story-content .btn-light-outline span { transition: transform .25s ease; }
     .rd-story-content .btn-light-outline:hover span { transform: translateX(4px); }
 
-    /* STATS BAR */
+    .footer-gstin {
+      margin-top: 12px;
+      font-size: 12px !important;
+      letter-spacing: .03em;
+      color: rgba(255,255,255,.72) !important;
+    }
+    .footer-gstin strong { color: #fff; }
+
     .company-stats-after-why {
       margin: 0;
       padding: 0;
@@ -635,13 +577,6 @@
       grid-template-columns: repeat(4, 1fr);
       padding: 30px 0;
     }
-    .footer-gstin {
-      margin-top: 12px;
-      font-size: 12px !important;
-      letter-spacing: .03em;
-      color: rgba(255,255,255,.72) !important;
-    }
-    .footer-gstin strong { color: #fff; }
 
     .stats-bar {
       display: grid;
@@ -687,8 +622,8 @@
     }
 
     /* -------------------------------------------------------------
-       OUR PRODUCT COLLECTION (8-GRID)
-       ------------------------------------------------------------- */
+        OUR PRODUCT COLLECTION (8-GRID)
+        ------------------------------------------------------------- */
     .products-section {
       background: var(--bg-cream);
     }
@@ -754,8 +689,8 @@
     }
 
     /* -------------------------------------------------------------
-       NATURAL SANDSTONE COLORS (15 SWATCHES) GRID & CONTROLS
-       ------------------------------------------------------------- */
+        NATURAL SANDSTONE COLORS GRID & CONTROLS
+        ------------------------------------------------------------- */
     .collection-controls-bar {
       padding: 24px 0 18px;
       display: flex;
@@ -824,20 +759,10 @@
       text-align: left;
     }
     
-    /* Performance optimizations for GPU composition & layout preservation */
     .color-stone-card {
       transform: translateZ(0);
-      
-    }
-    .product-card {
-      transform: translateZ(0);
-      
-    }
-    .stone-chunk-hidden {
-      display: none !important;
     }
 
-    /* Main page shows 7 featured varieties; remaining 8 appear via View All Varieties */
     .color-stone-card.main-hidden {
       display: none !important;
     }
@@ -1027,100 +952,7 @@
       .colors-collection-grid { grid-template-columns: 1fr; }
     }
 
-    /* -------------------------------------------------------------
-       SANDSTONE PAVERS SHOWCASE ON INDEX
-       ------------------------------------------------------------- */
-    .pavers-showcase-wrap {
-      margin-top: 55px;
-      padding-top: 50px;
-      border-top: 1px solid var(--border-warm);
-      text-align: left;
-    }
-    .pavers-finishes-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin: 30px 0 35px;
-    }
-    .paver-finish-card {
-      background: #FFFFFF;
-      border: 1px solid #ECE5DA;
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      transition: var(--transition);
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-    }
-    .paver-finish-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-card);
-      border-color: var(--terracotta);
-    }
-    .paver-finish-img-wrap {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      background: #FFFFFF;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-    }
-    .paver-finish-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform 0.4s ease;
-    }
-    .paver-finish-card:hover .paver-finish-img-wrap img {
-      transform: scale(1.05);
-    }
-    .paver-finish-body {
-      padding: 14px 16px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      border-top: 1px solid #F2ECE3;
-      background: #FAF8F5;
-    }
-    .paver-finish-name {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 4px;
-    }
-    .paver-finish-meta {
-      font-size: 11px;
-      color: var(--text-muted);
-      line-height: 1.4;
-      margin-bottom: 10px;
-    }
-    .paver-finish-link {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--terracotta);
-      margin-top: auto;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-    @media (max-width: 1024px) {
-      .pavers-finishes-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 580px) {
-      .pavers-finishes-grid { grid-template-columns: 1fr; }
-    }
-
-    /* -------------------------------------------------------------
-       CATALOGUE SECTION (DARK CONTAINER)
-       ------------------------------------------------------------- */
+    /* CATALOGUE SECTION */
     .catalog-section {
       padding: 40px 0;
     }
@@ -1177,9 +1009,7 @@
       transform: scale(1.05);
     }
 
-    /* -------------------------------------------------------------
-       INFRASTRUCTURE & CAPABILITIES (6-CARD GRID)
-       ------------------------------------------------------------- */
+    /* INFRASTRUCTURE & CAPABILITIES */
     .capabilities-section {
       background: var(--bg-cream);
     }
@@ -1244,9 +1074,7 @@
       margin: 0;
     }
 
-    /* -------------------------------------------------------------
-       EXPORT QUALITY PACKING & LOADING
-       ------------------------------------------------------------- */
+    /* EXPORT QUALITY PACKING & LOADING */
     .packing-section {
       background: var(--bg-cream-card);
       border-radius: var(--radius-lg);
@@ -1293,9 +1121,7 @@
       letter-spacing: 0.02em;
     }
 
-    /* -------------------------------------------------------------
-       HOW IT ALL STARTED (OUR VISION)
-       ------------------------------------------------------------- */
+    /* HOW IT ALL STARTED (OUR VISION) */
     .story-section {
       padding: 40px 0;
     }
@@ -1417,123 +1243,6 @@
       margin-top: 14px;
     }
 
-    /* LEADERSHIP STORY CARDS */
-    .leadership-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 45px;
-    }
-
-    .leader-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: var(--transition);
-    }
-
-    .leader-card:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: var(--accent-amber);
-      transform: translateY(-4px);
-    }
-
-    .leader-img-wrap {
-      width: 100%;
-      height: 310px;
-      position: relative;
-      overflow: hidden;
-      background: #1B1612;
-    }
-
-    .leader-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-      transition: transform 0.6s ease;
-    }
-
-    .leader-card:hover .leader-img-wrap img {
-      transform: scale(1.05);
-    }
-
-    .leader-body {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .leader-badge {
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent-amber);
-      margin-bottom: 6px;
-      display: inline-block;
-    }
-
-    .leader-name {
-      font-size: 19px;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 4px;
-    }
-
-    .leader-role {
-      font-size: 12.5px;
-      font-weight: 600;
-      color: var(--terracotta-light);
-      margin-bottom: 14px;
-      letter-spacing: 0.02em;
-    }
-
-    .leader-desc {
-      font-size: 13.5px;
-      color: var(--text-light-muted);
-      line-height: 1.65;
-      margin-bottom: 14px;
-    }
-
-    .leader-desc p {
-      font-size: 13.5px;
-      margin-bottom: 10px;
-    }
-
-    .leader-list {
-      list-style: none;
-      padding: 0;
-      margin: 10px 0 14px;
-    }
-
-    .leader-list li {
-      font-size: 12.5px;
-      color: var(--text-light-muted);
-      margin-bottom: 6px;
-      display: flex;
-      align-items: flex-start;
-      gap: 7px;
-    }
-
-    .leader-list li span {
-      color: var(--accent-amber);
-      font-weight: bold;
-    }
-
-    .leader-quote {
-      font-style: italic;
-      border-left: 2px solid var(--accent-amber);
-      padding-left: 12px;
-      margin-top: auto;
-      font-size: 12.5px;
-      color: #E2D9D0;
-    }
-
     @media (max-width: 760px) {
       .rd-story-banner { min-height: 560px; background-position: 60% center; }
       .rd-story-overlay { background: linear-gradient(180deg, rgba(20,15,12,.68), rgba(20,15,12,.92)); }
@@ -1541,105 +1250,7 @@
       .rd-story-content p { font-size: 14px; line-height: 1.7; }
     }
 
-    @media (max-width: 960px) {
-      .leadership-grid {
-        grid-template-columns: 1fr;
-      }
-      .leader-img-wrap {
-        height: 340px;
-      }
-    }
-
-    /* -------------------------------------------------------------
-       NATURAL STONE SHOWCASE (VIDEO CARDS)
-       ------------------------------------------------------------- */
-    .showcase-section {
-      background: var(--bg-cream);
-    }
-
-    .showcase-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 45px;
-    }
-
-    .showcase-card {
-      position: relative;
-      height: 380px;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: #25201C;
-      cursor: pointer;
-      box-shadow: var(--shadow-card);
-    }
-
-    .showcase-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.88);
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
-    }
-
-    .showcase-card:hover img {
-      transform: scale(1.06);
-      filter: brightness(0.78);
-    }
-
-    .showcase-play-btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: #FFFFFF;
-      color: var(--bg-dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-      transition: var(--transition);
-      z-index: 3;
-    }
-
-    .showcase-play-btn svg {
-      width: 18px;
-      height: 18px;
-      fill: var(--bg-dark);
-      margin-left: 3px;
-      transition: var(--transition);
-    }
-
-    .showcase-card:hover .showcase-play-btn {
-      transform: translate(-50%, -50%) scale(1.14);
-      background: var(--terracotta);
-    }
-
-    .showcase-card:hover .showcase-play-btn svg {
-      fill: #FFFFFF;
-    }
-
-    .showcase-caption {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      right: 20px;
-      z-index: 3;
-      color: #FFFFFF;
-      font-size: 13.5px;
-      font-weight: 600;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    /* -------------------------------------------------------------
-       FOOTER
-       ------------------------------------------------------------- */
+    /* FOOTER */
     footer {
       background: var(--bg-cream);
       border-top: 1px solid var(--border-warm);
@@ -1748,9 +1359,7 @@
       color: var(--text-muted);
     }
 
-    /* -------------------------------------------------------------
-       MODALS & LIGHTBOXES
-       ------------------------------------------------------------- */
+    /* MODALS */
     .modal-backdrop {
       position: fixed;
       inset: 0;
@@ -1822,7 +1431,6 @@
     }
 
     .form-input, .form-select, .form-textarea {
-      
       width: 100%;
       padding: 11px 14px;
       border: 1px solid var(--border-warm);
@@ -1845,32 +1453,6 @@
       min-height: 85px;
     }
 
-    /* VIDEO MODAL */
-    .video-modal-box {
-      background: #000000;
-      border-radius: var(--radius-lg);
-      max-width: 820px;
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
-    }
-
-    .video-wrapper {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-    }
-
-    .video-wrapper iframe, .video-wrapper video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
     /* SCROLL ANIMATIONS */
     .reveal {
       opacity: 0;
@@ -1883,96 +1465,30 @@
       transform: translateY(0);
     }
 
-    /* -------------------------------------------------------------
-       RESPONSIVENESS
-       ------------------------------------------------------------- */
+    /* RESPONSIVENESS */
     @media (max-width: 1024px) {
-      .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .capabilities-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .packing-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .capabilities-grid { grid-template-columns: repeat(2, 1fr); }
+      .packing-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 860px) {
-      .nav-menu {
-        display: none;
-      }
-      .menu-toggle {
-        display: block;
-      }
-      .rd-grid {
-        grid-template-columns: 1fr;
-      }
-      .catalog-layout {
-        grid-template-columns: 1fr;
-      }
-      .story-layout {
-        grid-template-columns: 1fr;
-      }
-      .showcase-grid {
-        grid-template-columns: 1fr;
-      }
-      .stats-bar {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-      .company-stats-after-why .stats-bar-inner {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-      .stat-item:nth-child(2)::after {
-        display: none;
-      }
-      .hero-frame {
-        min-height: 460px;
-      }
+      .nav-menu { display: none; }
+      .menu-toggle { display: block; }
+      .catalog-layout, .story-layout { grid-template-columns: 1fr; }
+      .stats-bar, .company-stats-after-why .stats-bar-inner { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .stat-item:nth-child(2)::after { display: none; }
+      .hero-frame { min-height: 460px; }
     }
 
     @media (max-width: 560px) {
-      .section-spacing {
-        padding: 65px 0;
-      }
-      .products-grid {
-        grid-template-columns: 1fr;
-      }
-      .capabilities-grid {
-        grid-template-columns: 1fr;
-      }
-      .packing-grid {
-        grid-template-columns: 1fr;
-      }
-      .stats-bar {
-        grid-template-columns: 1fr;
-      }
-      .company-stats-after-why .stats-bar-inner {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-      .stat-item::after {
-        display: none !important;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-      .footer-bottom {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-      }
-      .floating-enquiry-tab {
-        display: none;
-      }
-      .dark-card-container {
-        padding: 30px 20px;
-      }
+      .section-spacing { padding: 65px 0; }
+      .products-grid, .capabilities-grid, .packing-grid, .stats-bar, .company-stats-after-why .stats-bar-inner, .footer-grid { grid-template-columns: 1fr; }
+      .stat-item::after { display: none !important; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .floating-contact-stack { display: none; }
+      .dark-card-container { padding: 30px 20px; }
     }
 
     /* MOBILE MENU DRAWER */
@@ -2004,8 +1520,8 @@
       padding: 8px 0;
     }
 
-    /* STORY / LEADERSHIP MODAL */
-    .story-modal-box {
+    /* FACTORY / RK STONE IMPEX MODAL */
+    .factory-modal-box {
       max-width: 1000px;
       width: 95%;
       max-height: 88vh;
@@ -2013,113 +1529,32 @@
       padding: 40px 36px 36px;
     }
 
-    .story-leaders-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 36px;
-      margin-top: 8px;
-    }
-
-    .story-leader-card {
+    .factory-gallery-grid {
       display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 28px;
-      align-items: flex-start;
-      padding-bottom: 32px;
-      border-bottom: 1px solid var(--border-warm);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 24px 0;
     }
 
-    .story-leader-card:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .story-leader-img {
-      width: 180px;
-      height: 210px;
-      border-radius: 12px;
+    .factory-gallery-item {
+      border-radius: var(--radius-sm);
       overflow: hidden;
-      flex-shrink: 0;
+      aspect-ratio: 4/3;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
     }
 
-    .story-leader-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    @media (max-width: 768px) {
+      .factory-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .factory-gallery-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
-    .story-leader-info h4 {
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--text-dark);
-      margin: 6px 0 4px;
-      line-height: 1.2;
-    }
-
-    .story-leader-role {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--terracotta);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 12px;
-    }
-
-    .story-leader-desc p {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 10px;
-    }
-
-    .story-leader-desc p strong {
-      color: var(--text-dark);
-    }
-
-    .story-quote {
-      margin: 12px 0 0;
-      padding: 12px 16px;
-      border-left: 3px solid var(--accent-amber);
-      background: rgba(217,147,41,0.07);
-      border-radius: 0 8px 8px 0;
-      font-size: 13.5px;
-      font-style: italic;
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
-
-    .story-resp-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .story-resp-list li {
-      font-size: 13.5px;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .story-resp-list li span {
-      color: var(--accent-amber);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    @media (max-width: 640px) {
-      .story-modal-box { padding: 28px 18px 24px; }
-      .story-leader-card { grid-template-columns: 1fr; }
-      .story-leader-img { width: 100%; height: 200px; }
-    }
-  
-    /* =============================================================
-       RESPONSIVE MEDIA / NEW SECTIONS — FITTED TO EXISTING SYSTEM
-       ============================================================= */
+    /* ADDITIONAL SECTIONS */
     .image-brand-logo { justify-content:center; align-items:flex-start; }
     .site-logo { width:auto; height:48px; max-width:190px; object-fit:contain; }
 
@@ -2132,25 +1567,6 @@
     .hero-dots { position:absolute; z-index:4; bottom:22px; left:50%; transform:translateX(-50%); display:flex; gap:8px; }
     .hero-dot { width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.45); border:1px solid rgba(255,255,255,.5); padding:0; cursor:pointer; }
     .hero-dot.active { background:#fff; transform:scale(1.25); }
-
-    .rk-media-panel { padding:16px; min-height:310px; justify-content:flex-end; }
-    .rk-slider { position:relative; width:100%; height:275px; border-radius:15px; overflow:hidden; background:#17120f; border:1px solid rgba(222,193,150,.22); }
-    .rk-slides, .rk-slide { position:absolute; inset:0; }
-    .rk-slide { opacity:0; visibility:hidden; transition:opacity .5s ease; }
-    .rk-slide.active { opacity:1; visibility:visible; }
-    .rk-slide img { width:100%; height:100%; object-fit:cover; }
-    .rk-panel-label { position:absolute; left:28px; right:28px; bottom:24px; z-index:4; pointer-events:none; display:flex; justify-content:space-between; align-items:end; gap:15px; text-align:left; text-shadow:0 2px 10px rgba(0,0,0,.65); }
-    .rk-panel-label span { font-family:'Playfair Display',Georgia,serif; font-size:22px; color:#fff; font-weight:700; }
-    .rk-panel-label small { color:var(--gold-rd); font-size:9px; font-weight:700; letter-spacing:.16em; }
-
-    .media-nav, .showcase-nav { position:absolute; top:50%; transform:translateY(-50%); z-index:5; width:38px; height:38px; border-radius:50%; background:rgba(20,15,12,.72); color:#fff; border:1px solid rgba(255,255,255,.22); font-size:28px; line-height:1; display:flex; align-items:center; justify-content:center; cursor:pointer; backdrop-filter:blur(8px); }
-    .media-nav:hover, .showcase-nav:hover { background:var(--terracotta); transform:translateY(-50%) scale(1.08); }
-    .media-prev, .showcase-prev { left:12px; }
-    .media-next, .showcase-next { right:12px; }
-    .media-counter { position:absolute; z-index:5; top:12px; right:13px; color:#fff; font-size:10px; font-weight:700; letter-spacing:.12em; background:rgba(20,15,12,.68); padding:6px 9px; border-radius:999px; backdrop-filter:blur(8px); }
-    .media-dots { position:absolute; z-index:5; left:50%; bottom:12px; transform:translateX(-50%); display:flex; gap:5px; max-width:75%; flex-wrap:wrap; justify-content:center; }
-    .media-dots button { width:7px; height:7px; border-radius:50%; padding:0; background:rgba(255,255,255,.4); border:0; cursor:pointer; }
-    .media-dots button.active { background:#fff; transform:scale(1.25); }
 
     .showcase-slider { position:relative; width:min(900px,100%); height:500px; margin:45px auto 0; border-radius:var(--radius-xl); overflow:hidden; background:#17120f; box-shadow:0 20px 50px rgba(37,32,28,.15); }
     .showcase-track, .showcase-video-slide { position:absolute; inset:0; }
@@ -2180,8 +1596,15 @@
     .showcase-play-btn svg { width:25px; height:25px; fill:currentColor; margin-left:3px; }
     .showcase-play-btn.is-playing { background:var(--terracotta); color:#fff; }
     .showcase-play-btn.is-playing svg { margin-left:0; }
-
     .showcase-video-badge { position:absolute; z-index:5; top:16px; left:16px; background:rgba(20,15,12,.72); color:#fff; border:1px solid rgba(255,255,255,.18); padding:7px 11px; border-radius:999px; font-size:10px; font-weight:700; letter-spacing:.12em; backdrop-filter:blur(8px); }
+
+    .media-nav, .showcase-nav { position:absolute; top:50%; transform:translateY(-50%); z-index:5; width:38px; height:38px; border-radius:50%; background:rgba(20,15,12,.72); color:#fff; border:1px solid rgba(255,255,255,.22); font-size:28px; line-height:1; display:flex; align-items:center; justify-content:center; cursor:pointer; backdrop-filter:blur(8px); }
+    .media-nav:hover, .showcase-nav:hover { background:var(--terracotta); transform:translateY(-50%) scale(1.08); }
+    .media-prev, .showcase-prev { left:12px; }
+    .media-next, .showcase-next { right:12px; }
+    .media-dots { position:absolute; z-index:5; left:50%; bottom:12px; transform:translateX(-50%); display:flex; gap:5px; max-width:75%; flex-wrap:wrap; justify-content:center; }
+    .media-dots button { width:7px; height:7px; border-radius:50%; padding:0; background:rgba(255,255,255,.4); border:0; cursor:pointer; }
+    .media-dots button.active { background:#fff; transform:scale(1.25); }
 
     .process-section { background:var(--bg-cream-soft); }
     .process-layout { display:grid; grid-template-columns:1fr 1fr; gap:55px; align-items:center; }
@@ -2248,9 +1671,6 @@
     }
     @media (max-width:680px) {
       .site-logo { max-width:145px; height:40px; }
-      .rk-slider { height:245px; }
-      .rk-media-panel { min-height:280px; }
-      .rk-panel-label { left:20px; right:20px; bottom:18px; flex-direction:column; align-items:flex-start; gap:2px; }
       .showcase-slider { height:360px; border-radius:var(--radius-lg); }
       .process-media-slider, .map-frame, .map-frame iframe { min-height:380px; height:380px; }
       .why-grid, .reviews-grid { grid-template-columns:1fr; }
@@ -2258,11 +1678,6 @@
       .media-nav, .showcase-nav { width:34px; height:34px; font-size:24px; }
       .hero-dots { bottom:15px; }
     }
-
-
-    .team-slide img { object-position:center center; }
-    .team-slide.jaswant-slide img { object-position:center 42%; }
-
 </style>
 </head>
 <body>
@@ -2332,13 +1747,17 @@
   </header>
 
   <!-- =============================================================
-       FLOATING "SEND ENQUIRY" VERTICAL TAB
+       FLOATING QUICK CONTACT WIDGET (WHATSAPP & CALL)
        ============================================================= -->
-  <aside class="floating-enquiry-tab open-enquiry-btn" title="Send Direct Enquiry">
-    <svg class="tab-icon" viewBox="0 0 24 24">
-      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-    </svg>
-    <span class="tab-text">Send Enquiry</span>
+  <aside class="floating-contact-stack">
+    <a href="https://wa.me/918619392937?text=Hello%20Shri%20Sanwariya%20Stone%20Suppliers,%20I%20am%20interested%20in%20your%20natural%20stone%20products." target="_blank" rel="noopener" class="floating-widget-btn whatsapp" title="Chat on WhatsApp">
+      <svg class="widget-icon" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.184 1.564 5.938l-1.656 6.046 6.196-1.625c1.706.93 3.66 1.463 5.74 1.463 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
+      <span class="widget-text">WhatsApp</span>
+    </a>
+    <a href="tel:+918619392937" class="floating-widget-btn call" title="Call Us Directly">
+      <svg class="widget-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <span class="widget-text">Call Now</span>
+    </a>
   </aside>
 
   <!-- =============================================================
@@ -2346,7 +1765,7 @@
        ============================================================= -->
   <main id="home">
 
-    <!-- HERO SECTION (3-IMAGE SLIDER) -->
+    <!-- HERO SECTION -->
     <section class="hero-section">
       <div class="container">
         <div class="hero-frame hero-slider" id="heroSlider">
@@ -2357,7 +1776,7 @@
           </div>
           <div class="hero-overlay"></div>
           <div class="hero-content">
-            <span class="eyebrow light">Indian Natural Stone • Export Ready</span>
+            <span class="eyebrow light">Indian Natural Stone • Export Ready • GSTIN: 08ANHPD8308A1ZF</span>
             <h1 class="hero-title">Shri Sanwariya Stone Suppliers</h1>
             <p class="hero-subtitle">Transforming Spaces with Premium Indian Sandstone Slabs &amp; Natural Stone</p>
             <em class="hero-tagline">Your Vision, Our Stone</em>
@@ -2376,12 +1795,10 @@
          ============================================================= -->
     <section class="section-spacing rd-section" id="about">
       <div class="container">
-        <!-- Center Headings -->
         <div class="center reveal">
           <h2 class="section-title">RK STONE IMPEX</h2>
-          <p class="section-subtitle">The dedicated display brand of Shri Sanwariya Stone Suppliers. Experience our diverse showcase in Bijoliya Khurd, Rajasthan.</p>
+          <p class="section-subtitle">The dedicated display and manufacturing brand of Shri Sanwariya Stone Suppliers. Experience our showcase in Bijoliya Khurd, Rajasthan.</p>
         </div>
-        <!-- Our Story / RK Stone Impex Intro — single full-width background image, no right-side gallery -->
         <div class="rd-story-banner reveal">
           <div class="rd-story-overlay"></div>
           <div class="rd-story-content">
@@ -2389,28 +1806,24 @@
             <h3>From Shri Sanwariya Stone to RK Stone Impex</h3>
             <p>Shri Sanwariya Stone is our established sandstone supply business, founded by our father in 2005. Over the years, we have built our experience around sourcing and supplying quality natural sandstone for different projects and customer requirements.</p>
             <p>Today, we are taking this business forward with our next-generation approach and our new manufacturing facility, RK Stone Impex.</p>
-            <a href="pages/rk-stone-impex.html" class="btn-light-outline">KNOW MORE <span>→</span></a>
+            <button type="button" class="btn-light-outline" onclick="openFactoryModal()">KNOW MORE <span>→</span></button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =============================================================
-         OUR PRODUCT COLLECTION (8-GRID)
+         OUR PRODUCT COLLECTION
          ============================================================= -->
     <section class="section-spacing products-section" id="products">
       <div class="container center">
 
-        <!-- =========================================================
-             SECTION 1: NATURAL SANDSTONE COLORS COLLECTION (15 SWATCHES)
-             ========================================================= -->
         <div class="reveal" id="colors">
           <span class="eyebrow">15 AUTHENTIC QUARRY BEDS &amp; GEOLOGIES</span>
           <h2 class="section-title">Natural Sandstone Colors Collection</h2>
           <p class="section-subtitle">Directly extracted from the historic Bijolia &amp; Bundi sandstone belts. Available across all architectural formats.</p>
         </div>
 
-        <!-- CONTROLS: CATEGORY FILTER PILLS + SEARCH -->
         <div class="collection-controls-bar reveal">
           <div class="filter-pills-list">
             <button class="filter-pill active" onclick="filterCategory('all', this)">All 15 Colors</button>
@@ -2426,386 +1839,217 @@
           </div>
         </div>
 
-        <!-- 4-COLUMN COLORS GRID (15 CARDS MATCHING SCREENSHOT) -->
+        <!-- 4-COLUMN COLORS GRID -->
         <div class="colors-collection-grid" id="colorsGrid">
-
-          <!-- 1. Khadipur Grey -->
           <div class="color-stone-card" data-category="grey" onclick="window.location.href='pages/khadipur-grey.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/khadipur-grey-swatch-main.webp" alt="Khadipur Grey Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/khadipur-grey-swatch-main.webp" alt="Khadipur Grey Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-01</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-01</span></div>
               <h3 class="stone-title">Khadipur Grey</h3>
               <p class="stone-description">A cool, restrained grey from the Khadipur block of the Bijolia belt.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Bhilwara District</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Bhilwara District</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
 
-          <!-- 2. Kandla Grey -->
           <div class="color-stone-card" data-category="grey" onclick="window.location.href='pages/kandla-grey.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/kandla-grey-swatch-main.webp" alt="Kandla Grey Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/kandla-grey-swatch-main.webp" alt="Kandla Grey Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-02</span>
-                <span class="founding-badge">FOUNDING</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-02</span><span class="founding-badge">FOUNDING</span></div>
               <h3 class="stone-title">Kandla Grey</h3>
               <p class="stone-description">The founding stone. Worked since 1972 across the Bijolia belt.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Bundi District</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Bundi District</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
 
-          <!-- 3. York Grey -->
           <div class="color-stone-card" data-category="warm" onclick="window.location.href='pages/autumn-brown.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/autumn-brown-swatch-main.webp" alt="York Grey Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/autumn-brown-swatch-main.webp" alt="York Grey Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-03</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-03</span></div>
               <h3 class="stone-title">York Grey</h3>
               <p class="stone-description">The warm-brown anchor of the Bijolia belt — Nayanagar quarry, since the 1980s.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Bhilwara District</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Bhilwara District</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
 
-          <!-- 4. Raj Blend -->
           <div class="color-stone-card" data-category="variegated" onclick="window.location.href='pages/raj-blend.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/raj-blend-swatch-main.webp" alt="Raj Blend Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/raj-blend-swatch-main.webp" alt="Raj Blend Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-04</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-04</span></div>
               <h3 class="stone-title">Raj Blend</h3>
               <p class="stone-description">A naturally variegated warm bed from the Bijolia tehsil.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Bhilwara District</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Bhilwara District</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
 
-          <!-- 5. Garda Green -->
           <div class="color-stone-card" data-category="green" onclick="window.location.href='pages/garda-green.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/garda-green-swatch-main.webp" alt="Garda Green Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/garda-green-swatch-main.webp" alt="Garda Green Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-05</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-05</span></div>
               <h3 class="stone-title">Garda Green</h3>
               <p class="stone-description">A sage-to-khaki green from the family's owned Garda block, Bundi District.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Bundi District</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Bundi District</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
 
-          <!-- 6. Slate Grey -->
           <div class="color-stone-card" data-category="grey" onclick="window.location.href='pages/slate-grey.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/slate-grey-swatch-main.webp" alt="Slate Grey Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/slate-grey-swatch-main.webp" alt="Slate Grey Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-06</span>
-                <span class="founding-badge">FOUNDING</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-06</span><span class="founding-badge">FOUNDING</span></div>
               <h3 class="stone-title">Slate Grey</h3>
               <p class="stone-description">A dark, uniform grey from the founding-era Bundi blocks. Since 1972.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Bundi District</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Bundi District</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
 
-          <!-- 7. Raveena -->
           <div class="color-stone-card" data-category="green" onclick="window.location.href='pages/raveena.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/raveena-swatch-main.webp" alt="Raveena Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/raveena-swatch-main.webp" alt="Raveena Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-07</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-07</span></div>
               <h3 class="stone-title">Raveena</h3>
               <p class="stone-description">A pale celadon-mint from the Khokri block. Worked since the 1990s.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Bhilwara District</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Bhilwara District</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
 
-          <!-- 8. Mint -->
           <div class="color-stone-card main-hidden" data-category="warm" onclick="window.location.href='pages/mint.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/mint-swatch-main.webp" alt="Mint Fossil Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/mint-swatch-main.webp" alt="Mint Fossil Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-08</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-08</span></div>
               <h3 class="stone-title">Mint</h3>
               <p class="stone-description">The fossil-bearing mint bed. Marine impressions across selected slabs.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Bhilwara District</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Bhilwara District</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
 
-          <!-- 9. Buff -->
           <div class="color-stone-card main-hidden" data-category="warm" onclick="window.location.href='pages/buff.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/buff-swatch-main.webp" alt="Buff Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/buff-swatch-main.webp" alt="Buff Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-09</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-09</span></div>
               <h3 class="stone-title">Buff</h3>
               <p class="stone-description">A pale yellow-beige from the family's Bhootii block and the wider Bijolia tehsil.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Bhilwara District</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Bhilwara District</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
 
-          <!-- 10. Camel Dust -->
           <div class="color-stone-card main-hidden" data-category="warm" onclick="window.location.href='pages/camel-dust.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/camel-dust-swatch-main.webp" alt="Camel Dust Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/camel-dust-swatch-main.webp" alt="Camel Dust Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-10</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-10</span></div>
               <h3 class="stone-title">Camel Dust</h3>
               <p class="stone-description">A tan-to-camel mid-tone from the Bijolia tehsil. Bhootii and beyond.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Bhilwara District</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Bhilwara District</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
 
-          <!-- 11. Red Choco -->
           <div class="color-stone-card main-hidden" data-category="warm" onclick="window.location.href='pages/red-choco.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/red-choco-swatch-main.webp" alt="Red Choco Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/red-choco-swatch-main.webp" alt="Red Choco Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-11</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-11</span></div>
               <h3 class="stone-title">Red Choco</h3>
               <p class="stone-description">A deep cocoa-red from the Kasiriya block. Renamed from the trade's Kasariya Red.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Bhilwara District</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Bhilwara District</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
 
-          <!-- 12. Dual Tone -->
           <div class="color-stone-card main-hidden" data-category="variegated" onclick="window.location.href='pages/dual-tone.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/dual-tone-swatch-main.webp" alt="Dual Tone Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/dual-tone-swatch-main.webp" alt="Dual Tone Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-12</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-12</span></div>
               <h3 class="stone-title">Dual Tone</h3>
               <p class="stone-description">Buff and dove-grey in a single slab. The UK trade's Indian York.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Bhilwara District</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Bhilwara District</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
 
-          <!-- 13. Mocha Blend -->
           <div class="color-stone-card main-hidden" data-category="warm" onclick="window.location.href='pages/mocha-blend.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/mocha-blend-swatch-main.webp" alt="Mocha Blend Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/mocha-blend-swatch-main.webp" alt="Mocha Blend Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-13</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-13</span></div>
               <h3 class="stone-title">Mocha Blend</h3>
-              <p class="stone-description">Honey, walnut, cinnamon, cocoa — the variegated brown bed of three KHADANE blocks.</p>
+              <p class="stone-description">Honey, walnut, cinnamon, cocoa — the variegated brown block selection.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Bhilwara District</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Bhilwara District</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
 
-          <!-- 14. Rainbow -->
           <div class="color-stone-card main-hidden" data-category="variegated" onclick="window.location.href='pages/rainbow.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/rainbow-swatch-main.webp" alt="Rainbow Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/rainbow-swatch-main.webp" alt="Rainbow Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-14</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-14</span></div>
               <h3 class="stone-title">Rainbow</h3>
-              <p class="stone-description">Dramatic wave-patterned sandstone with rich swirls of violet, orange, plum, and golden amber.</p>
+              <p class="stone-description">Dramatic wave-patterned sandstone with rich swirls of violet, orange, plum, and gold.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Nagaur / Khatu Belt</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Nagaur Belt</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
 
-          <!-- 15. White -->
           <div class="color-stone-card main-hidden" data-category="grey" onclick="window.location.href='pages/white.html'">
-            <div class="stone-swatch-box">
-              <img src="assets/white-swatch-main.webp" alt="White Quartzitic Sandstone" width="300" height="300" loading="lazy" decoding="async">
-            </div>
+            <div class="stone-swatch-box"><img src="assets/white-swatch-main.webp" alt="White Quartzitic Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <div class="stone-code-row">
-                <span class="stone-code">KHD-0-15</span>
-              </div>
+              <div class="stone-code-row"><span class="stone-code">KHD-0-15</span></div>
               <h3 class="stone-title">White</h3>
-              <p class="stone-description">Clean, ultra-pale quartzitic sandstone with subtle silvery veining and a pure, luminous modern presence.</p>
+              <p class="stone-description">Clean, ultra-pale quartzitic sandstone with subtle silvery veining.</p>
               <div class="stone-meta-grid">
-                <div class="meta-col">
-                  <span class="meta-label">ORIGIN</span>
-                  <span class="meta-value">Bansi Paharpur / Dholpur Belt</span>
-                </div>
-                <div class="meta-col">
-                  <span class="meta-label">SCOPE</span>
-                  <span class="meta-value">All 21 formats</span>
-                </div>
+                <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Dholpur Belt</span></div>
+                <div class="meta-col"><span class="meta-label">SCOPE</span><span class="meta-value">All 21 formats</span></div>
               </div>
               <div class="view-stone-btn">VIEW STONE <span>→</span></div>
             </div>
           </div>
-
         </div>
 
         <div class="view-all-varieties-wrap" id="viewAllVarietiesWrap">
@@ -2819,48 +2063,34 @@
           <button class="btn-terracotta pill open-enquiry-btn" style="justify-content:center;">Request Stone Sample Box 📦</button>
         </div>
 
-        <!-- =========================================================
-             SECTION 2: ARCHITECTURAL COLLECTIONS BY APPLICATION
-             ========================================================= -->
+        <!-- COLLECTIONS BY APPLICATION -->
         <div class="reveal" style="border-top:1px solid var(--border-warm); padding-top:55px;">
           <span class="eyebrow">ARCHITECTURAL STONE APPLICATIONS</span>
           <h2 class="section-title">Collections By Application</h2>
           <p class="section-subtitle">Explore our specialized manufacturing lines for paving, landscaping, and heritage architecture.</p>
         </div>
 
-        <!-- 6 Product Collection Cards (3 x 2) -->
         <div class="products-grid reveal">
-          <!-- 1. Sandstone Pavers -->
           <a href="pages/sandstone-pavers.html" class="product-card">
             <img src="assets/sandstone-pavers-pool.webp" alt="Sandstone Pavers" width="600" height="400" loading="lazy" decoding="async">
             <div class="product-badge">Sandstone Pavers <span>→</span></div>
           </a>
-
-          <!-- 2. Copings -->
           <a href="pages/copings.html" class="product-card">
             <img src="assets/coping-residence-porch-steps.webp" alt="Natural Stone Copings" width="600" height="400" loading="lazy" decoding="async">
             <div class="product-badge">Copings <span>→</span></div>
           </a>
-
-          <!-- 3. Steps -->
           <a href="pages/steps.html" class="product-card">
             <img src="assets/steps-villa-columns-porch.webp" alt="Sandstone Steps" width="600" height="400" loading="lazy" decoding="async">
             <div class="product-badge">Steps <span>→</span></div>
           </a>
-
-          <!-- 4. Cobbles & Sets -->
           <a href="pages/cobbles-and-sets.html" class="product-card">
             <img src="assets/cobbles-concentric-circle-plaza.webp" alt="Sandstone Cobbles &amp; Sets" width="600" height="400" loading="lazy" decoding="async">
             <div class="product-badge">Cobbles &amp; Sets <span>→</span></div>
           </a>
-
-          <!-- 5. Fire Pits & Circles -->
           <a href="pages/fire-pits-and-circles.html" class="product-card">
             <img src="assets/firepit-lawn-blaze.webp" alt="Natural Sandstone Fire Pits &amp; Radial Circles" width="600" height="400" loading="lazy" decoding="async">
             <div class="product-badge">Fire Pits &amp; Circles <span>→</span></div>
           </a>
-
-          <!-- 6. Roofing -->
           <a href="pages/roofing.html" class="product-card">
             <img src="assets/roofing-house-installed-cottage.webp" alt="Natural Sandstone Roofing Slates &amp; Shingles" width="600" height="400" loading="lazy" decoding="async">
             <div class="product-badge">Roofing <span>→</span></div>
@@ -2870,26 +2100,19 @@
       </div>
     </section>
 
-    <!-- =============================================================
-         CATALOGUE SECTION (ROUNDED DARK CONTAINER)
-         ============================================================= -->
+    <!-- CATALOGUE SECTION -->
     <section class="catalog-section">
       <div class="container">
         <div class="dark-card-container reveal">
           <div class="catalog-layout">
-            <!-- Text content -->
             <div class="catalog-info">
               <h2>Check out our<br>Catalog</h2>
               <p>Explore our complete range of products, technical specifications, and project inspirations in our detailed brochure.</p>
-              <a href="assets/catalogue.pdf" download class="btn-terracotta pill" id="catalogDownloadBtn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
-                </svg>
+              <a href="assets/catalogue.pdf" download class="btn-terracotta pill">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
                 Download Catalog
               </a>
             </div>
-
-            <!-- Carved Buddha stone relief artwork -->
             <div class="catalog-visual">
               <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1200&q=85" alt="Buddha CNC carved natural stone wall relief in architectural setting">
             </div>
@@ -2898,9 +2121,7 @@
       </div>
     </section>
 
-    <!-- =============================================================
-         INFRASTRUCTURE & CAPABILITIES (6-CARD GRID)
-         ============================================================= -->
+    <!-- INFRASTRUCTURE & CAPABILITIES -->
     <section class="section-spacing capabilities-section" id="facilities">
       <div class="container center">
         <div class="reveal">
@@ -2909,85 +2130,39 @@
           <p class="section-subtitle">Combining traditional craftsmanship with modern technology since 2002.</p>
         </div>
 
-        <!-- 6 Feature Cards -->
         <div class="capabilities-grid reveal">
-          <!-- 1. Advanced Machinery -->
           <div class="cap-card">
-            <div class="cap-icon-box">
-              <svg viewBox="0 0 24 24">
-                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-              </svg>
-            </div>
+            <div class="cap-icon-box"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
             <h3>Advanced Machinery</h3>
             <p>Modern cutting, calibration, polishing and specialist stone-processing capabilities.</p>
           </div>
-
-          <!-- 2. Massive Capacity -->
           <div class="cap-card">
-            <div class="cap-icon-box">
-              <svg viewBox="0 0 24 24">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-              </svg>
-            </div>
+            <div class="cap-icon-box"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div>
             <h3>Massive Capacity</h3>
             <p>Production capacity designed to support recurring domestic and international project requirements.</p>
           </div>
-
-          <!-- 3. Global Standards -->
           <div class="cap-card">
-            <div class="cap-icon-box">
-              <svg viewBox="0 0 24 24">
-                <circle cx="12" cy="8" r="7"></circle>
-                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-              </svg>
-            </div>
+            <div class="cap-icon-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg></div>
             <h3>Global Standards</h3>
             <p>Consistent material handling and quality-focused production for export markets.</p>
           </div>
-
-          <!-- 4. Skilled Workforce -->
           <div class="cap-card">
-            <div class="cap-icon-box">
-              <svg viewBox="0 0 24 24">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
+            <div class="cap-icon-box"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
             <h3>Skilled Workforce</h3>
             <p>Experienced teams combining traditional craftsmanship with modern production methods.</p>
           </div>
-
-          <!-- 5. Global & Domestic Reach -->
           <div class="cap-card">
-            <div class="cap-icon-box">
-              <svg viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-              </svg>
-            </div>
+            <div class="cap-icon-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
             <h3>Global &amp; Domestic Reach</h3>
             <p>Supply coordination for buyers and projects across India and international markets.</p>
           </div>
-
-          <!-- 6. Processing Excellence -->
           <div class="cap-card">
-            <div class="cap-icon-box">
-              <svg viewBox="0 0 24 24">
-                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                <polyline points="2 17 12 22 22 17"></polyline>
-                <polyline points="2 12 12 17 22 12"></polyline>
-              </svg>
-            </div>
+            <div class="cap-icon-box"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>
             <h3>Processing Excellence</h3>
             <p>Finishing and processing options selected to suit architectural and landscape applications.</p>
           </div>
         </div>
 
-        <!-- EXPORT QUALITY PACKING & LOADING -->
         <div class="packing-section reveal">
           <div style="text-align: center;">
             <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.18em; color: var(--terracotta); text-transform: uppercase;">📦 EXPORT QUALITY PACKING &amp; LOADING</span>
@@ -2998,214 +2173,16 @@
           </div>
 
           <div class="packing-grid">
-            <div class="packing-card">
-              <img src="assets/packing-calibration-slabs.jpeg" width="640" height="427" loading="lazy" decoding="async" alt="Calibration Inspection &amp; Sawn Slabs Stack">
-              <span>1. Calibration Inspection</span>
-            </div>
-            <div class="packing-card">
-              <img src="assets/packing-covered-yard.webp" width="640" height="427" loading="lazy" decoding="async" alt="Crate &amp; Slab Storage in Covered Factory Yard">
-              <span>2. Covered Yard Storage</span>
-            </div>
-            <div class="packing-card">
-              <img src="assets/packing-wooden-crate.jpeg" width="640" height="427" loading="lazy" decoding="async" alt="ISPM-15 Heat-Treated Fumigated Wooden Crate">
-              <span>3. ISPM-15 Wooden Crates</span>
-            </div>
-            <div class="packing-card">
-              <img src="assets/packing-truck-loading.jpeg" width="640" height="427" loading="lazy" decoding="async" alt="Sea Container &amp; Flatbed Truck Loading">
-              <span>4. Sea Container Loading</span>
-            </div>
+            <div class="packing-card"><img src="assets/packing-calibration-slabs.jpeg" width="640" height="427" loading="lazy" decoding="async" alt="Calibration Inspection &amp; Sawn Slabs Stack"><span>1. Calibration Inspection</span></div>
+            <div class="packing-card"><img src="assets/packing-covered-yard.webp" width="640" height="427" loading="lazy" decoding="async" alt="Crate &amp; Slab Storage in Covered Factory Yard"><span>2. Covered Yard Storage</span></div>
+            <div class="packing-card"><img src="assets/packing-wooden-crate.jpeg" width="640" height="427" loading="lazy" decoding="async" alt="ISPM-15 Heat-Treated Fumigated Wooden Crate"><span>3. ISPM-15 Wooden Crates</span></div>
+            <div class="packing-card"><img src="assets/packing-truck-loading.jpeg" width="640" height="427" loading="lazy" decoding="async" alt="Sea Container &amp; Flatbed Truck Loading"><span>4. Sea Container Loading</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =============================================================
-         HOW IT ALL STARTED (ROUNDED DARK CONTAINER)
-         ============================================================= -->
-    <section class="story-section" id="story">
-      <div class="container">
-        <div class="dark-card-container reveal">
-          <div class="story-layout">
-            <!-- Our Vision Leadership Visuals (All 3 Images with Name & Tagline) -->
-            <div class="story-visual">
-              <div class="team-carousel" id="teamCarousel">
-                <!-- Dot navigation -->
-                <div class="team-slide-dots">
-                  <button class="team-dot active" onclick="showTeamSlide(0)" aria-label="Slide 1"></button>
-                  <button class="team-dot" onclick="showTeamSlide(1)" aria-label="Slide 2"></button>
-                  <button class="team-dot" onclick="showTeamSlide(2)" aria-label="Slide 3"></button>
-                </div>
-
-                <!-- Slide 1: Mr. Dinesh Kumar Dhakad -->
-                <div class="team-slide active">
-                  <img src="assets/team-dinesh-kumar-dhaakad.webp" width="400" height="400" loading="lazy" decoding="async" alt="Mr. Dinesh Kumar Dhakad - Managing Director &amp; Owner">
-                  <div class="team-slide-caption">
-                    <div class="team-slide-name">Mr. Dinesh Kumar Dhakad</div>
-                    <div class="team-slide-tagline">Managing Director &amp; Owner • Experience Since 2001</div>
-                  </div>
-                </div>
-
-                <!-- Slide 2: Arman Dhakad -->
-                <div class="team-slide">
-                  <img src="assets/team-arman-dhakar.webp" width="400" height="400" loading="lazy" decoding="async" alt="Arman Dhakad - Director – Leadership and Business Development">
-                  <div class="team-slide-caption">
-                    <div class="team-slide-name">Arman Dhakad</div>
-                    <div class="team-slide-tagline">Director – Leadership &amp; Business Development</div>
-                  </div>
-                </div>
-
-                <!-- Slide 3: Jaswant Dhakad -->
-                <div class="team-slide jaswant-slide">
-                  <img src="assets/team-jaswant-dhakad.webp" width="400" height="400" loading="lazy" decoding="async" alt="Jaswant Dhakad - Quality &amp; Operations">
-                  <div class="team-slide-caption">
-                    <div class="team-slide-name">Jaswant Dhakad</div>
-                    <div class="team-slide-tagline">Director – Quality &amp; Operations • Premium Quality Control</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Narrative -->
-            <div class="story-info">
-              <span class="eyebrow light">OUR VISION &amp; LEADERSHIP</span>
-              <h2>How It All Started</h2>
-              <p style="font-size: 13.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-amber); margin-bottom: 14px;">Behind the vision, Business, Leadership and Quality — SHRI SANWARIYA STONE</p>
-              <p>Rooted in the natural-stone ecosystem of Bijoliya Khurd, Rajasthan, Shri Sanwariya Stone Suppliers brings together generational quarrying mastery, modern manufacturing infrastructure, and an unyielding commitment to dependable global buyer relationships.</p>
-              <p>Our ambition is to connect the timeless character of premium Indian natural sandstone with architects, designers, builders, and international importers worldwide — backed by certified consistency and direct mine-to-port transparency.</p>
-              <a href="pages/our-story.html" class="btn-light-outline">Discover Our Story →</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- =============================================================
-         NATURAL STONE SHOWCASE (8 VIDEO MANUAL SLIDER)
-         ============================================================= -->
-    <section class="section-spacing showcase-section" id="showcase">
-      <div class="container center">
-        <div class="reveal">
-          <span class="eyebrow">NATURAL STONE SHOWCASE</span>
-          <h2 class="section-title">See the Stone in Motion</h2>
-          <p class="section-subtitle">Explore real stone textures, finishes, processing and applications through our visual showcase.</p>
-        </div>
-
-        <div class="showcase-slider reveal" id="showcaseSlider">
-          <div class="showcase-track">
-            <div class="showcase-video-slide active">
-              <video id="showcaseVideo1" src="assets/v1.mp4" muted playsinline preload="metadata"></video>
-              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(0, this)" aria-label="Play showcase video 1">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
-              </button>
-            </div>
-            <div class="showcase-video-slide">
-              <video id="showcaseVideo2" src="assets/v2.mp4" muted playsinline preload="metadata"></video>
-              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(1, this)" aria-label="Play showcase video 2">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
-              </button>
-            </div>
-            <div class="showcase-video-slide">
-              <video id="showcaseVideo3" src="assets/v3.mp4" muted playsinline preload="metadata"></video>
-              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(2, this)" aria-label="Play showcase video 3">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
-              </button>
-            </div>
-            <div class="showcase-video-slide">
-              <video id="showcaseVideo4" src="assets/v4.mp4" muted playsinline preload="metadata"></video>
-              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(3, this)" aria-label="Play showcase video 4">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
-              </button>
-            </div>
-            <div class="showcase-video-slide">
-              <video id="showcaseVideo5" src="assets/v5.mp4" muted playsinline preload="metadata"></video>
-              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(4, this)" aria-label="Play showcase video 5">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
-              </button>
-            </div>
-            <div class="showcase-video-slide">
-              <video id="showcaseVideo6" src="assets/v6.mp4" muted playsinline preload="metadata"></video>
-              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(5, this)" aria-label="Play showcase video 6">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
-              </button>
-            </div>
-            <div class="showcase-video-slide">
-              <video id="showcaseVideo7" src="assets/v7.mp4" muted playsinline preload="metadata"></video>
-              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(6, this)" aria-label="Play showcase video 7">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
-              </button>
-            </div>
-            <div class="showcase-video-slide">
-              <video id="showcaseVideo8" src="assets/v8.mp4" muted playsinline preload="metadata"></video>
-              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(7, this)" aria-label="Play showcase video 8">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
-              </button>
-            </div>
-          </div>
-          <button class="showcase-nav showcase-prev" onclick="moveShowcase(-1)" aria-label="Previous showcase video">‹</button>
-          <button class="showcase-nav showcase-next" onclick="moveShowcase(1)" aria-label="Next showcase video">›</button>
-          <div class="showcase-video-badge">MUTED • <span id="showcaseCounter">01 / 08</span></div>
-          <div class="media-dots showcase-dots"></div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- =============================================================
-         OUR PROCESS
-         ============================================================= -->
-    <section class="section-spacing process-section" id="process">
-      <div class="container">
-        <div class="process-layout">
-          <div class="process-copy reveal">
-            <span class="eyebrow">OUR PROCESS</span>
-            <h2 class="section-title">Maintaining Quality. Delivering Safely.</h2>
-            <p>Every order moves through a controlled process designed to maintain the natural character, finish and consistency of the stone from selection to dispatch.</p>
-            <div class="process-points">
-              <div class="process-point"><span>01</span><div><h3>Quality Selection</h3><p>Stone is checked for material quality, texture, finish, specifications and consistency before it moves forward.</p></div></div>
-              <div class="process-point"><span>02</span><div><h3>Processing &amp; Finishing</h3><p>We focus on accurate processing and the required finish so the material is ready for its intended architectural application.</p></div></div>
-              <div class="process-point"><span>03</span><div><h3>Safe Packaging</h3><p>Finished material is packed carefully for secure handling, loading and transportation, helping protect the stone until it reaches the client.</p></div></div>
-              <div class="process-point"><span>04</span><div><h3>Direct &amp; Reliable Dispatch</h3><p>From our facility to the client, we focus on dependable coordination and safe delivery with attention to every order.</p></div></div>
-            </div>
-            <div class="process-video-note">
-              <strong>Anti-Slip Surface Finish</strong>
-              <p>The stone texture can be processed to create a rougher, slip-resistant surface. This finish is especially useful around swimming pools and other areas where water exposure is high.</p>
-            </div>
-          </div>
-
-          <div class="process-media-wrap reveal">
-            <div class="process-media-slider" id="processSlider">
-              <div class="process-media-track">
-                <div class="process-media-slide active"><img src="assets/our1.webp" alt="Stone processing and quality process 1" width="800" height="533" decoding="async"></div>
-                <div class="process-media-slide"><img src="assets/our2.webp" alt="Stone processing and quality process 2" width="800" height="533" decoding="async"></div>
-                <div class="process-media-slide"><img src="assets/our3.webp" alt="Stone processing and quality process 3" width="800" height="533" decoding="async"></div>
-                <div class="process-media-slide"><img src="assets/our4.webp" alt="Stone processing and quality process 4" width="800" height="533" decoding="async"></div>
-                <div class="process-media-slide"><img src="assets/our5.webp" alt="Stone processing and quality process 5" width="800" height="533" decoding="async"></div>
-                <div class="process-media-slide"><img src="assets/our6.webp" alt="Stone processing and quality process 6" width="800" height="533" decoding="async"></div>
-                <div class="process-media-slide"><img src="assets/our7.webp" alt="Stone processing and quality process 7" width="800" height="533" decoding="async"></div>
-                <div class="process-media-slide"><img src="assets/our8.webp" alt="Stone processing and quality process 8" width="800" height="533" decoding="async"></div>
-                <div class="process-media-slide"><img src="assets/our9.webp" alt="Stone processing and quality process 9" width="800" height="533" decoding="async"></div>
-                <div class="process-media-slide"><img src="assets/our10.webp" alt="Stone processing and quality process 10" width="800" height="533" decoding="async"></div>
-                <div class="process-media-slide"><img src="assets/our11.webp" alt="Stone processing and quality process 11" width="800" height="533" decoding="async"></div>
-                <div class="process-media-slide"><img src="assets/our12.webp" alt="Stone processing and quality process 12" width="800" height="533" decoding="async"></div>
-                <div class="process-media-slide"><img src="assets/our13.webp" alt="Stone processing and quality process 13" width="800" height="533" decoding="async"></div>
-                <div class="process-media-slide"><img src="assets/our14.webp" alt="Stone processing and quality process 14" width="800" height="533" decoding="async"></div>
-                <div class="process-media-slide process-video-slide"><video src="assets/our.mp4" muted playsinline preload="none"></video></div>
-              </div>
-              <button class="media-nav media-prev" onclick="moveProcessSlide(-1)" aria-label="Previous process media">‹</button>
-              <button class="media-nav media-next" onclick="moveProcessSlide(1)" aria-label="Next process media">›</button>
-              <div class="media-counter" id="processCounter">01 / 15</div>
-              <div class="media-dots process-dots"></div>
-            </div>
-            <div class="process-media-caption">QUALITY • FINISHING • PACKAGING • DISPATCH</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =============================================================
-         WHY US
-         ============================================================= -->
+    <!-- WHY US -->
     <section class="section-spacing why-section" id="why-us">
       <div class="container">
         <div class="center reveal">
@@ -3224,31 +2201,16 @@
       </div>
     </section>
 
-    <!-- COMPANY STATS — moved below WHY US -->
     <div class="stats-bar reveal company-stats-after-why">
       <div class="container stats-bar-inner">
-        <div class="stat-item">
-          <span class="stat-value">2005</span>
-          <span class="stat-label">ESTABLISHED</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value">10 Ac.</span>
-          <span class="stat-label">FACILITY AREA</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value">50+</span>
-          <span class="stat-label">EMPLOYEES</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value">100+</span>
-          <span class="stat-label">ANNUAL CONTAINERS</span>
-        </div>
+        <div class="stat-item"><span class="stat-value">2005</span><span class="stat-label">ESTABLISHED</span></div>
+        <div class="stat-item"><span class="stat-value">10 Ac.</span><span class="stat-label">FACILITY AREA</span></div>
+        <div class="stat-item"><span class="stat-value">50+</span><span class="stat-label">EMPLOYEES</span></div>
+        <div class="stat-item"><span class="stat-value">100+</span><span class="stat-label">ANNUAL CONTAINERS</span></div>
       </div>
     </div>
 
-    <!-- =============================================================
-         REVIEWS
-         ============================================================= -->
+    <!-- REVIEWS -->
     <section class="section-spacing reviews-section" id="reviews">
       <div class="container">
         <div class="center reveal">
@@ -3264,9 +2226,7 @@
       </div>
     </section>
 
-    <!-- =============================================================
-         FAQ
-         ============================================================= -->
+    <!-- FAQ -->
     <section class="section-spacing faq-section" id="faq">
       <div class="container">
         <div class="faq-layout">
@@ -3287,9 +2247,7 @@
       </div>
     </section>
 
-    <!-- =============================================================
-         LOCATION / MAP
-         ============================================================= -->
+    <!-- LOCATION -->
     <section class="section-spacing location-section" id="location">
       <div class="container">
         <div class="location-card reveal">
@@ -3315,16 +2273,13 @@
   <footer id="contact">
     <div class="container">
       <div class="footer-grid">
-        <!-- Col 1: Brand & Actions -->
         <div class="footer-brand">
           <h3>Shri Sanwariya Stone Suppliers</h3>
           <p>Premium Indian natural stone for architectural, landscape and export projects.</p>
           <p class="footer-gstin"><strong>GSTIN:</strong> 08ANHPD8308A1ZF</p>
           <div class="footer-cta-buttons">
-            <a href="https://wa.me/919462976734?text=Hello%20Shri%20Sanwariya%20Stone%20Suppliers,%20I%20am%20interested%20in%20your%20natural%20stone%20products." target="_blank" rel="noopener" class="btn-whatsapp">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.184 1.564 5.938l-1.656 6.046 6.196-1.625c1.706.93 3.66 1.463 5.74 1.463 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/>
-              </svg>
+            <a href="https://wa.me/918619392937?text=Hello%20Shri%20Sanwariya%20Stone%20Suppliers,%20I%20am%20interested%20in%20your%20natural%20stone%20products." target="_blank" rel="noopener" class="btn-whatsapp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.184 1.564 5.938l-1.656 6.046 6.196-1.625c1.706.93 3.66 1.463 5.74 1.463 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
               WhatsApp Us
             </a>
             <a href="assets/catalogue.pdf" download class="btn-terracotta pill" style="padding: 9px 20px; font-size: 12.5px;">
@@ -3333,7 +2288,6 @@
           </div>
         </div>
 
-        <!-- Col 2: Products -->
         <div class="footer-col">
           <h4>Collections</h4>
           <ul class="footer-links">
@@ -3347,36 +2301,30 @@
           </ul>
         </div>
 
-        <!-- Col 3: Company -->
         <div class="footer-col">
           <h4>Company</h4>
           <ul class="footer-links">
             <li><a href="#about">About Us</a></li>
             <li><a href="#about">RK Stones Impex</a></li>
             <li><a href="#facilities">Infrastructure</a></li>
-            <li><a href="#story">Vision &amp; Mission</a></li>
-            <li><a href="#showcase">Factory Tour</a></li>
+            <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
 
-        <!-- Col 4: Support & Socials -->
         <div class="footer-col">
           <h4>Support</h4>
           <ul class="footer-links">
             <li><a class="open-enquiry-btn">Contact Us</a></li>
             <li><a class="open-enquiry-btn">Export Inquiries</a></li>
-            <li><a class="open-enquiry-btn">Technical Support</a></li>
-            <li><a href="mailto:info@shrisanwariyastone.com">info@shrisanwariyastone.com</a></li>
+            <li><a href="mailto:armandhakar11@gmail.com">armandhakar11@gmail.com</a></li>
           </ul>
           <div class="footer-social-links">
-            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
-            <a href="https://wa.me/919462976734" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="https://www.instagram.com/rk_stone_impex?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://wa.me/918619392937" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
       </div>
 
-      <!-- Copyright Bottom Bar -->
       <div class="footer-bottom">
         <span>© Shri Sanwariya Stone Suppliers 2026 · All rights reserved.</span>
         <span>Premium Indian Natural Stone · Bijoliya Khurd, Veekam Pura, Rajasthan</span>
@@ -3385,8 +2333,9 @@
   </footer>
 
   <!-- =============================================================
-       ENQUIRY / GET QUOTE MODAL
+       MODALS
        ============================================================= -->
+  <!-- ENQUIRY MODAL -->
   <div class="modal-backdrop" id="enquiryModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeEnquiryModal()" aria-label="Close modal">✕</button>
@@ -3403,11 +2352,11 @@
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
           <div class="form-group">
             <label class="form-label" for="clientPhone">Phone / WhatsApp *</label>
-            <input class="form-input" id="clientPhone" type="tel" placeholder="+91 98765 43210" required>
+            <input class="form-input" id="clientPhone" type="tel" placeholder="+91 86193 92937" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="clientEmail">Email Address</label>
-            <input class="form-input" id="clientEmail" type="email" placeholder="name@domain.com">
+            <input class="form-input" id="clientEmail" type="email" placeholder="armandhakar11@gmail.com">
           </div>
         </div>
 
@@ -3433,9 +2382,7 @@
         <div style="display:flex; gap:12px; margin-top:24px;">
           <button type="submit" class="btn-terracotta pill" style="flex:1; justify-content:center;">Submit Enquiry</button>
           <button type="button" onclick="sendViaWhatsApp()" class="btn-whatsapp" style="padding:11px 18px;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.184 1.564 5.938l-1.656 6.046 6.196-1.625c1.706.93 3.66 1.463 5.74 1.463 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/>
-            </svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.184 1.564 5.938l-1.656 6.046 6.196-1.625c1.706.93 3.66 1.463 5.74 1.463 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
             Send WhatsApp
           </button>
         </div>
@@ -3443,102 +2390,45 @@
     </div>
   </div>
 
-  <!-- =============================================================
-       PRODUCT DETAILS MODAL
-       ============================================================= -->
-  <div class="modal-backdrop" id="productModal">
-    <div class="modal-box" style="max-width: 600px;">
-      <button class="modal-close" onclick="closeProductModal()" aria-label="Close modal">✕</button>
-      <div style="height:240px; border-radius:14px; overflow:hidden; margin-bottom:18px;">
-        <img id="productModalImg" src="" alt="Product view">
-      </div>
-      <span class="eyebrow" id="productModalCategory">Natural Stone Collection</span>
-      <h3 id="productModalTitle" style="font-size:24px; font-weight:700; margin-bottom:8px; color:var(--text-dark);">Product Name</h3>
-      <p id="productModalDesc" style="font-size:14px; color:var(--text-muted); line-height:1.65; margin-bottom:20px;">Detailed description of product features, finishes, calibrations, and uses.</p>
+  <!-- FACTORY / RK STONE IMPEX MODAL -->
+  <div class="modal-backdrop" id="factoryModal">
+    <div class="modal-box factory-modal-box">
+      <button class="modal-close" onclick="closeFactoryModal()" aria-label="Close modal">✕</button>
+      <span class="eyebrow">RK STONE IMPEX</span>
+      <h3 style="font-size:26px; font-weight:800; margin-bottom:8px; color:var(--text-dark);">Our Manufacturing Facility</h3>
+      <p style="font-size:14px; color:var(--text-muted); line-height:1.75; margin-bottom:16px;">
+        Shri Sanwariya Stone is our established sandstone supply business, founded by our father in 2005. Over the years, we have built our experience around sourcing and supplying quality natural sandstone for different projects and customer requirements.
+      </p>
+      <p style="font-size:14px; color:var(--text-muted); line-height:1.75; margin-bottom:16px;">
+        Today, we are taking this business forward with our next-generation approach and our new manufacturing facility, <strong>RK Stone Impex</strong>.
+      </p>
+      <p style="font-size:14px; color:var(--text-muted); line-height:1.75; margin-bottom:16px;">
+        RK Stone Impex is our new factory where we process and prepare sandstone material for our customers. From block cutting to machine cutting, calibration, polishing and other required finishes, we prepare the material according to project specifications and customer requirements.
+      </p>
+      <p style="font-size:14px; color:var(--text-muted); line-height:1.75; margin-bottom:16px;">
+        Together, Shri Sanwariya Stone and RK Stone Impex represent our journey from an established sandstone supply business to a modern processing and manufacturing setup.
+      </p>
+      <p style="font-size:14px; color:var(--text-muted); line-height:1.75; margin-bottom:24px;">
+        Our focus is on consistent quality, accurate finishing, customized sizes, proper packaging and reliable supply for both Indian and international buyers.
+      </p>
 
-      <div style="background:var(--bg-cream-soft); border-radius:12px; padding:15px 18px; margin-bottom:20px; font-size:13px; color:var(--text-dark);">
-        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
-          <strong>Available Finishes:</strong> <span>Natural Split, Honed, Shotblasted, Brushed</span>
-        </div>
-        <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
-          <strong>Export Packaging:</strong> <span>Treated Wooden Crates with Plastic Wrap</span>
-        </div>
-        <div style="display:flex; justify-content:space-between;">
-          <strong>Origin:</strong> <span>Bijoliya Khurd, Veekam Pura, Rajasthan</span>
-        </div>
-      </div>
-
-      <div style="display:flex; gap:12px;">
-        <button onclick="requestProductQuote()" class="btn-terracotta pill" style="flex:1; justify-content:center;">Request Samples / Quote</button>
-        <button onclick="closeProductModal()" class="btn-outline">Close</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- =============================================================
-       INTERACTIVE STONE DETAIL MODAL (15 SWATCHES)
-       ============================================================= -->
-  <div class="modal-backdrop" id="stoneModal">
-    <div class="modal-box" style="max-width: 680px;">
-      <button class="modal-close" onclick="closeStoneModal()" aria-label="Close modal">✕</button>
-      
-      <div class="modal-stone-layout">
-        <div class="modal-img-wrap" style="aspect-ratio:1/1; overflow:hidden; border-radius:10px;">
-          <img id="modalStoneImg" src="" alt="Stone Swatch" style="width:100%; height:100%; object-fit:cover;">
-        </div>
-
-        <div>
-          <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-            <span id="modalStoneCode" class="stone-code"></span>
-            <span id="modalStoneBadge" class="founding-badge" style="display:none;">FOUNDING</span>
-          </div>
-
-          <h2 id="modalStoneTitle" style="font-family:'Playfair Display',serif; font-size:24px; font-weight:700; margin-bottom:8px; color:var(--text-dark);"></h2>
-          <p id="modalStoneDesc" style="font-size:13.5px; color:var(--text-muted); line-height:1.6; margin-bottom:16px;"></p>
-
-          <div style="background:var(--bg-cream-soft); padding:14px 16px; border-radius:8px; border:1px solid var(--border-warm); margin-bottom:18px;">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:12px;">
-              <div>
-                <strong style="display:block; color:var(--text-muted); font-size:10px; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:3px;">Quarry Origin:</strong>
-                <span id="modalStoneOrigin" style="font-weight:700; color:var(--text-dark);"></span>
-              </div>
-              <div>
-                <strong style="display:block; color:var(--text-muted); font-size:10px; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:3px;">Scope / Formats:</strong>
-                <span id="modalStoneScope" style="font-weight:700; color:var(--text-dark);"></span>
-              </div>
-            </div>
-          </div>
-
-          <div style="font-size:12px; color:var(--text-muted); margin-bottom:20px;">
-            <strong style="color:var(--text-dark);">Available In:</strong> Sandstone Pavers, Copings, Step Treads, Cobbles &amp; Sets, Radial Circles, and Heritage Roofing.
-          </div>
-
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <a id="modalWhatsAppBtn" href="#" target="_blank" rel="noopener" class="btn-whatsapp" style="padding:10px 18px; font-size:12.5px;">Enquire on WhatsApp</a>
-            <button id="modalQuoteBtn" class="btn-terracotta pill" style="padding:10px 18px; font-size:12.5px;" onclick="openEnquiryModalForCurrentStone()">Request Sample</button>
-          </div>
-        </div>
+      <h4 style="font-size:18px; font-weight:700; margin-bottom:12px; color:var(--text-dark);">Factory Gallery (RK Stones Impex)</h4>
+      <div class="factory-gallery-grid">
+        <div class="factory-gallery-item"><img src="assets/rk1.webp" alt="RK Stone Impex factory view 1" loading="lazy"></div>
+        <div class="factory-gallery-item"><img src="assets/rk2.jpeg" alt="RK Stone Impex factory view 2" loading="lazy"></div>
+        <div class="factory-gallery-item"><img src="assets/rk3.jpeg" alt="RK Stone Impex factory view 3" loading="lazy"></div>
+        <div class="factory-gallery-item"><img src="assets/rk4.jpeg" alt="RK Stone Impex factory view 4" loading="lazy"></div>
+        <div class="factory-gallery-item"><img src="assets/rk5.jpeg" alt="RK Stone Impex factory view 5" loading="lazy"></div>
+        <div class="factory-gallery-item"><img src="assets/rk6.jpeg" alt="RK Stone Impex factory view 6" loading="lazy"></div>
+        <div class="factory-gallery-item"><img src="assets/rk7.jpeg" alt="RK Stone Impex factory view 7" loading="lazy"></div>
+        <div class="factory-gallery-item"><img src="assets/rk8.jpeg" alt="RK Stone Impex factory view 8" loading="lazy"></div>
+        <div class="factory-gallery-item"><img src="assets/rk9.jpeg" alt="RK Stone Impex factory view 9" loading="lazy"></div>
       </div>
     </div>
   </div>
 
-  <!-- =============================================================
-       VIDEO LIGHTBOX MODAL
-       ============================================================= -->
-  <div class="modal-backdrop" id="videoModal">
-    <div class="video-modal-box">
-      <button class="modal-close" onclick="closeVideoModal()" style="z-index:10; color:#fff; background:rgba(0,0,0,0.6);" aria-label="Close video">✕</button>
-      <div class="video-wrapper">
-        <iframe id="videoIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-
-  <!-- =============================================================
-       JAVASCRIPT INTERACTIONS
-       ============================================================= -->
+  <!-- SCRIPT -->
   <script>
-    // IntersectionObserver for scroll animations
     if ('IntersectionObserver' in window) {
       const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -3552,7 +2442,6 @@
       document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
     }
 
-    // Mobile Menu Toggle
     const menuToggle = document.getElementById('menuToggle');
     const mobileDrawer = document.getElementById('mobileDrawer');
 
@@ -3568,17 +2457,15 @@
       });
     });
 
-    // Dropdown toggle on mobile/touch
     const dropdown = document.querySelector('.dropdown');
     if (dropdown) {
-      dropdown.addEventListener('click', (e) => {
+      dropdown.addEventListener('click', () => {
         if (window.innerWidth <= 860) {
           dropdown.classList.toggle('open');
         }
       });
     }
 
-    // Enquiry Modal Handling
     const enquiryModal = document.getElementById('enquiryModal');
     const openEnquiryButtons = document.querySelectorAll('.open-enquiry-btn');
 
@@ -3621,279 +2508,35 @@
       const msg = document.getElementById('clientMessage').value || '';
       
       const whatsappText = `Hello Shri Sanwariya Stone Suppliers,%0A%0AMy Name: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AProduct: ${encodeURIComponent(product)}%0ADetails: ${encodeURIComponent(msg)}`;
-      window.open(`https://wa.me/919462976734?text=${whatsappText}`, '_blank');
+      window.open(`https://wa.me/918619392937?text=${whatsappText}`, '_blank');
     }
 
-    // Product Modal Handling
-    const productModal = document.getElementById('productModal');
-    let currentSelectedProduct = '';
-
-    function openProductModal(name, imgUrl, description) {
-      currentSelectedProduct = name;
-      document.getElementById('productModalTitle').textContent = name;
-      document.getElementById('productModalImg').src = imgUrl;
-      document.getElementById('productModalDesc').textContent = description;
-      productModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeProductModal() {
-      productModal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    function requestProductQuote() {
-      closeProductModal();
-      setTimeout(() => {
-        openEnquiryModal(currentSelectedProduct);
-      }, 250);
-    }
-
-    // Video Lightbox Modal Handling
-    const videoModal = document.getElementById('videoModal');
-    const videoIframe = document.getElementById('videoIframe');
-
-    function openVideoModal(title, videoSrc) {
-      videoIframe.src = videoSrc;
-      videoModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeVideoModal() {
-      videoModal.classList.remove('active');
-      videoIframe.src = '';
-      document.body.style.overflow = '';
-    }
-
-    // =============================================================
-    // NATURAL SANDSTONE COLORS (15 SWATCHES) DATA & MODAL LOGIC
-    // =============================================================
-    const STONES_DATA = [
-      {
-        code: "KHD-0-01",
-        title: "Khadipur Grey",
-        isFounding: false,
-        desc: "A cool, restrained grey from the Khadipur block of the Bijolia belt.",
-        origin: "Bhilwara District",
-        scope: "All 21 formats",
-        img: "assets/khadipur-grey-swatch-main.webp"
-      },
-      {
-        code: "KHD-0-02",
-        title: "Kandla Grey",
-        isFounding: true,
-        desc: "The founding stone. Worked since 1972 across the Bijolia belt.",
-        origin: "Bundi District",
-        scope: "All 21 formats",
-        img: "assets/kandla-grey-swatch-main.webp"
-      },
-      {
-        code: "KHD-0-03",
-        title: "York Grey",
-        isFounding: false,
-        desc: "The warm-brown anchor of the Bijolia belt — Nayanagar quarry, since the 1980s.",
-        origin: "Bhilwara District",
-        scope: "All 21 formats",
-        img: "assets/autumn-brown-swatch-main.webp"
-      },
-      {
-        code: "KHD-0-04",
-        title: "Raj Blend",
-        isFounding: false,
-        desc: "A naturally variegated warm bed from the Bijolia tehsil.",
-        origin: "Bhilwara District",
-        scope: "All 21 formats",
-        img: "assets/raj-blend-swatch-main.webp"
-      },
-      {
-        code: "KHD-0-05",
-        title: "Garda Green",
-        isFounding: false,
-        desc: "A sage-to-khaki green from the family's owned Garda block, Bundi District.",
-        origin: "Bundi District",
-        scope: "All 21 formats",
-        img: "assets/garda-green-swatch-main.webp"
-      },
-      {
-        code: "KHD-0-06",
-        title: "Slate Grey",
-        isFounding: true,
-        desc: "A dark, uniform grey from the founding-era Bundi blocks. Since 1972.",
-        origin: "Bundi District",
-        scope: "All 21 formats",
-        img: "assets/slate-grey-swatch-main.webp"
-      },
-      {
-        code: "KHD-0-07",
-        title: "Raveena",
-        isFounding: false,
-        desc: "A pale celadon-mint from the Khokri block. Worked since the 1990s.",
-        origin: "Bhilwara District",
-        scope: "All 21 formats",
-        img: "assets/raveena-swatch-main.webp"
-      },
-      {
-        code: "KHD-0-08",
-        title: "Mint",
-        isFounding: false,
-        desc: "The fossil-bearing mint bed. Marine impressions across selected slabs.",
-        origin: "Bhilwara District",
-        scope: "All 21 formats",
-        img: "assets/mint-swatch-main.webp"
-      },
-      {
-        code: "KHD-0-09",
-        title: "Buff",
-        isFounding: false,
-        desc: "A pale yellow-beige from the family's Bhootii block and the wider Bijolia tehsil.",
-        origin: "Bhilwara District",
-        scope: "All 21 formats",
-        img: "assets/buff-swatch-main.webp"
-      },
-      {
-        code: "KHD-0-10",
-        title: "Camel Dust",
-        isFounding: false,
-        desc: "A tan-to-camel mid-tone from the Bijolia tehsil. Bhootii and beyond.",
-        origin: "Bhilwara District",
-        scope: "All 21 formats",
-        img: "assets/camel-dust-swatch-main.webp"
-      },
-      {
-        code: "KHD-0-11",
-        title: "Red Choco",
-        isFounding: false,
-        desc: "A deep cocoa-red from the Kasiriya block. Renamed from the trade's Kasariya Red.",
-        origin: "Bhilwara District",
-        scope: "All 21 formats",
-        img: "assets/red-choco-swatch-main.webp"
-      },
-      {
-        code: "KHD-0-12",
-        title: "Dual Tone",
-        isFounding: false,
-        desc: "Buff and dove-grey in a single slab. The UK trade's Indian York.",
-        origin: "Bhilwara District",
-        scope: "All 21 formats",
-        img: "assets/dual-tone-swatch-main.webp"
-      },
-      {
-        code: "KHD-0-13",
-        title: "Mocha Blend",
-        isFounding: false,
-        desc: "Honey, walnut, cinnamon, cocoa — the variegated brown bed of three KHADANE blocks.",
-        origin: "Bhilwara District",
-        scope: "All 21 formats",
-        img: "assets/mocha-blend-swatch-main.webp"
-      },
-      {
-        code: "KHD-0-14",
-        title: "Rainbow",
-        isFounding: false,
-        desc: "The full-spectrum variegated bed. Warm and cool tones blend across each piece; no two alike.",
-        origin: "Bhilwara District",
-        scope: "All 21 formats",
-        img: "assets/rainbow-swatch-main.webp"
-      },
-      {
-        code: "KHD-0-15",
-        title: "White",
-        isFounding: false,
-        desc: "A pale, cool-toned quartzitic sandstone. The tightest stone in the owned range.",
-        origin: "Bijolia belt",
-        scope: "Full format range — on enquiry",
-        img: "assets/white-swatch-main.webp"
-      }
-    ];
-
-    const stoneModal = document.getElementById('stoneModal');
-    let currentSelectedStone = null;
-
-    function openStoneModal(index) {
-      const stone = STONES_DATA[index];
-      if (!stone) return;
-      currentSelectedStone = stone;
-
-      document.getElementById('modalStoneImg').src = stone.img;
-      document.getElementById('modalStoneCode').innerText = stone.code;
-      document.getElementById('modalStoneTitle').innerText = stone.title;
-      document.getElementById('modalStoneDesc').innerText = stone.desc;
-      document.getElementById('modalStoneOrigin').innerText = stone.origin;
-      document.getElementById('modalStoneScope').innerText = stone.scope;
-
-      const badge = document.getElementById('modalStoneBadge');
-      if (stone.isFounding) {
-        badge.style.display = 'inline-block';
-      } else {
-        badge.style.display = 'none';
-      }
-
-      const waMsg = encodeURIComponent(`Hello Shri Sanwariya Stone, I am interested in ${stone.title} (${stone.code}) from ${stone.origin}. Please provide pricing and sample availability.`);
-      document.getElementById('modalWhatsAppBtn').href = `https://wa.me/919462976734?text=${waMsg}`;
-
-      stoneModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeStoneModal() {
-      if (stoneModal) stoneModal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    function openEnquiryModalForCurrentStone() {
-      closeStoneModal();
-      if (currentSelectedStone) {
-        setTimeout(() => {
-          openEnquiryModal('Natural Sandstone Colors - ' + currentSelectedStone.title + ' (' + currentSelectedStone.code + ')');
-        }, 250);
+    function openFactoryModal() {
+      const m = document.getElementById('factoryModal');
+      if (m) {
+        m.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
     }
 
-    // Progressive Chunk Observer for Stone Colors
-    let stoneSentinelObserver = null;
-    function revealAllStoneChunks() {
-      const hiddenCards = document.querySelectorAll('.color-stone-card.stone-chunk-hidden');
-      hiddenCards.forEach(c => c.classList.remove('stone-chunk-hidden'));
-      if (stoneSentinelObserver) {
-        stoneSentinelObserver.disconnect();
-        stoneSentinelObserver = null;
+    function closeFactoryModal() {
+      const m = document.getElementById('factoryModal');
+      if (m) {
+        m.classList.remove('active');
+        document.body.style.overflow = '';
       }
-    }
-
-    function initStoneObserver() {
-      const sentinel = document.getElementById('stoneGridSentinel');
-      if (!sentinel || !('IntersectionObserver' in window)) {
-        revealAllStoneChunks();
-        return;
-      }
-      stoneSentinelObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            revealAllStoneChunks();
-          }
-        });
-      }, { rootMargin: '250px' });
-      stoneSentinelObserver.observe(sentinel);
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initStoneObserver);
-    } else {
-      initStoneObserver();
     }
 
     function showAllStoneVarieties() {
       document.querySelectorAll('.color-stone-card.main-hidden').forEach(card => {
         card.classList.remove('main-hidden');
       });
-
       const wrap = document.getElementById('viewAllVarietiesWrap');
       if (wrap) wrap.style.display = 'none';
     }
 
     function filterCategory(cat, btn) {
-      revealAllStoneChunks();
-
+      showAllStoneVarieties();
       document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
       if (btn) btn.classList.add('active');
 
@@ -3908,7 +2551,7 @@
     }
 
     function handleSearch(query) {
-      revealAllStoneChunks();
+      showAllStoneVarieties();
       if (query.trim()) showAllStoneVarieties();
 
       const q = query.toLowerCase().trim();
@@ -3924,77 +2567,15 @@
       });
     }
 
-    // Close modals on backdrop click
-    [enquiryModal, productModal, videoModal, stoneModal].forEach(modal => {
+    [enquiryModal, document.getElementById('factoryModal')].forEach(modal => {
       if (!modal) return;
       modal.addEventListener('click', (e) => {
         if (e.target === modal) {
           modal.classList.remove('active');
           document.body.style.overflow = '';
-          if (modal === videoModal) videoIframe.src = '';
         }
       });
     });
-
-    // Team carousel in How It All Started section
-    let currentTeamIdx = 0;
-    const teamSlides = document.querySelectorAll('.team-slide');
-    const teamDots = document.querySelectorAll('.team-dot');
-
-    function showTeamSlide(idx) {
-      if (!teamSlides.length) return;
-      currentTeamIdx = idx % teamSlides.length;
-      teamSlides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === currentTeamIdx);
-      });
-      teamDots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentTeamIdx);
-      });
-    }
-
-    if (teamSlides.length > 1) {
-      setInterval(() => {
-        showTeamSlide(currentTeamIdx + 1);
-      }, 4500);
-    }
-
-    /* ---- Story / Leadership Modal ---- */
-    function openStoryModal() {
-      const m = document.getElementById('storyModal');
-      if (m) { m.classList.add('active'); document.body.style.overflow = 'hidden'; }
-    }
-    function closeStoryModal() {
-      const m = document.getElementById('storyModal');
-      if (m) { m.classList.remove('active'); document.body.style.overflow = ''; }
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-      const sm = document.getElementById('storyModal');
-      if (sm) {
-        sm.addEventListener('click', function(e) {
-          if (e.target === sm) closeStoryModal();
-        });
-      }
-    });
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeStoryModal();
-    });
-  
-    /* =============================================================
-       NEW MANUAL MEDIA SLIDERS + FAQ
-       ============================================================= */
-    function setupDots(containerSelector, count, activeIndex, callback) {
-      const container = document.querySelector(containerSelector);
-      if (!container) return;
-      container.innerHTML = '';
-      for (let i = 0; i < count; i++) {
-        const b = document.createElement('button');
-        b.type = 'button';
-        b.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-        b.className = i === activeIndex ? 'active' : '';
-        b.addEventListener('click', () => callback(i));
-        container.appendChild(b);
-      }
-    }
 
     let heroIndex = 0;
     const heroSlides = document.querySelectorAll('.hero-slide');
@@ -4007,81 +2588,6 @@
     }
     if (heroSlides.length > 1) setInterval(() => showHeroSlide(heroIndex + 1), 5000);
 
-    let rkIndex = 0;
-    const rkSlides = document.querySelectorAll('.rk-slide');
-    function showRKSlide(index) {
-      if (!rkSlides.length) return;
-      rkIndex = (index + rkSlides.length) % rkSlides.length;
-      rkSlides.forEach((s,i) => s.classList.toggle('active', i === rkIndex));
-      const counter = document.getElementById('rkCounter');
-      if (counter) counter.textContent = String(rkIndex + 1).padStart(2,'0') + ' / ' + String(rkSlides.length).padStart(2,'0');
-      document.querySelectorAll('.rk-dots button').forEach((d,i) => d.classList.toggle('active', i === rkIndex));
-    }
-    function moveRKSlide(step) { showRKSlide(rkIndex + step); }
-
-    let showcaseIndex = 0;
-    const showcaseSlides = document.querySelectorAll('.showcase-video-slide');
-    function resetShowcaseVideo(slide) {
-      const v = slide ? slide.querySelector('video') : null;
-      const btn = slide ? slide.querySelector('.showcase-play-btn') : null;
-      if (v) { v.pause(); v.currentTime = 0; v.muted = true; }
-      if (btn) {
-        btn.classList.remove('is-playing');
-        btn.setAttribute('aria-label', 'Play showcase video');
-        btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>';
-      }
-    }
-    function showShowcase(index) {
-      if (!showcaseSlides.length) return;
-      showcaseIndex = (index + showcaseSlides.length) % showcaseSlides.length;
-      showcaseSlides.forEach((s,i) => {
-        s.classList.toggle('active', i === showcaseIndex);
-        resetShowcaseVideo(s);
-      });
-      const counter = document.getElementById('showcaseCounter');
-      if (counter) counter.textContent = String(showcaseIndex + 1).padStart(2,'0') + ' / ' + String(showcaseSlides.length).padStart(2,'0');
-      document.querySelectorAll('.showcase-dots button').forEach((d,i) => d.classList.toggle('active', i === showcaseIndex));
-    }
-    function toggleShowcaseVideo(index, button) {
-      const slide = showcaseSlides[index];
-      if (!slide) return;
-      const video = slide.querySelector('video');
-      if (!video) return;
-
-      showcaseSlides.forEach((s,i) => { if (i !== index) resetShowcaseVideo(s); });
-      if (video.paused) {
-        video.muted = true;
-        video.play().then(() => {
-          button.classList.add('is-playing');
-          button.setAttribute('aria-label', 'Pause showcase video');
-          button.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"></path></svg>';
-        }).catch(() => {});
-      } else {
-        video.pause();
-        button.classList.remove('is-playing');
-        button.setAttribute('aria-label', 'Play showcase video');
-        button.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>';
-      }
-      video.onended = () => resetShowcaseVideo(slide);
-    }
-    function moveShowcase(step) { showShowcase(showcaseIndex + step); }
-
-    let processIndex = 0;
-    const processSlides = document.querySelectorAll('.process-media-slide');
-    function showProcessSlide(index) {
-      if (!processSlides.length) return;
-      processIndex = (index + processSlides.length) % processSlides.length;
-      processSlides.forEach((s,i) => {
-        s.classList.toggle('active', i === processIndex);
-        const v = s.querySelector('video');
-        if (v) { v.muted = true; if (i !== processIndex) { v.pause(); v.currentTime = 0; } else { v.play().catch(() => {}); } }
-      });
-      const counter = document.getElementById('processCounter');
-      if (counter) counter.textContent = String(processIndex + 1).padStart(2,'0') + ' / ' + String(processSlides.length).padStart(2,'0');
-      document.querySelectorAll('.process-dots button').forEach((d,i) => d.classList.toggle('active', i === processIndex));
-    }
-    function moveProcessSlide(step) { showProcessSlide(processIndex + step); }
-
     function toggleFaq(button) {
       const item = button.closest('.faq-item');
       if (!item) return;
@@ -4089,100 +2595,6 @@
       document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
       if (!wasActive) item.classList.add('active');
     }
-
-    setupDots('.rk-dots', rkSlides.length, 0, showRKSlide);
-    setupDots('.showcase-dots', showcaseSlides.length, 0, showShowcase);
-    setupDots('.process-dots', processSlides.length, 0, showProcessSlide);
-    showRKSlide(0);
-    showShowcase(0);
-    showProcessSlide(0);
-
-    // Keep showcase/process videos muted for mobile/browser autoplay policy.
-    document.querySelectorAll('.showcase-video-slide video, .process-media-slide video').forEach(v => {
-      v.muted = true;
-      v.setAttribute('muted','');
-      v.setAttribute('playsinline','');
-    });
-
-</script>
-  <!-- =============================================================
-       LEADERSHIP / DISCOVER OUR STORY MODAL
-       ============================================================= -->
-  <div class="modal-backdrop" id="storyModal">
-    <div class="modal-box story-modal-box">
-      <button class="modal-close" onclick="closeStoryModal()" aria-label="Close modal">✕</button>
-      <span class="eyebrow">OUR VISION &amp; LEADERSHIP</span>
-      <h3 style="font-size:26px; font-weight:800; margin-bottom:4px; color:var(--text-dark);">How It All Started</h3>
-      <p style="font-size:13px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent-amber); margin-bottom:24px;">Behind the Vision, Business, Leadership and Quality — SHRI SANWARIYA STONE</p>
-
-      <div class="story-leaders-grid">
-
-        <!-- Leader 1 -->
-        <div class="story-leader-card">
-          <div class="story-leader-img">
-            <img src="assets/team-dinesh-kumar-dhaakad.webp" alt="Mr. Dinesh Kumar Dhakad" width="400" height="400" loading="lazy" decoding="async">
-          </div>
-          <div class="story-leader-info">
-            <span class="leader-badge" style="background:rgba(217,147,41,0.15); color:var(--accent-amber); padding:4px 12px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px; display:inline-block;">Established Experience Since 2001</span>
-            <h4>Mr. Dinesh Kumar Dhakad</h4>
-            <div class="story-leader-role">Managing Director &amp; Owner</div>
-            <div class="story-leader-desc">
-              <p>Mr. Dinesh Kumar Dhakad is the Managing Director and Owner of Shri Sanwariya Stone, with experience in the sandstone mining industry since 2001.</p>
-              <p>Since the beginning of his journey, he has been involved in sandstone mining operations, gaining extensive practical knowledge of natural sandstone, mining processes, stone quality and the selection of suitable raw material.</p>
-              <p>With years of experience in the sandstone industry, his focus has remained on quality, reliable material and consistent standards. His experience in sandstone mining has provided a strong foundation for the company's work in natural stone.</p>
-              <p>Today, Shri Sanwariya Stone carries forward this experience with a focus on supplying quality sandstone and maintaining reliable standards from the mining stage onward.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Leader 2 -->
-        <div class="story-leader-card">
-          <div class="story-leader-img">
-            <img src="assets/team-arman-dhakar.webp" alt="Arman Dhakad" width="400" height="400" loading="lazy" decoding="async">
-          </div>
-          <div class="story-leader-info">
-            <span class="leader-badge" style="background:rgba(217,147,41,0.15); color:var(--accent-amber); padding:4px 12px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px; display:inline-block;">Second Generation Leadership</span>
-            <h4>Arman Dhakad</h4>
-            <div class="story-leader-role">Director – Leadership &amp; Business Development</div>
-            <div class="story-leader-desc">
-              <p>I am Arman Dhakad, representing the second generation of our family business. Since 2024, I have taken an active role in expanding the business with a modern approach and connecting our products directly with buyers through online platforms.</p>
-              <p><strong>Our Own Mines &amp; Factory:</strong> We operate our own sandstone mining business, Shri Sanwariya Sandstone Supplier, along with our own processing and manufacturing facility, RK Stone Impex. Having our own mining and manufacturing setup allows us to maintain better control over quality, processing, finishing, and supply.</p>
-              <p><strong>Direct-to-Client Model:</strong> We work directly with our clients without unnecessary middlemen, providing reasonable, transparent pricing and delivering genuine value without price markups.</p>
-              <p><strong>Our Vision:</strong> Our goal is to take our sandstone products beyond local markets and connect directly with buyers across India and worldwide. We focus on consistency, quality, commitment, and long-term business relationships.</p>
-              <blockquote class="story-quote">"Building on our family legacy since 2005, while creating a stronger and more connected future for RK Sandstone."</blockquote>
-            </div>
-          </div>
-        </div>
-
-        <!-- Leader 3 -->
-        <div class="story-leader-card">
-          <div class="story-leader-img">
-            <img src="assets/team-jaswant-dhakad.webp" alt="Jaswant Dhakad" width="400" height="400" loading="lazy" decoding="async">
-          </div>
-          <div class="story-leader-info">
-            <span class="leader-badge" style="background:rgba(217,147,41,0.15); color:var(--accent-amber); padding:4px 12px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px; display:inline-block;">Premium Quality Control</span>
-            <h4>Jaswant Dhakad</h4>
-            <div class="story-leader-role">Director – Quality &amp; Operations</div>
-            <div class="story-leader-desc">
-              <p>Mr. Jaswant Dhakad, son of Mr. Hari Shankar Dhakad, is a key member of our team and plays an important role in managing our day-to-day operations and coordinating the entire team.</p>
-              <p>He is responsible for maintaining our focus on premium quality and consistent standards throughout the production and dispatch process. Before any material leaves the factory, Jaswant personally ensures that the product is properly checked for quality, finishing, specifications, and overall presentation.</p>
-              <p style="font-weight:700; color:var(--text-dark); margin-bottom:8px;">Key Responsibilities:</p>
-              <ul class="story-resp-list">
-                <li><span>✓</span> Managing and coordinating the team</li>
-                <li><span>✓</span> Monitoring production and day-to-day operations</li>
-                <li><span>✓</span> Maintaining premium quality standards</li>
-                <li><span>✓</span> Final inspection before material dispatch</li>
-                <li><span>✓</span> Checking finishing and product quality</li>
-                <li><span>✓</span> Ensuring consistency in every order</li>
-                <li><span>✓</span> Helping maintain long-term customer trust</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
+  </script>
 </body>
 </html>
