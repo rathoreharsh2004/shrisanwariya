@@ -624,6 +624,25 @@
     .rd-story-content .btn-light-outline:hover span { transform: translateX(4px); }
 
     /* STATS BAR */
+    .company-stats-after-why {
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--border-warm);
+      border-bottom: 1px solid var(--border-warm);
+    }
+    .company-stats-after-why .stats-bar-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 30px 0;
+    }
+    .footer-gstin {
+      margin-top: 12px;
+      font-size: 12px !important;
+      letter-spacing: .03em;
+      color: rgba(255,255,255,.72) !important;
+    }
+    .footer-gstin strong { color: #fff; }
+
     .stats-bar {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -1905,6 +1924,10 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
       }
+      .company-stats-after-why .stats-bar-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
       .stat-item:nth-child(2)::after {
         display: none;
       }
@@ -1928,6 +1951,10 @@
       }
       .stats-bar {
         grid-template-columns: 1fr;
+      }
+      .company-stats-after-why .stats-bar-inner {
+        grid-template-columns: 1fr;
+        gap: 0;
       }
       .stat-item::after {
         display: none !important;
@@ -2354,14 +2381,14 @@
           <h2 class="section-title">RK STONE IMPEX</h2>
           <p class="section-subtitle">The dedicated display brand of Shri Sanwariya Stone Suppliers. Experience our diverse showcase in Bijoliya Khurd, Rajasthan.</p>
         </div>
-        <!-- Our Story / RK Stone Impex Intro -->
+        <!-- Our Story / RK Stone Impex Intro — single full-width background image, no right-side gallery -->
         <div class="rd-story-banner reveal">
           <div class="rd-story-overlay"></div>
           <div class="rd-story-content">
             <span class="eyebrow light">OUR STORY • RK STONE IMPEX</span>
-            <h3>Experience Our World</h3>
-            <p>RK Sandstone is a family-run sandstone business based in Bijoliya, Rajasthan, India, with a strong foundation in the natural stone industry.</p>
-            <p>The Dhakad family has been associated with the sandstone business since 2005, with the experience and foundation built by Mr. Dinesh Kumar Dhakad. From quarry selection to precision calibration, custom architectural fabrication and global dispatch, our legacy blends generational stone mastery with modern export quality.</p>
+            <h3>From Shri Sanwariya Stone to RK Stone Impex</h3>
+            <p>Shri Sanwariya Stone is our established sandstone supply business, founded by our father in 2005. Over the years, we have built our experience around sourcing and supplying quality natural sandstone for different projects and customer requirements.</p>
+            <p>Today, we are taking this business forward with our next-generation approach and our new manufacturing facility, RK Stone Impex.</p>
             <a href="pages/our-story.html" class="btn-light-outline">KNOW MORE <span>→</span></a>
           </div>
         </div>
@@ -2462,7 +2489,7 @@
               <div class="stone-code-row">
                 <span class="stone-code">KHD-0-03</span>
               </div>
-              <h3 class="stone-title">Autumn Brown </h3>
+              <h3 class="stone-title">York Grey</h3>
               <p class="stone-description">The warm-brown anchor of the Bijolia belt — Nayanagar quarry, since the 1980s.</p>
               <div class="stone-meta-grid">
                 <div class="meta-col">
@@ -3124,26 +3151,6 @@
     </section>
 
 
-        <!-- COMPANY STATS -->
-        <div class="stats-bar reveal">
-          <div class="stat-item">
-            <span class="stat-value">2005</span>
-            <span class="stat-label">ESTABLISHED</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">10 Ac.</span>
-            <span class="stat-label">FACILITY AREA</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">50+</span>
-            <span class="stat-label">EMPLOYEES</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">100+</span>
-            <span class="stat-label">ANNUAL CONTAINERS</span>
-          </div>
-        </div>
-
     <!-- =============================================================
          OUR PROCESS
          ============================================================= -->
@@ -3216,6 +3223,28 @@
         </div>
       </div>
     </section>
+
+    <!-- COMPANY STATS — moved below WHY US -->
+    <div class="stats-bar reveal company-stats-after-why">
+      <div class="container stats-bar-inner">
+        <div class="stat-item">
+          <span class="stat-value">2005</span>
+          <span class="stat-label">ESTABLISHED</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">10 Ac.</span>
+          <span class="stat-label">FACILITY AREA</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">50+</span>
+          <span class="stat-label">EMPLOYEES</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">100+</span>
+          <span class="stat-label">ANNUAL CONTAINERS</span>
+        </div>
+      </div>
+    </div>
 
     <!-- =============================================================
          REVIEWS
@@ -3290,6 +3319,7 @@
         <div class="footer-brand">
           <h3>Shri Sanwariya Stone Suppliers</h3>
           <p>Premium Indian natural stone for architectural, landscape and export projects.</p>
+          <p class="footer-gstin"><strong>GSTIN:</strong> 08ANHPD8308A1ZF</p>
           <div class="footer-cta-buttons">
             <a href="https://wa.me/919462976734?text=Hello%20Shri%20Sanwariya%20Stone%20Suppliers,%20I%20am%20interested%20in%20your%20natural%20stone%20products." target="_blank" rel="noopener" class="btn-whatsapp">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
