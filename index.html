@@ -575,6 +575,54 @@
       line-height: 1.4;
     }
 
+    /* OUR STORY / RK STONE IMPEX BANNER */
+    .rd-story-banner {
+      position: relative;
+      min-height: 520px;
+      margin-top: 50px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: #211a15 url('assets/rk1.webp') center/cover no-repeat;
+      box-shadow: 0 22px 55px rgba(0,0,0,.16);
+      display: flex;
+      align-items: center;
+    }
+    .rd-story-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(20,15,12,.88) 0%, rgba(20,15,12,.68) 48%, rgba(20,15,12,.25) 100%);
+    }
+    .rd-story-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      padding: 70px 64px;
+      color: #fff;
+    }
+    .rd-story-content h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(32px, 4vw, 54px);
+      line-height: 1.08;
+      margin: 10px 0 20px;
+      color: #fff;
+      letter-spacing: -.02em;
+    }
+    .rd-story-content p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: rgba(255,255,255,.86);
+      margin-bottom: 15px;
+      max-width: 660px;
+    }
+    .rd-story-content .btn-light-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .rd-story-content .btn-light-outline span { transition: transform .25s ease; }
+    .rd-story-content .btn-light-outline:hover span { transform: translateX(4px); }
+
     /* STATS BAR */
     .stats-bar {
       display: grid;
@@ -1467,6 +1515,13 @@
       color: #E2D9D0;
     }
 
+    @media (max-width: 760px) {
+      .rd-story-banner { min-height: 560px; background-position: 60% center; }
+      .rd-story-overlay { background: linear-gradient(180deg, rgba(20,15,12,.68), rgba(20,15,12,.92)); }
+      .rd-story-content { padding: 48px 28px; }
+      .rd-story-content p { font-size: 14px; line-height: 1.7; }
+    }
+
     @media (max-width: 960px) {
       .leadership-grid {
         grid-template-columns: 1fr;
@@ -2075,6 +2130,30 @@
     .showcase-video-slide { opacity:0; visibility:hidden; transition:opacity .5s ease; }
     .showcase-video-slide.active { opacity:1; visibility:visible; }
     .showcase-video-slide video { width:100%; height:100%; object-fit:cover; display:block; }
+    .showcase-play-btn {
+      position:absolute;
+      z-index:6;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      width:72px;
+      height:72px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.45);
+      background:rgba(255,255,255,.94);
+      color:var(--bg-dark);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      box-shadow:0 14px 35px rgba(0,0,0,.35);
+      transition:transform .25s ease, background .25s ease, opacity .25s ease;
+    }
+    .showcase-play-btn:hover { transform:translate(-50%,-50%) scale(1.1); background:var(--terracotta); }
+    .showcase-play-btn svg { width:25px; height:25px; fill:currentColor; margin-left:3px; }
+    .showcase-play-btn.is-playing { background:var(--terracotta); color:#fff; }
+    .showcase-play-btn.is-playing svg { margin-left:0; }
+
     .showcase-video-badge { position:absolute; z-index:5; top:16px; left:16px; background:rgba(20,15,12,.72); color:#fff; border:1px solid rgba(255,255,255,.18); padding:7px 11px; border-radius:999px; font-size:10px; font-weight:700; letter-spacing:.12em; backdrop-filter:blur(8px); }
 
     .process-section { background:var(--bg-cream-soft); }
@@ -2275,56 +2354,15 @@
           <h2 class="section-title">RK STONE IMPEX</h2>
           <p class="section-subtitle">The dedicated display brand of Shri Sanwariya Stone Suppliers. Experience our diverse showcase in Bijoliya Khurd, Rajasthan.</p>
         </div>
-
-        <!-- 2-Column Intro -->
-        <div class="rd-grid reveal">
-          <div class="rd-copy">
+        <!-- Our Story / RK Stone Impex Intro -->
+        <div class="rd-story-banner reveal">
+          <div class="rd-story-overlay"></div>
+          <div class="rd-story-content">
+            <span class="eyebrow light">OUR STORY • RK STONE IMPEX</span>
             <h3>Experience Our World</h3>
             <p>RK Sandstone is a family-run sandstone business based in Bijoliya, Rajasthan, India, with a strong foundation in the natural stone industry.</p>
             <p>The Dhakad family has been associated with the sandstone business since 2005, with the experience and foundation built by Mr. Dinesh Kumar Dhakad. From quarry selection to precision calibration, custom architectural fabrication and global dispatch, our legacy blends generational stone mastery with modern export quality.</p>
-          </div>
-
-          <!-- RK STONE IMPEX MEDIA SLIDER -->
-          <div class="rd-box-panel rk-media-panel">
-            <div class="rk-slider" id="rkSlider">
-              <div class="rk-slides">
-                <div class="rk-slide active"><img src="assets/rk1.webp" alt="RK Stone Impex — natural stone showcase 1" width="800" height="533" loading="lazy" decoding="async"></div>
-                <div class="rk-slide"><img src="assets/rk2.webp" alt="RK Stone Impex — natural stone showcase 2" width="800" height="533" loading="lazy" decoding="async"></div>
-                <div class="rk-slide"><img src="assets/rk3.webp" alt="RK Stone Impex — natural stone showcase 3" width="800" height="533" loading="lazy" decoding="async"></div>
-                <div class="rk-slide"><img src="assets/rk4.webp" alt="RK Stone Impex — natural stone showcase 4" width="800" height="533" loading="lazy" decoding="async"></div>
-                <div class="rk-slide"><img src="assets/rk5.webp" alt="RK Stone Impex — natural stone showcase 5" width="800" height="533" loading="lazy" decoding="async"></div>
-                <div class="rk-slide"><img src="assets/rk6.webp" alt="RK Stone Impex — natural stone showcase 6" width="800" height="533" loading="lazy" decoding="async"></div>
-                <div class="rk-slide"><img src="assets/rk7.webp" alt="RK Stone Impex — natural stone showcase 7" width="800" height="533" loading="lazy" decoding="async"></div>
-                <div class="rk-slide"><img src="assets/rk8.webp" alt="RK Stone Impex — natural stone showcase 8" width="800" height="533" loading="lazy" decoding="async"></div>
-                <div class="rk-slide"><img src="assets/rk9.webp" alt="RK Stone Impex — natural stone showcase 9" width="800" height="533" loading="lazy" decoding="async"></div>
-                <div class="rk-slide"><img src="assets/rk10.webp" alt="RK Stone Impex — natural stone showcase 10" width="800" height="533" loading="lazy" decoding="async"></div>
-              </div>
-              <button class="media-nav media-prev" onclick="moveRKSlide(-1)" aria-label="Previous RK Stone image">‹</button>
-              <button class="media-nav media-next" onclick="moveRKSlide(1)" aria-label="Next RK Stone image">›</button>
-              <div class="media-counter" id="rkCounter">01 / 10</div>
-              <div class="media-dots rk-dots"></div>
-            </div>
-            <div class="rk-panel-label"><span>RK STONE IMPEX</span><small>PROCESSING • FINISHING • DISPATCH</small></div>
-          </div>
-        </div>
-
-        <!-- Stats Bar -->
-        <div class="stats-bar reveal">
-          <div class="stat-item">
-            <span class="stat-value">2005</span>
-            <span class="stat-label">ESTABLISHED</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">10 Ac.</span>
-            <span class="stat-label">FACILITY AREA</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">50+</span>
-            <span class="stat-label">EMPLOYEES</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-value">100+</span>
-            <span class="stat-label">ANNUAL CONTAINERS</span>
+            <a href="pages/our-story.html" class="btn-light-outline">KNOW MORE <span>→</span></a>
           </div>
         </div>
       </div>
@@ -2424,7 +2462,7 @@
               <div class="stone-code-row">
                 <span class="stone-code">KHD-0-03</span>
               </div>
-              <h3 class="stone-title">York Grey</h3>
+              <h3 class="stone-title">Autumn Brown </h3>
               <p class="stone-description">The warm-brown anchor of the Bijolia belt — Nayanagar quarry, since the 1980s.</p>
               <div class="stone-meta-grid">
                 <div class="meta-col">
@@ -3028,14 +3066,54 @@
 
         <div class="showcase-slider reveal" id="showcaseSlider">
           <div class="showcase-track">
-            <div class="showcase-video-slide active"><video src="assets/v1.mp4" muted playsinline preload="none"></video></div>
-            <div class="showcase-video-slide"><video src="assets/v2.mp4" muted playsinline preload="none"></video></div>
-            <div class="showcase-video-slide"><video src="assets/v3.mp4" muted playsinline preload="none"></video></div>
-            <div class="showcase-video-slide"><video src="assets/v4.mp4" muted playsinline preload="none"></video></div>
-            <div class="showcase-video-slide"><video src="assets/v5.mp4" muted playsinline preload="none"></video></div>
-            <div class="showcase-video-slide"><video src="assets/v6.mp4" muted playsinline preload="none"></video></div>
-            <div class="showcase-video-slide"><video src="assets/v7.mp4" muted playsinline preload="none"></video></div>
-            <div class="showcase-video-slide"><video src="assets/v8.mp4" muted playsinline preload="none"></video></div>
+            <div class="showcase-video-slide active">
+              <video id="showcaseVideo1" src="assets/v1.mp4" muted playsinline preload="metadata"></video>
+              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(0, this)" aria-label="Play showcase video 1">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
+              </button>
+            </div>
+            <div class="showcase-video-slide">
+              <video id="showcaseVideo2" src="assets/v2.mp4" muted playsinline preload="metadata"></video>
+              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(1, this)" aria-label="Play showcase video 2">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
+              </button>
+            </div>
+            <div class="showcase-video-slide">
+              <video id="showcaseVideo3" src="assets/v3.mp4" muted playsinline preload="metadata"></video>
+              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(2, this)" aria-label="Play showcase video 3">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
+              </button>
+            </div>
+            <div class="showcase-video-slide">
+              <video id="showcaseVideo4" src="assets/v4.mp4" muted playsinline preload="metadata"></video>
+              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(3, this)" aria-label="Play showcase video 4">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
+              </button>
+            </div>
+            <div class="showcase-video-slide">
+              <video id="showcaseVideo5" src="assets/v5.mp4" muted playsinline preload="metadata"></video>
+              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(4, this)" aria-label="Play showcase video 5">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
+              </button>
+            </div>
+            <div class="showcase-video-slide">
+              <video id="showcaseVideo6" src="assets/v6.mp4" muted playsinline preload="metadata"></video>
+              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(5, this)" aria-label="Play showcase video 6">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
+              </button>
+            </div>
+            <div class="showcase-video-slide">
+              <video id="showcaseVideo7" src="assets/v7.mp4" muted playsinline preload="metadata"></video>
+              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(6, this)" aria-label="Play showcase video 7">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
+              </button>
+            </div>
+            <div class="showcase-video-slide">
+              <video id="showcaseVideo8" src="assets/v8.mp4" muted playsinline preload="metadata"></video>
+              <button class="showcase-play-btn" type="button" onclick="toggleShowcaseVideo(7, this)" aria-label="Play showcase video 8">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>
+              </button>
+            </div>
           </div>
           <button class="showcase-nav showcase-prev" onclick="moveShowcase(-1)" aria-label="Previous showcase video">‹</button>
           <button class="showcase-nav showcase-next" onclick="moveShowcase(1)" aria-label="Next showcase video">›</button>
@@ -3044,6 +3122,27 @@
         </div>
       </div>
     </section>
+
+
+        <!-- COMPANY STATS -->
+        <div class="stats-bar reveal">
+          <div class="stat-item">
+            <span class="stat-value">2005</span>
+            <span class="stat-label">ESTABLISHED</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">10 Ac.</span>
+            <span class="stat-label">FACILITY AREA</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">50+</span>
+            <span class="stat-label">EMPLOYEES</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">100+</span>
+            <span class="stat-label">ANNUAL CONTAINERS</span>
+          </div>
+        </div>
 
     <!-- =============================================================
          OUR PROCESS
@@ -3892,17 +3991,48 @@
 
     let showcaseIndex = 0;
     const showcaseSlides = document.querySelectorAll('.showcase-video-slide');
+    function resetShowcaseVideo(slide) {
+      const v = slide ? slide.querySelector('video') : null;
+      const btn = slide ? slide.querySelector('.showcase-play-btn') : null;
+      if (v) { v.pause(); v.currentTime = 0; v.muted = true; }
+      if (btn) {
+        btn.classList.remove('is-playing');
+        btn.setAttribute('aria-label', 'Play showcase video');
+        btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>';
+      }
+    }
     function showShowcase(index) {
       if (!showcaseSlides.length) return;
       showcaseIndex = (index + showcaseSlides.length) % showcaseSlides.length;
       showcaseSlides.forEach((s,i) => {
         s.classList.toggle('active', i === showcaseIndex);
-        const v = s.querySelector('video');
-        if (v) { v.muted = true; if (i !== showcaseIndex) { v.pause(); v.currentTime = 0; } else { v.play().catch(() => {}); } }
+        resetShowcaseVideo(s);
       });
       const counter = document.getElementById('showcaseCounter');
       if (counter) counter.textContent = String(showcaseIndex + 1).padStart(2,'0') + ' / ' + String(showcaseSlides.length).padStart(2,'0');
       document.querySelectorAll('.showcase-dots button').forEach((d,i) => d.classList.toggle('active', i === showcaseIndex));
+    }
+    function toggleShowcaseVideo(index, button) {
+      const slide = showcaseSlides[index];
+      if (!slide) return;
+      const video = slide.querySelector('video');
+      if (!video) return;
+
+      showcaseSlides.forEach((s,i) => { if (i !== index) resetShowcaseVideo(s); });
+      if (video.paused) {
+        video.muted = true;
+        video.play().then(() => {
+          button.classList.add('is-playing');
+          button.setAttribute('aria-label', 'Pause showcase video');
+          button.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"></path></svg>';
+        }).catch(() => {});
+      } else {
+        video.pause();
+        button.classList.remove('is-playing');
+        button.setAttribute('aria-label', 'Play showcase video');
+        button.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.53.85l10.3-6.86a1.02 1.02 0 0 0 0-1.7L9.53 4.29A1 1 0 0 0 8 5.14Z"></path></svg>';
+      }
+      video.onended = () => resetShowcaseVideo(slide);
     }
     function moveShowcase(step) { showShowcase(showcaseIndex + step); }
 
@@ -3937,7 +4067,7 @@
     showShowcase(0);
     showProcessSlide(0);
 
-    // Keep every showcase/process video muted, including after browser interactions.
+    // Keep showcase/process videos muted for mobile/browser autoplay policy.
     document.querySelectorAll('.showcase-video-slide video, .process-media-slide video').forEach(v => {
       v.muted = true;
       v.setAttribute('muted','');
