@@ -1941,7 +1941,9 @@
               <li class="dropdown-item"><a href="pages/copings.html">Copings</a></li>
               <li class="dropdown-item"><a href="pages/steps.html">Steps</a></li>
               <li class="dropdown-item"><a href="pages/cobbles-and-sets.html">Cobbles &amp; Sets</a></li>
+              <li class="dropdown-item"><a href="pages/fire-pits-and-circles.html">Fire Pits &amp; Circles</a></li>
               <li class="dropdown-item"><a href="pages/roofing.html">Roofing</a></li>
+              <li class="dropdown-item"><a href="#crazy-flagstone" onclick="openCrazyFlagstoneModal(); return false;">Crazy / Flagstone</a></li>
             </ul>
           </li>
           <li><a href="#facilities" class="nav-link">Facilities</a></li>
@@ -1970,6 +1972,7 @@
       <a href="pages/cobbles-and-sets.html" class="mobile-link" style="padding-left:14px; font-size:13px;">↳ Cobbles &amp; Sets</a>
       <a href="pages/fire-pits-and-circles.html" class="mobile-link" style="padding-left:14px; font-size:13px;">↳ Fire Pits &amp; Circles</a>
       <a href="pages/roofing.html" class="mobile-link" style="padding-left:14px; font-size:13px;">↳ Roofing</a>
+      <a href="#crazy-flagstone" onclick="openCrazyFlagstoneModal();" class="mobile-link" style="padding-left:14px; font-size:13px;">↳ Crazy / Flagstone</a>
       <a href="#facilities" class="mobile-link">Facilities</a>
       <a href="pages/our-story.html" class="mobile-link">Our Story</a>
       <a href="#contact" class="mobile-link">Contact Us</a>
@@ -2303,7 +2306,7 @@
             <img src="assets/roofing-house-installed-cottage.webp" alt="Natural Sandstone Roofing Slates &amp; Shingles" width="600" height="400" loading="lazy" decoding="async">
             <div class="product-badge">Roofing <span>→</span></div>
           </a>
-          <a href="#crazy-flagstone" class="product-card" onclick="openCrazyFlagstoneModal(); return false;" aria-label="View Crazy / Flagstone collection">
+          <a href="#crazy-flagstone" id="crazy-flagstone" class="product-card" onclick="openCrazyFlagstoneModal(); return false;" aria-label="View Crazy / Flagstone collection">
             <img src="assets/crazy1-crazy6.jpeg" alt="Crazy / Flagstone paving" width="600" height="400" loading="lazy" decoding="async">
             <div class="product-badge">Crazy / Flagstone <span>→</span></div>
           </a>
@@ -2638,6 +2641,7 @@
             <li><a href="pages/cobbles-and-sets.html">Cobbles &amp; Sets</a></li>
             <li><a href="pages/fire-pits-and-circles.html">Fire Pits &amp; Circles</a></li>
             <li><a href="pages/roofing.html">Roofing</a></li>
+            <li><a href="#crazy-flagstone" onclick="openCrazyFlagstoneModal(); return false;">Crazy / Flagstone</a></li>
           </ul>
         </div>
 
@@ -2780,6 +2784,7 @@
             <option value="Cobbles & Sets">Cobbles &amp; Sets</option>
             <option value="Fire Pits & Circles">Fire Pits &amp; Circles</option>
             <option value="Roofing">Roofing</option>
+            <option value="Crazy / Flagstone">Crazy / Flagstone</option>
             <option value="Custom Project Export">Custom Architectural Stone / Container Export</option>
           </select>
         </div>
@@ -2889,6 +2894,17 @@
     });
 
     const crazyFlagstoneModal = document.getElementById('crazyFlagstoneModal');
+
+        function checkCrazyHash() {
+      if (window.location.hash === "#crazy-flagstone") {
+        openCrazyFlagstoneModal();
+      }
+    }
+    window.addEventListener("DOMContentLoaded", checkCrazyHash);
+    window.addEventListener("hashchange", checkCrazyHash);
+    if (window.location.hash === "#crazy-flagstone") {
+      openCrazyFlagstoneModal();
+    }
 
     function openCrazyFlagstoneModal() {
       if (!crazyFlagstoneModal) return;
