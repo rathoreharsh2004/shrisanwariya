@@ -2318,10 +2318,10 @@
             <div class="catalog-info">
               <h2>Check out our<br>Catalog</h2>
               <p>Explore our complete range of products, technical specifications, and project inspirations in our detailed brochure.</p>
-              <button type="button" class="btn-terracotta pill" onclick="downloadFullCatalogue()">
+              <a href="Shri-Sanwariya-Stone-Suppliers-Catalogue.pdf" download="Shri-Sanwariya-Stone-Suppliers-Catalogue.pdf" class="btn-terracotta pill">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
                 Download Catalog
-              </button>
+              </a>
             </div>
             <div class="catalog-visual">
               <img src="assets/CH.jpeg" alt="Natural stone collection showcase">
@@ -2620,9 +2620,9 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.184 1.564 5.938l-1.656 6.046 6.196-1.625c1.706.93 3.66 1.463 5.74 1.463 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
               WhatsApp Us
             </a>
-            <button type="button" onclick="downloadFullCatalogue()" class="btn-terracotta pill" style="padding: 9px 20px; font-size: 12.5px;">
+            <a href="Shri-Sanwariya-Stone-Suppliers-Catalogue.pdf" download="Shri-Sanwariya-Stone-Suppliers-Catalogue.pdf" class="btn-terracotta pill" style="padding: 9px 20px; font-size: 12.5px;">
               Download Catalogue
-            </button>
+            </a>
           </div>
         </div>
 
@@ -3029,215 +3029,18 @@
 
 
     /* =============================================================
-       FULL PRODUCT CATALOGUE PDF
-       Includes every Natural Stone Collection item + every
-       Collection By Application item shown on this page.
+       CATALOGUE DOWNLOAD
+       Uses the supplied final catalogue PDF directly.
+       Keep the PDF in the same folder as this HTML file.
        ============================================================= */
-    const catalogueProducts = [
-      // Collection of Natural Stone
-      { section: 'Collection of Natural Stone', name: 'Khadipur Grey', image: 'assets/khadipur-grey-swatch-main.webp' },
-      { section: 'Collection of Natural Stone', name: 'Kandla Grey', image: 'assets/kandla-grey-swatch-main.webp' },
-      { section: 'Collection of Natural Stone', name: 'York Grey', image: 'assets/autumn-brown-swatch-main.webp' },
-      { section: 'Collection of Natural Stone', name: 'Raj Blend', image: 'assets/raj-blend-swatch-main.webp' },
-      { section: 'Collection of Natural Stone', name: 'Garda Green', image: 'assets/garda-green-swatch-main.webp' },
-      { section: 'Collection of Natural Stone', name: 'Slate Grey', image: 'assets/slate-grey-swatch-main.webp' },
-      { section: 'Collection of Natural Stone', name: 'Raveena', image: 'assets/raveena-swatch-main.webp' },
-      { section: 'Collection of Natural Stone', name: 'Mint', image: 'assets/mint-swatch-main.webp' },
-      { section: 'Collection of Natural Stone', name: 'Buff', image: 'assets/buff-swatch-main.webp' },
-      { section: 'Collection of Natural Stone', name: 'Camel Dust', image: 'assets/camel-dust-swatch-main.webp' },
-      { section: 'Collection of Natural Stone', name: 'Red Choco', image: 'assets/red-choco-swatch-main.webp' },
-      { section: 'Collection of Natural Stone', name: 'York Grey', image: 'assets/dual-tone-swatch-main.webp' },
-      { section: 'Collection of Natural Stone', name: 'Mocha Blend', image: 'assets/mocha-blend-swatch-main.webp' },
-      { section: 'Collection of Natural Stone', name: 'Rainbow', image: 'assets/rainbow-swatch-main.webp' },
-      { section: 'Collection of Natural Stone', name: 'White', image: 'assets/white-swatch-main.webp' },
-
-      // Collections By Application
-      { section: 'Collections By Application', name: 'Sandstone Pavers', image: 'assets/sandstone-pavers-blue-ice-patio.jpg' },
-      { section: 'Collections By Application', name: 'Copings', image: 'assets/coping-residence-porch-steps.webp' },
-      { section: 'Collections By Application', name: 'Steps', image: 'assets/steps-villa-columns-porch.webp' },
-      { section: 'Collections By Application', name: 'Cobbles & Sets', image: 'assets/cobbles-natural-colors-grid.jpg' },
-      { section: 'Collections By Application', name: 'Fire Pits & Circles', image: 'assets/firepit-lawn-blaze.webp' },
-      { section: 'Collections By Application', name: 'Roofing', image: 'assets/roofing-house-installed-cottage.webp' }
-    ];
-
-    function imageToJpegDataUrl(src, maxW = 1000, maxH = 700) {
-      return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.onload = () => {
-          try {
-            const scale = Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
-            const canvas = document.createElement('canvas');
-            canvas.width = Math.max(1, Math.round(img.naturalWidth * scale));
-            canvas.height = Math.max(1, Math.round(img.naturalHeight * scale));
-            const ctx = canvas.getContext('2d');
-            ctx.fillStyle = '#FFFFFF';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-            resolve(canvas.toDataURL('image/jpeg', 0.88));
-          } catch (err) {
-            reject(err);
-          }
-        };
-        img.onerror = () => reject(new Error('Could not load catalogue image: ' + src));
-        img.src = src;
-      });
+    function downloadFullCatalogue() {
+      const link = document.createElement('a');
+      link.href = 'Shri-Sanwariya-Stone-Suppliers-Catalogue.pdf';
+      link.download = 'Shri-Sanwariya-Stone-Suppliers-Catalogue.pdf';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
     }
-
-    async function downloadFullCatalogue() {
-      const button = document.querySelector('.catalog-info button[onclick="downloadFullCatalogue()"]');
-      const originalText = button ? button.innerHTML : '';
-      if (button) {
-        button.disabled = true;
-        button.innerHTML = 'Preparing Catalogue…';
-      }
-
-      try {
-        if (!window.jspdf || !window.jspdf.jsPDF) {
-          throw new Error('PDF library could not be loaded.');
-        }
-
-        const { jsPDF } = window.jspdf;
-        const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
-
-        const pageW = pdf.internal.pageSize.getWidth();
-        const pageH = pdf.internal.pageSize.getHeight();
-        const margin = 14;
-        const contentW = pageW - (margin * 2);
-
-        // Cover
-        pdf.setFillColor(37, 32, 28);
-        pdf.rect(0, 0, pageW, pageH, 'F');
-        pdf.setTextColor(222, 193, 150);
-        pdf.setFont('helvetica', 'bold');
-        pdf.setFontSize(11);
-        pdf.text('SHRI SANWARIYA STONE SUPPLIERS', margin, 28);
-        pdf.setTextColor(255, 255, 255);
-        pdf.setFontSize(27);
-        pdf.text('Natural Stone Catalogue', margin, 53);
-        pdf.setFont('helvetica', 'normal');
-        pdf.setFontSize(12);
-        pdf.setTextColor(215, 207, 199);
-        pdf.text('Collection of Natural Stone + Collections By Application', margin, 65);
-        pdf.setDrawColor(222, 193, 150);
-        pdf.line(margin, 76, pageW - margin, 76);
-        pdf.setFontSize(10);
-        pdf.setTextColor(200, 190, 181);
-        pdf.text('Premium Indian Natural Stone', margin, 88);
-        pdf.text('Your Vision, Our Stone', margin, 96);
-        pdf.setTextColor(222, 193, 150);
-        pdf.setFontSize(9);
-        pdf.text('GSTIN: 08ANHPD8308A1ZF', margin, pageH - 25);
-        pdf.text('Bijoliya Khurd, Veekam Pura, Rajasthan 311602', margin, pageH - 18);
-
-        let currentSection = '';
-
-        for (let i = 0; i < catalogueProducts.length; i++) {
-          const product = catalogueProducts[i];
-
-          if (product.section !== currentSection) {
-            pdf.addPage();
-            currentSection = product.section;
-
-            pdf.setTextColor(184, 101, 57);
-            pdf.setFont('helvetica', 'bold');
-            pdf.setFontSize(10);
-            pdf.text(product.section.toUpperCase(), margin, 20);
-
-            pdf.setTextColor(34, 28, 24);
-            pdf.setFontSize(21);
-            pdf.text(
-              product.section === 'Collection of Natural Stone'
-                ? 'Natural Stone Collection'
-                : 'Collections By Application',
-              margin,
-              31
-            );
-          }
-
-          const indexInSection = catalogueProducts
-            .slice(0, i)
-            .filter(p => p.section === product.section).length;
-
-          const col = indexInSection % 2;
-          const row = Math.floor(indexInSection / 2);
-          const cardW = (contentW - 10) / 2;
-          const cardH = 70;
-          const x = margin + col * (cardW + 10);
-          const y = 40 + (row % 3) * 79;
-
-          if (row > 0 && row % 3 === 0 && col === 0) {
-            pdf.addPage();
-            pdf.setTextColor(184, 101, 57);
-            pdf.setFont('helvetica', 'bold');
-            pdf.setFontSize(10);
-            pdf.text(product.section.toUpperCase(), margin, 20);
-            pdf.setTextColor(34, 28, 24);
-            pdf.setFontSize(18);
-            pdf.text(
-              product.section === 'Collection of Natural Stone'
-                ? 'Natural Stone Collection'
-                : 'Collections By Application',
-              margin,
-              31
-            );
-          }
-
-          const actualY = 40 + (row % 3) * 79;
-
-          pdf.setFillColor(250, 247, 242);
-          pdf.setDrawColor(230, 223, 213);
-          pdf.roundedRect(x, actualY, cardW, cardH, 3, 3, 'FD');
-
-          try {
-            const dataUrl = await imageToJpegDataUrl(product.image);
-            const imageX = x + 4;
-            const imageY = actualY + 4;
-            const imageW = cardW - 8;
-            const imageH = 53;
-            pdf.addImage(dataUrl, 'JPEG', imageX, imageY, imageW, imageH, undefined, 'FAST');
-          } catch (imageError) {
-            pdf.setFillColor(235, 230, 223);
-            pdf.rect(x + 4, actualY + 4, cardW - 8, 53, 'F');
-          }
-
-          pdf.setFillColor(34, 28, 24);
-          pdf.rect(x + 4, actualY + 50, cardW - 8, 7, 'F');
-          pdf.setTextColor(255, 255, 255);
-          pdf.setFont('helvetica', 'bold');
-          pdf.setFontSize(9);
-          pdf.text(product.name, x + 7, actualY + 55);
-        }
-
-        // Page numbers
-        const totalPages = pdf.getNumberOfPages();
-        for (let page = 2; page <= totalPages; page++) {
-          pdf.setPage(page);
-          pdf.setFont('helvetica', 'normal');
-          pdf.setFontSize(8);
-          pdf.setTextColor(110, 102, 94);
-          pdf.text(`Shri Sanwariya Stone Suppliers  •  Page ${page - 1}`, pageW - margin, pageH - 8, { align: 'right' });
-        }
-
-        pdf.save('Shri-Sanwariya-Stone-Suppliers-Catalogue.pdf');
-      } catch (error) {
-        console.error(error);
-        alert('The catalogue PDF could not be generated. Please make sure the website is online and try again.');
-      } finally {
-        if (button) {
-          button.disabled = false;
-          button.innerHTML = originalText;
-        }
-      }
-    }
-
-    function toggleFaq(button) {
-      const item = button.closest('.faq-item');
-      if (!item) return;
-      const wasActive = item.classList.contains('active');
-      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
-      if (!wasActive) item.classList.add('active');
-    }
-  
 
     /* =============================================================
        EXTRACTED JS: OUR VISION & LEADERSHIP + NATURAL STONE SHOWCASE + OUR PROCESS
