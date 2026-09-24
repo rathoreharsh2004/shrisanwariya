@@ -3222,5 +3222,210 @@
       v.setAttribute('playsinline','');
     });
   </script>
+
+<!-- ================================================================
+     SHRI SANWARIYA STONE — ADMIN PANEL (ADDED ONLY)
+     Trigger: add #admin to the website URL.
+     Note: this is a client-side editor. Changes are stored in this
+     browser's localStorage; a server/database is required for shared
+     multi-device publishing.
+     ================================================================ -->
+<style id="ss-admin-styles">
+  #ssAdminLogin, #ssAdminPanel { font-family: Arial, sans-serif; }
+  #ssAdminLogin { position:fixed; inset:0; z-index:2147483646; display:none; align-items:center; justify-content:center; background:rgba(18,14,11,.78); backdrop-filter:blur(10px); padding:20px; }
+  #ssAdminLogin.show { display:flex; }
+  .ss-login-box { width:min(420px,100%); background:#fff; border-radius:18px; padding:32px; box-shadow:0 30px 80px rgba(0,0,0,.35); position:relative; }
+  .ss-login-box h2 { margin:0 0 7px; font-size:25px; color:#221c18; }
+  .ss-login-box p { margin:0 0 22px; color:#6e665e; font-size:13px; }
+  .ss-admin-field { margin-bottom:14px; }
+  .ss-admin-field label { display:block; font-size:12px; font-weight:700; margin-bottom:6px; color:#221c18; }
+  .ss-admin-field input { width:100%; box-sizing:border-box; padding:12px 13px; border:1px solid #e6dfd5; border-radius:9px; outline:none; font-size:14px; }
+  .ss-admin-field input:focus { border-color:#b86539; box-shadow:0 0 0 3px rgba(184,101,57,.12); }
+  .ss-admin-btn { border:0; border-radius:9px; padding:12px 17px; cursor:pointer; font-weight:700; background:#b86539; color:#fff; }
+  .ss-admin-btn.secondary { background:#25201c; }
+  .ss-admin-error { min-height:18px; color:#b42318; font-size:12px; margin:8px 0; }
+  #ssAdminPanel { position:fixed; top:0; right:0; bottom:0; width:min(390px,92vw); z-index:2147483645; background:#fff; box-shadow:-20px 0 60px rgba(0,0,0,.25); transform:translateX(105%); transition:transform .3s ease; overflow:auto; }
+  #ssAdminPanel.show { transform:translateX(0); }
+  .ss-admin-head { position:sticky; top:0; z-index:3; padding:16px; background:#25201c; color:#fff; display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  .ss-admin-head strong { font-size:14px; }
+  .ss-admin-head button { background:rgba(255,255,255,.12); color:#fff; border:0; width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:18px; }
+  .ss-admin-tools { padding:12px 14px; border-bottom:1px solid #eee; display:grid; grid-template-columns:1fr 1fr; gap:8px; position:sticky; top:65px; z-index:2; background:#fff; }
+  .ss-admin-tools button { border:1px solid #ddd; background:#fafafa; padding:9px 7px; border-radius:8px; cursor:pointer; font-size:11px; font-weight:700; }
+  .ss-admin-tools button.primary { background:#b86539; color:#fff; border-color:#b86539; }
+  .ss-admin-help { padding:12px 14px; font-size:11px; line-height:1.55; color:#6e665e; background:#faf7f2; border-bottom:1px solid #eee; }
+  .ss-admin-list { padding:10px 14px 30px; }
+  .ss-admin-section { border:1px solid #e8e2da; border-radius:10px; margin:9px 0; overflow:hidden; background:#fff; }
+  .ss-admin-section-title { padding:11px 12px; font-size:12px; font-weight:800; color:#221c18; background:#faf7f2; cursor:pointer; display:flex; justify-content:space-between; }
+  .ss-admin-section-body { padding:9px 10px; }
+  .ss-admin-item { display:flex; gap:8px; align-items:center; padding:8px 0; border-bottom:1px solid #f0ece7; }
+  .ss-admin-item:last-child { border-bottom:0; }
+  .ss-admin-thumb { width:42px; height:42px; flex:0 0 42px; border-radius:6px; object-fit:cover; background:#eee; }
+  .ss-admin-item-info { min-width:0; flex:1; }
+  .ss-admin-item-info b { display:block; font-size:11px; color:#221c18; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .ss-admin-item-info small { display:block; font-size:9px; color:#8a8178; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .ss-admin-item button { border:1px solid #ddd; background:#fff; border-radius:6px; padding:6px 7px; cursor:pointer; font-size:10px; }
+  .ss-admin-item button:hover { border-color:#b86539; color:#b86539; }
+  .ss-admin-item .danger { color:#b42318; }
+  body.ss-admin-editing [data-ss-editable="text"] { outline:2px dashed rgba(184,101,57,.75); outline-offset:3px; cursor:text; }
+  body.ss-admin-editing [data-ss-editable="image"] { outline:2px dashed rgba(37,32,28,.7); outline-offset:3px; cursor:pointer; }
+  .ss-admin-floating { position:fixed; right:18px; bottom:18px; z-index:2147483644; display:none; gap:8px; }
+  .ss-admin-floating.show { display:flex; }
+  .ss-admin-floating button { border:0; border-radius:999px; padding:10px 14px; background:#25201c; color:#fff; font-weight:700; cursor:pointer; box-shadow:0 8px 25px rgba(0,0,0,.2); }
+  .ss-admin-toast { position:fixed; left:50%; bottom:24px; transform:translate(-50%,20px); opacity:0; z-index:2147483647; background:#25201c; color:#fff; padding:10px 15px; border-radius:999px; font-size:12px; pointer-events:none; transition:.25s; }
+  .ss-admin-toast.show { opacity:1; transform:translate(-50%,0); }
+</style>
+
+<div id="ssAdminLogin" aria-hidden="true">
+  <div class="ss-login-box">
+    <button type="button" onclick="SSAdmin.closeLogin()" style="position:absolute;right:14px;top:12px;border:0;background:none;font-size:20px;cursor:pointer;color:#777">×</button>
+    <h2>Website Admin</h2>
+    <p>Shri Sanwariya Stone Suppliers — secure editing area</p>
+    <form onsubmit="SSAdmin.login(event)">
+      <div class="ss-admin-field"><label>Email / ID</label><input id="ssAdminUser" type="text" autocomplete="username" required></div>
+      <div class="ss-admin-field"><label>Password</label><input id="ssAdminPass" type="password" autocomplete="current-password" required></div>
+      <div id="ssAdminError" class="ss-admin-error"></div>
+      <button class="ss-admin-btn" type="submit" style="width:100%">Login to Admin Panel</button>
+    </form>
+  </div>
+</div>
+
+<aside id="ssAdminPanel" aria-label="Website Admin Panel">
+  <div class="ss-admin-head"><strong>Shri Sanwariya — Admin</strong><button onclick="SSAdmin.logout()" title="Close">×</button></div>
+  <div class="ss-admin-tools">
+    <button class="primary" onclick="SSAdmin.toggleEdit()">✎ Edit Website</button>
+    <button onclick="SSAdmin.save()">💾 Save</button>
+    <button onclick="SSAdmin.exportHTML()">⬇ Export HTML</button>
+    <button onclick="SSAdmin.reset()">↺ Reset Changes</button>
+  </div>
+  <div class="ss-admin-help"><b>How to edit:</b> Click “Edit Website”, then click any visible heading, paragraph, label or image. Text can be typed directly. Clicking an image opens a file picker. Save stores the changes in this browser.</div>
+  <div id="ssAdminList" class="ss-admin-list"></div>
+</aside>
+<div id="ssAdminFloating" class="ss-admin-floating"><button onclick="SSAdmin.toggleEdit()">✎ Edit</button><button onclick="SSAdmin.save()">💾 Save</button></div>
+<div id="ssAdminToast" class="ss-admin-toast"></div>
+<input id="ssAdminFile" type="file" accept="image/*" hidden>
+
+<script id="ss-admin-script">
+(function(){
+  'use strict';
+  const USER='shrisanwariyastonesupply@gmail.com';
+  const PASS='Arman@bijolia11';
+  const STORE='ss_sanwariya_admin_v1';
+  const AUTH='ss_sanwariya_admin_auth';
+  let editing=false, currentImage=null;
+
+  function $(id){ return document.getElementById(id); }
+  function toast(msg){ const t=$('ssAdminToast'); t.textContent=msg; t.classList.add('show'); clearTimeout(window.__ssToast); window.__ssToast=setTimeout(()=>t.classList.remove('show'),1800); }
+  function isAdminURL(){ return location.hash.toLowerCase()==='#admin'; }
+  function openLogin(){ $('ssAdminLogin').classList.add('show'); $('ssAdminLogin').setAttribute('aria-hidden','false'); setTimeout(()=>{ $('ssAdminUser').focus(); },80); }
+  function closeLogin(){ $('ssAdminLogin').classList.remove('show'); $('ssAdminLogin').setAttribute('aria-hidden','true'); }
+  function login(e){
+    e.preventDefault();
+    const u=$('ssAdminUser').value.trim(), p=$('ssAdminPass').value;
+    if(u===USER && p===PASS){ localStorage.setItem(AUTH,'1'); closeLogin(); openPanel(); toast('Admin login successful'); }
+    else $('ssAdminError').textContent='Incorrect email/ID or password.';
+  }
+  function openPanel(){ $('ssAdminPanel').classList.add('show'); $('ssAdminFloating').classList.add('show'); buildList(); }
+  function logout(){ editing=false; document.body.classList.remove('ss-admin-editing'); $('ssAdminPanel').classList.remove('show'); $('ssAdminFloating').classList.remove('show'); localStorage.removeItem(AUTH); }
+  function ensureAdmin(){ if(localStorage.getItem(AUTH)==='1') openPanel(); else openLogin(); }
+
+  // Mark editable content without changing the original site's markup/content.
+  function collect(){
+    const root=document.body;
+    root.querySelectorAll('script,style,#ssAdminLogin,#ssAdminPanel,#ssAdminFloating,#ssAdminToast,#ssAdminFile').forEach(()=>{});
+    root.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span,a,button,li,strong,small,label').forEach(el=>{
+      if(el.closest('#ssAdminPanel,#ssAdminLogin,#ssAdminFloating,#ssAdminToast')) return;
+      if(!el.textContent.trim()) return;
+      if(el.children.length===0 || ['A','BUTTON','SPAN','STRONG','SMALL','LABEL'].includes(el.tagName)) el.dataset.ssEditable='text';
+    });
+    root.querySelectorAll('img').forEach(img=>{ if(!img.closest('#ssAdminPanel,#ssAdminLogin')) img.dataset.ssEditable='image'; });
+  }
+  function textNodes(){ return [...document.querySelectorAll('[data-ss-editable="text"]')].filter(el=>!el.closest('#ssAdminPanel,#ssAdminLogin,#ssAdminFloating,#ssAdminToast')); }
+  function imageNodes(){ return [...document.querySelectorAll('[data-ss-editable="image"]')].filter(el=>!el.closest('#ssAdminPanel,#ssAdminLogin')); }
+
+  function bind(){
+    textNodes().forEach(el=>{
+      if(el.dataset.ssBound) return; el.dataset.ssBound='1';
+      el.addEventListener('click',()=>{ if(editing){ el.contentEditable='true'; el.focus(); }});
+      el.addEventListener('blur',()=>{ if(editing){ el.contentEditable='false'; }});
+    });
+    imageNodes().forEach(img=>{
+      if(img.dataset.ssBound) return; img.dataset.ssBound='1';
+      img.addEventListener('click',()=>{ if(!editing) return; currentImage=img; $('ssAdminFile').click(); });
+    });
+  }
+  $('ssAdminFile').addEventListener('change', function(){
+    const f=this.files && this.files[0]; if(!f || !currentImage) return;
+    const r=new FileReader(); r.onload=()=>{ currentImage.src=r.result; currentImage.dataset.ssLocal='1'; currentImage=null; this.value=''; toast('Image replaced — click Save'); }; r.readAsDataURL(f);
+  });
+
+  function buildList(){
+    collect(); bind();
+    const list=$('ssAdminList'); list.innerHTML='';
+    const sections=[...document.querySelectorAll('section,header,footer,main > div,body > div')].filter(el=>!el.closest('#ssAdminPanel,#ssAdminLogin,#ssAdminFloating,#ssAdminToast') && el.offsetWidth!==0);
+    const seen=new Set(); let index=0;
+    sections.forEach(sec=>{
+      if(seen.has(sec)) return; seen.add(sec); index++;
+      const title=(sec.querySelector('h1,h2,h3')?.textContent||sec.id||sec.className||('Section '+index)).trim().replace(/\s+/g,' ').slice(0,70);
+      const box=document.createElement('div'); box.className='ss-admin-section';
+      box.innerHTML='<div class="ss-admin-section-title"><span>'+esc(title)+'</span><span>↗</span></div>';
+      const body=document.createElement('div'); body.className='ss-admin-section-body';
+      const texts=[...sec.querySelectorAll('[data-ss-editable="text"]')].filter(x=>x.textContent.trim()).slice(0,8);
+      const imgs=[...sec.querySelectorAll('[data-ss-editable="image"]')].slice(0,12);
+      if(!texts.length && !imgs.length){ body.innerHTML='<div style="font-size:10px;color:#999;padding:5px">No directly editable content detected.</div>'; }
+      texts.forEach((el,i)=>{
+        const row=document.createElement('div'); row.className='ss-admin-item';
+        row.innerHTML='<div class="ss-admin-item-info"><b>Text '+(i+1)+'</b><small>'+esc(el.textContent.trim().slice(0,90))+'</small></div><button>Edit</button>';
+        row.querySelector('button').onclick=()=>{ editing=true; document.body.classList.add('ss-admin-editing'); el.scrollIntoView({behavior:'smooth',block:'center'}); setTimeout(()=>{el.contentEditable='true';el.focus();},450); };
+        body.appendChild(row);
+      });
+      imgs.forEach((img,i)=>{
+        const row=document.createElement('div'); row.className='ss-admin-item';
+        row.innerHTML='<img class="ss-admin-thumb" src="'+escAttr(img.currentSrc||img.src)+'"><div class="ss-admin-item-info"><b>Image '+(i+1)+'</b><small>'+esc(img.getAttribute('src')||'image')+'</small></div><button>Replace</button>';
+        row.querySelector('button').onclick=()=>{ editing=true; document.body.classList.add('ss-admin-editing'); currentImage=img; $('ssAdminFile').click(); };
+        body.appendChild(row);
+      });
+      box.querySelector('.ss-admin-section-title').onclick=()=>{ sec.scrollIntoView({behavior:'smooth',block:'center'}); if(!editing){editing=true;document.body.classList.add('ss-admin-editing');} };
+      box.appendChild(body); list.appendChild(box);
+    });
+  }
+  function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+  function escAttr(s){return esc(s);}
+
+  function snapshot(){
+    return {
+      texts:textNodes().map((el,i)=>({i,html:el.innerHTML})),
+      images:imageNodes().map((el,i)=>({i,src:el.getAttribute('src'),local:el.dataset.ssLocal||''}))
+    };
+  }
+  function save(){
+    collect(); bind();
+    const data=snapshot();
+    try{ localStorage.setItem(STORE,JSON.stringify(data)); toast('Changes saved in this browser'); buildList(); }
+    catch(e){ alert('Could not save. Large images may exceed browser storage. Try smaller images.'); }
+  }
+  function apply(){
+    let data; try{data=JSON.parse(localStorage.getItem(STORE)||'null');}catch(e){data=null;}
+    if(!data) return;
+    collect();
+    (data.texts||[]).forEach(x=>{const el=textNodes()[x.i]; if(el) el.innerHTML=x.html;});
+    (data.images||[]).forEach(x=>{const el=imageNodes()[x.i]; if(el && x.src) el.setAttribute('src',x.src);});
+    bind();
+  }
+  function reset(){ if(!confirm('Reset all saved admin changes on this browser?')) return; localStorage.removeItem(STORE); location.reload(); }
+  function toggleEdit(){ editing=!editing; document.body.classList.toggle('ss-admin-editing',editing); toast(editing?'Edit mode ON — click any text or image':'Edit mode OFF'); }
+  function exportHTML(){
+    const clone=document.documentElement.cloneNode(true);
+    clone.querySelector('#ssAdminLogin')?.remove(); clone.querySelector('#ssAdminPanel')?.remove(); clone.querySelector('#ssAdminFloating')?.remove(); clone.querySelector('#ssAdminToast')?.remove(); clone.querySelector('#ssAdminFile')?.remove();
+    clone.querySelector('#ss-admin-styles')?.remove(); clone.querySelector('#ss-admin-script')?.remove();
+    clone.querySelectorAll('[data-ss-editable],[contenteditable]').forEach(el=>{el.removeAttribute('data-ss-editable');el.removeAttribute('data-ss-bound');el.removeAttribute('data-ss-local');el.removeAttribute('contenteditable');});
+    const blob=new Blob(['<!DOCTYPE html>\n'+clone.outerHTML],{type:'text/html'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='shri-sanwariya-stone-edited.html'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  }
+
+  window.SSAdmin={login,closeLogin,logout,toggleEdit,save,reset,exportHTML};
+  window.addEventListener('hashchange',()=>{ if(isAdminURL()) ensureAdmin(); });
+  document.addEventListener('DOMContentLoaded',()=>{ apply(); collect(); bind(); if(isAdminURL()) ensureAdmin(); });
+})();
+</script>
+
 </body>
 </html>
