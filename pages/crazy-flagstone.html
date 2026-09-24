@@ -1,12 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/webp" href="../assets/logo.webp">
-  <title>Sandstone Steps | Shri Sanwariya Stone Suppliers</title>
-  <meta name="description" content="Architectural Indian Sandstone Steps, Treads & Risers from Shri Sanwariya Stone Suppliers. Handcrafted solid 150mm block steps, calibrated 50mm treads, and bullnose steps for entrances and garden landscapes.">
-  <meta name="keywords" content="Sandstone Steps, Step Treads, Step Risers, Solid Block Steps, Bullnose Steps, Rockface Steps, Indian Sandstone Steps, Kandla Grey Steps, Landscape Steps">
+  <title>Crazy / Flagstone Paving | Shri Sanwariya Stone Suppliers</title>
+  <meta name="description" content="Authentic Indian Sandstone Crazy Paving, Irregular Flagstones & Random Stepping Stones from Shri Sanwariya Stone Suppliers. Natural split & calibrated 20mm-35mm for organic patios, walkways, pool surrounds and courtyards.">
+  <meta name="keywords" content="Crazy Paving, Flagstones, Flagstone Paving, Random Flagstone, Irregular Sandstone Paving, Garden Stepping Stones, Bijoliya Stone, Indian Sandstone Exporter">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,123 +99,148 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
       transition: var(--transition);
-      color: #fff;
     }
     .action-circle-btn:hover {
-      transform: translateY(-3px) scale(1.06);
+      transform: scale(1.08) translateY(-2px);
     }
-    .action-circle-btn.btn-brochure {
-      background: #8A4F20;
+    .btn-brochure {
+      background: #73482F;
+      color: #FFFFFF;
     }
-    .action-circle-btn.btn-wa {
+    .btn-wa {
       background: #25D366;
+      color: #FFFFFF;
     }
 
     /* PAGE BANNER */
     .page-banner {
-      position: relative; height: 230px; display: flex; align-items: center; justify-content: center;
-      background: #25201C; overflow: hidden;
+      width: min(1180px, 92%);
+      margin: 20px auto 40px;
+      height: 280px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow-sm);
     }
-    .page-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.40); }
-    .page-banner-content { position: relative; z-index: 2; text-align: center; color: #FFFFFF; }
-    .page-banner-content h1 { font-size: clamp(34px, 4.2vw, 48px); font-weight: 800; letter-spacing: -0.02em; }
+    .page-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 45%;
+      filter: brightness(0.78);
+    }
+    .page-banner-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(26, 21, 18, 0.4);
+    }
+    .page-banner-content h1 {
+      font-size: clamp(34px, 4vw, 50px);
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.01em;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.45);
+    }
 
-    /* MAIN SPLIT GRID */
+    /* PRODUCT MAIN GRID (2 COLUMNS) */
     .product-main-grid {
       display: grid;
-      grid-template-columns: 390px 1fr;
+      grid-template-columns: 370px 1fr;
       gap: 40px;
       align-items: start;
-      padding: 45px 0 60px;
+      margin-bottom: 60px;
     }
 
-    /* SPECIFICATION CARD (STICKY) */
+    /* LEFT: SPECIFICATION CARD */
     .spec-sticky-wrap {
       position: sticky;
       top: 96px;
     }
     .spec-card {
-      background: var(--bg-dark);
-      border-radius: 12px;
+      background: #2D2520;
+      border-radius: var(--radius-md);
       overflow: hidden;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-      border: 1px solid rgba(186, 110, 43, 0.25);
+      color: #FFFFFF;
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
     .spec-header {
-      background: var(--accent-amber);
-      color: #FFFFFF;
+      background: linear-gradient(135deg, #BA6E2B, #A05C20);
       padding: 13px 20px;
-      font-size: 13px;
+      font-size: 11.5px;
       font-weight: 800;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #FFFFFF;
       display: flex;
       align-items: center;
       gap: 10px;
-      text-transform: uppercase;
     }
     .spec-header svg {
-      width: 17px;
-      height: 17px;
+      width: 15px;
+      height: 15px;
       fill: currentColor;
     }
     .spec-table-row {
-      display: grid;
-      grid-template-columns: 130px 1fr;
-      gap: 14px;
-      padding: 15px 20px;
-      border-bottom: 1px solid var(--border-dark);
-      align-items: start;
-    }
-    .spec-col-label {
-      font-size: 10.5px;
-      font-weight: 700;
-      color: #FFFFFF;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      line-height: 1.45;
-    }
-    .spec-col-val {
-      font-size: 11px;
-      font-weight: 500;
-      color: var(--text-light-muted);
-      line-height: 1.6;
-      text-transform: uppercase;
-    }
-    .spec-note-bar {
-      background: var(--accent-ochre-dark);
-      color: #FFF0E2;
       padding: 13px 20px;
-      font-size: 11px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      font-size: 11.5px;
       line-height: 1.5;
     }
+    .spec-table-row:last-of-type {
+      border-bottom: none;
+    }
+    .spec-col-label {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #D6C2B4;
+      margin-bottom: 4px;
+    }
+    .spec-col-val {
+      color: #FFFFFF;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .spec-note-bar {
+      padding: 13px 20px;
+      background: #251E19;
+      font-size: 11px;
+      color: #C2B7AC;
+      line-height: 1.55;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
     .spec-sample-btn {
+      width: 100%;
+      background: #FFFFFF;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-sm);
+      padding: 13px 18px;
+      margin-top: 12px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 100%;
-      background: #FFFFFF;
-      color: var(--accent-amber);
-      padding: 13px 20px;
-      border-radius: var(--radius-sm);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      margin-top: 14px;
-      border: 1px solid var(--border-warm);
-      box-shadow: var(--shadow-sm);
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--text-dark);
       cursor: pointer;
-      text-transform: uppercase;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+      transition: var(--transition);
     }
     .spec-sample-btn:hover {
-      background: var(--accent-amber);
-      color: #FFFFFF;
+      background: var(--bg-cream-soft);
       border-color: var(--accent-amber);
     }
     .spec-pills-row {
       display: flex;
-      gap: 8px;
+      flex-wrap: wrap;
+      gap: 7px;
       margin-top: 12px;
     }
     .spec-chip {
@@ -259,8 +284,13 @@
       color: var(--text-muted);
       margin-bottom: 24px;
     }
+    .crazy-lead {
+      font-size: 14px;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
 
-    /* GALLERY SUBHEADER & GRID (2 COLS X 3 ROWS MATCHING SCREENSHOT) */
+    /* GALLERY SUBHEADER & GRID */
     .gallery-sub-header {
       font-size: 12px;
       font-weight: 800;
@@ -271,28 +301,55 @@
       border-bottom: 1px solid var(--border-warm);
       margin-bottom: 18px;
     }
-    .steps-gallery-grid {
+    .crazy-gallery-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
     }
-    .steps-card {
-      height: 200px;
+    .crazy-card {
+      height: 210px;
       border-radius: var(--radius-sm);
       overflow: hidden;
       box-shadow: 0 4px 15px rgba(0,0,0,0.06);
       background: #2E2722;
       cursor: pointer;
       position: relative;
+      transition: var(--transition);
     }
-    .steps-card img {
+    .crazy-card.tall-card {
+      height: 320px;
+    }
+    .crazy-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.5s ease;
     }
-    .steps-card:hover img {
+    .crazy-card:hover img {
       transform: scale(1.05);
+    }
+    .crazy-card-badge {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      background: rgba(34, 28, 24, 0.88);
+      backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: var(--transition);
+    }
+    .crazy-card:hover .crazy-card-badge {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* 3 FEATURE CARDS */
@@ -304,26 +361,26 @@
     }
     .info-card {
       background: #FFFFFF;
-      border-radius: var(--radius-lg);
-      padding: 28px 22px;
-      border: 1px solid rgba(222, 215, 205, 0.75);
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-md);
+      padding: 26px 24px;
       box-shadow: var(--shadow-sm);
     }
-    .info-card .card-eyebrow {
+    .card-eyebrow {
       font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      color: var(--accent-amber);
+      font-weight: 800;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
+      color: var(--accent-amber);
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .info-card h3 {
-      font-size: 18px;
-      font-weight: 800;
+      font-size: 16px;
+      font-weight: 700;
       color: var(--text-dark);
       margin-bottom: 14px;
-      letter-spacing: -0.01em;
+      line-height: 1.35;
     }
     .info-list {
       list-style: none;
@@ -390,154 +447,148 @@
       transition: transform 0.5s ease;
     }
     .packing-card:hover img {
-      transform: scale(1.05);
+      transform: scale(1.06);
     }
-    .packing-card span {
+    .packing-label {
       position: absolute;
-      bottom: 8px;
-      left: 8px;
-      right: 8px;
-      background: rgba(0, 0, 0, 0.72);
-      color: #fff;
-      font-size: 10.5px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(34, 28, 24, 0.9) 0%, rgba(34, 28, 24, 0.3) 70%, transparent 100%);
+      color: #FFFFFF;
+      padding: 18px 10px 8px;
+      font-size: 11px;
       font-weight: 600;
-      padding: 4px 8px;
-      border-radius: 4px;
       text-align: center;
+      letter-spacing: 0.03em;
     }
 
-    /* FAQ & COMPLETE PACKAGE SECTION */
+    /* FAQ & BESPOKE PACKAGES SECTION */
     .faq-bespoke-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1fr 1fr;
       gap: 36px;
-      margin-bottom: 65px;
+      margin-bottom: 70px;
     }
-    .faq-title {
-      font-size: 20px;
-      font-weight: 800;
-      margin-bottom: 18px;
-      color: var(--text-dark);
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
     .faq-item {
       background: #FFFFFF;
       border: 1px solid var(--border-warm);
       border-radius: var(--radius-sm);
-      margin-bottom: 10px;
       overflow: hidden;
     }
     .faq-question {
-      padding: 14px 18px;
+      padding: 15px 18px;
       font-size: 13.5px;
       font-weight: 700;
       color: var(--text-dark);
-      cursor: pointer;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-    }
-    .faq-question:hover {
-      color: var(--accent-amber);
+      justify-content: space-between;
+      cursor: pointer;
     }
     .faq-chevron {
-      transition: transform 0.3s ease;
       font-size: 11px;
-    }
-    .faq-item.active .faq-chevron {
-      transform: rotate(180deg);
-      color: var(--accent-amber);
+      color: var(--text-muted);
+      transition: transform 0.3s ease;
     }
     .faq-answer {
-      display: none;
-      padding: 0 18px 15px;
+      padding: 0 18px 16px;
       font-size: 12.5px;
       color: var(--text-muted);
-      line-height: 1.65;
+      line-height: 1.6;
+      display: none;
     }
     .faq-item.active .faq-answer {
       display: block;
     }
+    .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+    }
 
-    /* RELATED PRODUCTS & CTA */
     .related-box {
       background: #FFFFFF;
       border: 1px solid var(--border-warm);
-      border-radius: var(--radius-lg);
-      padding: 24px 20px;
-      margin-bottom: 16px;
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 24px;
     }
     .related-box h4 {
-      font-size: 15px;
-      font-weight: 800;
-      margin-bottom: 14px;
+      font-size: 14.5px;
+      font-weight: 700;
+      margin-bottom: 16px;
       color: var(--text-dark);
     }
     .related-item {
-      margin-bottom: 12px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--bg-cream-soft);
+      padding: 12px 14px;
+      background: var(--bg-cream-soft);
+      border-radius: var(--radius-sm);
+      margin-bottom: 10px;
       cursor: pointer;
+      transition: var(--transition);
     }
-    .related-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
+    .related-item:hover {
+      background: #EFE7DC;
+      transform: translateX(3px);
     }
     .related-item strong {
       display: block;
       font-size: 13px;
-      color: var(--accent-ochre);
+      color: var(--text-dark);
       margin-bottom: 2px;
     }
-    .related-item strong:hover {
-      text-decoration: underline;
-    }
     .related-item p {
-      font-size: 12px;
+      font-size: 11.5px;
       color: var(--text-muted);
-      margin: 0;
-      line-height: 1.5;
+      line-height: 1.45;
     }
 
-    .inquiry-cta-dark {
-      background: var(--bg-dark);
-      color: #fff;
-      border-radius: var(--radius-lg);
-      padding: 24px 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    /* CTA DARK CONTAINER */
+    .inquiry-dark-box {
+      background: #241E1A;
+      border-radius: var(--radius-md);
+      padding: 28px;
+      color: #FFFFFF;
+      border: 1px solid rgba(255,255,255,0.08);
     }
-    .inquiry-cta-dark h4 {
+    .inquiry-dark-box h4 {
       font-size: 15px;
-      font-weight: 800;
+      font-weight: 700;
       margin-bottom: 8px;
     }
-    .inquiry-cta-dark p {
+    .inquiry-dark-box p {
       font-size: 12px;
       color: var(--text-light-muted);
-      margin-bottom: 15px;
-      line-height: 1.55;
+      line-height: 1.6;
+      margin-bottom: 18px;
     }
-
-    /* BUTTONS */
-    .btn-ochre {
+    .inquiry-actions-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .btn-terracotta {
+      background: var(--accent-amber);
+      color: #FFFFFF;
+      padding: 9px 18px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 700;
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 10px 20px;
-      background: var(--accent-ochre);
-      color: #fff;
-      border-radius: var(--radius-full);
-      font-size: 12.5px;
-      font-weight: 700;
+      gap: 6px;
     }
-    .btn-ochre:hover {
-      background: var(--accent-ochre-dark);
-      transform: translateY(-2px);
+    .btn-terracotta:hover {
+      background: #A35B1D;
     }
     .btn-outline {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
+      gap: 6px;
       padding: 9px 18px;
       border: 1px solid var(--border-warm);
       border-radius: var(--radius-full);
@@ -603,27 +654,33 @@
       display: flex;
       flex-direction: column;
       gap: 9px;
+    }
+    .footer-links a {
       font-size: 12.5px;
       color: var(--text-muted);
     }
     .footer-links a:hover {
       color: var(--accent-ochre);
+      padding-left: 4px;
     }
     .footer-bottom {
       margin-top: 45px;
       padding-top: 20px;
       border-top: 1px solid var(--border-warm);
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      font-size: 11.5px;
+      font-size: 12px;
       color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
-    /* MODAL */
+    /* MODAL STYLES */
     .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(18, 14, 11, 0.75);
+      background: rgba(18, 14, 11, 0.7);
       backdrop-filter: blur(8px);
       z-index: 1000;
       display: flex;
@@ -719,7 +776,7 @@
       }
     }
     @media (max-width: 600px) {
-      .steps-gallery-grid {
+      .crazy-gallery-grid {
         grid-template-columns: 1fr;
       }
       .packing-grid {
@@ -749,26 +806,25 @@
           <li><a href="../index.html" class="nav-link">Home</a></li>
           <li><a href="../index.html#about" class="nav-link">About Us</a></li>
           <li class="dropdown">
-            <span class="nav-link dropdown-btn">Collections <span style="font-size:11px;">▾</span></span>
+            <span class="nav-link dropdown-btn">Collections ▾</span>
             <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="natural-sandstone-colors.html" style="font-weight:700; color:var(--accent-ochre);">Natural Sandstone Colors ✨</a></li>
+              <li class="dropdown-item"><a href="natural-sandstone-colors.html">Natural Sandstone Colors</a></li>
               <li class="dropdown-item"><a href="sandstone-pavers.html">Sandstone Pavers</a></li>
               <li class="dropdown-item"><a href="copings.html">Copings</a></li>
-              <li class="dropdown-item"><a href="steps.html" style="font-weight:700; color:var(--accent-amber);">Steps</a></li>
+              <li class="dropdown-item"><a href="steps.html">Steps</a></li>
               <li class="dropdown-item"><a href="cobbles-and-sets.html">Cobbles &amp; Sets</a></li>
               <li class="dropdown-item"><a href="fire-pits-and-circles.html">Fire Pits &amp; Circles</a></li>
               <li class="dropdown-item"><a href="roofing.html">Roofing</a></li>
-              <li class="dropdown-item"><a href="crazy-flagstone.html">Crazy / Flagstone</a></li>
+              <li class="dropdown-item"><a href="crazy-flagstone.html" style="font-weight:700; color:var(--accent-ochre);">Crazy / Flagstone</a></li>
             </ul>
           </li>
           <li><a href="../index.html#facilities" class="nav-link">Facilities</a></li>
-          <li><a href="../index.html#story" class="nav-link">Vision</a></li>
-          <li><a href="#contact" class="nav-link" onclick="openQuoteModal('Sandstone Steps Project Consultation')">Contact Us</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
       <div style="display:flex; align-items:center; gap:16px;">
-        <button class="btn-quote" onclick="openQuoteModal('Sandstone Steps Quick Quote')">Enquire Now</button>
+        <button class="btn-quote" onclick="openQuoteModal('Crazy / Flagstone Paving')">Get Quote</button>
         <button class="menu-toggle" onclick="alert('Menu: Use navigation links to browse.')" aria-label="Toggle menu">☰</button>
       </div>
     </div>
@@ -776,7 +832,7 @@
 
   <!-- FLOATING SIDE ACTIONS (PDF & WHATSAPP) -->
   <aside class="floating-side-actions">
-    <a href="../assets/catalogue.pdf" download class="action-circle-btn btn-brochure" title="Download Product Catalogue PDF">
+    <a href="../assets/catalogue.pdf" download="Shri-Sanwariya-Stone-Suppliers-Catalogue.pdf" class="action-circle-btn btn-brochure" title="Download Product Catalogue PDF">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
         <polyline points="14 2 14 8 20 8"></polyline>
@@ -784,30 +840,30 @@
         <line x1="9" y1="15" x2="15" y2="15"></line>
       </svg>
     </a>
-    <a href="https://wa.me/918619392937?text=Hello%20Shri%20Sanwariya%20Stone%20Suppliers,%20I%20am%20interested%20in%20Sandstone%20Steps." target="_blank" rel="noopener noreferrer" class="action-circle-btn btn-wa" title="Instant WhatsApp Assistance">
+    <a href="https://wa.me/918619392937?text=Hello%20Shri%20Sanwariya%20Stone%20Suppliers,%20I%20am%20interested%20in%20Crazy%20/%20Flagstone%20Paving." target="_blank" rel="noopener noreferrer" class="action-circle-btn btn-wa" title="Instant WhatsApp Assistance">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.184 1.564 5.938l-1.656 6.046 6.196-1.625c1.706.93 3.66 1.463 5.74 1.463 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/>
       </svg>
     </a>
   </aside>
 
-  <!-- PAGE BANNER (MATCHING SCREENSHOT) -->
+  <!-- PAGE BANNER -->
   <div class="page-banner">
-    <img src="../assets/steps-villa-columns-porch.webp" fetchpriority="high" decoding="async" alt="Sandstone Steps — Treads &amp; Risers Banner">
+    <img src="../assets/sandstone-crazy-paving-patio.webp" fetchpriority="high" decoding="async" alt="Crazy / Flagstone — Sandstone Crazy Paving Banner">
     <div class="page-banner-content">
-      <h1>Sandstone Steps</h1>
+      <h1>Flagstones / Crazy Paving</h1>
     </div>
   </div>
 
   <main>
     <section class="container product-main-grid">
-
-      <!-- LEFT: SPECIFICATION CARD (STICKY) -->
+      
+      <!-- LEFT: SPECIFICATION CARD -->
       <div class="spec-sticky-wrap">
         <div class="spec-card">
           <div class="spec-header">
             <svg viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg>
-            <span>SANDSTONE SPECIFICATION</span>
+            <span>FLAGSTONE SPECIFICATION</span>
           </div>
 
           <div class="spec-table-row">
@@ -816,96 +872,131 @@
           </div>
 
           <div class="spec-table-row">
-            <div class="spec-col-label">THICKNESS:</div>
-            <div class="spec-col-val">150 MM SOLID STEP BLOCKS, 50 MM, 40 MM, 30 MM TREADS &amp; RISERS</div>
+            <div class="spec-col-label">FORMAT:</div>
+            <div class="spec-col-val">Random Form / Irregular Polygonal Slabs</div>
           </div>
 
           <div class="spec-table-row">
-            <div class="spec-col-label">COMMON SIZES:</div>
-            <div class="spec-col-val">
-              <div>1000X350 MM, 1200X350 MM</div>
-              <div style="margin-top:2px;">1000X150 MM, 1200X150 MM (RISERS)</div>
-              <div style="margin-top:2px;">1500X350 MM, 1800X350 MM</div>
-              <div style="color:var(--accent-amber); margin-top:4px; font-weight:700;">CORNER &amp; RADIUS BULLNOSE AVAILABLE</div>
-            </div>
+            <div class="spec-col-label">THICKNESSES (MM):</div>
+            <div class="spec-col-val">20, 22, 25, 30, 35 MM (Calibrated available)</div>
+          </div>
+
+          <div class="spec-table-row">
+            <div class="spec-col-label">SPECIFIED BY:</div>
+            <div class="spec-col-val">Pieces per sqm (3–20 pieces / sqm)</div>
           </div>
 
           <div class="spec-table-row">
             <div class="spec-col-label">FINISHES:</div>
-            <div class="spec-col-val">NATURAL SPLIT, HONED, SAWN, SHOTBLASTED, FLAMED, BUSH HAMMERED</div>
+            <div class="spec-col-val">Natural Split / Riven Cleft, Hand Cut Edges, Tumbled Antique</div>
           </div>
 
           <div class="spec-table-row">
-            <div class="spec-col-label">EDGE PROFILES:</div>
-            <div class="spec-col-val">FULL BULLNOSE, HALF BULLNOSE, ROCKFACED CHISELED, SAWN &amp; CHAMFERED</div>
+            <div class="spec-col-label">CALIBRATED:</div>
+            <div class="spec-col-val">Yes (Calibrated underside for quick uniform bed laying)</div>
           </div>
 
           <div class="spec-note-bar">
-            We gladly customize sizes, thickness tolerances and surface finishes to suit your exact project requirements.
+            Cut to specification. Quote against specification. We gladly customize thicknesses, crate packaging specifications and coverage rates to suit your exact project requirements.
           </div>
         </div>
 
-        <button class="spec-sample-btn" onclick="openQuoteModal('Sandstone Steps Delivery &amp; Care / Sample')">
+        <button class="spec-sample-btn" onclick="openQuoteModal('Crazy / Flagstone Delivery & Care / Sample')">
           <span>DELIVERY &amp; CARE</span>
           <span>▾</span>
         </button>
 
         <div class="spec-pills-row">
-          <span class="spec-chip">Calibrated 50mm</span>
-          <span class="spec-chip">Solid 150mm Blocks</span>
+          <span class="spec-chip">Random Form</span>
+          <span class="spec-chip">Calibrated 20-35mm</span>
+          <span class="spec-chip">High Slip Resistance</span>
+          <span class="spec-chip">Organic Garden Paths</span>
+          <span class="spec-chip">Export Sea Crated</span>
         </div>
       </div>
 
-      <!-- RIGHT: NARRATIVE + 6 GALLERY CARDS (MATCHING SCREENSHOT) -->
+      <!-- RIGHT: NARRATIVE + GALLERY -->
       <div>
         <div class="intro-header-bar">
           <div class="intro-title-group">
             <div class="accent-bar"></div>
-            <h2 class="intro-title">Sandstone Steps</h2>
+            <h2 class="intro-title">Flagstones / Crazy Paving</h2>
           </div>
         </div>
 
+        <p class="crazy-lead" style="font-weight: 600;">
+          Random-form irregular paving. For garden paths, courtyards, pool surrounds, and organic-layout patios.
+        </p>
+
         <p class="intro-paragraph">
-<p class="crazy-lead" style="font-weight: 600;">Garden step risers, Terraced-garden treads, Public-realm staircase treads, Pool-deck step risers .</p>
-          
-          As a reliable sandstone steps supplier, we enhance your garden or landscape with handcrafted solid steps and step risers. These sandstone steps create the very best quality and timeless charm for any residential or commercial patio, providing both safe footing and elegance.
+          Flagstones are random-form fragments sorted from the quarry bed before calibration. The irregular outlines are the authentic character of the format; landscapers fit pieces together on site to produce the dry-stone look of traditional English garden paths, rustic Mediterranean terraces, and freeform organic patios. Every piece features a natural split non-slip surface, dense frost-resistant sandstone composition, and uniform calibrated depth for efficient bed installation. Sold by the crate at a standard coverage rate.
         </p>
 
         <div class="gallery-sub-header">
-          <span>GALLERY</span>
+          <span>GALLERY &amp; VISUAL REFERENCES</span>
         </div>
 
-        <!-- 6 GALLERY CARDS (2 COLS X 3 ROWS MATCHING SCREENSHOT) -->
-        <div class="steps-gallery-grid">
+        <!-- 10 GALLERY CARDS -->
+        <div class="crazy-gallery-grid">
 
-          <!-- Card 1 (Row 1 Left): Stacked Two-Tone Natural Stone Step Blocks on Pallet -->
-          <div class="steps-card" onclick="openQuoteModal('Sandstone Steps', '../assets/steps-stacked-blocks-palette.png')">
-            <img src="../assets/steps-stacked-blocks-palette.webp" loading="lazy" decoding="async" alt="Sandstone Steps — Stacked Two-Tone Step Blocks on Pallet">
+          <!-- Card 1: Patio Terrace -->
+          <div class="crazy-card tall-card" onclick="openQuoteModal('Crazy Paving Patio Terrace', '../assets/sandstone-crazy-paving-patio.webp')">
+            <img src="../assets/sandstone-crazy-paving-patio.webp" loading="lazy" decoding="async" alt="Natural Sandstone Crazy Paving Organic Patio Terrace">
+            <div class="crazy-card-badge"><span>Patio Terrace Installation</span> <span>↗</span></div>
           </div>
 
-          <!-- Card 2 (Row 1 Right): Long Sandstone Step Tread with Hand-Chiseled Face on Pallet -->
-          <div class="steps-card" onclick="openQuoteModal('Sandstone Steps', '../assets/steps-chiseled-tread-slab.png')">
-            <img src="../assets/steps-chiseled-tread-slab.webp" loading="lazy" decoding="async" alt="Sandstone Steps — Hand-Chiseled Step Tread on Pallet">
+          <!-- Card 2: Polygonal Slabs -->
+          <div class="crazy-card tall-card" onclick="openQuoteModal('Random Polygonal Flagstone Slabs', '../assets/sandstone-crazy-paving-slabs.webp')">
+            <img src="../assets/sandstone-crazy-paving-slabs.webp" loading="lazy" decoding="async" alt="Random-Form Polygonal Sandstone Flagstone Slabs">
+            <div class="crazy-card-badge"><span>Polygonal Flagstone Slabs</span> <span>↗</span></div>
           </div>
 
-          <!-- Card 3 (Row 2 Left): Classical Entrance Porch with Columns & Broad Stone Steps -->
-          <div class="steps-card" onclick="openQuoteModal('Sandstone Steps', '../assets/steps-villa-columns-porch.png')">
-            <img src="../assets/steps-villa-columns-porch.webp" loading="lazy" decoding="async" alt="Sandstone Steps — Classical Villa Entrance Porch with Multi-Tier Steps">
+          <!-- Card 3: Wall & Stepping Stone Feature -->
+          <div class="crazy-card" onclick="openQuoteModal('Flagstone Wall Cladding & Stepping Stones', '../assets/sandstone-crazy-paving-wall.webp')">
+            <img src="../assets/sandstone-crazy-paving-wall.webp" loading="lazy" decoding="async" alt="Sandstone Flagstone Wall Cladding &amp; Stepping Stones">
+            <div class="crazy-card-badge"><span>Wall Cladding &amp; Steps</span> <span>↗</span></div>
           </div>
 
-          <!-- Card 4 (Row 2 Right): Thick Sandstone Step Blocks Stacked with Foam -->
-          <div class="steps-card" onclick="openQuoteModal('Sandstone Steps', '../assets/steps-thick-blocks-pallet.png')">
-            <img src="../assets/steps-thick-blocks-pallet.webp" loading="lazy" decoding="async" alt="Sandstone Steps — Solid Step Blocks Stacked on Pallet">
+          <!-- Card 4: Garden Pathway -->
+          <div class="crazy-card" onclick="openQuoteModal('Landscape Garden Pathway Crazy Paving', '../assets/cobbles-crazy-paving-garden.jpg')">
+            <img src="../assets/cobbles-crazy-paving-garden.jpg" loading="lazy" decoding="async" alt="Landscape Garden Pathway &amp; Greenery Integration">
+            <div class="crazy-card-badge"><span>Garden Walkway Paving</span> <span>↗</span></div>
           </div>
 
-          <!-- Card 5 (Row 3 Left): Landscaped Garden Hill Staircase with Wide Sandstone Steps -->
-          <div class="steps-card" onclick="openQuoteModal('Sandstone Steps', '../assets/steps-lawn-hill-staircase.png')">
-            <img src="../assets/steps-lawn-hill-staircase.webp" loading="lazy" decoding="async" alt="Sandstone Steps — Landscaped Lawn Hill Staircase with Wide Steps">
+          <!-- Card 5: Visual Reference 1 -->
+          <div class="crazy-card" onclick="openQuoteModal('Natural Cleft Surface Flagstone', '../assets/crazy1.jpeg')">
+            <img src="../assets/crazy1.jpeg" loading="lazy" decoding="async" alt="Natural Cleft Flagstone Surface">
+            <div class="crazy-card-badge"><span>Natural Cleft Surface</span> <span>↗</span></div>
           </div>
 
-          <!-- Card 6 (Row 3 Right): Pallet of Sawn & Rockface Grey Sandstone Steps -->
-          <div class="steps-card" onclick="openQuoteModal('Sandstone Steps', '../assets/steps-sawn-rockface-crate.png')">
-            <img src="../assets/steps-sawn-rockface-crate.webp" loading="lazy" decoding="async" alt="Sandstone Steps — Sawn &amp; Rockfaced Grey Steps on Pallet">
+          <!-- Card 6: Visual Reference 2 -->
+          <div class="crazy-card" onclick="openQuoteModal('Hand-Dressed Edge Profile', '../assets/crazy2.jpeg')">
+            <img src="../assets/crazy2.jpeg" loading="lazy" decoding="async" alt="Hand-Dressed Edge Profile &amp; Calibrated Thickness">
+            <div class="crazy-card-badge"><span>Hand-Dressed Edge Profile</span> <span>↗</span></div>
+          </div>
+
+          <!-- Card 7: Visual Reference 3 -->
+          <div class="crazy-card" onclick="openQuoteModal('Completed Flagstone Walkway', '../assets/crazy3.jpeg')">
+            <img src="../assets/crazy3.jpeg" loading="lazy" decoding="async" alt="Completed Garden Path Flagstone Installation">
+            <div class="crazy-card-badge"><span>Completed Garden Walkway</span> <span>↗</span></div>
+          </div>
+
+          <!-- Card 8: Visual Reference 4 -->
+          <div class="crazy-card" onclick="openQuoteModal('Rustic Patio Layout', '../assets/crazy4.jpeg')">
+            <img src="../assets/crazy4.jpeg" loading="lazy" decoding="async" alt="Rustic Irregular Patio Layout">
+            <div class="crazy-card-badge"><span>Rustic Patio Layout</span> <span>↗</span></div>
+          </div>
+
+          <!-- Card 9: Visual Reference 5 -->
+          <div class="crazy-card" onclick="openQuoteModal('Export Crate Stacking', '../assets/crazy5.jpeg')">
+            <img src="../assets/crazy5.jpeg" loading="lazy" decoding="async" alt="Export Crate Stacking &amp; Pallet Inspection">
+            <div class="crazy-card-badge"><span>Export Crate Stacking</span> <span>↗</span></div>
+          </div>
+
+          <!-- Card 10: Visual Reference 6 -->
+          <div class="crazy-card" onclick="openQuoteModal('Bijolia Quartzitic Flagstone', '../assets/crazy6.jpeg')">
+            <img src="../assets/crazy6.jpeg" loading="lazy" decoding="async" alt="Fine-Grained Bijolia Quartzitic Sandstone Flagstone">
+            <div class="crazy-card-badge"><span>Bijolia Quartzitic Stone</span> <span>↗</span></div>
           </div>
 
         </div>
@@ -913,130 +1004,131 @@
 
     </section>
 
-    <!-- 3 FEATURE CARDS (MATCHING SCREENSHOT) -->
+    <!-- 3 FEATURE CARDS -->
     <section class="container">
       <div class="feature-cards-grid">
         <!-- Card 1: Applications -->
         <div class="info-card">
           <span class="card-eyebrow">APPLICATIONS</span>
-          <h3>Best-fit projects for Sandstone Steps</h3>
+          <h3>Best-fit projects for Crazy / Flagstone Paving</h3>
           <ul class="info-list">
-            <li><span class="check-bullet">✓</span> Garden terraces &amp; elevation changes</li>
-            <li><span class="check-bullet">✓</span> Villa and residential entrance steps</li>
-            <li><span class="check-bullet">✓</span> Pool surrounds with matching coping</li>
-            <li><span class="check-bullet">✓</span> Commercial pathways, parks &amp; public transitions</li>
+            <li><span class="check-bullet">✓</span> Organic garden paths, meandering walkways &amp; stepping stones</li>
+            <li><span class="check-bullet">✓</span> Swimming pool surrounds and wet-deck slip-resistant paving</li>
+            <li><span class="check-bullet">✓</span> Rustic courtyard patios, fire pit lounges &amp; garden terraces</li>
+            <li><span class="check-bullet">✓</span> Vertical masonry wall cladding &amp; rustic boundary veneer</li>
           </ul>
         </div>
 
         <!-- Card 2: Formats & Finishes -->
         <div class="info-card">
           <span class="card-eyebrow">FORMATS &amp; FINISHES</span>
-          <h3>Finish and size overview</h3>
+          <h3>Format and calibration overview</h3>
           <p style="font-size:12.5px; color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
-            Bullnose edges, Sawn &amp; Chamfered edges, or Hand Chiseled Rockface. Common sizes: 1000x350x50mm, 1200x350x50mm, 1000x150x50mm risers. Solid 150mm step blocks available. Packaging: Sea-worthy fumigated wooden crates / pallet pack on request.
+            Irregular polygonal outlines sorted by hand. Standard thicknesses: 20mm, 22mm, 25mm, 30mm, and 35mm. Calibrated underside options ensure easy leveling on wet mortar or sand-cement screeds. Available in natural split riven, hand-dressed edges, or antique tumbled finish.
           </p>
           <div class="tags-container">
-            <span class="pill-tag">Bullnose</span>
-            <span class="pill-tag">Rockface / Chiseled</span>
-            <span class="pill-tag">Sawn &amp; Honed</span>
-            <span class="pill-tag">Calibrated 50mm</span>
-            <span class="pill-tag">Solid 150mm Block</span>
+            <span class="pill-tag">Random Form</span>
+            <span class="pill-tag">Calibrated Underside</span>
+            <span class="pill-tag">Hand Dressed Edges</span>
+            <span class="pill-tag">3-20 Pcs/Sqm</span>
+            <span class="pill-tag">Riven Cleft</span>
+            <span class="pill-tag">ISPM-15 Crated</span>
           </div>
         </div>
 
         <!-- Card 3: Export Support -->
         <div class="info-card">
           <span class="card-eyebrow">EXPORT SUPPORT</span>
-          <h3>Markets we commonly support</h3>
+          <h3>Global supply &amp; container logistics</h3>
           <ul class="info-list">
-            <li><span class="check-bullet">✓</span> UK merchant &amp; landscaper networks</li>
-            <li><span class="check-bullet">✓</span> European &amp; North American importers</li>
-            <li><span class="check-bullet">✓</span> Luxury villa &amp; estate projects in GCC</li>
+            <li><span class="check-bullet">✓</span> UK landscaping merchants &amp; contractor networks</li>
+            <li><span class="check-bullet">✓</span> European architectural &amp; villa development projects</li>
+            <li><span class="check-bullet">✓</span> North American &amp; Australian residential landscapes</li>
           </ul>
           <p style="font-size:12px; color:var(--text-muted); line-height:1.55; margin-top:10px;">
-            Every step stone is inspected for dimension consistency, calibrated underside thickness, and sea-transport safety. Export packing includes steel straps, foam padding, and fumigated ISPM-15 wooden crates.
+            Supplied securely strapped in fumigated IPPC ISPM-15 wooden crates with plastic shrink-wrap and corner buffers, ensuring zero edge breakage during ocean container transit.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- EXPORT QUALITY PACKING & LOADING (MATCHING SCREENSHOT) -->
+    <!-- EXPORT QUALITY PACKING & LOADING -->
     <section class="container">
       <div class="packing-section">
         <div class="center">
           <span style="font-size:11px; font-weight:700; letter-spacing:0.18em; color:var(--accent-amber); text-transform:uppercase;">📦 EXPORT QUALITY PACKING &amp; LOADING</span>
           <p style="font-size:13px; color:var(--text-muted); max-width:680px; margin:8px auto 0; line-height:1.6;">
-            We ensure full safety during handling and transit with custom export-grade packaging and rigorous loading procedures.
+            We ensure complete protection during international handling with export-grade wooden crates and verified container loading procedures.
           </p>
         </div>
 
         <div class="packing-grid">
           <div class="packing-card">
-            <img src="../assets/packing-calibration-slabs.jpeg" loading="lazy" decoding="async" alt="Calibration Inspection &amp; Sawn Slabs Stack">
-            <span>1. Calibration Inspection</span>
+            <img src="../assets/packing-calibration-slabs.jpeg" loading="lazy" decoding="async" alt="Calibration Inspection &amp; Sawn Stack">
+            <div class="packing-label">Calibration Inspection</div>
           </div>
           <div class="packing-card">
-            <img src="../assets/packing-covered-yard.webp" loading="lazy" decoding="async" alt="Crate &amp; Slab Storage in Covered Factory Yard">
-            <span>2. Covered Yard Storage</span>
+            <img src="../assets/packing-covered-yard.webp" loading="lazy" decoding="async" alt="Covered Yard Storage">
+            <div class="packing-label">Covered Yard Storage</div>
           </div>
           <div class="packing-card">
-            <img src="../assets/packing-wooden-crate.webp" loading="lazy" decoding="async" alt="ISPM-15 Heat-Treated Fumigated Wooden Crate">
-            <span>3. ISPM-15 Wooden Crates</span>
+            <img src="../assets/packing-wooden-crate.jpeg" loading="lazy" decoding="async" alt="ISPM-15 Fumigated Wooden Export Crate">
+            <div class="packing-label">ISPM-15 Wooden Crates</div>
           </div>
           <div class="packing-card">
-            <img src="../assets/packing-truck-loading.jpeg" loading="lazy" decoding="async" alt="Sea Container &amp; Flatbed Truck Loading">
-            <span>4. Sea Container Loading</span>
+            <img src="../assets/packing-truck-loading.jpeg" loading="lazy" decoding="async" alt="Sea Container Export Loading">
+            <div class="packing-label">Container Loading</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ & COMPLETE STONE PACKAGE (MATCHING SCREENSHOT) -->
+    <!-- FAQ & BESPOKE PACKAGES -->
     <section class="container">
       <div class="faq-bespoke-grid">
         
         <!-- Left: FAQ Accordion -->
         <div>
           <span style="font-size:11px; font-weight:700; letter-spacing:0.18em; color:var(--accent-amber); text-transform:uppercase; display:block; margin-bottom:4px;">FAQS</span>
-          <h3 class="faq-title">Questions buyers ask about Sandstone Steps</h3>
+          <h2 style="font-size:22px; font-weight:800; color:var(--text-dark); margin-bottom:20px;">Questions buyers ask about Crazy / Flagstone Paving</h2>
 
           <div class="faq-item active">
             <div class="faq-question" onclick="toggleFaq(this)">
-              <span>Can you supply matching step treads and paving in the same color tone?</span>
+              <span>How is coverage calculated for Crazy / Flagstone Paving?</span>
               <span class="faq-chevron">▼</span>
             </div>
-            <div class="faq-answer">
-              Yes, we quarry and fabricate our sandstone step treads, risers and matching patio pavers from identical sandstone deposits, ensuring uniform color and finish across the entire project.
+            <div class="faq-answer" style="display:block;">
+              Flagstone crazy paving is sold by square meter coverage or by the crate. Each crate typically provides 15 to 20 square meters of coverage depending on stone thickness and installation joint width (usually 10mm to 30mm joints).
             </div>
           </div>
 
           <div class="faq-item">
             <div class="faq-question" onclick="toggleFaq(this)">
-              <span>Are custom step thicknesses and edging options available?</span>
+              <span>Are your crazy paving flagstones calibrated?</span>
               <span class="faq-chevron">▼</span>
             </div>
             <div class="faq-answer">
-              Absolutely. We manufacture step treads from 30mm, 40mm, and 50mm calibrated thickness up to solid 150mm thick block steps. Edge profiles include full bullnose, half bullnose, hand chiseled rockface, and modern sawn chamfered.
+              Yes. We provide precision calibrated flagstones at 20mm, 22mm, 25mm, 30mm, and 35mm thicknesses. Calibrating the underside allows contractors to lay irregular stones much faster on a uniform bed depth without uneven rocking.
             </div>
           </div>
 
           <div class="faq-item">
             <div class="faq-question" onclick="toggleFaq(this)">
-              <span>What is the slip resistance rating of your stone step treads?</span>
+              <span>Is crazy paving slip-resistant for swimming pool surrounds?</span>
               <span class="faq-chevron">▼</span>
             </div>
             <div class="faq-answer">
-              Our natural split, shotblasted, flamed, and bush-hammered step surfaces provide high wet slip resistance ratings (PTV &gt; 45 / R11+), exceeding British and European standards for external pedestrian stairs.
+              Extremely slip-resistant. The natural riven cleft texture of Indian sandstone provides exceptional wet grip underfoot, making it one of the most popular choices worldwide for swimming pool copings, beach entries, and wet garden paths.
             </div>
           </div>
 
           <div class="faq-item">
             <div class="faq-question" onclick="toggleFaq(this)">
-              <span>How are step treads and heavy block steps packed for export?</span>
+              <span>What stone colors can be supplied in crazy paving?</span>
               <span class="faq-chevron">▼</span>
             </div>
             <div class="faq-answer">
-              Solid block steps and treads are separated with protective high-density foam sheets, shrink-wrapped, steel-banded, and securely crated onto certified ISPM-15 heat-treated heavy pallets designed for container forklift unloading.
+              All 15 authentic quarry colors are available, including Kandla Grey, Autumn Brown, Raj Blend, Mandana Red, Mint Fossil, Raveena, Buff, Camel Dust, and White Quartzite.
             </div>
           </div>
         </div>
@@ -1049,35 +1141,36 @@
 
             <div class="related-item" onclick="window.location.href='sandstone-pavers.html'">
               <strong>Sandstone Pavers</strong>
-              <p>Pair calibrated step treads and risers with identical sandstone patio pavers for continuous architectural flow.</p>
+              <p>Dimensionally cut 600x900 patio slabs to complement irregular flagstone garden pathways.</p>
             </div>
 
             <div class="related-item" onclick="window.location.href='copings.html'">
-              <strong>Copings</strong>
-              <p>Complement retaining walls and pool perimeter copings with coordinated edge profiles and stone tones.</p>
+              <strong>Copings &amp; Wall Caps</strong>
+              <p>Bullnose and rockfaced wall caps for pool edging and garden planter boundaries.</p>
             </div>
 
-            <div class="related-item" onclick="openQuoteModal('Sandstone Stepping Stones Inquiry')">
-              <strong>Sandstone Stepping Stones</strong>
-              <p>Natural round and irregular flagstone steppers for garden pathways, lawn landscaping, and stepping paths.</p>
+            <div class="related-item" onclick="window.location.href='steps.html'">
+              <strong>Steps &amp; Risers</strong>
+              <p>Solid monolithic step blocks to connect elevated crazy-paved patio terraces.</p>
             </div>
           </div>
 
-          <div class="inquiry-cta-dark">
-            <span style="font-size:10px; font-weight:700; letter-spacing:0.18em; color:var(--accent-amber); text-transform:uppercase; display:block; margin-bottom:6px;">NEXT STEPS</span>
-            <h4>Plan your inquiry with real project details</h4>
-            <p>Tell us project sizes, target stone, surface finish and edge profile for a quick quotation. We provide custom packing schedules, container counts and express dispatch for UK, European and GCC buyers.</p>
-            <div style="display:flex; gap:8px; flex-wrap:wrap;">
-              <button class="btn-ochre" onclick="openQuoteModal('Sandstone Steps Project Quotation')">Request a Quote</button>
-              <a href="https://wa.me/918619392937?text=Hello%20Shri%20Sanwariya%20Stone%20Suppliers,%20I%20would%20like%20a%20steps%20quotation." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Live Chat Now</a>
-              <a href="../assets/catalogue.pdf" download class="btn-outline">Download Brochure</a>
+          <!-- Dark Inquiry CTA Card -->
+          <div class="inquiry-dark-box">
+            <span style="font-size:10px; font-weight:800; letter-spacing:0.18em; color:var(--accent-amber); text-transform:uppercase; display:block; margin-bottom:6px;">NEXT STEPS</span>
+            <h4>Plan your project with real factory pricing</h4>
+            <p>Tell us your required square footage or meterage, preferred thickness (20mm-35mm), color choice, and destination port for an accurate direct-quarry quotation.</p>
+
+            <div class="inquiry-actions-row">
+              <button class="btn-terracotta" onclick="openQuoteModal('Crazy / Flagstone Project Inquiry')">Enquire Now →</button>
+              <a href="../assets/catalogue.pdf" download="Shri-Sanwariya-Stone-Suppliers-Catalogue.pdf" class="btn-outline">Download Specs ↗</a>
+              <a href="https://wa.me/918619392937?text=Hello%20Shri%20Sanwariya%20Stone%20Suppliers,%20I%20need%20a%20quote%20for%20Crazy%20/%20Flagstone%20Paving." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">WhatsApp Instant</a>
             </div>
           </div>
         </div>
 
       </div>
     </section>
-
   </main>
 
   <!-- FOOTER -->
@@ -1086,49 +1179,57 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <h3>Shri Sanwariya</h3>
-          <p>Direct quarry manufacturer and global exporter of calibrated sandstone steps, treads, copings, pavers, and bespoke architectural masonry from Bijoliya Khurd, Veekam Pura, Rajasthan.</p>
-          <div style="display:flex; gap:10px;">
-            <a href="https://wa.me/918619392937" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="font-size:11px; padding:6px 14px;">WhatsApp Direct</a>
+          <p>Export-grade Indian sandstone and architectural stone products. Direct quarry manufacturing and precision fabrication for global delivery.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn-quote" onclick="openQuoteModal('General Inquiry')">Quick Enquiry</button>
+            <a href="https://wa.me/918619392937" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">WhatsApp</a>
           </div>
         </div>
 
         <div class="footer-col">
-          <h4>Stone Collections</h4>
+          <h4>COLLECTIONS</h4>
           <ul class="footer-links">
-            <li><a href="natural-sandstone-colors.html" style="color:var(--accent-ochre); font-weight:700;">Natural Sandstone Colors ✨</a></li>
+            <li><a href="natural-sandstone-colors.html">15 Natural Colors</a></li>
             <li><a href="sandstone-pavers.html">Sandstone Pavers</a></li>
             <li><a href="copings.html">Copings</a></li>
-            <li><a href="steps.html">Steps</a></li>
+            <li><a href="steps.html">Steps &amp; Risers</a></li>
             <li><a href="cobbles-and-sets.html">Cobbles &amp; Sets</a></li>
             <li><a href="fire-pits-and-circles.html">Fire Pits &amp; Circles</a></li>
             <li><a href="roofing.html">Roofing</a></li>
-            <li><a href="crazy-flagstone.html">Crazy / Flagstone</a></li>
+            <li><a href="crazy-flagstone.html" style="font-weight:700; color:var(--accent-ochre);">Crazy / Flagstone</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4>SPECIFICATIONS</h4>
           <ul class="footer-links">
-            <li><a href="../index.html#about">About Us</a></li>
-            <li><a href="../index.html#about">RK Stone Impex</a></li>
-            <li><a href="../index.html#facilities">Facilities</a></li>
-            <li><a href="../index.html#story">Vision &amp; Story</a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal('20-25mm Calibrated Flagstone')">20-25mm Calibrated Flagstone</a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal('30-35mm Heavy Paving Slabs')">30-35mm Heavy Paving Slabs</a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal('Random Polygonal Stepping Stones')">Random Polygonal Stepping Stones</a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal('Tumbled Antique Crazy Paving')">Tumbled Antique Finish</a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal('High Slip Pool Deck Flagstones')">Pool Deck Non-Slip Slabs</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Support &amp; Contact</h4>
-          <ul class="footer-links">
-            <li><a href="mailto:shrisanwariyastonesupply@gmail.com">shrisanwariyastonesupply@gmail.com</a></li>
-            <li><a href="tel:+918619392937">+91 86193 92937</a></li>
-            <li><span>Bijoliya Khurd, Veekam Pura, Rajasthan</span></li>
-          </ul>
+          <h4>CONTACT &amp; EXPORT</h4>
+          <p style="font-size:12.5px; color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
+            Bijoliya Khurd, Veekam Pura, Rajasthan<br>
+            Direct / WhatsApp: <a href="tel:+918619392937" style="color:inherit; text-decoration:none;">+91 86193 92937</a><br>
+            Email: <a href="mailto:shrisanwariyastonesupply@gmail.com" style="color:inherit; text-decoration:none;">shrisanwariyastonesupply@gmail.com</a>
+          </p>
+          <a href="../assets/catalogue.pdf" download="Shri-Sanwariya-Stone-Suppliers-Catalogue.pdf" class="btn-outline" style="color:var(--text-dark); border-color:var(--border-warm); background:#fff;">Download Catalogue PDF</a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© Shri Sanwariya Stone Suppliers 2026 · All rights reserved.</span>
-        <span>Premium Indian Natural Stone Export</span>
+        <div>© 2026 Shri Sanwariya Stone Suppliers. All rights reserved.</div>
+        <div style="display:flex; gap:16px;">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#facilities">Facilities</a>
+          <a href="../index.html#contact">Contact</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -1137,57 +1238,46 @@
   <div class="modal-backdrop" id="quoteModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeQuoteModal()" aria-label="Close modal">✕</button>
-      <span style="font-size:11px; font-weight:700; letter-spacing:0.18em; color:var(--accent-amber); text-transform:uppercase; display:block; margin-bottom:4px;">Direct Export Desk</span>
-      <h3 style="font-size:22px; font-weight:800; margin-bottom:6px; color:var(--text-dark);" id="modalSubjectTitle">Request a Custom Quote</h3>
-      <p style="font-size:13px; color:var(--text-muted); margin-bottom:18px;">Share your step tread dimensions and project details. Our stone engineers will assist within 24 hours.</p>
-
-      <!-- Clicked Product Thumbnail Preview -->
-      <div id="modalImgPreviewWrap" style="display:none; margin-bottom:16px; border-radius:8px; overflow:hidden; max-height:140px; background:#FAF8F5; border:1px solid var(--border-warm); text-align:center;">
-        <img id="modalImgPreview" src="" alt="Sandstone Steps — Selected Product Preview" style="width:100%; height:140px; object-fit:contain;">
+      
+      <div id="modalImgPreviewWrap" style="display:none; width:100%; height:130px; border-radius:8px; overflow:hidden; margin-bottom:16px; border:1px solid var(--border-warm);">
+        <img id="modalImgPreview" src="" alt="Selected Product Preview" style="width:100%; height:100%; object-fit:cover;">
       </div>
+
+      <h3 style="font-size:18px; font-weight:800; margin-bottom:4px; color:var(--text-dark);" id="modalTitle">Request Quotation &amp; Samples</h3>
+      <p style="font-size:12.5px; color:var(--text-muted); margin-bottom:18px;">Direct factory quotation from Shri Sanwariya Stone Suppliers.</p>
 
       <form id="quoteForm" onsubmit="event.preventDefault(); sendViaWhatsApp();">
         <div class="form-group">
-          <label class="form-label" for="clientName">Full Name *</label>
-          <input class="form-input" id="clientName" type="text" placeholder="e.g. Landscape Architect, Builder or Merchant" required>
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-input" id="clientName" placeholder="Full name or company" required>
         </div>
-
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
-          <div class="form-group">
-            <label class="form-label" for="clientPhone">Phone / WhatsApp *</label>
-            <input class="form-input" id="clientPhone" type="tel" placeholder="+91 86193 92937" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="clientEmail">Email Address</label>
-            <input class="form-input" id="clientEmail" type="email" placeholder="shrisanwariyastonesupply@gmail.com">
-          </div>
-        </div>
-
         <div class="form-group">
-          <label class="form-label" for="stoneProduct">Selected Stone Category</label>
+          <label class="form-label">Phone / WhatsApp *</label>
+          <input type="tel" class="form-input" id="clientPhone" placeholder="+91 86193 92937" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" id="clientEmail" placeholder="shrisanwariyastonesupply@gmail.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Selected Stone Product</label>
           <select class="form-select" id="stoneProduct">
-            <option value="Sandstone Steps & Risers" selected>Sandstone Steps &amp; Risers (50mm Treads &amp; Risers)</option>
-            <option value="Solid 150mm Block Steps">Solid 150mm Block Steps (Hand Chiseled Rockface)</option>
-            <option value="Bullnose Step Treads">Bullnose Step Treads (Full &amp; Half Bullnose)</option>
-            <option value="Steps Sample Box">Steps Sample Box 📦</option>
-            <option value="Sandstone Pavers">Sandstone Pavers</option>
-            <option value="Copings & Wall Caps">Copings &amp; Wall Caps</option>
-            <option value="Cobbles & Sets">Cobbles &amp; Sets</option>
+            <option value="Crazy / Flagstone Paving">Crazy / Flagstone Paving (General)</option>
+            <option value="20-25mm Calibrated Flagstone">20-25mm Calibrated Flagstone</option>
+            <option value="30-35mm Heavy Flagstone Slabs">30-35mm Heavy Flagstone Slabs</option>
+            <option value="Random Polygonal Stepping Stones">Random Polygonal Stepping Stones</option>
+            <option value="Tumbled Antique Crazy Paving">Tumbled Antique Crazy Paving</option>
+            <option value="Kandla Grey Crazy Paving">Kandla Grey Crazy Paving</option>
+            <option value="Autumn Brown Flagstones">Autumn Brown Flagstones</option>
+            <option value="Raj Blend Crazy Paving">Raj Blend Crazy Paving</option>
           </select>
         </div>
-
         <div class="form-group">
-          <label class="form-label" for="clientMessage">Project Details / Dimensions &amp; Quantity</label>
-          <textarea class="form-textarea" id="clientMessage" rows="3" placeholder="Approx number of steps/treads, thickness (e.g. 50mm tread, 150mm block), edge profile (e.g. Bullnose, Rockface), or destination port..."></textarea>
+          <label class="form-label">Estimated Quantity / Project Specifications</label>
+          <textarea class="form-textarea" id="clientMessage" rows="3" placeholder="Approx square meters / feet, preferred thickness, destination port..."></textarea>
         </div>
-
-        <div style="margin-top:20px;">
-          <button type="button" onclick="sendViaWhatsApp()" class="btn-whatsapp" style="width:100%; justify-content:center; padding:12px 18px; font-size:14px; cursor:pointer;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.184 1.564 5.938l-1.656 6.046 6.196-1.625c1.706.93 3.66 1.463 5.74 1.463 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/>
-            </svg>
-            Send WhatsApp
-          </button>
+        <div style="display:flex; gap:10px; margin-top:20px;">
+          <button type="submit" class="btn-whatsapp" style="flex:1; justify-content:center; padding:12px;">Send via WhatsApp</button>
         </div>
       </form>
     </div>
@@ -1195,11 +1285,28 @@
 
   <script>
     const quoteModal = document.getElementById('quoteModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const stoneProductSelect = document.getElementById('stoneProduct');
 
-    function openQuoteModal(topic, imgSrc) {
-      if (topic) {
-        document.getElementById('modalSubjectTitle').innerText = topic;
+    function openQuoteModal(productName, imgSrc) {
+      if (productName) {
+        modalTitle.textContent = productName;
+        let found = false;
+        for (let opt of stoneProductSelect.options) {
+          if (opt.value === productName) {
+            opt.selected = true;
+            found = true;
+            break;
+          }
+        }
+        if (!found) {
+          const opt = new Option(productName, productName, true, true);
+          stoneProductSelect.add(opt);
+        }
+      } else {
+        modalTitle.textContent = 'Request Quotation & Samples';
       }
+
       const previewWrap = document.getElementById('modalImgPreviewWrap');
       const previewImg = document.getElementById('modalImgPreview');
       if (imgSrc) {
@@ -1220,20 +1327,10 @@
       if (previewWrap) previewWrap.style.display = 'none';
     }
 
-    function handleQuoteSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('clientName').value;
-      const phone = document.getElementById('clientPhone').value;
-      const prod = document.getElementById('stoneProduct').value;
-      alert(`Thank you, ${name}! Your enquiry for ${prod} has been recorded. Our export team will reach you at ${phone}.`);
-      closeQuoteModal();
-      e.target.reset();
-    }
-
     function sendViaWhatsApp() {
       const name = document.getElementById('clientName').value || 'Customer';
       const phone = document.getElementById('clientPhone').value || '';
-      const prod = document.getElementById('stoneProduct').value || 'Sandstone Steps';
+      const prod = document.getElementById('stoneProduct').value || 'Crazy / Flagstone Paving';
       const msg = document.getElementById('clientMessage').value || '';
       const text = `Hello Shri Sanwariya Stone Suppliers,%0A%0AMy Name: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AProduct: ${encodeURIComponent(prod)}%0ADetails: ${encodeURIComponent(msg)}`;
       window.open(`https://wa.me/918619392937?text=${text}`, '_blank');
