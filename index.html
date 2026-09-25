@@ -275,26 +275,16 @@
       width: 100%;
     }
 
-    /* DROPDOWN (Removed from top navbar) */
-
     .header-actions {
       display: flex;
       align-items: center;
       gap: 16px;
     }
 
-    .btn-quote {
-      padding: 9px 20px;
-      border: 1px solid var(--text-dark);
-      border-radius: var(--radius-full);
-      font-size: 12.5px;
-      font-weight: 600;
-      color: var(--text-dark);
-    }
-
-    .btn-quote:hover {
-      background: var(--text-dark);
-      color: #FFFFFF;
+    /* CLEAN HEADER: no quote/enquiry CTA inside or above the navbar */
+    header .open-enquiry-btn,
+    header .btn-quote {
+      display: none !important;
     }
 
     .menu-toggle {
@@ -1866,7 +1856,7 @@
         <img src="assets/logo.webp" alt="Shri Sanwariya Stone Suppliers logo" class="site-logo" width="190" height="48" decoding="async">
       </a>
 
-      <!-- MAIN NAVIGATION (Dropdown removed, clean layout) -->
+      <!-- MAIN NAVIGATION -->
       <nav>
         <ul class="nav-menu">
           <li><a href="#home" class="nav-link">Home</a></li>
@@ -1878,9 +1868,8 @@
         </ul>
       </nav>
 
-      <!-- CTA & MOBILE TOGGLE -->
+      <!-- MOBILE TOGGLE ONLY -->
       <div class="header-actions">
-        <button class="btn-quote open-enquiry-btn">Enquire Now</button>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
       </div>
     </div>
@@ -1893,7 +1882,6 @@
       <a href="#facilities" class="mobile-link">Facilities</a>
       <a href="pages/our-story.html" class="mobile-link">Our Story</a>
       <a href="#contact" class="mobile-link">Contact Us</a>
-      <button class="btn-terracotta pill open-enquiry-btn" style="justify-content:center; margin-top:6px; padding:10px;">Get Free Quote</button>
     </div>
   </header>
 
