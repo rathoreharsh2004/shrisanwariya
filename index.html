@@ -58,6 +58,11 @@
       font-size: 16px;
     }
 
+    /* Sticky-header anchor offset */
+    main [id], footer[id] {
+      scroll-margin-top: 92px;
+    }
+
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--bg-cream);
@@ -1350,7 +1355,43 @@
       font-size: 14.5px;
       font-weight: 600;
       color: var(--text-dark);
-      padding: 6px 0;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(230,223,213,.65);
+    }
+
+    .mobile-drawer .mobile-sub-link {
+      padding-left: 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .mobile-enquire {
+      width: 100%;
+      margin-top: 4px;
+      padding: 12px 18px;
+      border-radius: var(--radius-full);
+      background: var(--text-dark);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .mobile-enquire:hover {
+      background: var(--terracotta);
+    }
+
+    @media (min-width: 861px) {
+      .mobile-drawer { display: none !important; }
+    }
+
+    @media (max-width: 860px) {
+      header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 2000 !important;
+      }
+      .mobile-drawer { z-index: 1999; }
+      body.mobile-menu-open { overflow: hidden; }
     }
 
     /* FACTORY / RK STONE IMPEX MODAL */
@@ -1955,9 +1996,28 @@
       <!-- CTA & MOBILE TOGGLE -->
       <div class="header-actions">
         <button class="btn-quote open-enquiry-btn">Enquire Now</button>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileDrawer">☰</button>
       </div>
     </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About Us</a>
+    <a href="#products" class="mobile-link">Products</a>
+    <a href="#colors" class="mobile-link mobile-sub-link">Natural Sandstone Colors</a>
+    <a href="#story" class="mobile-link">Our Story</a>
+    <a href="#showcase" class="mobile-link">Stone Showcase</a>
+    <a href="#process" class="mobile-link">Our Process</a>
+    <a href="#facilities" class="mobile-link">Facilities</a>
+    <a href="#why-us" class="mobile-link">Why Choose Us</a>
+    <a href="#reviews" class="mobile-link">Reviews</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="#location" class="mobile-link">Location</a>
+    <a href="#contact" class="mobile-link">Contact Us</a>
+    <button type="button" class="mobile-enquire open-enquiry-btn">Enquire Now</button>
+  </div>
 
   <!-- =============================================================
        FLOATING ROUND QUICK CONTACT BUTTONS (BOTTOM RIGHT)
@@ -2839,20 +2899,55 @@
       document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
     }
 
+    /* =============================================================
+       FIXED STICKY NAV + MOBILE MENU
+       ============================================================= */
     const menuToggle = document.getElementById('menuToggle');
     const mobileDrawer = document.getElementById('mobileDrawer');
 
-    menuToggle.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('active');
-      menuToggle.textContent = mobileDrawer.classList.contains('active') ? '✕' : '☰';
-    });
+    function setMobileMenu(open) {
+      if (!menuToggle || !mobileDrawer) return;
+      mobileDrawer.classList.toggle('active', open);
+      mobileDrawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+      menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      menuToggle.textContent = open ? '✕' : '☰';
+      document.body.classList.toggle('mobile-menu-open', open);
+    }
 
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileDrawer.classList.remove('active');
-        menuToggle.textContent = '☰';
+    if (menuToggle && mobileDrawer) {
+      menuToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setMobileMenu(!mobileDrawer.classList.contains('active'));
       });
-    });
+
+      document.querySelectorAll('.mobile-link, .mobile-enquire').forEach(link => {
+        link.addEventListener('click', function () {
+          setMobileMenu(false);
+        });
+      });
+
+      document.addEventListener('click', function (e) {
+        if (
+          mobileDrawer.classList.contains('active') &&
+          !mobileDrawer.contains(e.target) &&
+          !menuToggle.contains(e.target)
+        ) {
+          setMobileMenu(false);
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && mobileDrawer.classList.contains('active')) {
+          setMobileMenu(false);
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 860) setMobileMenu(false);
+      });
+    }
 
     const dropdown = document.querySelector('.dropdown');
     if (dropdown) {
