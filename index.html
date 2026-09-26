@@ -1327,7 +1327,7 @@
       .dark-card-container { padding: 30px 20px; }
     }
 
-    /* FIXED MOBILE MENU DRAWER (COMPACT & SCROLLABLE) */
+    /* FIXED MOBILE MENU DRAWER + PRODUCTS ACCORDION */
     .mobile-drawer {
       position: fixed;
       top: 76px;
@@ -1335,11 +1335,11 @@
       right: 0;
       background: #FFFFFF;
       border-bottom: 1px solid var(--border-warm);
-      padding: 20px 24px;
+      padding: 18px 24px 22px;
       box-shadow: 0 15px 35px rgba(0,0,0,0.1);
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 0;
       max-height: calc(100vh - 76px);
       overflow-y: auto;
       transform: translateY(-110%);
@@ -1351,18 +1351,114 @@
       transform: translateY(0);
     }
 
-    .mobile-drawer a {
+    .mobile-drawer > .mobile-link {
+      display: block;
       font-size: 14.5px;
       font-weight: 600;
       color: var(--text-dark);
-      padding: 9px 0;
+      padding: 11px 0;
       border-bottom: 1px solid rgba(230,223,213,.65);
     }
 
-    .mobile-drawer .mobile-sub-link {
-      padding-left: 16px;
-      font-size: 13px;
+    .mobile-drawer > .mobile-link:hover {
+      color: var(--terracotta);
+    }
+
+    /* Products row opens the 8 product links below it */
+    .mobile-products-toggle {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 11px 0;
+      border-bottom: 1px solid rgba(230,223,213,.65);
+      color: var(--text-dark);
+      font-size: 14.5px;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    .mobile-products-toggle:hover {
+      color: var(--terracotta);
+    }
+
+    .mobile-products-toggle .mobile-products-arrow {
+      font-size: 15px;
+      line-height: 1;
+      transition: transform .25s ease;
       color: var(--text-muted);
+    }
+
+    .mobile-products-toggle.active .mobile-products-arrow {
+      transform: rotate(180deg);
+      color: var(--terracotta);
+    }
+
+    .mobile-products-submenu {
+      display: none;
+      padding: 9px 0 6px;
+      border-bottom: 1px solid rgba(230,223,213,.65);
+    }
+
+    .mobile-products-submenu.active {
+      display: block;
+      animation: mobileProductMenuIn .22s ease-out;
+    }
+
+    @keyframes mobileProductMenuIn {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Matches the screenshot: highlighted View Colors link first */
+    .mobile-view-colors {
+      display: block;
+      width: fit-content;
+      max-width: 100%;
+      padding: 7px 11px;
+      margin: 0 0 13px;
+      border: 1px dashed var(--border-warm);
+      border-radius: var(--radius-full);
+      color: var(--terracotta);
+      background: #FFFDF9;
+      font-size: 12.5px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .mobile-view-colors:hover {
+      background: var(--terracotta-soft);
+      color: var(--terracotta-dark);
+    }
+
+    .mobile-product-heading {
+      display: block;
+      padding: 0 0 9px;
+      color: var(--accent-ochre);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .mobile-product-link {
+      display: block;
+      padding: 8px 0;
+      color: var(--text-dark);
+      font-size: 13.5px;
+      font-weight: 500;
+      border: 0;
+    }
+
+    .mobile-product-link:hover {
+      color: var(--terracotta);
+      padding-left: 4px;
     }
 
     .mobile-enquire {
@@ -2005,8 +2101,34 @@
   <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
     <a href="#home" class="mobile-link">Home</a>
     <a href="#about" class="mobile-link">About Us</a>
-    <a href="#products" class="mobile-link">Products</a>
-    <a href="#colors" class="mobile-link mobile-sub-link">Natural Sandstone Colors</a>
+
+    <!-- PRODUCTS ACCORDION -->
+    <button type="button"
+            class="mobile-products-toggle"
+            id="mobileProductsToggle"
+            aria-expanded="false"
+            aria-controls="mobileProductsSubmenu">
+      <span>Products</span>
+      <span class="mobile-products-arrow" aria-hidden="true">⌄</span>
+    </button>
+
+    <div class="mobile-products-submenu" id="mobileProductsSubmenu" aria-hidden="true">
+      <!-- 1 of 8 clickable product links -->
+      <a href="#colors" class="mobile-view-colors mobile-product-link">✨ View Colors On Page ↓</a>
+
+      <!-- Visual heading from the requested menu design; not counted as a product link -->
+      <div class="mobile-product-heading">Natural Sandstone Colors ✨</div>
+
+      <!-- 7 product category links -->
+      <a href="pages/sandstone-pavers.html" class="mobile-product-link">Sandstone Pavers</a>
+      <a href="pages/copings.html" class="mobile-product-link">Copings</a>
+      <a href="pages/steps.html" class="mobile-product-link">Steps</a>
+      <a href="pages/cobbles-and-sets.html" class="mobile-product-link">Cobbles &amp; Sets</a>
+      <a href="pages/fire-pits-and-circles.html" class="mobile-product-link">Fire Pits &amp; Circles</a>
+      <a href="pages/roofing.html" class="mobile-product-link">Roofing</a>
+      <a href="pages/crazy-flagstone.html" class="mobile-product-link">Crazy / Flagstone</a>
+    </div>
+
     <a href="#story" class="mobile-link">Our Story</a>
     <a href="#showcase" class="mobile-link">Stone Showcase</a>
     <a href="#process" class="mobile-link">Our Process</a>
@@ -2256,7 +2378,7 @@
           <div class="color-stone-card main-hidden" data-category="variegated" onclick="window.location.href='pages/dual-tone.html'">
             <div class="stone-swatch-box"><img src="assets/dual-tone-swatch-main.webp" alt=" Autumn Brown Sandstone" width="300" height="300" loading="lazy" decoding="async"></div>
             <div class="stone-details-body">
-              <h3 class="stone-title">York Grey </h3>
+              <h3 class="stone-title"> York Grey</h3>
               <p class="stone-description">Buff and dove-grey in a single slab.</p>
               <div class="stone-meta-grid">
                 <div class="meta-col"><span class="meta-label">ORIGIN</span><span class="meta-value">Bhilwara District</span></div>
@@ -2904,6 +3026,16 @@
        ============================================================= */
     const menuToggle = document.getElementById('menuToggle');
     const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobileProductsToggle = document.getElementById('mobileProductsToggle');
+    const mobileProductsSubmenu = document.getElementById('mobileProductsSubmenu');
+
+    function setMobileProducts(open) {
+      if (!mobileProductsToggle || !mobileProductsSubmenu) return;
+      mobileProductsToggle.classList.toggle('active', open);
+      mobileProductsToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      mobileProductsSubmenu.classList.toggle('active', open);
+      mobileProductsSubmenu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    }
 
     function setMobileMenu(open) {
       if (!menuToggle || !mobileDrawer) return;
@@ -2913,6 +3045,10 @@
       menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
       menuToggle.textContent = open ? '✕' : '☰';
       document.body.classList.toggle('mobile-menu-open', open);
+
+      if (!open) {
+        setMobileProducts(false);
+      }
     }
 
     if (menuToggle && mobileDrawer) {
@@ -2922,7 +3058,17 @@
         setMobileMenu(!mobileDrawer.classList.contains('active'));
       });
 
-      document.querySelectorAll('.mobile-link, .mobile-enquire').forEach(link => {
+      /* Products opens its own category submenu instead of closing the drawer */
+      if (mobileProductsToggle) {
+        mobileProductsToggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          setMobileProducts(!mobileProductsToggle.classList.contains('active'));
+        });
+      }
+
+      /* All normal links close the mobile drawer after navigation */
+      document.querySelectorAll('.mobile-link, .mobile-product-link, .mobile-enquire').forEach(link => {
         link.addEventListener('click', function () {
           setMobileMenu(false);
         });
