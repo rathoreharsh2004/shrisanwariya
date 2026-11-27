@@ -1764,34 +1764,15 @@
       background: #1B1612;
     }
 
-    .team-carousel {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    .team-slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.8s ease, visibility 0.8s ease;
-    }
-
-    .team-slide.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .team-slide img {
+    .story-visual > img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: top center;
+      object-position: center center;
       transition: transform 0.6s ease;
     }
 
-    .team-slide:hover img {
+    .story-visual:hover > img {
       transform: scale(1.04);
     }
 
@@ -1821,29 +1802,9 @@
       text-transform: uppercase;
     }
 
-    .team-slide-dots {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      display: flex;
-      gap: 7px;
-      z-index: 3;
-    }
-
-    .team-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.4);
-      cursor: pointer;
-      transition: var(--transition);
-      border: none;
-      padding: 0;
-    }
-
-    .team-dot.active {
-      background: var(--accent-amber);
-      transform: scale(1.25);
+    @media (max-width: 860px) {
+      .story-layout { grid-template-columns: 1fr; gap: 28px; }
+      .story-visual { height: auto; aspect-ratio: 1 / 1; }
     }
 
     .story-info h2 {
@@ -2046,8 +2007,6 @@
     }
 
 
-    .team-slide img { object-position:center center; }
-    .team-slide.jaswant-slide img { object-position:center 42%; }
 
 </style>
 </head>
@@ -2503,28 +2462,15 @@
       <div class="container">
         <div class="dark-card-container reveal">
           <div class="story-layout">
-            <!-- Our Vision Leadership Visuals (All 3 Images with Name & Tagline) -->
+            <!-- Our Vision Leadership Visual -->
             <div class="story-visual">
-              <div class="team-carousel" id="teamCarousel">
-                <!-- Dot navigation -->
-                <div class="team-slide-dots">
-                  <button class="team-dot active" onclick="showTeamSlide(0)" aria-label="Slide 1"></button>
-                  <button class="team-dot" onclick="showTeamSlide(1)" aria-label="Slide 2"></button>
-                  <button class="team-dot" onclick="showTeamSlide(2)" aria-label="Slide 3"></button>
-                </div>
+              <img src="assets/team-arman-dhakar.webp" width="400" height="400" loading="lazy" decoding="async" alt="Arman Dhakad - Director – Leadership and Business Development">
+              <div class="team-slide-caption">
+                <div class="team-slide-name">Arman Dhakad</div>
+                <div class="team-slide-tagline">Director – Leadership &amp; Business Development</div>
+              </div>
+            </div>
 
-          
-
-                <!-- Slide 2: Arman Dhakad -->
-                <div class="team-slide">
-                  <img src="assets/team-arman-dhakar.webp" width="400" height="400" loading="lazy" decoding="async" alt="Arman Dhakad - Director – Leadership and Business Development">
-                  <div class="team-slide-caption">
-                    <div class="team-slide-name">Arman Dhakad</div>
-                    <div class="team-slide-tagline">Director – Leadership &amp; Business Development</div>
-                  </div>
-                </div>
-
-               
             <!-- Narrative -->
             <div class="story-info">
               <span class="eyebrow light">OUR VISION &amp; LEADERSHIP</span>
@@ -3335,28 +3281,6 @@
     /* =============================================================
        EXTRACTED JS: OUR VISION & LEADERSHIP + NATURAL STONE SHOWCASE + OUR PROCESS
        ============================================================= */
-// Team carousel in How It All Started section
-    let currentTeamIdx = 0;
-    const teamSlides = document.querySelectorAll('.team-slide');
-    const teamDots = document.querySelectorAll('.team-dot');
-
-    function showTeamSlide(idx) {
-      if (!teamSlides.length) return;
-      currentTeamIdx = idx % teamSlides.length;
-      teamSlides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === currentTeamIdx);
-      });
-      teamDots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentTeamIdx);
-      });
-    }
-
-    if (teamSlides.length > 1) {
-      setInterval(() => {
-        showTeamSlide(currentTeamIdx + 1);
-      }, 4500);
-    }
-
     /* ---- Story / Leadership Modal ---- */
     function openStoryModal() {
       const m = document.getElementById('storyModal');
